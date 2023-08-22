@@ -1,0 +1,160 @@
+$comment
+	File created using the following command:
+		vcd file TESTES.msim.vcd -direction
+$end
+$date
+	Tue Aug 22 19:21:50 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module TESTES_vlg_vec_tst $end
+$var reg 1 ! B0 $end
+$var reg 1 " B1 $end
+$var reg 1 # B2 $end
+$var reg 1 $ B3 $end
+$var reg 1 % CH0 $end
+$var reg 1 & CH1 $end
+$var reg 1 ' CH2 $end
+$var reg 1 ( CH3 $end
+$var reg 1 ) CH4 $end
+$var reg 1 * CH5 $end
+$var reg 1 + CH6 $end
+$var reg 1 , CH7 $end
+$var wire 1 - LED0 $end
+$var wire 1 . LED1 $end
+$var wire 1 / LED2 $end
+$var wire 1 0 LED3 $end
+$var wire 1 1 LED4 $end
+$var wire 1 2 LED5 $end
+$var wire 1 3 LEDRGB_blue $end
+$var wire 1 4 LEDRGB_green $end
+$var wire 1 5 LEDRGB_red $end
+
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < CH2~combout $end
+$var wire 1 = CH3~combout $end
+$var wire 1 > CH1~combout $end
+$var wire 1 ? seletorIE02|V_P_FUN2~combout $end
+$var wire 1 @ CH6~combout $end
+$var wire 1 A CH7~combout $end
+$var wire 1 B CH5~combout $end
+$var wire 1 C seletorIE01|V_P_FUN2~combout $end
+$var wire 1 D verificadorPrioridade|auxOUT05~0_combout $end
+$var wire 1 E B3~combout $end
+$var wire 1 F seletorIE01|V_P_FUN1~0_combout $end
+$var wire 1 G seletorIE01|PossbilidadeReal~3_combout $end
+$var wire 1 H B2~combout $end
+$var wire 1 I CH4~combout $end
+$var wire 1 J seletorIE01|PossbilidadeReal~1_combout $end
+$var wire 1 K seletorIE01|PossbilidadeReal~2_combout $end
+$var wire 1 L seletorIE01|PossbilidadeReal~4_combout $end
+$var wire 1 M seletorIE01|PossbilidadeReal~0_combout $end
+$var wire 1 N seletorIE01|PossbilidadeReal~5_combout $end
+$var wire 1 O CH0~combout $end
+$var wire 1 P B0~combout $end
+$var wire 1 Q seletorIE02|PossbilidadeReal~1_combout $end
+$var wire 1 R seletorIE02|PossbilidadeReal~2_combout $end
+$var wire 1 S seletorIE02|PossbilidadeReal~3_combout $end
+$var wire 1 T seletorIE02|PossbilidadeReal~4_combout $end
+$var wire 1 U seletorIE02|V_P_FUN1~0_combout $end
+$var wire 1 V B1~combout $end
+$var wire 1 W seletorIE02|PossbilidadeReal~0_combout $end
+$var wire 1 X seletorIE02|PossbilidadeReal~5_combout $end
+$var wire 1 Y verificadorPrioridade|Igualdade2~combout $end
+$var wire 1 Z verificadorPrioridade|Igualdade3~combout $end
+$var wire 1 [ verificadorPrioridade|Igualdade1~combout $end
+$var wire 1 \ verificadorPrioridade|auxOUT05~1_combout $end
+$var wire 1 ] verificadorPrioridade|auxOUT05~2_combout $end
+$var wire 1 ^ verificadorPrioridade|IE02_3~combout $end
+$var wire 1 _ verificadorPrioridade|IE02_1~0_combout $end
+$var wire 1 ` verificadorPrioridade|IE02_0~0_combout $end
+$var wire 1 a verificadorPrioridade|auxOUT01~0_combout $end
+$var wire 1 b verificadorPrioridade|IE01_2~combout $end
+$var wire 1 c verificadorPrioridade|IE01_1~0_combout $end
+$var wire 1 d verificadorPrioridade|IE01_0~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+1#
+0$
+0%
+1&
+1'
+0(
+0)
+1*
+0+
+0,
+1-
+1.
+0/
+00
+01
+02
+03
+04
+05
+06
+17
+x8
+19
+1:
+1;
+1<
+0=
+1>
+1?
+0@
+0A
+1B
+0C
+0D
+0E
+1F
+1G
+1H
+0I
+0J
+1K
+1L
+0M
+1N
+0O
+1P
+0Q
+1R
+1S
+1T
+1U
+0V
+0W
+1X
+0Y
+0Z
+0[
+1\
+1]
+1^
+1_
+0`
+0a
+0b
+0c
+0d
+$end
+#1000000
