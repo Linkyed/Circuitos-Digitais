@@ -1,0 +1,276 @@
+Analysis & Synthesis report for TESTES
+Tue Aug 22 19:09:39 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "controladorPrioridade:verificadorPrioridade"
+ 10. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Aug 22 19:09:39 2023       ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; TESTES                                      ;
+; Top-level Entity Name       ; TESTES                                      ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 29                                          ;
+; Total pins                  ; 21                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; TESTES             ; TESTES             ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+; TESTES.v                         ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v                   ;         ;
+; seletorFUN.v                     ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v               ;         ;
+; comparador.v                     ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comparador.v               ;         ;
+; conversor_perfil_binario.v       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v ;         ;
+; controladorPrioridade.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv   ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 29    ;
+;     -- Combinational with no register       ; 29    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 16    ;
+;     -- 3 input functions                    ; 13    ;
+;     -- 2 input functions                    ; 0     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 29    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 21    ;
+; Maximum fan-out node                        ; CH1   ;
+; Maximum fan-out                             ; 8     ;
+; Total fan-out                               ; 109   ;
+; Average fan-out                             ; 2.18  ;
++---------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
+; Compilation Hierarchy Node                       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                 ; Entity Name           ; Library Name ;
++--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
+; |TESTES                                          ; 29 (0)      ; 0            ; 0          ; 21   ; 0            ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES                                             ; TESTES                ; work         ;
+;    |controladorPrioridade:verificadorPrioridade| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|controladorPrioridade:verificadorPrioridade ; controladorPrioridade ; work         ;
+;    |seletorFUN:seletorIE01|                      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE01                      ; seletorFUN            ; work         ;
+;    |seletorFUN:seletorIE02|                      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE02                      ; seletorFUN            ; work         ;
++--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "controladorPrioridade:verificadorPrioridade"                                              ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; out[11..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out[5..3]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Aug 22 19:09:28 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TESTES -c TESTES
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file testes.v
+    Info (12023): Found entity 1: TESTES File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file associado.v
+    Info (12023): Found entity 1: associado File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/associado.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file seletorfun.v
+    Info (12023): Found entity 1: seletorFUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
+    Info (12023): Found entity 1: comparador File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comparador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conversor_perfil_binario.v
+    Info (12023): Found entity 1: conversor_perfil_binario File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file controladorprioridade.sv
+    Info (12023): Found entity 1: controladorPrioridade File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(12): created implicit net for "D_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(13): created implicit net for "E_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(14): created implicit net for "F_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 14
+Info (12127): Elaborating entity "TESTES" for the top level hierarchy
+Warning (10034): Output port "LEDRGB_red" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+Warning (10034): Output port "LEDRGB_green" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+Warning (10034): Output port "LEDRGB_blue" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+Info (12128): Elaborating entity "seletorFUN" for hierarchy "seletorFUN:seletorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 17
+Info (12128): Elaborating entity "controladorPrioridade" for hierarchy "controladorPrioridade:verificadorPrioridade" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 22
+Info (12128): Elaborating entity "conversor_perfil_binario" for hierarchy "controladorPrioridade:verificadorPrioridade|conversor_perfil_binario:conversorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 17
+Info (12128): Elaborating entity "comparador" for hierarchy "controladorPrioridade:verificadorPrioridade|comparador:compararPerfis" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDRGB_red" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+    Warning (13410): Pin "LEDRGB_green" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+    Warning (13410): Pin "LEDRGB_blue" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 29 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4701 megabytes
+    Info: Processing ended: Tue Aug 22 19:09:39 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:25
+
+

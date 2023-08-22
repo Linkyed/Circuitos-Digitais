@@ -1,0 +1,1393 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
+
+// DATE "08/22/2023 19:21:48"
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module TESTES (
+	LED0,
+	LED1,
+	LED2,
+	LED3,
+	LED4,
+	LED5,
+	LEDRGB_red,
+	LEDRGB_green,
+	LEDRGB_blue,
+	CH7,
+	CH6,
+	CH5,
+	CH4,
+	B3,
+	B2,
+	CH3,
+	CH2,
+	CH1,
+	CH0,
+	B1,
+	B0);
+output 	LED0;
+output 	LED1;
+output 	LED2;
+output 	LED3;
+output 	LED4;
+output 	LED5;
+output 	LEDRGB_red;
+output 	LEDRGB_green;
+output 	LEDRGB_blue;
+input 	CH7;
+input 	CH6;
+input 	CH5;
+input 	CH4;
+input 	B3;
+input 	B2;
+input 	CH3;
+input 	CH2;
+input 	CH1;
+input 	CH0;
+input 	B1;
+input 	B0;
+
+// Design Ports Information
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \CH2~combout ;
+wire \CH3~combout ;
+wire \CH1~combout ;
+wire \seletorIE02|V_P_FUN2~combout ;
+wire \CH6~combout ;
+wire \CH7~combout ;
+wire \CH5~combout ;
+wire \seletorIE01|V_P_FUN2~combout ;
+wire \verificadorPrioridade|auxOUT05~0_combout ;
+wire \B3~combout ;
+wire \seletorIE01|V_P_FUN1~0_combout ;
+wire \seletorIE01|PossbilidadeReal~3_combout ;
+wire \B2~combout ;
+wire \CH4~combout ;
+wire \seletorIE01|PossbilidadeReal~1_combout ;
+wire \seletorIE01|PossbilidadeReal~2_combout ;
+wire \seletorIE01|PossbilidadeReal~4_combout ;
+wire \seletorIE01|PossbilidadeReal~0_combout ;
+wire \seletorIE01|PossbilidadeReal~5_combout ;
+wire \CH0~combout ;
+wire \B0~combout ;
+wire \seletorIE02|PossbilidadeReal~1_combout ;
+wire \seletorIE02|PossbilidadeReal~2_combout ;
+wire \seletorIE02|PossbilidadeReal~3_combout ;
+wire \seletorIE02|PossbilidadeReal~4_combout ;
+wire \seletorIE02|V_P_FUN1~0_combout ;
+wire \B1~combout ;
+wire \seletorIE02|PossbilidadeReal~0_combout ;
+wire \seletorIE02|PossbilidadeReal~5_combout ;
+wire \verificadorPrioridade|Igualdade2~combout ;
+wire \verificadorPrioridade|Igualdade3~combout ;
+wire \verificadorPrioridade|Igualdade1~combout ;
+wire \verificadorPrioridade|auxOUT05~1_combout ;
+wire \verificadorPrioridade|auxOUT05~2_combout ;
+wire \verificadorPrioridade|IE02_3~combout ;
+wire \verificadorPrioridade|IE02_1~0_combout ;
+wire \verificadorPrioridade|IE02_0~0_combout ;
+wire \verificadorPrioridade|auxOUT01~0_combout ;
+wire \verificadorPrioridade|IE01_2~combout ;
+wire \verificadorPrioridade|IE01_1~0_combout ;
+wire \verificadorPrioridade|IE01_0~0_combout ;
+
+
+// Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH2~combout ),
+	.padio(CH2));
+// synopsys translate_off
+defparam \CH2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH3~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH3~combout ),
+	.padio(CH3));
+// synopsys translate_off
+defparam \CH3~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH1~combout ),
+	.padio(CH1));
+// synopsys translate_off
+defparam \CH1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N4
+maxii_lcell \seletorIE02|V_P_FUN2 (
+// Equation(s):
+// \seletorIE02|V_P_FUN2~combout  = ((\CH1~combout  & (\CH3~combout  $ (\CH2~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH3~combout ),
+	.datac(\CH2~combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|V_P_FUN2~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|V_P_FUN2 .lut_mask = "3c00";
+defparam \seletorIE02|V_P_FUN2 .operation_mode = "normal";
+defparam \seletorIE02|V_P_FUN2 .output_mode = "comb_only";
+defparam \seletorIE02|V_P_FUN2 .register_cascade_mode = "off";
+defparam \seletorIE02|V_P_FUN2 .sum_lutc_input = "datac";
+defparam \seletorIE02|V_P_FUN2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH6~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH6~combout ),
+	.padio(CH6));
+// synopsys translate_off
+defparam \CH6~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH7~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH7~combout ),
+	.padio(CH7));
+// synopsys translate_off
+defparam \CH7~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH5~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH5~combout ),
+	.padio(CH5));
+// synopsys translate_off
+defparam \CH5~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N3
+maxii_lcell \seletorIE01|V_P_FUN2 (
+// Equation(s):
+// \seletorIE01|V_P_FUN2~combout  = ((\CH5~combout  & (\CH6~combout  $ (\CH7~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(vcc),
+	.datac(\CH7~combout ),
+	.datad(\CH5~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|V_P_FUN2~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|V_P_FUN2 .lut_mask = "5a00";
+defparam \seletorIE01|V_P_FUN2 .operation_mode = "normal";
+defparam \seletorIE01|V_P_FUN2 .output_mode = "comb_only";
+defparam \seletorIE01|V_P_FUN2 .register_cascade_mode = "off";
+defparam \seletorIE01|V_P_FUN2 .sum_lutc_input = "datac";
+defparam \seletorIE01|V_P_FUN2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N7
+maxii_lcell \verificadorPrioridade|auxOUT05~0 (
+// Equation(s):
+// \verificadorPrioridade|auxOUT05~0_combout  = (!\CH2~combout  & (\CH1~combout  & ((\CH6~combout ) # (!\CH5~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(\CH5~combout ),
+	.datac(\CH2~combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|auxOUT05~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|auxOUT05~0 .lut_mask = "0b00";
+defparam \verificadorPrioridade|auxOUT05~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|auxOUT05~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|auxOUT05~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|auxOUT05~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|auxOUT05~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B3~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B3~combout ),
+	.padio(B3));
+// synopsys translate_off
+defparam \B3~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N5
+maxii_lcell \seletorIE01|V_P_FUN1~0 (
+// Equation(s):
+// \seletorIE01|V_P_FUN1~0_combout  = ((\CH5~combout  & ((!\CH7~combout ) # (!\CH6~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(vcc),
+	.datac(\CH7~combout ),
+	.datad(\CH5~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|V_P_FUN1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|V_P_FUN1~0 .lut_mask = "5f00";
+defparam \seletorIE01|V_P_FUN1~0 .operation_mode = "normal";
+defparam \seletorIE01|V_P_FUN1~0 .output_mode = "comb_only";
+defparam \seletorIE01|V_P_FUN1~0 .register_cascade_mode = "off";
+defparam \seletorIE01|V_P_FUN1~0 .sum_lutc_input = "datac";
+defparam \seletorIE01|V_P_FUN1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N4
+maxii_lcell \seletorIE01|PossbilidadeReal~3 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~3_combout  = ((\CH7~combout  & (\CH6~combout  & !\CH5~combout )) # (!\CH7~combout  & ((\CH5~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(vcc),
+	.datac(\CH7~combout ),
+	.datad(\CH5~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~3 .lut_mask = "0fa0";
+defparam \seletorIE01|PossbilidadeReal~3 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~3 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~3 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~3 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B2~combout ),
+	.padio(B2));
+// synopsys translate_off
+defparam \B2~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH4~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH4~combout ),
+	.padio(CH4));
+// synopsys translate_off
+defparam \CH4~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N8
+maxii_lcell \seletorIE01|PossbilidadeReal~1 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~1_combout  = (!\CH6~combout  & (((\CH7~combout  & \CH5~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(vcc),
+	.datac(\CH7~combout ),
+	.datad(\CH5~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~1 .lut_mask = "5000";
+defparam \seletorIE01|PossbilidadeReal~1 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~1 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~1 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~1 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N3
+maxii_lcell \seletorIE01|PossbilidadeReal~2 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~2_combout  = (\B2~combout  & (((\seletorIE01|PossbilidadeReal~1_combout )) # (!\CH4~combout ))) # (!\B2~combout  & (\CH4~combout ))
+
+	.clk(gnd),
+	.dataa(\B2~combout ),
+	.datab(\CH4~combout ),
+	.datac(\seletorIE01|PossbilidadeReal~1_combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~2 .lut_mask = "e6e6";
+defparam \seletorIE01|PossbilidadeReal~2 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~2 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~2 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~2 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N7
+maxii_lcell \seletorIE01|PossbilidadeReal~4 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~4_combout  = (\seletorIE01|PossbilidadeReal~2_combout  & ((\seletorIE01|PossbilidadeReal~3_combout  $ (\seletorIE01|PossbilidadeReal~1_combout )))) # (!\seletorIE01|PossbilidadeReal~2_combout  & (\seletorIE01|V_P_FUN2~combout 
+// ))
+
+	.clk(gnd),
+	.dataa(\seletorIE01|V_P_FUN2~combout ),
+	.datab(\seletorIE01|PossbilidadeReal~3_combout ),
+	.datac(\seletorIE01|PossbilidadeReal~2_combout ),
+	.datad(\seletorIE01|PossbilidadeReal~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~4 .lut_mask = "3aca";
+defparam \seletorIE01|PossbilidadeReal~4 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~4 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~4 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~4 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N5
+maxii_lcell \seletorIE01|PossbilidadeReal~0 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~0_combout  = (\B3~combout  & (!\CH4~combout )) # (!\B3~combout  & (\CH4~combout  & (!\B2~combout )))
+
+	.clk(gnd),
+	.dataa(\B3~combout ),
+	.datab(\CH4~combout ),
+	.datac(\B2~combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~0 .lut_mask = "2626";
+defparam \seletorIE01|PossbilidadeReal~0 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~0 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~0 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~0 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N7
+maxii_lcell \seletorIE01|PossbilidadeReal~5 (
+// Equation(s):
+// \seletorIE01|PossbilidadeReal~5_combout  = (\seletorIE01|PossbilidadeReal~0_combout  & ((\seletorIE01|PossbilidadeReal~2_combout  & (\seletorIE01|V_P_FUN1~0_combout )) # (!\seletorIE01|PossbilidadeReal~2_combout  & 
+// ((\seletorIE01|PossbilidadeReal~4_combout ))))) # (!\seletorIE01|PossbilidadeReal~0_combout  & (((\seletorIE01|PossbilidadeReal~4_combout  & \seletorIE01|PossbilidadeReal~2_combout ))))
+
+	.clk(gnd),
+	.dataa(\seletorIE01|V_P_FUN1~0_combout ),
+	.datab(\seletorIE01|PossbilidadeReal~4_combout ),
+	.datac(\seletorIE01|PossbilidadeReal~0_combout ),
+	.datad(\seletorIE01|PossbilidadeReal~2_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE01|PossbilidadeReal~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE01|PossbilidadeReal~5 .lut_mask = "acc0";
+defparam \seletorIE01|PossbilidadeReal~5 .operation_mode = "normal";
+defparam \seletorIE01|PossbilidadeReal~5 .output_mode = "comb_only";
+defparam \seletorIE01|PossbilidadeReal~5 .register_cascade_mode = "off";
+defparam \seletorIE01|PossbilidadeReal~5 .sum_lutc_input = "datac";
+defparam \seletorIE01|PossbilidadeReal~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \CH0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\CH0~combout ),
+	.padio(CH0));
+// synopsys translate_off
+defparam \CH0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B0~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B0~combout ),
+	.padio(B0));
+// synopsys translate_off
+defparam \B0~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N7
+maxii_lcell \seletorIE02|PossbilidadeReal~1 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~1_combout  = ((!\CH2~combout  & (\CH3~combout  & \CH1~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH2~combout ),
+	.datac(\CH3~combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~1 .lut_mask = "3000";
+defparam \seletorIE02|PossbilidadeReal~1 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~1 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~1 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~1 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N4
+maxii_lcell \seletorIE02|PossbilidadeReal~2 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~2_combout  = (\CH0~combout  & (((\seletorIE02|PossbilidadeReal~1_combout )) # (!\B0~combout ))) # (!\CH0~combout  & (\B0~combout ))
+
+	.clk(gnd),
+	.dataa(\CH0~combout ),
+	.datab(\B0~combout ),
+	.datac(\seletorIE02|PossbilidadeReal~1_combout ),
+	.datad(vcc),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~2 .lut_mask = "e6e6";
+defparam \seletorIE02|PossbilidadeReal~2 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~2 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~2 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~2 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N9
+maxii_lcell \seletorIE02|PossbilidadeReal~3 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~3_combout  = ((\CH3~combout  & (\CH2~combout  & !\CH1~combout )) # (!\CH3~combout  & ((\CH1~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH2~combout ),
+	.datac(\CH3~combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~3_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~3 .lut_mask = "0fc0";
+defparam \seletorIE02|PossbilidadeReal~3 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~3 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~3 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~3 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N8
+maxii_lcell \seletorIE02|PossbilidadeReal~4 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~4_combout  = (\seletorIE02|PossbilidadeReal~2_combout  & (\seletorIE02|PossbilidadeReal~3_combout  $ (((\seletorIE02|PossbilidadeReal~1_combout ))))) # (!\seletorIE02|PossbilidadeReal~2_combout  & 
+// (((\seletorIE02|V_P_FUN2~combout ))))
+
+	.clk(gnd),
+	.dataa(\seletorIE02|PossbilidadeReal~2_combout ),
+	.datab(\seletorIE02|PossbilidadeReal~3_combout ),
+	.datac(\seletorIE02|V_P_FUN2~combout ),
+	.datad(\seletorIE02|PossbilidadeReal~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~4_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~4 .lut_mask = "72d8";
+defparam \seletorIE02|PossbilidadeReal~4 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~4 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~4 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~4 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~4 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N2
+maxii_lcell \seletorIE02|V_P_FUN1~0 (
+// Equation(s):
+// \seletorIE02|V_P_FUN1~0_combout  = ((\CH1~combout  & ((!\CH3~combout ) # (!\CH2~combout ))))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\CH2~combout ),
+	.datac(\CH3~combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|V_P_FUN1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|V_P_FUN1~0 .lut_mask = "3f00";
+defparam \seletorIE02|V_P_FUN1~0 .operation_mode = "normal";
+defparam \seletorIE02|V_P_FUN1~0 .output_mode = "comb_only";
+defparam \seletorIE02|V_P_FUN1~0 .register_cascade_mode = "off";
+defparam \seletorIE02|V_P_FUN1~0 .sum_lutc_input = "datac";
+defparam \seletorIE02|V_P_FUN1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B1~combout ),
+	.padio(B1));
+// synopsys translate_off
+defparam \B1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N4
+maxii_lcell \seletorIE02|PossbilidadeReal~0 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~0_combout  = ((\B1~combout  & (!\CH0~combout )) # (!\B1~combout  & (\CH0~combout  & !\B0~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\B1~combout ),
+	.datac(\CH0~combout ),
+	.datad(\B0~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~0 .lut_mask = "0c3c";
+defparam \seletorIE02|PossbilidadeReal~0 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~0 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~0 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~0 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X2_Y3_N5
+maxii_lcell \seletorIE02|PossbilidadeReal~5 (
+// Equation(s):
+// \seletorIE02|PossbilidadeReal~5_combout  = (\seletorIE02|PossbilidadeReal~2_combout  & ((\seletorIE02|PossbilidadeReal~0_combout  & ((\seletorIE02|V_P_FUN1~0_combout ))) # (!\seletorIE02|PossbilidadeReal~0_combout  & 
+// (\seletorIE02|PossbilidadeReal~4_combout )))) # (!\seletorIE02|PossbilidadeReal~2_combout  & (\seletorIE02|PossbilidadeReal~4_combout  & ((\seletorIE02|PossbilidadeReal~0_combout ))))
+
+	.clk(gnd),
+	.dataa(\seletorIE02|PossbilidadeReal~4_combout ),
+	.datab(\seletorIE02|V_P_FUN1~0_combout ),
+	.datac(\seletorIE02|PossbilidadeReal~2_combout ),
+	.datad(\seletorIE02|PossbilidadeReal~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\seletorIE02|PossbilidadeReal~5_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \seletorIE02|PossbilidadeReal~5 .lut_mask = "caa0";
+defparam \seletorIE02|PossbilidadeReal~5 .operation_mode = "normal";
+defparam \seletorIE02|PossbilidadeReal~5 .output_mode = "comb_only";
+defparam \seletorIE02|PossbilidadeReal~5 .register_cascade_mode = "off";
+defparam \seletorIE02|PossbilidadeReal~5 .sum_lutc_input = "datac";
+defparam \seletorIE02|PossbilidadeReal~5 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N2
+maxii_lcell \verificadorPrioridade|Igualdade2 (
+// Equation(s):
+// \verificadorPrioridade|Igualdade2~combout  = (\B3~combout  & (\seletorIE01|PossbilidadeReal~5_combout  $ (((\seletorIE02|PossbilidadeReal~5_combout  & \B1~combout ))))) # (!\B3~combout  & (((\seletorIE02|PossbilidadeReal~5_combout  & \B1~combout ))))
+
+	.clk(gnd),
+	.dataa(\B3~combout ),
+	.datab(\seletorIE01|PossbilidadeReal~5_combout ),
+	.datac(\seletorIE02|PossbilidadeReal~5_combout ),
+	.datad(\B1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|Igualdade2~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|Igualdade2 .lut_mask = "7888";
+defparam \verificadorPrioridade|Igualdade2 .operation_mode = "normal";
+defparam \verificadorPrioridade|Igualdade2 .output_mode = "comb_only";
+defparam \verificadorPrioridade|Igualdade2 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|Igualdade2 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|Igualdade2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N6
+maxii_lcell \verificadorPrioridade|Igualdade3 (
+// Equation(s):
+// \verificadorPrioridade|Igualdade3~combout  = (\B2~combout  & (\seletorIE01|PossbilidadeReal~5_combout  $ (((\seletorIE02|PossbilidadeReal~5_combout  & \B0~combout ))))) # (!\B2~combout  & (((\seletorIE02|PossbilidadeReal~5_combout  & \B0~combout ))))
+
+	.clk(gnd),
+	.dataa(\B2~combout ),
+	.datab(\seletorIE01|PossbilidadeReal~5_combout ),
+	.datac(\seletorIE02|PossbilidadeReal~5_combout ),
+	.datad(\B0~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|Igualdade3~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|Igualdade3 .lut_mask = "7888";
+defparam \verificadorPrioridade|Igualdade3 .operation_mode = "normal";
+defparam \verificadorPrioridade|Igualdade3 .output_mode = "comb_only";
+defparam \verificadorPrioridade|Igualdade3 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|Igualdade3 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|Igualdade3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N8
+maxii_lcell \verificadorPrioridade|Igualdade1 (
+// Equation(s):
+// \verificadorPrioridade|Igualdade1~combout  = (\CH0~combout  & (\seletorIE02|PossbilidadeReal~5_combout  $ (((\CH4~combout  & \seletorIE01|PossbilidadeReal~5_combout ))))) # (!\CH0~combout  & (\CH4~combout  & (\seletorIE01|PossbilidadeReal~5_combout )))
+
+	.clk(gnd),
+	.dataa(\CH0~combout ),
+	.datab(\CH4~combout ),
+	.datac(\seletorIE01|PossbilidadeReal~5_combout ),
+	.datad(\seletorIE02|PossbilidadeReal~5_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|Igualdade1~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|Igualdade1 .lut_mask = "6ac0";
+defparam \verificadorPrioridade|Igualdade1 .operation_mode = "normal";
+defparam \verificadorPrioridade|Igualdade1 .output_mode = "comb_only";
+defparam \verificadorPrioridade|Igualdade1 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|Igualdade1 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|Igualdade1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X4_Y2_N9
+maxii_lcell \verificadorPrioridade|auxOUT05~1 (
+// Equation(s):
+// \verificadorPrioridade|auxOUT05~1_combout  = ((!\verificadorPrioridade|Igualdade2~combout  & (!\verificadorPrioridade|Igualdade3~combout  & !\verificadorPrioridade|Igualdade1~combout )))
+
+	.clk(gnd),
+	.dataa(vcc),
+	.datab(\verificadorPrioridade|Igualdade2~combout ),
+	.datac(\verificadorPrioridade|Igualdade3~combout ),
+	.datad(\verificadorPrioridade|Igualdade1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|auxOUT05~1_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|auxOUT05~1 .lut_mask = "0003";
+defparam \verificadorPrioridade|auxOUT05~1 .operation_mode = "normal";
+defparam \verificadorPrioridade|auxOUT05~1 .output_mode = "comb_only";
+defparam \verificadorPrioridade|auxOUT05~1 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|auxOUT05~1 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|auxOUT05~1 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N5
+maxii_lcell \verificadorPrioridade|auxOUT05~2 (
+// Equation(s):
+// \verificadorPrioridade|auxOUT05~2_combout  = ((\seletorIE02|V_P_FUN2~combout  & ((\verificadorPrioridade|auxOUT05~0_combout ) # (!\seletorIE01|V_P_FUN2~combout ))) # (!\seletorIE02|V_P_FUN2~combout  & (!\seletorIE01|V_P_FUN2~combout  & 
+// \verificadorPrioridade|auxOUT05~0_combout ))) # (!\verificadorPrioridade|auxOUT05~1_combout )
+
+	.clk(gnd),
+	.dataa(\seletorIE02|V_P_FUN2~combout ),
+	.datab(\seletorIE01|V_P_FUN2~combout ),
+	.datac(\verificadorPrioridade|auxOUT05~0_combout ),
+	.datad(\verificadorPrioridade|auxOUT05~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|auxOUT05~2_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|auxOUT05~2 .lut_mask = "b2ff";
+defparam \verificadorPrioridade|auxOUT05~2 .operation_mode = "normal";
+defparam \verificadorPrioridade|auxOUT05~2 .output_mode = "comb_only";
+defparam \verificadorPrioridade|auxOUT05~2 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|auxOUT05~2 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|auxOUT05~2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N8
+maxii_lcell \verificadorPrioridade|IE02_3 (
+// Equation(s):
+// \verificadorPrioridade|IE02_3~combout  = (\verificadorPrioridade|auxOUT05~2_combout  & (\CH1~combout  & ((!\CH3~combout ) # (!\CH2~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(\CH3~combout ),
+	.datac(\verificadorPrioridade|auxOUT05~2_combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE02_3~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE02_3 .lut_mask = "7000";
+defparam \verificadorPrioridade|IE02_3 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE02_3 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE02_3 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE02_3 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE02_3 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N9
+maxii_lcell \verificadorPrioridade|IE02_1~0 (
+// Equation(s):
+// \verificadorPrioridade|IE02_1~0_combout  = (\CH2~combout  & (\verificadorPrioridade|auxOUT05~2_combout  & (\CH3~combout  $ (\CH1~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(\CH3~combout ),
+	.datac(\verificadorPrioridade|auxOUT05~2_combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE02_1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE02_1~0 .lut_mask = "2080";
+defparam \verificadorPrioridade|IE02_1~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE02_1~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE02_1~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE02_1~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE02_1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N6
+maxii_lcell \verificadorPrioridade|IE02_0~0 (
+// Equation(s):
+// \verificadorPrioridade|IE02_0~0_combout  = (\CH3~combout  & (\verificadorPrioridade|auxOUT05~2_combout  & (\CH2~combout  $ (\CH1~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH2~combout ),
+	.datab(\CH3~combout ),
+	.datac(\verificadorPrioridade|auxOUT05~2_combout ),
+	.datad(\CH1~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE02_0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE02_0~0 .lut_mask = "4080";
+defparam \verificadorPrioridade|IE02_0~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE02_0~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE02_0~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE02_0~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE02_0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y1_N2
+maxii_lcell \verificadorPrioridade|auxOUT01~0 (
+// Equation(s):
+// \verificadorPrioridade|auxOUT01~0_combout  = ((\seletorIE02|V_P_FUN2~combout  & (\seletorIE01|V_P_FUN2~combout  & !\verificadorPrioridade|auxOUT05~0_combout )) # (!\seletorIE02|V_P_FUN2~combout  & ((\seletorIE01|V_P_FUN2~combout ) # 
+// (!\verificadorPrioridade|auxOUT05~0_combout )))) # (!\verificadorPrioridade|auxOUT05~1_combout )
+
+	.clk(gnd),
+	.dataa(\seletorIE02|V_P_FUN2~combout ),
+	.datab(\seletorIE01|V_P_FUN2~combout ),
+	.datac(\verificadorPrioridade|auxOUT05~0_combout ),
+	.datad(\verificadorPrioridade|auxOUT05~1_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|auxOUT01~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|auxOUT01~0 .lut_mask = "4dff";
+defparam \verificadorPrioridade|auxOUT01~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|auxOUT01~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|auxOUT01~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|auxOUT01~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|auxOUT01~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N6
+maxii_lcell \verificadorPrioridade|IE01_2 (
+// Equation(s):
+// \verificadorPrioridade|IE01_2~combout  = (\CH5~combout  & (\verificadorPrioridade|auxOUT01~0_combout  & ((!\CH7~combout ) # (!\CH6~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(\CH5~combout ),
+	.datac(\CH7~combout ),
+	.datad(\verificadorPrioridade|auxOUT01~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE01_2~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE01_2 .lut_mask = "4c00";
+defparam \verificadorPrioridade|IE01_2 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE01_2 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE01_2 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE01_2 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE01_2 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N1
+maxii_lcell \verificadorPrioridade|IE01_1~0 (
+// Equation(s):
+// \verificadorPrioridade|IE01_1~0_combout  = (\CH6~combout  & (\verificadorPrioridade|auxOUT01~0_combout  & (\CH5~combout  $ (\CH7~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(\CH5~combout ),
+	.datac(\CH7~combout ),
+	.datad(\verificadorPrioridade|auxOUT01~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE01_1~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE01_1~0 .lut_mask = "2800";
+defparam \verificadorPrioridade|IE01_1~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE01_1~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE01_1~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE01_1~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE01_1~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N9
+maxii_lcell \verificadorPrioridade|IE01_0~0 (
+// Equation(s):
+// \verificadorPrioridade|IE01_0~0_combout  = (\CH7~combout  & (\verificadorPrioridade|auxOUT01~0_combout  & (\CH6~combout  $ (\CH5~combout ))))
+
+	.clk(gnd),
+	.dataa(\CH6~combout ),
+	.datab(\CH5~combout ),
+	.datac(\CH7~combout ),
+	.datad(\verificadorPrioridade|auxOUT01~0_combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\verificadorPrioridade|IE01_0~0_combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
+// synopsys translate_off
+defparam \verificadorPrioridade|IE01_0~0 .lut_mask = "6000";
+defparam \verificadorPrioridade|IE01_0~0 .operation_mode = "normal";
+defparam \verificadorPrioridade|IE01_0~0 .output_mode = "comb_only";
+defparam \verificadorPrioridade|IE01_0~0 .register_cascade_mode = "off";
+defparam \verificadorPrioridade|IE01_0~0 .sum_lutc_input = "datac";
+defparam \verificadorPrioridade|IE01_0~0 .synch_mode = "off";
+// synopsys translate_on
+
+// Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED0~I (
+	.datain(\verificadorPrioridade|IE02_3~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED0));
+// synopsys translate_off
+defparam \LED0~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED1~I (
+	.datain(\verificadorPrioridade|IE02_1~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED1));
+// synopsys translate_off
+defparam \LED1~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_57,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED2~I (
+	.datain(\verificadorPrioridade|IE02_0~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED2));
+// synopsys translate_off
+defparam \LED2~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_61,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED3~I (
+	.datain(\verificadorPrioridade|IE01_2~combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED3));
+// synopsys translate_off
+defparam \LED3~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_67,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED4~I (
+	.datain(\verificadorPrioridade|IE01_1~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED4));
+// synopsys translate_off
+defparam \LED4~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LED5~I (
+	.datain(\verificadorPrioridade|IE01_0~0_combout ),
+	.oe(vcc),
+	.combout(),
+	.padio(LED5));
+// synopsys translate_off
+defparam \LED5~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LEDRGB_red~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(LEDRGB_red));
+// synopsys translate_off
+defparam \LEDRGB_red~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LEDRGB_green~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(LEDRGB_green));
+// synopsys translate_off
+defparam \LEDRGB_green~I .operation_mode = "output";
+// synopsys translate_on
+
+// Location: PIN_74,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \LEDRGB_blue~I (
+	.datain(gnd),
+	.oe(vcc),
+	.combout(),
+	.padio(LEDRGB_blue));
+// synopsys translate_off
+defparam \LEDRGB_blue~I .operation_mode = "output";
+// synopsys translate_on
+
+endmodule

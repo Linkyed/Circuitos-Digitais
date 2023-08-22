@@ -1,0 +1,12 @@
+module TESTES( S0, S1, S2, S3, A, B, C );
+   input A, B, C;
+   output S0, S1, S2, S3;
+	wire A_not, B_not, C_not;
+	not A_inv (A_not, A);
+	not B_inv (B_not, B);
+	not C_int (C_not, C);
+	and And1 (S0, A, B_not, C); //ADMIN
+	and And2 (S1, A_not, B, C); //TESTE
+	and And3 (S2, A_not, B_not, C); //USER
+	and Adn4 (S3, A, B, C_not); //GUESTER
+endmodule

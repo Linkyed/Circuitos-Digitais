@@ -1,0 +1,194 @@
+|TESTES
+LED0 <= controladorPrioridade:verificadorPrioridade.port12
+LED1 <= controladorPrioridade:verificadorPrioridade.port12
+LED2 <= controladorPrioridade:verificadorPrioridade.port12
+LED3 <= controladorPrioridade:verificadorPrioridade.port12
+LED4 <= controladorPrioridade:verificadorPrioridade.port12
+LED5 <= controladorPrioridade:verificadorPrioridade.port12
+LEDRGB_red <= <GND>
+LEDRGB_green <= <GND>
+LEDRGB_blue <= <GND>
+CH7 => CH7.IN1
+CH6 => CH6.IN1
+CH5 => CH5.IN1
+CH4 => CH4.IN1
+B3 => B3.IN1
+B2 => B2.IN1
+CH3 => CH3.IN1
+CH2 => CH2.IN1
+CH1 => CH1.IN1
+CH0 => CH0.IN1
+B1 => B1.IN1
+B0 => B0.IN1
+
+
+|TESTES|seletorFUN:seletorIE01
+out[0] <= PerfilValido0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= PerfilValido1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= PerfilValido2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Saida0Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Saida1Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Saida2Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+A => AndADM.IN0
+A => AndGUEST.IN0
+A => AndTESTER.IN0
+A => AndUSER.IN0
+B => AndTESTER.IN1
+B => AndGUEST.IN1
+B => AndADM.IN1
+B => AndUSER.IN1
+C => AndADM.IN2
+C => AndTESTER.IN2
+C => AndUSER.IN2
+C => AndGUEST.IN2
+D => Funcionlidade4.IN0
+D => Funcionlidade5.IN0
+D => Funcionlidade6.IN0
+D => Funcionlidade7.IN0
+D => Saida0Funcionlidade.IN1
+D => Funcionlidade1.IN0
+D => Funcionlidade2.IN0
+D => Funcionlidade3.IN0
+E => Funcionlidade2.IN1
+E => Funcionlidade3.IN1
+E => Funcionlidade6.IN1
+E => Funcionlidade7.IN1
+E => Saida1Funcionlidade.IN1
+E => Funcionlidade1.IN1
+E => Funcionlidade4.IN1
+E => Funcionlidade5.IN1
+F => Funcionlidade1.IN2
+F => Funcionlidade3.IN2
+F => Funcionlidade5.IN2
+F => Funcionlidade7.IN2
+F => Saida2Funcionlidade.IN1
+F => Funcionlidade2.IN2
+F => Funcionlidade4.IN2
+F => Funcionlidade6.IN2
+
+
+|TESTES|seletorFUN:seletorIE02
+out[0] <= PerfilValido0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= PerfilValido1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= PerfilValido2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Saida0Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Saida1Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Saida2Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
+A => AndADM.IN0
+A => AndGUEST.IN0
+A => AndTESTER.IN0
+A => AndUSER.IN0
+B => AndTESTER.IN1
+B => AndGUEST.IN1
+B => AndADM.IN1
+B => AndUSER.IN1
+C => AndADM.IN2
+C => AndTESTER.IN2
+C => AndUSER.IN2
+C => AndGUEST.IN2
+D => Funcionlidade4.IN0
+D => Funcionlidade5.IN0
+D => Funcionlidade6.IN0
+D => Funcionlidade7.IN0
+D => Saida0Funcionlidade.IN1
+D => Funcionlidade1.IN0
+D => Funcionlidade2.IN0
+D => Funcionlidade3.IN0
+E => Funcionlidade2.IN1
+E => Funcionlidade3.IN1
+E => Funcionlidade6.IN1
+E => Funcionlidade7.IN1
+E => Saida1Funcionlidade.IN1
+E => Funcionlidade1.IN1
+E => Funcionlidade4.IN1
+E => Funcionlidade5.IN1
+F => Funcionlidade1.IN2
+F => Funcionlidade3.IN2
+F => Funcionlidade5.IN2
+F => Funcionlidade7.IN2
+F => Saida2Funcionlidade.IN1
+F => Funcionlidade2.IN2
+F => Funcionlidade4.IN2
+F => Funcionlidade6.IN2
+
+
+|TESTES|controladorPrioridade:verificadorPrioridade
+A => A.IN1
+B => B.IN1
+C => C.IN1
+D => Igualdade1.IN0
+D => FUN_IE01_0.IN1
+E => Igualdade2.IN0
+E => FUN_IE01_1.IN1
+F => Igualdade3.IN0
+F => FUN_IE01_2.IN1
+G => G.IN1
+H => H.IN1
+I => I.IN1
+J => Igualdade1.IN1
+J => FUN_IE02_0.IN1
+K => Igualdade2.IN1
+K => FUN_IE02_1.IN1
+L => Igualdade3.IN1
+L => FUN_IE02_2.IN1
+out[0] <= IE01_0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= IE01_1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= IE01_2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= FUN_IE01_0.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= FUN_IE01_1.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= FUN_IE01_2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= IE02_0.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= IE02_1.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= IE02_3.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= FUN_IE02_0.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= FUN_IE02_1.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= FUN_IE02_2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TESTES|controladorPrioridade:verificadorPrioridade|conversor_perfil_binario:conversorIE01
+A => Or1.IN0
+B => Or1.IN1
+B => And0.IN0
+C => And0.IN1
+out[0] <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TESTES|controladorPrioridade:verificadorPrioridade|conversor_perfil_binario:conversorIE02
+A => Or1.IN0
+B => Or1.IN1
+B => And0.IN0
+C => And0.IN1
+out[0] <= Or1.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TESTES|controladorPrioridade:verificadorPrioridade|comparador:compararPerfis
+A[0] => testeIgual0.IN0
+A[0] => condicao1_AgreaterB.IN0
+A[0] => condicao2_AgreaterB.IN0
+A[0] => condicao0_AlessB.IN0
+A[0] => condicao1_AlessB.IN0
+A[1] => testeIgual1.IN0
+A[1] => condicao0_AgreaterB.IN0
+A[1] => condicao2_AgreaterB.IN1
+A[1] => condicao0_AlessB.IN1
+A[1] => condicao2_AlessB.IN0
+B[0] => testeIgual0.IN1
+B[0] => condicao1_AlessB.IN1
+B[0] => condicao2_AlessB.IN1
+B[0] => condicao0_AgreaterB.IN1
+B[0] => condicao1_AgreaterB.IN1
+B[1] => testeIgual1.IN1
+B[1] => condicao0_AlessB.IN2
+B[1] => condicao2_AlessB.IN2
+B[1] => condicao0_AgreaterB.IN2
+B[1] => condicao2_AgreaterB.IN2
+turnON => A_greater_B_output.IN1
+turnON => A_equals_B_output.IN1
+turnON => A_less_B_output.IN1
+A_equal_B <= A_equals_B_output.DB_MAX_OUTPUT_PORT_TYPE
+A_less_B <= A_less_B_output.DB_MAX_OUTPUT_PORT_TYPE
+A_greater_B <= A_greater_B_output.DB_MAX_OUTPUT_PORT_TYPE
+
+

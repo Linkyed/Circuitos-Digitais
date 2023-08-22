@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
+vTESTES
+Z1 !s110 1692742910
+!i10b 1
+!s100 `C[;VKK4E`KKWoQ6^QQi71
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ime6VObeNETakjU6fXO9>e2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1692742908
+8TESTES.vo
+FTESTES.vo
+!i122 48
+L0 32 1362
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1692742909.000000
+!s107 TESTES.vo|
+!s90 -work|work|TESTES.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@t@e@s@t@e@s
+vTESTES_vlg_vec_tst
+R1
+!i10b 1
+!s100 i@]bQF19AW5GTE:4aOYWN3
+R2
+I?S<8:NbCcf?hVWh=VX`n=1
+R3
+R0
+w1692742906
+8testarPrioridade.vwf.vt
+FtestarPrioridade.vwf.vt
+!i122 49
+L0 30 128
+R4
+r1
+!s85 0
+31
+!s108 1692742910.000000
+!s107 testarPrioridade.vwf.vt|
+!s90 -work|work|testarPrioridade.vwf.vt|
+!i113 1
+R5
+R6
+n@t@e@s@t@e@s_vlg_vec_tst
