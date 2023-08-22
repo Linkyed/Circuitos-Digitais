@@ -1,0 +1,14 @@
+module conversor_perfil_binario(A, B, C, out);
+   input A, B, C;
+   output [1:0] out;
+	wire A_not, B_not, C_not;
+	
+	not A_inv (A_not, A);
+	not B_inv (B_not, B);
+	not C_int (C_not, C);
+	
+	//REPRESENTAÇÃO EM NUMEROS NA BASE 2
+	xor Or1 (out[0], A, B);
+	and And0 (out[1], C, B_not);
+	
+endmodule
