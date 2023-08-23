@@ -1,6 +1,7 @@
-module controladorPrioridade(A, B, C, D, E, F, G, H, I, J, K, L, out);
+module controladorPrioridade(A, B, C, D, E, F, G, H, I, J, K, L, out, LED_r, LED_g, LED_b);
    input A, B, C, D, E, F, G, H, I, J, K, L;
    output [11:0] out;
+	output LED_r, LED_g, LED_b;
 	wire [1:0] auxOUT;
 	wire [1:0] BinPERFIL0, BinPERFIL1;
 	wire  igual0, igual1, igual2, isIgual, isIgual_not;
@@ -17,6 +18,10 @@ module controladorPrioridade(A, B, C, D, E, F, G, H, I, J, K, L, out);
 	conversor_perfil_binario conversorIE01(A, B, C, BinPERFIL0);
 	conversor_perfil_binario conversorIE02(G, H, I, BinPERFIL1);
 	comparador compararPerfis(BinPERFIL0, BinPERFIL1, isIgual, IE01_equal_IE02, IE01_less_IE02, IE01_greater_IE02);
+	
+	assign LED_r = IE01_less_IE02; // VERMELHO QUANDO A IE02 GANHAR
+	assign LED_g = isIgual; // VERDE QUANDO FOR EMPATE
+	assign LED_b = IE01_greater_IE02; // AZUL QUANDO A IE01 GANHAR
 	
 	//SAIDAS DOS PERFIS
 	or auxOUT01 (auxOUT[0], IE01_equal_IE02, IE01_greater_IE02, isIgual_not);
