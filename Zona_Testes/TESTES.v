@@ -19,7 +19,8 @@ module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
 	controladorPrioridade verificadorPrioridade(Perfil_Funcao0[0], Perfil_Funcao0[1], Perfil_Funcao0[2],
 												Perfil_Funcao0[3], Perfil_Funcao0[4], Perfil_Funcao0[5],
 												Perfil_Funcao1[0], Perfil_Funcao1[1], Perfil_Funcao1[2],
-												Perfil_Funcao1[3], Perfil_Funcao1[4], Perfil_Funcao1[5], outPrioridade);
+												Perfil_Funcao1[3], Perfil_Funcao1[4], Perfil_Funcao1[5], 
+												outPrioridade, LEDRGB_red, LEDRGB_green, LEDRGB_blue);
 	
 	assign LED5 = outPrioridade[0];
 	assign LED4 = outPrioridade[1];

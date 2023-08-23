@@ -5,9 +5,9 @@ LED2 <= controladorPrioridade:verificadorPrioridade.port12
 LED3 <= controladorPrioridade:verificadorPrioridade.port12
 LED4 <= controladorPrioridade:verificadorPrioridade.port12
 LED5 <= controladorPrioridade:verificadorPrioridade.port12
-LEDRGB_red <= <GND>
-LEDRGB_green <= <GND>
-LEDRGB_blue <= <GND>
+LEDRGB_red <= controladorPrioridade:verificadorPrioridade.port13
+LEDRGB_green <= controladorPrioridade:verificadorPrioridade.port14
+LEDRGB_blue <= controladorPrioridade:verificadorPrioridade.port15
 CH7 => CH7.IN1
 CH6 => CH6.IN1
 CH5 => CH5.IN1
@@ -143,6 +143,9 @@ out[8] <= IE02_3.DB_MAX_OUTPUT_PORT_TYPE
 out[9] <= FUN_IE02_0.DB_MAX_OUTPUT_PORT_TYPE
 out[10] <= FUN_IE02_1.DB_MAX_OUTPUT_PORT_TYPE
 out[11] <= FUN_IE02_2.DB_MAX_OUTPUT_PORT_TYPE
+LED_r <= comparador:compararPerfis.port4
+LED_g <= isIgual.DB_MAX_OUTPUT_PORT_TYPE
+LED_b <= comparador:compararPerfis.port5
 
 
 |TESTES|controladorPrioridade:verificadorPrioridade|conversor_perfil_binario:conversorIE01
