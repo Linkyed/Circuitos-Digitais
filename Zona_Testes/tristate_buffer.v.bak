@@ -1,0 +1,8 @@
+module tristate_buffer(input_x, enable, output_x);
+
+	input input_x, enable;
+	output output_x;
+
+	assign output_x = enable? input_x : 'bz;
+
+endmodule

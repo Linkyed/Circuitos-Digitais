@@ -1,0 +1,10 @@
+module trat_PERFIL(A, B, C, FUN02, out);
+   input A, B, C, FUN02;
+   output [2:0] out;
+	wire SUP;
+	
+	and Out0 (out[0], FUN02, A);
+	and Out0 (out[1], FUN02, B);
+	and Out0 (out[2], FUN02, C);
+	
+endmodule

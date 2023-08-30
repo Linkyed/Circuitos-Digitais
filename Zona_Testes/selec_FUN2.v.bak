@@ -1,0 +1,10 @@
+module selec_FUN2(FUN2_IE01, FUN2_IE02, PRIO, out);
+   input FUN2_IE01, FUN2_IE02, PRIO;
+   output [1:0] out;
+	wire SUP;
+	
+	nand Nand0 (SUP, PRIO, FUN2_IE01)
+	and out0_FUN (out[0], FUN2_IE01, PRIO);
+	and out0_FUN (out[1], FUN2_IE02, SUP);
+	
+endmodule
