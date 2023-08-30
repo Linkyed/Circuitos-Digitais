@@ -1,6 +1,6 @@
 module seletorFUN( out, A, B, C, D, E, F);
    input A, B, C, D, E, F;
-   output [5:0] out;
+   output [2:0] out;
 	wire A_not, B_not, C_not, ADM, USER, TESTER, GUEST, AUTO, IS01, IS02;
 	wire Fun1_Possivel, Fun2_Possivel, Fun3_Possivel, Fun4_Possivel, Fun5_Possivel, Fun6_Possivel, Fun7_Possivel,
 	FUN01, FUN02, FUN03, FUN04, FUN05, FUN06, FUN07, PerfilFUN01, PerfilFUN02, PerfilFUN03, PerfilFUN04,
@@ -27,9 +27,6 @@ module seletorFUN( out, A, B, C, D, E, F);
 	xor V_P_FUN6 (Fun6_Possivel, ADM, GUEST, USER, TESTER);
 	assign Fun7_Possivel =  ADM;
 	
-	xor PerfilValido0 (out[0], ADM, GUEST);
-	xor PerfilValido1 (out[1], TESTER, GUEST);
-	xor PerfilValido2 (out[2], TESTER, USER, ADM);
 	
 	and Funcionlidade1 (FUN01, D_not, E_not, F);
 	and Funcionlidade2 (FUN02, D_not, E, F_not);
@@ -49,7 +46,7 @@ module seletorFUN( out, A, B, C, D, E, F);
 	
 	xor PossbilidadeReal (Possibilidade, PerfilFUN01, PerfilFUN02, PerfilFUN03, PerfilFUN04, PerfilFUN05, PerfilFUN06, PerfilFUN07);
 	
-	and Saida0Funcionlidade (out[3], Possibilidade, D);
-	and Saida1Funcionlidade (out[4], Possibilidade, E);
-	and Saida2Funcionlidade (out[5], Possibilidade, F);
+	and Saida0Funcionlidade (out[0], Possibilidade, D);
+	and Saida1Funcionlidade (out[1], Possibilidade, E);
+	and Saida2Funcionlidade (out[2], Possibilidade, F);
 endmodule
