@@ -1,0 +1,10 @@
+module fil_7SEG(A, B, C, D, E, F, out);
+   input A, B, C, D, E, F;
+   output [2:0] out;
+	
+	xor XOr0 (out[0], A, D);
+	xor XOr1 (out[1], B, E);
+	xor XOr2 (out[2], C, F);
+	
+	
+endmodule

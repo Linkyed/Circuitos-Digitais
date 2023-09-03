@@ -77,3 +77,14 @@ set_location_assignment PIN_61 -to LED3
 set_location_assignment PIN_67 -to LED4
 set_location_assignment PIN_69 -to LED5
 set_global_assignment -name VECTOR_WAVEFORM_FILE testarPrioridade.vwf
+set_global_assignment -name VERILOG_FILE comp_FUN.v
+set_global_assignment -name VERILOG_FILE selec_FUN2.v
+set_global_assignment -name VERILOG_FILE enc_FUN.v
+set_global_assignment -name VERILOG_FILE trat_PERFIL.v
+set_global_assignment -name VERILOG_FILE contr_7SEG.v
+set_global_assignment -name VERILOG_FILE fil_7SEG.v
+set_global_assignment -name VERILOG_FILE atv_PRIO.v
+set_global_assignment -name SYSTEMVERILOG_FILE FUN2_P_S.sv
+set_global_assignment -name VERILOG_FILE tristate_buffer.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE testeTribuffer.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE TesteEncaminhadores.vwf

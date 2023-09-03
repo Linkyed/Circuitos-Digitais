@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TESTES
-Tue Aug 22 19:09:39 2023
+Tue Aug 29 19:09:50 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,8 +14,9 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "controladorPrioridade:verificadorPrioridade"
- 10. Analysis & Synthesis Messages
+  9. Port Connectivity Checks: "enc_FUN:enc_IE02"
+ 10. Port Connectivity Checks: "enc_FUN:enc_IE01"
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -42,13 +43,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug 22 19:09:39 2023       ;
+; Analysis & Synthesis Status ; Successful - Tue Aug 29 19:09:50 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; TESTES                                      ;
 ; Top-level Entity Name       ; TESTES                                      ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 29                                          ;
-; Total pins                  ; 21                                          ;
+; Total logic elements        ; 33                                          ;
+; Total pins                  ; 29                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -148,56 +149,63 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 ; TESTES.v                         ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v                   ;         ;
 ; seletorFUN.v                     ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v               ;         ;
-; comparador.v                     ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comparador.v               ;         ;
 ; conversor_perfil_binario.v       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v ;         ;
 ; controladorPrioridade.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv   ;         ;
+; comp_FUN.v                       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comp_FUN.v                 ;         ;
+; enc_FUN.v                        ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/enc_FUN.v                  ;         ;
+; atv_PRIO.v                       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/atv_PRIO.v                 ;         ;
 +----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 29    ;
-;     -- Combinational with no register       ; 29    ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 16    ;
-;     -- 3 input functions                    ; 13    ;
-;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 29    ;
-;     -- arithmetic mode                      ; 0     ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 21    ;
-; Maximum fan-out node                        ; CH1   ;
-; Maximum fan-out                             ; 8     ;
-; Total fan-out                               ; 109   ;
-; Average fan-out                             ; 2.18  ;
-+---------------------------------------------+-------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++---------------------------------------------+-------------------------------------------+
+; Resource                                    ; Usage                                     ;
++---------------------------------------------+-------------------------------------------+
+; Total logic elements                        ; 33                                        ;
+;     -- Combinational with no register       ; 33                                        ;
+;     -- Register only                        ; 0                                         ;
+;     -- Combinational with a register        ; 0                                         ;
+;                                             ;                                           ;
+; Logic element usage by number of LUT inputs ;                                           ;
+;     -- 4 input functions                    ; 23                                        ;
+;     -- 3 input functions                    ; 4                                         ;
+;     -- 2 input functions                    ; 6                                         ;
+;     -- 1 input functions                    ; 0                                         ;
+;     -- 0 input functions                    ; 0                                         ;
+;                                             ;                                           ;
+; Logic elements by mode                      ;                                           ;
+;     -- normal mode                          ; 33                                        ;
+;     -- arithmetic mode                      ; 0                                         ;
+;     -- qfbk mode                            ; 0                                         ;
+;     -- register cascade mode                ; 0                                         ;
+;     -- synchronous clear/load mode          ; 0                                         ;
+;     -- asynchronous clear/load mode         ; 0                                         ;
+;                                             ;                                           ;
+; Total registers                             ; 0                                         ;
+; I/O pins                                    ; 29                                        ;
+; Maximum fan-out node                        ; seletorFUN:seletorIE02|PossbilidadeReal~1 ;
+; Maximum fan-out                             ; 9                                         ;
+; Total fan-out                               ; 128                                       ;
+; Average fan-out                             ; 2.06                                      ;
++---------------------------------------------+-------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
-+--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
-; Compilation Hierarchy Node                       ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                 ; Entity Name           ; Library Name ;
-+--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
-; |TESTES                                          ; 29 (0)      ; 0            ; 0          ; 21   ; 0            ; 29 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES                                             ; TESTES                ; work         ;
-;    |controladorPrioridade:verificadorPrioridade| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|controladorPrioridade:verificadorPrioridade ; controladorPrioridade ; work         ;
-;    |seletorFUN:seletorIE01|                      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE01                      ; seletorFUN            ; work         ;
-;    |seletorFUN:seletorIE02|                      ; 8 (8)       ; 0            ; 0          ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE02                      ; seletorFUN            ; work         ;
-+--------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------+-----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                 ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                        ; Entity Name              ; Library Name ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
+; |TESTES                                 ; 33 (0)      ; 0            ; 0          ; 29   ; 0            ; 33 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES                                    ; TESTES                   ; work         ;
+;    |atv_PRIO:atv_PRIO1|                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|atv_PRIO:atv_PRIO1                 ; atv_PRIO                 ; work         ;
+;    |comp_FUN:comp_FUN|                  ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|comp_FUN:comp_FUN                  ; comp_FUN                 ; work         ;
+;    |controladorPrioridade:CON_PRIO|     ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|controladorPrioridade:CON_PRIO     ; controladorPrioridade    ; work         ;
+;    |conversor_perfil_binario:CONV_IE01| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|conversor_perfil_binario:CONV_IE01 ; conversor_perfil_binario ; work         ;
+;    |enc_FUN:enc_IE01|                   ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE01                   ; enc_FUN                  ; work         ;
+;    |enc_FUN:enc_IE02|                   ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE02                   ; enc_FUN                  ; work         ;
+;    |seletorFUN:seletorIE01|             ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE01             ; seletorFUN               ; work         ;
+;    |seletorFUN:seletorIE02|             ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE02             ; seletorFUN               ; work         ;
++-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -216,14 +224,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "controladorPrioridade:verificadorPrioridade"                                              ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
-; out[11..9] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; out[5..3]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "enc_FUN:enc_IE02"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; out_7SEG ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "enc_FUN:enc_IE01"                                                                       ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; out_7SEG ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -232,7 +248,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Aug 22 19:09:28 2023
+    Info: Processing started: Tue Aug 29 19:09:33 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TESTES -c TESTES
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -248,29 +264,50 @@ Info (12021): Found 1 design units, including 1 entities, in source file convers
     Info (12023): Found entity 1: conversor_perfil_binario File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controladorprioridade.sv
     Info (12023): Found entity 1: controladorPrioridade File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file comp_fun.v
+    Info (12023): Found entity 1: comp_FUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comp_FUN.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file selec_fun2.v
+    Info (12023): Found entity 1: selec_FUN2 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/selec_FUN2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file enc_fun.v
+    Info (12023): Found entity 1: enc_FUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/enc_FUN.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file trat_perfil.v
+Info (12021): Found 1 design units, including 1 entities, in source file contr_7seg.v
+    Info (12023): Found entity 1: contr_7SEG File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/contr_7SEG.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file fil_7seg.v
+Info (12021): Found 1 design units, including 1 entities, in source file atv_prio.v
+    Info (12023): Found entity 1: atv_PRIO File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/atv_PRIO.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fun2_p_s.sv
+    Info (12023): Found entity 1: FUN2_P_S File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/FUN2_P_S.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tristate_buffer.v
+    Info (12023): Found entity 1: tristate_buffer File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/tristate_buffer.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(12): created implicit net for "D_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 12
 Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(13): created implicit net for "E_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(14): created implicit net for "F_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 14
 Info (12127): Elaborating entity "TESTES" for the top level hierarchy
-Warning (10034): Output port "LEDRGB_red" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-Warning (10034): Output port "LEDRGB_green" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-Warning (10034): Output port "LEDRGB_blue" at TESTES.v(9) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-Info (12128): Elaborating entity "seletorFUN" for hierarchy "seletorFUN:seletorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 17
-Info (12128): Elaborating entity "controladorPrioridade" for hierarchy "controladorPrioridade:verificadorPrioridade" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 22
-Info (12128): Elaborating entity "conversor_perfil_binario" for hierarchy "controladorPrioridade:verificadorPrioridade|conversor_perfil_binario:conversorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 17
-Info (12128): Elaborating entity "comparador" for hierarchy "controladorPrioridade:verificadorPrioridade|comparador:compararPerfis" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 19
+Warning (10034): Output port "M_LED6" at TESTES.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+Info (12128): Elaborating entity "conversor_perfil_binario" for hierarchy "conversor_perfil_binario:CONV_IE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 22
+Info (12128): Elaborating entity "seletorFUN" for hierarchy "seletorFUN:seletorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 25
+Info (12128): Elaborating entity "comp_FUN" for hierarchy "comp_FUN:comp_FUN" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 28
+Info (12128): Elaborating entity "controladorPrioridade" for hierarchy "controladorPrioridade:CON_PRIO" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 30
+Warning (10034): Output port "LED_r" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Warning (10034): Output port "LED_g" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Warning (10034): Output port "LED_b" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Info (12128): Elaborating entity "atv_PRIO" for hierarchy "atv_PRIO:atv_PRIO0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 34
+Info (12128): Elaborating entity "enc_FUN" for hierarchy "enc_FUN:enc_IE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 39
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDRGB_red" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-    Warning (13410): Pin "LEDRGB_green" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-    Warning (13410): Pin "LEDRGB_blue" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 9
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "M_LED6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+    Warning (13410): Pin "MCOL_LED0" is stuck at VCC File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+    Warning (13410): Pin "RGB_r" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+    Warning (13410): Pin "RGB_g" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+    Warning (13410): Pin "RGB_b" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
-    Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 29 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Tue Aug 22 19:09:39 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 33 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4700 megabytes
+    Info: Processing ended: Tue Aug 29 19:09:50 2023
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:31
 
 

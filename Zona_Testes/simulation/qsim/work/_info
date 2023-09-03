@@ -10,50 +10,50 @@ z2
 cModel Technology
 Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
 vTESTES
-Z1 !s110 1692742910
+Z1 !s110 1693348824
 !i10b 1
-!s100 `C[;VKK4E`KKWoQ6^QQi71
+!s100 XiFn8@m>ib3hYPFJcoMAm2
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-Ime6VObeNETakjU6fXO9>e2
+I2QmboHf1N]cD:6NZfO=P32
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1692742908
+w1693348822
 8TESTES.vo
 FTESTES.vo
-!i122 48
-L0 32 1362
+!i122 110
+L0 32 1601
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1692742909.000000
+Z5 !s108 1693348824.000000
 !s107 TESTES.vo|
 !s90 -work|work|TESTES.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 n@t@e@s@t@e@s
 vTESTES_vlg_vec_tst
 R1
 !i10b 1
-!s100 i@]bQF19AW5GTE:4aOYWN3
+!s100 ?5WVCH8:GDLN>TPOz6:lJ2
 R2
-I?S<8:NbCcf?hVWh=VX`n=1
+IAVjS:1jKScSNmo@IjM18z3
 R3
 R0
-w1692742906
-8testarPrioridade.vwf.vt
-FtestarPrioridade.vwf.vt
-!i122 49
-L0 30 128
+w1693348821
+8TesteEncaminhadores.vwf.vt
+FTesteEncaminhadores.vwf.vt
+!i122 111
+L0 30 144
 R4
 r1
 !s85 0
 31
-!s108 1692742910.000000
-!s107 testarPrioridade.vwf.vt|
-!s90 -work|work|testarPrioridade.vwf.vt|
-!i113 1
 R5
+!s107 TesteEncaminhadores.vwf.vt|
+!s90 -work|work|TesteEncaminhadores.vwf.vt|
+!i113 1
 R6
+R7
 n@t@e@s@t@e@s_vlg_vec_tst
