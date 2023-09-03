@@ -88,3 +88,11 @@ set_global_assignment -name SYSTEMVERILOG_FILE FUN2_P_S.sv
 set_global_assignment -name VERILOG_FILE tristate_buffer.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE testeTribuffer.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE TesteEncaminhadores.vwf
+set_global_assignment -name VERILOG_FILE decodificador_Matriz_De_Led.v
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name VECTOR_WAVEFORM_FILE ../../../../Downloads/Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf

@@ -9,51 +9,99 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
-vTESTES
-Z1 !s110 1693348824
+vdecodificador_Matriz_De_Led
+!s110 1693784869
 !i10b 1
-!s100 XiFn8@m>ib3hYPFJcoMAm2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I2QmboHf1N]cD:6NZfO=P32
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1693348822
-8TESTES.vo
-FTESTES.vo
-!i122 110
-L0 32 1601
-Z4 OV;L;2020.1;71
+!s100 G67Bb8_E@T;C898_E`PP31
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I]TU3k;36g<O[4N0gW>MC90
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/simulation/qsim
+w1693784863
+Z4 8TESTES.vo
+Z5 FTESTES.vo
+!i122 140
+L0 32 613
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1693348824.000000
-!s107 TESTES.vo|
-!s90 -work|work|TESTES.vo|
+Z7 !s108 1693784869.000000
+Z8 !s107 TESTES.vo|
+Z9 !s90 -work|work|TESTES.vo|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z10 o-work work
+Z11 tCvgOpt 0
+ndecodificador_@matriz_@de_@led
+vdecodificador_Matriz_De_Led_vlg_vec_tst
+!s110 1693784870
+!i10b 1
+!s100 jVBJ2XCF5zOelk1U[<NEl2
+R1
+IWC:h8:A[e<D`[G^e`Z[`53
+R2
+R3
+w1693784861
+8Waveform5.vwf.vt
+FWaveform5.vwf.vt
+!i122 141
+L0 30 74
+R6
+r1
+!s85 0
+31
+R7
+!s107 Waveform5.vwf.vt|
+!s90 -work|work|Waveform5.vwf.vt|
+!i113 1
+R10
+R11
+ndecodificador_@matriz_@de_@led_vlg_vec_tst
+vTESTES
+Z12 !s110 1693348824
+!i10b 1
+!s100 XiFn8@m>ib3hYPFJcoMAm2
+R1
+I2QmboHf1N]cD:6NZfO=P32
+R2
+R0
+w1693348822
+R4
+R5
+!i122 110
+L0 32 1601
+R6
+r1
+!s85 0
+31
+Z13 !s108 1693348824.000000
+R8
+R9
+!i113 1
+R10
+R11
 n@t@e@s@t@e@s
 vTESTES_vlg_vec_tst
-R1
+R12
 !i10b 1
 !s100 ?5WVCH8:GDLN>TPOz6:lJ2
-R2
+R1
 IAVjS:1jKScSNmo@IjM18z3
-R3
+R2
 R0
 w1693348821
 8TesteEncaminhadores.vwf.vt
 FTesteEncaminhadores.vwf.vt
 !i122 111
 L0 30 144
-R4
+R6
 r1
 !s85 0
 31
-R5
+R13
 !s107 TesteEncaminhadores.vwf.vt|
 !s90 -work|work|TesteEncaminhadores.vwf.vt|
 !i113 1
-R6
-R7
+R10
+R11
 n@t@e@s@t@e@s_vlg_vec_tst

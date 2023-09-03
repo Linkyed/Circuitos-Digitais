@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TESTES
-Tue Aug 29 19:09:50 2023
+Sun Sep 03 20:49:17 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Tue Aug 29 19:09:50 2023       ;
+; Analysis & Synthesis Status ; Successful - Sun Sep 03 20:49:17 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; TESTES                                      ;
 ; Top-level Entity Name       ; TESTES                                      ;
@@ -131,8 +131,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -142,19 +142,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; TESTES.v                         ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v                   ;         ;
-; seletorFUN.v                     ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v               ;         ;
-; conversor_perfil_binario.v       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v ;         ;
-; controladorPrioridade.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv   ;         ;
-; comp_FUN.v                       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comp_FUN.v                 ;         ;
-; enc_FUN.v                        ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/enc_FUN.v                  ;         ;
-; atv_PRIO.v                       ; yes             ; User Verilog HDL File        ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/atv_PRIO.v                 ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                        ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
+; TESTES.v                         ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v                   ;         ;
+; seletorFUN.v                     ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/seletorFUN.v               ;         ;
+; conversor_perfil_binario.v       ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v ;         ;
+; controladorPrioridade.sv         ; yes             ; User SystemVerilog HDL File  ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv   ;         ;
+; comp_FUN.v                       ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/comp_FUN.v                 ;         ;
+; enc_FUN.v                        ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/enc_FUN.v                  ;         ;
+; atv_PRIO.v                       ; yes             ; User Verilog HDL File        ; C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/atv_PRIO.v                 ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -248,66 +248,90 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Aug 29 19:09:33 2023
+    Info: Processing started: Sun Sep 03 20:48:51 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TESTES -c TESTES
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file testes.v
-    Info (12023): Found entity 1: TESTES File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 1
+    Info (12023): Found entity 1: TESTES File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file associado.v
-    Info (12023): Found entity 1: associado File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/associado.v Line: 1
+    Info (12023): Found entity 1: associado File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/associado.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file seletorfun.v
-    Info (12023): Found entity 1: seletorFUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 1
+    Info (12023): Found entity 1: seletorFUN File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comparador.v
-    Info (12023): Found entity 1: comparador File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comparador.v Line: 1
+    Info (12023): Found entity 1: comparador File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/comparador.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file conversor_perfil_binario.v
-    Info (12023): Found entity 1: conversor_perfil_binario File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v Line: 1
+    Info (12023): Found entity 1: conversor_perfil_binario File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/conversor_perfil_binario.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file controladorprioridade.sv
-    Info (12023): Found entity 1: controladorPrioridade File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 1
+    Info (12023): Found entity 1: controladorPrioridade File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file comp_fun.v
-    Info (12023): Found entity 1: comp_FUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/comp_FUN.v Line: 1
+    Info (12023): Found entity 1: comp_FUN File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/comp_FUN.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file selec_fun2.v
-    Info (12023): Found entity 1: selec_FUN2 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/selec_FUN2.v Line: 1
+    Info (12023): Found entity 1: selec_FUN2 File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/selec_FUN2.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file enc_fun.v
-    Info (12023): Found entity 1: enc_FUN File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/enc_FUN.v Line: 1
+    Info (12023): Found entity 1: enc_FUN File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/enc_FUN.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file trat_perfil.v
 Info (12021): Found 1 design units, including 1 entities, in source file contr_7seg.v
-    Info (12023): Found entity 1: contr_7SEG File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/contr_7SEG.v Line: 1
+    Info (12023): Found entity 1: contr_7SEG File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/contr_7SEG.v Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file fil_7seg.v
 Info (12021): Found 1 design units, including 1 entities, in source file atv_prio.v
-    Info (12023): Found entity 1: atv_PRIO File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/atv_PRIO.v Line: 1
+    Info (12023): Found entity 1: atv_PRIO File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/atv_PRIO.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fun2_p_s.sv
-    Info (12023): Found entity 1: FUN2_P_S File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/FUN2_P_S.sv Line: 1
+    Info (12023): Found entity 1: FUN2_P_S File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/FUN2_P_S.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tristate_buffer.v
-    Info (12023): Found entity 1: tristate_buffer File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/tristate_buffer.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(12): created implicit net for "D_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(13): created implicit net for "E_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(14): created implicit net for "F_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 14
+    Info (12023): Found entity 1: tristate_buffer File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/tristate_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decodificador_matriz_de_led.v
+    Info (12023): Found entity 1: decodificador_Matriz_De_Led File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(12): created implicit net for "D_not" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(13): created implicit net for "E_not" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(14): created implicit net for "F_not" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(10): created implicit net for "nB100" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(12): created implicit net for "nA300" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(16): created implicit net for "nB200" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(17): created implicit net for "nB301" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(19): created implicit net for "nA201" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(20): created implicit net for "nA302" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(24): created implicit net for "nB101" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(26): created implicit net for "nA100" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(30): created implicit net for "nB103" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(31): created implicit net for "nB302" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(33): created implicit net for "nA101" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(34): created implicit net for "nA303" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(38): created implicit net for "nB104" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(39): created implicit net for "nB201" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(41): created implicit net for "nA102" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(42): created implicit net for "nA202" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(46): created implicit net for "nB105" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 46
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(47): created implicit net for "nB202" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 47
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(48): created implicit net for "nB303" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(50): created implicit net for "nA103" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(51): created implicit net for "nA203" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at decodificador_Matriz_De_Led.v(52): created implicit net for "nA304" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v Line: 52
 Info (12127): Elaborating entity "TESTES" for the top level hierarchy
-Warning (10034): Output port "M_LED6" at TESTES.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
-Info (12128): Elaborating entity "conversor_perfil_binario" for hierarchy "conversor_perfil_binario:CONV_IE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 22
-Info (12128): Elaborating entity "seletorFUN" for hierarchy "seletorFUN:seletorIE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 25
-Info (12128): Elaborating entity "comp_FUN" for hierarchy "comp_FUN:comp_FUN" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 28
-Info (12128): Elaborating entity "controladorPrioridade" for hierarchy "controladorPrioridade:CON_PRIO" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 30
-Warning (10034): Output port "LED_r" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
-Warning (10034): Output port "LED_g" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
-Warning (10034): Output port "LED_b" at controladorPrioridade.sv(3) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
-Info (12128): Elaborating entity "atv_PRIO" for hierarchy "atv_PRIO:atv_PRIO0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 34
-Info (12128): Elaborating entity "enc_FUN" for hierarchy "enc_FUN:enc_IE01" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 39
+Warning (10034): Output port "M_LED6" at TESTES.v(12) has no driver File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+Info (12128): Elaborating entity "conversor_perfil_binario" for hierarchy "conversor_perfil_binario:CONV_IE01" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 22
+Info (12128): Elaborating entity "seletorFUN" for hierarchy "seletorFUN:seletorIE01" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 25
+Info (12128): Elaborating entity "comp_FUN" for hierarchy "comp_FUN:comp_FUN" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 28
+Info (12128): Elaborating entity "controladorPrioridade" for hierarchy "controladorPrioridade:CON_PRIO" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 30
+Warning (10034): Output port "LED_r" at controladorPrioridade.sv(3) has no driver File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Warning (10034): Output port "LED_g" at controladorPrioridade.sv(3) has no driver File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Warning (10034): Output port "LED_b" at controladorPrioridade.sv(3) has no driver File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/controladorPrioridade.sv Line: 3
+Info (12128): Elaborating entity "atv_PRIO" for hierarchy "atv_PRIO:atv_PRIO0" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 34
+Info (12128): Elaborating entity "enc_FUN" for hierarchy "enc_FUN:enc_IE01" File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 39
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "M_LED6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
-    Warning (13410): Pin "MCOL_LED0" is stuck at VCC File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
-    Warning (13410): Pin "RGB_r" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
-    Warning (13410): Pin "RGB_g" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
-    Warning (13410): Pin "RGB_b" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+    Warning (13410): Pin "M_LED6" is stuck at GND File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+    Warning (13410): Pin "MCOL_LED0" is stuck at VCC File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 12
+    Warning (13410): Pin "RGB_r" is stuck at GND File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+    Warning (13410): Pin "RGB_g" is stuck at GND File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
+    Warning (13410): Pin "RGB_b" is stuck at GND File: C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/TESTES.v Line: 11
 Info (21057): Implemented 62 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 12 input pins
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Tue Aug 29 19:09:50 2023
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:31
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
+    Info: Peak virtual memory: 4696 megabytes
+    Info: Processing ended: Sun Sep 03 20:49:17 2023
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:28
 
 

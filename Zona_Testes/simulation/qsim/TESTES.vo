@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition"
 
-// DATE "08/29/2023 19:40:22"
+// DATE "09/03/2023 20:47:43"
 
 // 
 // Device: Altera EPM240T100C5 Package TQFP100
@@ -29,65 +29,31 @@
 
 `timescale 1 ps/ 1 ps
 
-module TESTES (
-	LED0,
-	LED1,
-	LED2,
-	LED3,
-	LED4,
-	LED5,
-	M_LED0,
-	M_LED1,
-	M_LED2,
-	M_LED3,
-	M_LED4,
-	M_LED5,
-	M_LED6,
-	MCOL_LED0,
-	RGB_r,
-	RGB_g,
-	RGB_b,
-	CH7,
-	CH6,
-	CH5,
-	CH4,
-	B3,
-	B2,
-	CH3,
-	CH2,
-	CH1,
-	CH0,
+module decodificador_Matriz_De_Led (
+	A1,
+	A2,
+	A3,
 	B1,
-	B0);
-output 	LED0;
-output 	LED1;
-output 	LED2;
-output 	LED3;
-output 	LED4;
-output 	LED5;
-output 	M_LED0;
-output 	M_LED1;
-output 	M_LED2;
-output 	M_LED3;
-output 	M_LED4;
-output 	M_LED5;
-output 	M_LED6;
-output 	MCOL_LED0;
-output 	RGB_r;
-output 	RGB_g;
-output 	RGB_b;
-input 	CH7;
-input 	CH6;
-input 	CH5;
-input 	CH4;
-input 	B3;
-input 	B2;
-input 	CH3;
-input 	CH2;
-input 	CH1;
-input 	CH0;
+	B2,
+	B3,
+	S0,
+	S1,
+	S2,
+	S3,
+	S4,
+	S5);
+input 	A1;
+input 	A2;
+input 	A3;
 input 	B1;
-input 	B0;
+input 	B2;
+input 	B3;
+output 	S0;
+output 	S1;
+output 	S2;
+output 	S3;
+output 	S4;
+output 	S5;
 
 // Design Ports Information
 
@@ -103,275 +69,34 @@ assign unknown = 1'bx;
 tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
-wire \CH3~combout ;
-wire \CH2~combout ;
-wire \CH1~combout ;
-wire \seletorIE02|V_P_FUN2~0_combout ;
-wire \CH6~combout ;
-wire \CH7~combout ;
-wire \CH5~combout ;
-wire \CONV_IE01|Or0~0_combout ;
-wire \CON_PRIO|Or0~0_combout ;
-wire \CON_PRIO|Or0~1_combout ;
-wire \CH4~combout ;
-wire \B2~combout ;
+wire \A2~combout ;
 wire \B3~combout ;
-wire \seletorIE01|PossbilidadeReal~0_combout ;
-wire \seletorIE01|PossbilidadeReal~2_combout ;
-wire \seletorIE01|PossbilidadeReal~3_combout ;
-wire \seletorIE01|PossbilidadeReal~1_combout ;
-wire \seletorIE01|Saida0Funcionlidade~combout ;
 wire \B1~combout ;
-wire \CH0~combout ;
-wire \B0~combout ;
-wire \seletorIE02|PossbilidadeReal~2_combout ;
-wire \seletorIE02|PossbilidadeReal~3_combout ;
-wire \seletorIE02|PossbilidadeReal~0_combout ;
-wire \seletorIE02|PossbilidadeReal~1_combout ;
-wire \comp_FUN|Or0~combout ;
-wire \seletorIE02|Saida2Funcionlidade~combout ;
-wire \seletorIE01|Saida2Funcionlidade~combout ;
-wire \seletorIE01|Saida1Funcionlidade~combout ;
-wire \seletorIE02|Saida1Funcionlidade~combout ;
-wire \comp_FUN|is_IGUAL~0_combout ;
-wire \comp_FUN|is_IGUAL~1_combout ;
-wire \enc_IE01|outLED0~combout ;
-wire \enc_IE01|outLED1~combout ;
-wire \enc_IE01|outLED2~combout ;
-wire \atv_PRIO1|Or0~combout ;
-wire \enc_IE02|outLED0~combout ;
-wire \enc_IE02|outLED1~combout ;
-wire \enc_IE02|outLED2~combout ;
-wire \enc_IE01|outMATRIZ0~combout ;
-wire \enc_IE01|outMATRIZ1~combout ;
-wire \enc_IE01|outMATRIZ2~combout ;
-wire \enc_IE02|outMATRIZ0~combout ;
-wire \enc_IE02|outMATRIZ1~combout ;
-wire \enc_IE02|outMATRIZ2~combout ;
+wire \or12_S6~0_combout ;
+wire \B2~combout ;
+wire \A3~combout ;
+wire \A1~combout ;
+wire \or13_S6~0_combout ;
+wire \and01~combout ;
+wire \and02~combout ;
+wire \or13_S6~1_combout ;
+wire \or12_S6~1_combout ;
+wire \and03~combout ;
+wire \and04~combout ;
+wire \or13_S6~2_combout ;
+wire \or12_S6~2_combout ;
+wire \and05~combout ;
+wire \and06~combout ;
 
 
-// Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH3~I (
+// Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \A2~I (
 	.datain(gnd),
 	.oe(gnd),
-	.combout(\CH3~combout ),
-	.padio(CH3));
+	.combout(\A2~combout ),
+	.padio(A2));
 // synopsys translate_off
-defparam \CH3~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH2~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH2~combout ),
-	.padio(CH2));
-// synopsys translate_off
-defparam \CH2~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH1~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH1~combout ),
-	.padio(CH1));
-// synopsys translate_off
-defparam \CH1~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N0
-maxii_lcell \seletorIE02|V_P_FUN2~0 (
-// Equation(s):
-// \seletorIE02|V_P_FUN2~0_combout  = ((\CH1~combout  & (\CH3~combout  $ (\CH2~combout ))))
-
-	.clk(gnd),
-	.dataa(\CH3~combout ),
-	.datab(vcc),
-	.datac(\CH2~combout ),
-	.datad(\CH1~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|V_P_FUN2~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|V_P_FUN2~0 .lut_mask = "5a00";
-defparam \seletorIE02|V_P_FUN2~0 .operation_mode = "normal";
-defparam \seletorIE02|V_P_FUN2~0 .output_mode = "comb_only";
-defparam \seletorIE02|V_P_FUN2~0 .register_cascade_mode = "off";
-defparam \seletorIE02|V_P_FUN2~0 .sum_lutc_input = "datac";
-defparam \seletorIE02|V_P_FUN2~0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH6~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH6~combout ),
-	.padio(CH6));
-// synopsys translate_off
-defparam \CH6~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH7~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH7~combout ),
-	.padio(CH7));
-// synopsys translate_off
-defparam \CH7~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH5~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH5~combout ),
-	.padio(CH5));
-// synopsys translate_off
-defparam \CH5~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N3
-maxii_lcell \CONV_IE01|Or0~0 (
-// Equation(s):
-// \CONV_IE01|Or0~0_combout  = ((\CH5~combout  & (\CH6~combout  $ (\CH7~combout ))))
-
-	.clk(gnd),
-	.dataa(vcc),
-	.datab(\CH6~combout ),
-	.datac(\CH7~combout ),
-	.datad(\CH5~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\CONV_IE01|Or0~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \CONV_IE01|Or0~0 .lut_mask = "3c00";
-defparam \CONV_IE01|Or0~0 .operation_mode = "normal";
-defparam \CONV_IE01|Or0~0 .output_mode = "comb_only";
-defparam \CONV_IE01|Or0~0 .register_cascade_mode = "off";
-defparam \CONV_IE01|Or0~0 .sum_lutc_input = "datac";
-defparam \CONV_IE01|Or0~0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N8
-maxii_lcell \CON_PRIO|Or0~0 (
-// Equation(s):
-// \CON_PRIO|Or0~0_combout  = (\CH2~combout ) # (((!\CH6~combout  & \CH5~combout )) # (!\CH1~combout ))
-
-	.clk(gnd),
-	.dataa(\CH6~combout ),
-	.datab(\CH5~combout ),
-	.datac(\CH2~combout ),
-	.datad(\CH1~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\CON_PRIO|Or0~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \CON_PRIO|Or0~0 .lut_mask = "f4ff";
-defparam \CON_PRIO|Or0~0 .operation_mode = "normal";
-defparam \CON_PRIO|Or0~0 .output_mode = "comb_only";
-defparam \CON_PRIO|Or0~0 .register_cascade_mode = "off";
-defparam \CON_PRIO|Or0~0 .sum_lutc_input = "datac";
-defparam \CON_PRIO|Or0~0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X4_Y3_N2
-maxii_lcell \CON_PRIO|Or0~1 (
-// Equation(s):
-// \CON_PRIO|Or0~1_combout  = (\seletorIE02|V_P_FUN2~0_combout  & (((\CONV_IE01|Or0~0_combout  & \CON_PRIO|Or0~0_combout )))) # (!\seletorIE02|V_P_FUN2~0_combout  & (((\CONV_IE01|Or0~0_combout ) # (\CON_PRIO|Or0~0_combout ))))
-
-	.clk(gnd),
-	.dataa(\seletorIE02|V_P_FUN2~0_combout ),
-	.datab(vcc),
-	.datac(\CONV_IE01|Or0~0_combout ),
-	.datad(\CON_PRIO|Or0~0_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\CON_PRIO|Or0~1_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \CON_PRIO|Or0~1 .lut_mask = "f550";
-defparam \CON_PRIO|Or0~1 .operation_mode = "normal";
-defparam \CON_PRIO|Or0~1 .output_mode = "comb_only";
-defparam \CON_PRIO|Or0~1 .register_cascade_mode = "off";
-defparam \CON_PRIO|Or0~1 .sum_lutc_input = "datac";
-defparam \CON_PRIO|Or0~1 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH4~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH4~combout ),
-	.padio(CH4));
-// synopsys translate_off
-defparam \CH4~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \B2~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\B2~combout ),
-	.padio(B2));
-// synopsys translate_off
-defparam \B2~I .operation_mode = "input";
+defparam \A2~I .operation_mode = "input";
 // synopsys translate_on
 
 // Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -384,186 +109,6 @@ maxii_io \B3~I (
 defparam \B3~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X2_Y4_N7
-maxii_lcell \seletorIE01|PossbilidadeReal~0 (
-// Equation(s):
-// \seletorIE01|PossbilidadeReal~0_combout  = (\CH7~combout  & ((\B2~combout  & (!\CH4~combout  & !\B3~combout )) # (!\B2~combout  & (\CH4~combout  & \B3~combout ))))
-
-	.clk(gnd),
-	.dataa(\B2~combout ),
-	.datab(\CH7~combout ),
-	.datac(\CH4~combout ),
-	.datad(\B3~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|PossbilidadeReal~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|PossbilidadeReal~0 .lut_mask = "4008";
-defparam \seletorIE01|PossbilidadeReal~0 .operation_mode = "normal";
-defparam \seletorIE01|PossbilidadeReal~0 .output_mode = "comb_only";
-defparam \seletorIE01|PossbilidadeReal~0 .register_cascade_mode = "off";
-defparam \seletorIE01|PossbilidadeReal~0 .sum_lutc_input = "datac";
-defparam \seletorIE01|PossbilidadeReal~0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N9
-maxii_lcell \seletorIE01|PossbilidadeReal~2 (
-// Equation(s):
-// \seletorIE01|PossbilidadeReal~2_combout  = (\CH7~combout  & (((!\CH6~combout )))) # (!\CH7~combout  & ((\B2~combout  & (!\CH4~combout )) # (!\B2~combout  & ((\CH4~combout ) # (\CH6~combout )))))
-
-	.clk(gnd),
-	.dataa(\B2~combout ),
-	.datab(\CH7~combout ),
-	.datac(\CH4~combout ),
-	.datad(\CH6~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|PossbilidadeReal~2_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|PossbilidadeReal~2 .lut_mask = "13de";
-defparam \seletorIE01|PossbilidadeReal~2 .operation_mode = "normal";
-defparam \seletorIE01|PossbilidadeReal~2 .output_mode = "comb_only";
-defparam \seletorIE01|PossbilidadeReal~2 .register_cascade_mode = "off";
-defparam \seletorIE01|PossbilidadeReal~2 .sum_lutc_input = "datac";
-defparam \seletorIE01|PossbilidadeReal~2 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N4
-maxii_lcell \seletorIE01|PossbilidadeReal~3 (
-// Equation(s):
-// \seletorIE01|PossbilidadeReal~3_combout  = (\seletorIE01|PossbilidadeReal~2_combout  & ((\CH4~combout ) # ((\B2~combout ) # (\B3~combout ))))
-
-	.clk(gnd),
-	.dataa(\CH4~combout ),
-	.datab(\seletorIE01|PossbilidadeReal~2_combout ),
-	.datac(\B2~combout ),
-	.datad(\B3~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|PossbilidadeReal~3_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|PossbilidadeReal~3 .lut_mask = "ccc8";
-defparam \seletorIE01|PossbilidadeReal~3 .operation_mode = "normal";
-defparam \seletorIE01|PossbilidadeReal~3 .output_mode = "comb_only";
-defparam \seletorIE01|PossbilidadeReal~3 .register_cascade_mode = "off";
-defparam \seletorIE01|PossbilidadeReal~3 .sum_lutc_input = "datac";
-defparam \seletorIE01|PossbilidadeReal~3 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N2
-maxii_lcell \seletorIE01|PossbilidadeReal~1 (
-// Equation(s):
-// \seletorIE01|PossbilidadeReal~1_combout  = (\CH5~combout  & (((\seletorIE01|PossbilidadeReal~3_combout )))) # (!\CH5~combout  & (\seletorIE01|PossbilidadeReal~0_combout  & (\CH6~combout )))
-
-	.clk(gnd),
-	.dataa(\seletorIE01|PossbilidadeReal~0_combout ),
-	.datab(\CH6~combout ),
-	.datac(\seletorIE01|PossbilidadeReal~3_combout ),
-	.datad(\CH5~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|PossbilidadeReal~1_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|PossbilidadeReal~1 .lut_mask = "f088";
-defparam \seletorIE01|PossbilidadeReal~1 .operation_mode = "normal";
-defparam \seletorIE01|PossbilidadeReal~1 .output_mode = "comb_only";
-defparam \seletorIE01|PossbilidadeReal~1 .register_cascade_mode = "off";
-defparam \seletorIE01|PossbilidadeReal~1 .sum_lutc_input = "datac";
-defparam \seletorIE01|PossbilidadeReal~1 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N5
-maxii_lcell \seletorIE01|Saida0Funcionlidade (
-// Equation(s):
-// \seletorIE01|Saida0Funcionlidade~combout  = (((\CH4~combout  & \seletorIE01|PossbilidadeReal~1_combout )))
-
-	.clk(gnd),
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\CH4~combout ),
-	.datad(\seletorIE01|PossbilidadeReal~1_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|Saida0Funcionlidade~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|Saida0Funcionlidade .lut_mask = "f000";
-defparam \seletorIE01|Saida0Funcionlidade .operation_mode = "normal";
-defparam \seletorIE01|Saida0Funcionlidade .output_mode = "comb_only";
-defparam \seletorIE01|Saida0Funcionlidade .register_cascade_mode = "off";
-defparam \seletorIE01|Saida0Funcionlidade .sum_lutc_input = "datac";
-defparam \seletorIE01|Saida0Funcionlidade .synch_mode = "off";
-// synopsys translate_on
-
 // Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 maxii_io \B1~I (
 	.datain(gnd),
@@ -574,322 +119,14 @@ maxii_io \B1~I (
 defparam \B1~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \CH0~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\CH0~combout ),
-	.padio(CH0));
-// synopsys translate_off
-defparam \CH0~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: PIN_52,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-maxii_io \B0~I (
-	.datain(gnd),
-	.oe(gnd),
-	.combout(\B0~combout ),
-	.padio(B0));
-// synopsys translate_off
-defparam \B0~I .operation_mode = "input";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N4
-maxii_lcell \seletorIE02|PossbilidadeReal~2 (
+// Location: LC_X3_Y2_N1
+maxii_lcell \or12_S6~0 (
 // Equation(s):
-// \seletorIE02|PossbilidadeReal~2_combout  = (\CH3~combout  & (((!\CH2~combout )))) # (!\CH3~combout  & ((\CH0~combout  & ((!\B0~combout ))) # (!\CH0~combout  & ((\CH2~combout ) # (\B0~combout )))))
-
-	.clk(gnd),
-	.dataa(\CH3~combout ),
-	.datab(\CH0~combout ),
-	.datac(\CH2~combout ),
-	.datad(\B0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|PossbilidadeReal~2_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|PossbilidadeReal~2 .lut_mask = "1b5e";
-defparam \seletorIE02|PossbilidadeReal~2 .operation_mode = "normal";
-defparam \seletorIE02|PossbilidadeReal~2 .output_mode = "comb_only";
-defparam \seletorIE02|PossbilidadeReal~2 .register_cascade_mode = "off";
-defparam \seletorIE02|PossbilidadeReal~2 .sum_lutc_input = "datac";
-defparam \seletorIE02|PossbilidadeReal~2 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N6
-maxii_lcell \seletorIE02|PossbilidadeReal~3 (
-// Equation(s):
-// \seletorIE02|PossbilidadeReal~3_combout  = (\seletorIE02|PossbilidadeReal~2_combout  & ((\B1~combout ) # ((\CH0~combout ) # (\B0~combout ))))
-
-	.clk(gnd),
-	.dataa(\B1~combout ),
-	.datab(\CH0~combout ),
-	.datac(\seletorIE02|PossbilidadeReal~2_combout ),
-	.datad(\B0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|PossbilidadeReal~3_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|PossbilidadeReal~3 .lut_mask = "f0e0";
-defparam \seletorIE02|PossbilidadeReal~3 .operation_mode = "normal";
-defparam \seletorIE02|PossbilidadeReal~3 .output_mode = "comb_only";
-defparam \seletorIE02|PossbilidadeReal~3 .register_cascade_mode = "off";
-defparam \seletorIE02|PossbilidadeReal~3 .sum_lutc_input = "datac";
-defparam \seletorIE02|PossbilidadeReal~3 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N2
-maxii_lcell \seletorIE02|PossbilidadeReal~0 (
-// Equation(s):
-// \seletorIE02|PossbilidadeReal~0_combout  = (\CH3~combout  & ((\B1~combout  & (\CH0~combout  & !\B0~combout )) # (!\B1~combout  & (!\CH0~combout  & \B0~combout ))))
-
-	.clk(gnd),
-	.dataa(\B1~combout ),
-	.datab(\CH0~combout ),
-	.datac(\CH3~combout ),
-	.datad(\B0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|PossbilidadeReal~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|PossbilidadeReal~0 .lut_mask = "1080";
-defparam \seletorIE02|PossbilidadeReal~0 .operation_mode = "normal";
-defparam \seletorIE02|PossbilidadeReal~0 .output_mode = "comb_only";
-defparam \seletorIE02|PossbilidadeReal~0 .register_cascade_mode = "off";
-defparam \seletorIE02|PossbilidadeReal~0 .sum_lutc_input = "datac";
-defparam \seletorIE02|PossbilidadeReal~0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X4_Y1_N5
-maxii_lcell \seletorIE02|PossbilidadeReal~1 (
-// Equation(s):
-// \seletorIE02|PossbilidadeReal~1_combout  = (\CH1~combout  & (\seletorIE02|PossbilidadeReal~3_combout )) # (!\CH1~combout  & (((\seletorIE02|PossbilidadeReal~0_combout  & \CH2~combout ))))
-
-	.clk(gnd),
-	.dataa(\seletorIE02|PossbilidadeReal~3_combout ),
-	.datab(\seletorIE02|PossbilidadeReal~0_combout ),
-	.datac(\CH2~combout ),
-	.datad(\CH1~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|PossbilidadeReal~1_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|PossbilidadeReal~1 .lut_mask = "aac0";
-defparam \seletorIE02|PossbilidadeReal~1 .operation_mode = "normal";
-defparam \seletorIE02|PossbilidadeReal~1 .output_mode = "comb_only";
-defparam \seletorIE02|PossbilidadeReal~1 .register_cascade_mode = "off";
-defparam \seletorIE02|PossbilidadeReal~1 .sum_lutc_input = "datac";
-defparam \seletorIE02|PossbilidadeReal~1 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y3_N6
-maxii_lcell \comp_FUN|Or0 (
-// Equation(s):
-// \comp_FUN|Or0~combout  = (\CH4~combout  & (\seletorIE01|PossbilidadeReal~1_combout  $ (((\seletorIE02|PossbilidadeReal~1_combout  & \CH0~combout ))))) # (!\CH4~combout  & (\seletorIE02|PossbilidadeReal~1_combout  & ((\CH0~combout ))))
-
-	.clk(gnd),
-	.dataa(\CH4~combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\seletorIE01|PossbilidadeReal~1_combout ),
-	.datad(\CH0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\comp_FUN|Or0~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \comp_FUN|Or0 .lut_mask = "6ca0";
-defparam \comp_FUN|Or0 .operation_mode = "normal";
-defparam \comp_FUN|Or0 .output_mode = "comb_only";
-defparam \comp_FUN|Or0 .register_cascade_mode = "off";
-defparam \comp_FUN|Or0 .sum_lutc_input = "datac";
-defparam \comp_FUN|Or0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y4_N6
-maxii_lcell \seletorIE02|Saida2Funcionlidade (
-// Equation(s):
-// \seletorIE02|Saida2Funcionlidade~combout  = (((\B0~combout  & \seletorIE02|PossbilidadeReal~1_combout )))
+// \or12_S6~0_combout  = ((\B3~combout  & ((!\B1~combout ))))
 
 	.clk(gnd),
 	.dataa(vcc),
-	.datab(vcc),
-	.datac(\B0~combout ),
-	.datad(\seletorIE02|PossbilidadeReal~1_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE02|Saida2Funcionlidade~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE02|Saida2Funcionlidade .lut_mask = "f000";
-defparam \seletorIE02|Saida2Funcionlidade .operation_mode = "normal";
-defparam \seletorIE02|Saida2Funcionlidade .output_mode = "comb_only";
-defparam \seletorIE02|Saida2Funcionlidade .register_cascade_mode = "off";
-defparam \seletorIE02|Saida2Funcionlidade .sum_lutc_input = "datac";
-defparam \seletorIE02|Saida2Funcionlidade .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N6
-maxii_lcell \seletorIE01|Saida2Funcionlidade (
-// Equation(s):
-// \seletorIE01|Saida2Funcionlidade~combout  = (((\B2~combout  & \seletorIE01|PossbilidadeReal~1_combout )))
-
-	.clk(gnd),
-	.dataa(vcc),
-	.datab(vcc),
-	.datac(\B2~combout ),
-	.datad(\seletorIE01|PossbilidadeReal~1_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|Saida2Funcionlidade~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|Saida2Funcionlidade .lut_mask = "f000";
-defparam \seletorIE01|Saida2Funcionlidade .operation_mode = "normal";
-defparam \seletorIE01|Saida2Funcionlidade .output_mode = "comb_only";
-defparam \seletorIE01|Saida2Funcionlidade .register_cascade_mode = "off";
-defparam \seletorIE01|Saida2Funcionlidade .sum_lutc_input = "datac";
-defparam \seletorIE01|Saida2Funcionlidade .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X2_Y4_N8
-maxii_lcell \seletorIE01|Saida1Funcionlidade (
-// Equation(s):
-// \seletorIE01|Saida1Funcionlidade~combout  = ((\seletorIE01|PossbilidadeReal~1_combout  & ((\B3~combout ))))
-
-	.clk(gnd),
-	.dataa(vcc),
-	.datab(\seletorIE01|PossbilidadeReal~1_combout ),
-	.datac(vcc),
-	.datad(\B3~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\seletorIE01|Saida1Funcionlidade~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \seletorIE01|Saida1Funcionlidade .lut_mask = "cc00";
-defparam \seletorIE01|Saida1Funcionlidade .operation_mode = "normal";
-defparam \seletorIE01|Saida1Funcionlidade .output_mode = "comb_only";
-defparam \seletorIE01|Saida1Funcionlidade .register_cascade_mode = "off";
-defparam \seletorIE01|Saida1Funcionlidade .sum_lutc_input = "datac";
-defparam \seletorIE01|Saida1Funcionlidade .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y4_N8
-maxii_lcell \seletorIE02|Saida1Funcionlidade (
-// Equation(s):
-// \seletorIE02|Saida1Funcionlidade~combout  = ((\seletorIE02|PossbilidadeReal~1_combout  & ((\B1~combout ))))
-
-	.clk(gnd),
-	.dataa(vcc),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
+	.datab(\B3~combout ),
 	.datac(vcc),
 	.datad(\B1~combout ),
 	.aclr(gnd),
@@ -904,67 +141,60 @@ maxii_lcell \seletorIE02|Saida1Funcionlidade (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\seletorIE02|Saida1Funcionlidade~combout ),
+	.combout(\or12_S6~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \seletorIE02|Saida1Funcionlidade .lut_mask = "cc00";
-defparam \seletorIE02|Saida1Funcionlidade .operation_mode = "normal";
-defparam \seletorIE02|Saida1Funcionlidade .output_mode = "comb_only";
-defparam \seletorIE02|Saida1Funcionlidade .register_cascade_mode = "off";
-defparam \seletorIE02|Saida1Funcionlidade .sum_lutc_input = "datac";
-defparam \seletorIE02|Saida1Funcionlidade .synch_mode = "off";
+defparam \or12_S6~0 .lut_mask = "00cc";
+defparam \or12_S6~0 .operation_mode = "normal";
+defparam \or12_S6~0 .output_mode = "comb_only";
+defparam \or12_S6~0 .register_cascade_mode = "off";
+defparam \or12_S6~0 .sum_lutc_input = "datac";
+defparam \or12_S6~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N9
-maxii_lcell \comp_FUN|is_IGUAL~0 (
-// Equation(s):
-// \comp_FUN|is_IGUAL~0_combout  = (\seletorIE02|Saida2Funcionlidade~combout  & (\seletorIE01|Saida2Funcionlidade~combout  & (\seletorIE01|Saida1Funcionlidade~combout  $ (!\seletorIE02|Saida1Funcionlidade~combout )))) # 
-// (!\seletorIE02|Saida2Funcionlidade~combout  & (!\seletorIE01|Saida2Funcionlidade~combout  & (\seletorIE01|Saida1Funcionlidade~combout  $ (!\seletorIE02|Saida1Funcionlidade~combout ))))
-
-	.clk(gnd),
-	.dataa(\seletorIE02|Saida2Funcionlidade~combout ),
-	.datab(\seletorIE01|Saida2Funcionlidade~combout ),
-	.datac(\seletorIE01|Saida1Funcionlidade~combout ),
-	.datad(\seletorIE02|Saida1Funcionlidade~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\comp_FUN|is_IGUAL~0_combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
+// Location: PIN_48,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \B2~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\B2~combout ),
+	.padio(B2));
 // synopsys translate_off
-defparam \comp_FUN|is_IGUAL~0 .lut_mask = "9009";
-defparam \comp_FUN|is_IGUAL~0 .operation_mode = "normal";
-defparam \comp_FUN|is_IGUAL~0 .output_mode = "comb_only";
-defparam \comp_FUN|is_IGUAL~0 .register_cascade_mode = "off";
-defparam \comp_FUN|is_IGUAL~0 .sum_lutc_input = "datac";
-defparam \comp_FUN|is_IGUAL~0 .synch_mode = "off";
+defparam \B2~I .operation_mode = "input";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N3
-maxii_lcell \comp_FUN|is_IGUAL~1 (
+// Location: PIN_17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \A3~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\A3~combout ),
+	.padio(A3));
+// synopsys translate_off
+defparam \A3~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+maxii_io \A1~I (
+	.datain(gnd),
+	.oe(gnd),
+	.combout(\A1~combout ),
+	.padio(A1));
+// synopsys translate_off
+defparam \A1~I .operation_mode = "input";
+// synopsys translate_on
+
+// Location: LC_X3_Y2_N3
+maxii_lcell \or13_S6~0 (
 // Equation(s):
-// \comp_FUN|is_IGUAL~1_combout  = (((!\comp_FUN|Or0~combout  & \comp_FUN|is_IGUAL~0_combout )))
+// \or13_S6~0_combout  = ((\A3~combout  & ((!\A1~combout ))))
 
 	.clk(gnd),
 	.dataa(vcc),
-	.datab(vcc),
-	.datac(\comp_FUN|Or0~combout ),
-	.datad(\comp_FUN|is_IGUAL~0_combout ),
+	.datab(\A3~combout ),
+	.datac(vcc),
+	.datad(\A1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -977,30 +207,30 @@ maxii_lcell \comp_FUN|is_IGUAL~1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\comp_FUN|is_IGUAL~1_combout ),
+	.combout(\or13_S6~0_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \comp_FUN|is_IGUAL~1 .lut_mask = "0f00";
-defparam \comp_FUN|is_IGUAL~1 .operation_mode = "normal";
-defparam \comp_FUN|is_IGUAL~1 .output_mode = "comb_only";
-defparam \comp_FUN|is_IGUAL~1 .register_cascade_mode = "off";
-defparam \comp_FUN|is_IGUAL~1 .sum_lutc_input = "datac";
-defparam \comp_FUN|is_IGUAL~1 .synch_mode = "off";
+defparam \or13_S6~0 .lut_mask = "00cc";
+defparam \or13_S6~0 .operation_mode = "normal";
+defparam \or13_S6~0 .output_mode = "comb_only";
+defparam \or13_S6~0 .register_cascade_mode = "off";
+defparam \or13_S6~0 .sum_lutc_input = "datac";
+defparam \or13_S6~0 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N7
-maxii_lcell \enc_IE01|outLED0 (
+// Location: LC_X3_Y2_N2
+maxii_lcell and01(
 // Equation(s):
-// \enc_IE01|outLED0~combout  = (!\CONV_IE01|Or0~0_combout  & (\seletorIE01|Saida0Funcionlidade~combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \and01~combout  = (\A2~combout  & (\or12_S6~0_combout  & (!\B2~combout ))) # (!\A2~combout  & ((\or13_S6~0_combout ) # ((\or12_S6~0_combout  & !\B2~combout ))))
 
 	.clk(gnd),
-	.dataa(\CON_PRIO|Or0~1_combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\seletorIE01|Saida0Funcionlidade~combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
+	.dataa(\A2~combout ),
+	.datab(\or12_S6~0_combout ),
+	.datac(\B2~combout ),
+	.datad(\or13_S6~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1013,30 +243,30 @@ maxii_lcell \enc_IE01|outLED0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE01|outLED0~combout ),
+	.combout(\and01~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE01|outLED0 .lut_mask = "2030";
-defparam \enc_IE01|outLED0 .operation_mode = "normal";
-defparam \enc_IE01|outLED0 .output_mode = "comb_only";
-defparam \enc_IE01|outLED0 .register_cascade_mode = "off";
-defparam \enc_IE01|outLED0 .sum_lutc_input = "datac";
-defparam \enc_IE01|outLED0 .synch_mode = "off";
+defparam and01.lut_mask = "5d0c";
+defparam and01.operation_mode = "normal";
+defparam and01.output_mode = "comb_only";
+defparam and01.register_cascade_mode = "off";
+defparam and01.sum_lutc_input = "datac";
+defparam and01.synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N6
-maxii_lcell \enc_IE01|outLED1 (
+// Location: LC_X3_Y2_N8
+maxii_lcell and02(
 // Equation(s):
-// \enc_IE01|outLED1~combout  = (!\CONV_IE01|Or0~0_combout  & (\seletorIE01|Saida1Funcionlidade~combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \and02~combout  = (\A2~combout  & ((\or13_S6~0_combout ) # ((\or12_S6~0_combout  & \B2~combout )))) # (!\A2~combout  & (\or12_S6~0_combout  & (\B2~combout )))
 
 	.clk(gnd),
-	.dataa(\CON_PRIO|Or0~1_combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\seletorIE01|Saida1Funcionlidade~combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
+	.dataa(\A2~combout ),
+	.datab(\or12_S6~0_combout ),
+	.datac(\B2~combout ),
+	.datad(\or13_S6~0_combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1049,65 +279,29 @@ maxii_lcell \enc_IE01|outLED1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE01|outLED1~combout ),
+	.combout(\and02~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE01|outLED1 .lut_mask = "2030";
-defparam \enc_IE01|outLED1 .operation_mode = "normal";
-defparam \enc_IE01|outLED1 .output_mode = "comb_only";
-defparam \enc_IE01|outLED1 .register_cascade_mode = "off";
-defparam \enc_IE01|outLED1 .sum_lutc_input = "datac";
-defparam \enc_IE01|outLED1 .synch_mode = "off";
+defparam and02.lut_mask = "eac0";
+defparam and02.operation_mode = "normal";
+defparam and02.output_mode = "comb_only";
+defparam and02.register_cascade_mode = "off";
+defparam and02.sum_lutc_input = "datac";
+defparam and02.synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N9
-maxii_lcell \enc_IE01|outLED2 (
+// Location: LC_X3_Y2_N6
+maxii_lcell \or13_S6~1 (
 // Equation(s):
-// \enc_IE01|outLED2~combout  = (\seletorIE01|Saida2Funcionlidade~combout  & (!\CONV_IE01|Or0~0_combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \or13_S6~1_combout  = ((\A1~combout  & (!\A2~combout )))
 
 	.clk(gnd),
-	.dataa(\seletorIE01|Saida2Funcionlidade~combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\CON_PRIO|Or0~1_combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\enc_IE01|outLED2~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \enc_IE01|outLED2 .lut_mask = "2022";
-defparam \enc_IE01|outLED2 .operation_mode = "normal";
-defparam \enc_IE01|outLED2 .output_mode = "comb_only";
-defparam \enc_IE01|outLED2 .register_cascade_mode = "off";
-defparam \enc_IE01|outLED2 .sum_lutc_input = "datac";
-defparam \enc_IE01|outLED2 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X7_Y3_N5
-maxii_lcell \atv_PRIO1|Or0 (
-// Equation(s):
-// \atv_PRIO1|Or0~combout  = (((\comp_FUN|Or0~combout )) # (!\comp_FUN|is_IGUAL~0_combout )) # (!\CON_PRIO|Or0~1_combout )
-
-	.clk(gnd),
-	.dataa(\CON_PRIO|Or0~1_combout ),
-	.datab(\comp_FUN|is_IGUAL~0_combout ),
-	.datac(\comp_FUN|Or0~combout ),
+	.dataa(vcc),
+	.datab(\A1~combout ),
+	.datac(\A2~combout ),
 	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
@@ -1121,65 +315,29 @@ maxii_lcell \atv_PRIO1|Or0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\atv_PRIO1|Or0~combout ),
+	.combout(\or13_S6~1_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \atv_PRIO1|Or0 .lut_mask = "f7f7";
-defparam \atv_PRIO1|Or0 .operation_mode = "normal";
-defparam \atv_PRIO1|Or0 .output_mode = "comb_only";
-defparam \atv_PRIO1|Or0 .register_cascade_mode = "off";
-defparam \atv_PRIO1|Or0 .sum_lutc_input = "datac";
-defparam \atv_PRIO1|Or0 .synch_mode = "off";
+defparam \or13_S6~1 .lut_mask = "0c0c";
+defparam \or13_S6~1 .operation_mode = "normal";
+defparam \or13_S6~1 .output_mode = "comb_only";
+defparam \or13_S6~1 .register_cascade_mode = "off";
+defparam \or13_S6~1 .sum_lutc_input = "datac";
+defparam \or13_S6~1 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N7
-maxii_lcell \enc_IE02|outLED0 (
+// Location: LC_X3_Y2_N4
+maxii_lcell \or12_S6~1 (
 // Equation(s):
-// \enc_IE02|outLED0~combout  = (\CH0~combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (!\seletorIE02|V_P_FUN2~0_combout  & \atv_PRIO1|Or0~combout )))
+// \or12_S6~1_combout  = (((!\B2~combout  & \B1~combout )))
 
 	.clk(gnd),
-	.dataa(\CH0~combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\seletorIE02|V_P_FUN2~0_combout ),
-	.datad(\atv_PRIO1|Or0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\enc_IE02|outLED0~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \enc_IE02|outLED0 .lut_mask = "0800";
-defparam \enc_IE02|outLED0 .operation_mode = "normal";
-defparam \enc_IE02|outLED0 .output_mode = "comb_only";
-defparam \enc_IE02|outLED0 .register_cascade_mode = "off";
-defparam \enc_IE02|outLED0 .sum_lutc_input = "datac";
-defparam \enc_IE02|outLED0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y4_N4
-maxii_lcell \enc_IE02|outLED1 (
-// Equation(s):
-// \enc_IE02|outLED1~combout  = (\atv_PRIO1|Or0~combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (!\seletorIE02|V_P_FUN2~0_combout  & \B1~combout )))
-
-	.clk(gnd),
-	.dataa(\atv_PRIO1|Or0~combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\seletorIE02|V_P_FUN2~0_combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\B2~combout ),
 	.datad(\B1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
@@ -1193,30 +351,30 @@ maxii_lcell \enc_IE02|outLED1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE02|outLED1~combout ),
+	.combout(\or12_S6~1_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE02|outLED1 .lut_mask = "0800";
-defparam \enc_IE02|outLED1 .operation_mode = "normal";
-defparam \enc_IE02|outLED1 .output_mode = "comb_only";
-defparam \enc_IE02|outLED1 .register_cascade_mode = "off";
-defparam \enc_IE02|outLED1 .sum_lutc_input = "datac";
-defparam \enc_IE02|outLED1 .synch_mode = "off";
+defparam \or12_S6~1 .lut_mask = "0f00";
+defparam \or12_S6~1 .operation_mode = "normal";
+defparam \or12_S6~1 .output_mode = "comb_only";
+defparam \or12_S6~1 .register_cascade_mode = "off";
+defparam \or12_S6~1 .sum_lutc_input = "datac";
+defparam \or12_S6~1 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N1
-maxii_lcell \enc_IE02|outLED2 (
+// Location: LC_X3_Y2_N7
+maxii_lcell and03(
 // Equation(s):
-// \enc_IE02|outLED2~combout  = (!\seletorIE02|V_P_FUN2~0_combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (\B0~combout  & \atv_PRIO1|Or0~combout )))
+// \and03~combout  = (\or13_S6~1_combout  & (((\or12_S6~1_combout  & !\B3~combout )) # (!\A3~combout ))) # (!\or13_S6~1_combout  & (((\or12_S6~1_combout  & !\B3~combout ))))
 
 	.clk(gnd),
-	.dataa(\seletorIE02|V_P_FUN2~0_combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\B0~combout ),
-	.datad(\atv_PRIO1|Or0~combout ),
+	.dataa(\or13_S6~1_combout ),
+	.datab(\A3~combout ),
+	.datac(\or12_S6~1_combout ),
+	.datad(\B3~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1229,30 +387,30 @@ maxii_lcell \enc_IE02|outLED2 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE02|outLED2~combout ),
+	.combout(\and03~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE02|outLED2 .lut_mask = "4000";
-defparam \enc_IE02|outLED2 .operation_mode = "normal";
-defparam \enc_IE02|outLED2 .output_mode = "comb_only";
-defparam \enc_IE02|outLED2 .register_cascade_mode = "off";
-defparam \enc_IE02|outLED2 .sum_lutc_input = "datac";
-defparam \enc_IE02|outLED2 .synch_mode = "off";
+defparam and03.lut_mask = "22f2";
+defparam and03.operation_mode = "normal";
+defparam and03.output_mode = "comb_only";
+defparam and03.register_cascade_mode = "off";
+defparam and03.sum_lutc_input = "datac";
+defparam and03.synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N4
-maxii_lcell \enc_IE01|outMATRIZ0 (
+// Location: LC_X3_Y2_N0
+maxii_lcell and04(
 // Equation(s):
-// \enc_IE01|outMATRIZ0~combout  = (\CONV_IE01|Or0~0_combout  & (\seletorIE01|Saida0Funcionlidade~combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \and04~combout  = (\or13_S6~1_combout  & ((\A3~combout ) # ((\or12_S6~1_combout  & \B3~combout )))) # (!\or13_S6~1_combout  & (((\or12_S6~1_combout  & \B3~combout ))))
 
 	.clk(gnd),
-	.dataa(\CON_PRIO|Or0~1_combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\seletorIE01|Saida0Funcionlidade~combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
+	.dataa(\or13_S6~1_combout ),
+	.datab(\A3~combout ),
+	.datac(\or12_S6~1_combout ),
+	.datad(\B3~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1265,30 +423,30 @@ maxii_lcell \enc_IE01|outMATRIZ0 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE01|outMATRIZ0~combout ),
+	.combout(\and04~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE01|outMATRIZ0 .lut_mask = "80c0";
-defparam \enc_IE01|outMATRIZ0 .operation_mode = "normal";
-defparam \enc_IE01|outMATRIZ0 .output_mode = "comb_only";
-defparam \enc_IE01|outMATRIZ0 .register_cascade_mode = "off";
-defparam \enc_IE01|outMATRIZ0 .sum_lutc_input = "datac";
-defparam \enc_IE01|outMATRIZ0 .synch_mode = "off";
+defparam and04.lut_mask = "f888";
+defparam and04.operation_mode = "normal";
+defparam and04.output_mode = "comb_only";
+defparam and04.register_cascade_mode = "off";
+defparam and04.sum_lutc_input = "datac";
+defparam and04.synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N8
-maxii_lcell \enc_IE01|outMATRIZ1 (
+// Location: LC_X3_Y2_N5
+maxii_lcell \or13_S6~2 (
 // Equation(s):
-// \enc_IE01|outMATRIZ1~combout  = (\CONV_IE01|Or0~0_combout  & (\seletorIE01|Saida1Funcionlidade~combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \or13_S6~2_combout  = ((\A1~combout  & (\A2~combout )))
 
 	.clk(gnd),
-	.dataa(\CON_PRIO|Or0~1_combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\seletorIE01|Saida1Funcionlidade~combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
+	.dataa(vcc),
+	.datab(\A1~combout ),
+	.datac(\A2~combout ),
+	.datad(vcc),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1301,101 +459,29 @@ maxii_lcell \enc_IE01|outMATRIZ1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE01|outMATRIZ1~combout ),
+	.combout(\or13_S6~2_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE01|outMATRIZ1 .lut_mask = "80c0";
-defparam \enc_IE01|outMATRIZ1 .operation_mode = "normal";
-defparam \enc_IE01|outMATRIZ1 .output_mode = "comb_only";
-defparam \enc_IE01|outMATRIZ1 .register_cascade_mode = "off";
-defparam \enc_IE01|outMATRIZ1 .sum_lutc_input = "datac";
-defparam \enc_IE01|outMATRIZ1 .synch_mode = "off";
+defparam \or13_S6~2 .lut_mask = "c0c0";
+defparam \or13_S6~2 .operation_mode = "normal";
+defparam \or13_S6~2 .output_mode = "comb_only";
+defparam \or13_S6~2 .register_cascade_mode = "off";
+defparam \or13_S6~2 .sum_lutc_input = "datac";
+defparam \or13_S6~2 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X7_Y3_N2
-maxii_lcell \enc_IE01|outMATRIZ2 (
+// Location: LC_X3_Y2_N9
+maxii_lcell \or12_S6~2 (
 // Equation(s):
-// \enc_IE01|outMATRIZ2~combout  = (\seletorIE01|Saida2Funcionlidade~combout  & (\CONV_IE01|Or0~0_combout  & ((\CON_PRIO|Or0~1_combout ) # (!\comp_FUN|is_IGUAL~1_combout ))))
+// \or12_S6~2_combout  = (((\B2~combout  & \B1~combout )))
 
 	.clk(gnd),
-	.dataa(\seletorIE01|Saida2Funcionlidade~combout ),
-	.datab(\CONV_IE01|Or0~0_combout ),
-	.datac(\CON_PRIO|Or0~1_combout ),
-	.datad(\comp_FUN|is_IGUAL~1_combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\enc_IE01|outMATRIZ2~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \enc_IE01|outMATRIZ2 .lut_mask = "8088";
-defparam \enc_IE01|outMATRIZ2 .operation_mode = "normal";
-defparam \enc_IE01|outMATRIZ2 .output_mode = "comb_only";
-defparam \enc_IE01|outMATRIZ2 .register_cascade_mode = "off";
-defparam \enc_IE01|outMATRIZ2 .sum_lutc_input = "datac";
-defparam \enc_IE01|outMATRIZ2 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y4_N3
-maxii_lcell \enc_IE02|outMATRIZ0 (
-// Equation(s):
-// \enc_IE02|outMATRIZ0~combout  = (\CH0~combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (\seletorIE02|V_P_FUN2~0_combout  & \atv_PRIO1|Or0~combout )))
-
-	.clk(gnd),
-	.dataa(\CH0~combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\seletorIE02|V_P_FUN2~0_combout ),
-	.datad(\atv_PRIO1|Or0~combout ),
-	.aclr(gnd),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.cin(gnd),
-	.cin0(gnd),
-	.cin1(vcc),
-	.inverta(gnd),
-	.regcascin(gnd),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.combout(\enc_IE02|outMATRIZ0~combout ),
-	.regout(),
-	.cout(),
-	.cout0(),
-	.cout1());
-// synopsys translate_off
-defparam \enc_IE02|outMATRIZ0 .lut_mask = "8000";
-defparam \enc_IE02|outMATRIZ0 .operation_mode = "normal";
-defparam \enc_IE02|outMATRIZ0 .output_mode = "comb_only";
-defparam \enc_IE02|outMATRIZ0 .register_cascade_mode = "off";
-defparam \enc_IE02|outMATRIZ0 .sum_lutc_input = "datac";
-defparam \enc_IE02|outMATRIZ0 .synch_mode = "off";
-// synopsys translate_on
-
-// Location: LC_X3_Y4_N5
-maxii_lcell \enc_IE02|outMATRIZ1 (
-// Equation(s):
-// \enc_IE02|outMATRIZ1~combout  = (\atv_PRIO1|Or0~combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (\seletorIE02|V_P_FUN2~0_combout  & \B1~combout )))
-
-	.clk(gnd),
-	.dataa(\atv_PRIO1|Or0~combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\seletorIE02|V_P_FUN2~0_combout ),
+	.dataa(vcc),
+	.datab(vcc),
+	.datac(\B2~combout ),
 	.datad(\B1~combout ),
 	.aclr(gnd),
 	.aload(gnd),
@@ -1409,30 +495,30 @@ maxii_lcell \enc_IE02|outMATRIZ1 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE02|outMATRIZ1~combout ),
+	.combout(\or12_S6~2_combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE02|outMATRIZ1 .lut_mask = "8000";
-defparam \enc_IE02|outMATRIZ1 .operation_mode = "normal";
-defparam \enc_IE02|outMATRIZ1 .output_mode = "comb_only";
-defparam \enc_IE02|outMATRIZ1 .register_cascade_mode = "off";
-defparam \enc_IE02|outMATRIZ1 .sum_lutc_input = "datac";
-defparam \enc_IE02|outMATRIZ1 .synch_mode = "off";
+defparam \or12_S6~2 .lut_mask = "f000";
+defparam \or12_S6~2 .operation_mode = "normal";
+defparam \or12_S6~2 .output_mode = "comb_only";
+defparam \or12_S6~2 .register_cascade_mode = "off";
+defparam \or12_S6~2 .sum_lutc_input = "datac";
+defparam \or12_S6~2 .synch_mode = "off";
 // synopsys translate_on
 
-// Location: LC_X3_Y4_N0
-maxii_lcell \enc_IE02|outMATRIZ2 (
+// Location: LC_X4_Y2_N5
+maxii_lcell and05(
 // Equation(s):
-// \enc_IE02|outMATRIZ2~combout  = (\seletorIE02|V_P_FUN2~0_combout  & (\seletorIE02|PossbilidadeReal~1_combout  & (\B0~combout  & \atv_PRIO1|Or0~combout )))
+// \and05~combout  = (\or13_S6~2_combout  & (((\or12_S6~2_combout  & !\B3~combout )) # (!\A3~combout ))) # (!\or13_S6~2_combout  & (((\or12_S6~2_combout  & !\B3~combout ))))
 
 	.clk(gnd),
-	.dataa(\seletorIE02|V_P_FUN2~0_combout ),
-	.datab(\seletorIE02|PossbilidadeReal~1_combout ),
-	.datac(\B0~combout ),
-	.datad(\atv_PRIO1|Or0~combout ),
+	.dataa(\or13_S6~2_combout ),
+	.datab(\A3~combout ),
+	.datac(\or12_S6~2_combout ),
+	.datad(\B3~combout ),
 	.aclr(gnd),
 	.aload(gnd),
 	.sclr(gnd),
@@ -1445,188 +531,114 @@ maxii_lcell \enc_IE02|outMATRIZ2 (
 	.regcascin(gnd),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.combout(\enc_IE02|outMATRIZ2~combout ),
+	.combout(\and05~combout ),
 	.regout(),
 	.cout(),
 	.cout0(),
 	.cout1());
 // synopsys translate_off
-defparam \enc_IE02|outMATRIZ2 .lut_mask = "8000";
-defparam \enc_IE02|outMATRIZ2 .operation_mode = "normal";
-defparam \enc_IE02|outMATRIZ2 .output_mode = "comb_only";
-defparam \enc_IE02|outMATRIZ2 .register_cascade_mode = "off";
-defparam \enc_IE02|outMATRIZ2 .sum_lutc_input = "datac";
-defparam \enc_IE02|outMATRIZ2 .synch_mode = "off";
+defparam and05.lut_mask = "22f2";
+defparam and05.operation_mode = "normal";
+defparam and05.output_mode = "comb_only";
+defparam and05.register_cascade_mode = "off";
+defparam and05.sum_lutc_input = "datac";
+defparam and05.synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED0~I (
-	.datain(\enc_IE01|outLED0~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(LED0));
+// Location: LC_X4_Y2_N2
+maxii_lcell and06(
+// Equation(s):
+// \and06~combout  = (\or13_S6~2_combout  & ((\A3~combout ) # ((\or12_S6~2_combout  & \B3~combout )))) # (!\or13_S6~2_combout  & (((\or12_S6~2_combout  & \B3~combout ))))
+
+	.clk(gnd),
+	.dataa(\or13_S6~2_combout ),
+	.datab(\A3~combout ),
+	.datac(\or12_S6~2_combout ),
+	.datad(\B3~combout ),
+	.aclr(gnd),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.cin(gnd),
+	.cin0(gnd),
+	.cin1(vcc),
+	.inverta(gnd),
+	.regcascin(gnd),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.combout(\and06~combout ),
+	.regout(),
+	.cout(),
+	.cout0(),
+	.cout1());
 // synopsys translate_off
-defparam \LED0~I .operation_mode = "output";
+defparam and06.lut_mask = "f888";
+defparam and06.operation_mode = "normal";
+defparam and06.output_mode = "comb_only";
+defparam and06.register_cascade_mode = "off";
+defparam and06.sum_lutc_input = "datac";
+defparam and06.synch_mode = "off";
 // synopsys translate_on
 
-// Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED1~I (
-	.datain(\enc_IE01|outLED1~combout ),
+// Location: PIN_16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S0~I (
+	.datain(!\and01~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(LED1));
+	.padio(S0));
 // synopsys translate_off
-defparam \LED1~I .operation_mode = "output";
+defparam \S0~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_57,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED2~I (
-	.datain(\enc_IE01|outLED2~combout ),
+// Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S1~I (
+	.datain(!\and02~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(LED2));
+	.padio(S1));
 // synopsys translate_off
-defparam \LED2~I .operation_mode = "output";
+defparam \S1~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_61,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED3~I (
-	.datain(\enc_IE02|outLED0~combout ),
+// Location: PIN_15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S2~I (
+	.datain(!\and03~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(LED3));
+	.padio(S2));
 // synopsys translate_off
-defparam \LED3~I .operation_mode = "output";
+defparam \S2~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_67,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED4~I (
-	.datain(\enc_IE02|outLED1~combout ),
+// Location: PIN_21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S3~I (
+	.datain(!\and04~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(LED4));
+	.padio(S3));
 // synopsys translate_off
-defparam \LED4~I .operation_mode = "output";
+defparam \S3~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \LED5~I (
-	.datain(\enc_IE02|outLED2~combout ),
+// Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S4~I (
+	.datain(!\and05~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(LED5));
+	.padio(S4));
 // synopsys translate_off
-defparam \LED5~I .operation_mode = "output";
+defparam \S4~I .operation_mode = "output";
 // synopsys translate_on
 
-// Location: PIN_75,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED0~I (
-	.datain(!\enc_IE01|outMATRIZ0~combout ),
+// Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+maxii_io \S5~I (
+	.datain(!\and06~combout ),
 	.oe(vcc),
 	.combout(),
-	.padio(M_LED0));
+	.padio(S5));
 // synopsys translate_off
-defparam \M_LED0~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_64,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED1~I (
-	.datain(!\enc_IE01|outMATRIZ1~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED1));
-// synopsys translate_off
-defparam \M_LED1~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED2~I (
-	.datain(!\enc_IE01|outMATRIZ2~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED2));
-// synopsys translate_off
-defparam \M_LED2~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED3~I (
-	.datain(!\enc_IE02|outMATRIZ0~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED3));
-// synopsys translate_off
-defparam \M_LED3~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED4~I (
-	.datain(!\enc_IE02|outMATRIZ1~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED4));
-// synopsys translate_off
-defparam \M_LED4~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED5~I (
-	.datain(!\enc_IE02|outMATRIZ2~combout ),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED5));
-// synopsys translate_off
-defparam \M_LED5~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_87,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \M_LED6~I (
-	.datain(gnd),
-	.oe(vcc),
-	.combout(),
-	.padio(M_LED6));
-// synopsys translate_off
-defparam \M_LED6~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_77,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \MCOL_LED0~I (
-	.datain(vcc),
-	.oe(vcc),
-	.combout(),
-	.padio(MCOL_LED0));
-// synopsys translate_off
-defparam \MCOL_LED0~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \RGB_r~I (
-	.datain(gnd),
-	.oe(vcc),
-	.combout(),
-	.padio(RGB_r));
-// synopsys translate_off
-defparam \RGB_r~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \RGB_g~I (
-	.datain(gnd),
-	.oe(vcc),
-	.combout(),
-	.padio(RGB_g));
-// synopsys translate_off
-defparam \RGB_g~I .operation_mode = "output";
-// synopsys translate_on
-
-// Location: PIN_19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
-maxii_io \RGB_b~I (
-	.datain(gnd),
-	.oe(vcc),
-	.combout(),
-	.padio(RGB_b));
-// synopsys translate_off
-defparam \RGB_b~I .operation_mode = "output";
+defparam \S5~I .operation_mode = "output";
 // synopsys translate_on
 
 endmodule
