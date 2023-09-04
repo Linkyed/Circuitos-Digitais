@@ -1,251 +1,29 @@
-|TESTES
-LED0 << enc_FUN:enc_IE01.port5
-LED1 << enc_FUN:enc_IE01.port5
-LED2 << enc_FUN:enc_IE01.port5
-LED3 << enc_FUN:enc_IE02.port5
-LED4 << enc_FUN:enc_IE02.port5
-LED5 << enc_FUN:enc_IE02.port5
-M_LED0 << enc_FUN:enc_IE01.port6
-M_LED1 << enc_FUN:enc_IE01.port6
-M_LED2 << enc_FUN:enc_IE01.port6
-M_LED3 << enc_FUN:enc_IE02.port6
-M_LED4 << enc_FUN:enc_IE02.port6
-M_LED5 << enc_FUN:enc_IE02.port6
-M_LED6 << <GND>
-MCOL_LED0 << <VCC>
-RGB_r << controladorPrioridade:CON_PRIO.port3
-RGB_g << controladorPrioridade:CON_PRIO.port4
-RGB_b << controladorPrioridade:CON_PRIO.port5
-CH7 => CH7.IN2
-CH6 => CH6.IN2
-CH5 => CH5.IN2
-CH4 => CH4.IN1
-B3 => B3.IN1
-B2 => B2.IN1
-CH3 => CH3.IN2
-CH2 => CH2.IN2
-CH1 => CH1.IN2
-CH0 => CH0.IN1
-B1 => B1.IN1
-B0 => B0.IN1
-
-
-|TESTES|conversor_perfil_binario:CONV_IE01
-A => And2.IN0
-A => And3.IN0
-B => And3.IN1
-B => And2.IN1
-B => And0.IN0
-C => And3.IN2
-C => And2.IN2
-C => And0.IN1
-out[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|conversor_perfil_binario:CONV_IE02
-A => And2.IN0
-A => And3.IN0
-B => And3.IN1
-B => And2.IN1
-B => And0.IN0
-C => And3.IN2
-C => And2.IN2
-C => And0.IN1
-out[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|seletorFUN:seletorIE01
-out[0] <= Saida0Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= Saida1Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= Saida2Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-A => AndADM.IN0
-A => AndGUEST.IN0
-A => AndTESTER.IN0
-A => AndUSER.IN0
-B => AndTESTER.IN1
-B => AndGUEST.IN1
-B => AndADM.IN1
-B => AndUSER.IN1
-C => AndADM.IN2
-C => AndTESTER.IN2
-C => AndUSER.IN2
-C => AndGUEST.IN2
-D => Funcionlidade4.IN0
-D => Funcionlidade5.IN0
-D => Funcionlidade6.IN0
-D => Funcionlidade7.IN0
-D => Saida0Funcionlidade.IN1
-D => Funcionlidade1.IN0
-D => Funcionlidade2.IN0
-D => Funcionlidade3.IN0
-E => Funcionlidade2.IN1
-E => Funcionlidade3.IN1
-E => Funcionlidade6.IN1
-E => Funcionlidade7.IN1
-E => Saida1Funcionlidade.IN1
-E => Funcionlidade1.IN1
-E => Funcionlidade4.IN1
-E => Funcionlidade5.IN1
-F => Funcionlidade1.IN2
-F => Funcionlidade3.IN2
-F => Funcionlidade5.IN2
-F => Funcionlidade7.IN2
-F => Saida2Funcionlidade.IN1
-F => Funcionlidade2.IN2
-F => Funcionlidade4.IN2
-F => Funcionlidade6.IN2
-
-
-|TESTES|seletorFUN:seletorIE02
-out[0] <= Saida0Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-out[1] <= Saida1Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-out[2] <= Saida2Funcionlidade.DB_MAX_OUTPUT_PORT_TYPE
-A => AndADM.IN0
-A => AndGUEST.IN0
-A => AndTESTER.IN0
-A => AndUSER.IN0
-B => AndTESTER.IN1
-B => AndGUEST.IN1
-B => AndADM.IN1
-B => AndUSER.IN1
-C => AndADM.IN2
-C => AndTESTER.IN2
-C => AndUSER.IN2
-C => AndGUEST.IN2
-D => Funcionlidade4.IN0
-D => Funcionlidade5.IN0
-D => Funcionlidade6.IN0
-D => Funcionlidade7.IN0
-D => Saida0Funcionlidade.IN1
-D => Funcionlidade1.IN0
-D => Funcionlidade2.IN0
-D => Funcionlidade3.IN0
-E => Funcionlidade2.IN1
-E => Funcionlidade3.IN1
-E => Funcionlidade6.IN1
-E => Funcionlidade7.IN1
-E => Saida1Funcionlidade.IN1
-E => Funcionlidade1.IN1
-E => Funcionlidade4.IN1
-E => Funcionlidade5.IN1
-F => Funcionlidade1.IN2
-F => Funcionlidade3.IN2
-F => Funcionlidade5.IN2
-F => Funcionlidade7.IN2
-F => Saida2Funcionlidade.IN1
-F => Funcionlidade2.IN2
-F => Funcionlidade4.IN2
-F => Funcionlidade6.IN2
-
-
-|TESTES|comp_FUN:comp_FUN
-A => Or0.IN0
-B => Or1.IN0
-C => Or2.IN0
-D => Or0.IN1
-E => Or1.IN1
-F => Or2.IN1
-out <= is_IGUAL.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|controladorPrioridade:CON_PRIO
-PERF_IE01[0] => And0.IN0
-PERF_IE01[0] => And1.IN0
-PERF_IE01[0] => And2.IN0
-PERF_IE01[1] => And0.IN1
-PERF_IE01[1] => And3.IN0
-PERF_IE02[0] => And1.IN1
-PERF_IE02[0] => And3.IN1
-PERF_IE02[0] => And4.IN0
-PERF_IE02[1] => And2.IN1
-PERF_IE02[1] => And4.IN1
-out <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-LED_r <= <GND>
-LED_g <= <GND>
-LED_b <= <GND>
-
-
-|TESTES|atv_PRIO:atv_PRIO0
-PRIO => And1.IN0
-PRIO => And2.IN0
-PRIO => And0.IN0
-FUN_IG => And2.IN1
-FUN_IG => And0.IN1
-FUN_IG => And1.IN1
-out <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|atv_PRIO:atv_PRIO1
-PRIO => And1.IN0
-PRIO => And2.IN0
-PRIO => And0.IN0
-FUN_IG => And2.IN1
-FUN_IG => And0.IN1
-FUN_IG => And1.IN1
-out <= Or0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|enc_FUN:enc_IE01
-A => outLED0.IN0
-A => outMATRIZ0.IN0
-A => out7SEG.IN0
-B => outLED1.IN0
-B => outMATRIZ1.IN0
-B => out7SEG.IN1
-C => outLED2.IN0
-C => outMATRIZ2.IN0
-C => out7SEG.IN2
-atv_PRIO => outLED0.IN1
-atv_PRIO => outLED1.IN1
-atv_PRIO => outLED2.IN1
-atv_PRIO => outMATRIZ0.IN1
-atv_PRIO => outMATRIZ1.IN1
-atv_PRIO => outMATRIZ2.IN1
-INTERF => outMATRIZ0.IN2
-INTERF => outMATRIZ1.IN2
-INTERF => outMATRIZ2.IN2
-INTERF => outLED0.IN2
-INTERF => outLED1.IN2
-INTERF => outLED2.IN2
-out_LEDS[0] <= outLED0.DB_MAX_OUTPUT_PORT_TYPE
-out_LEDS[1] <= outLED1.DB_MAX_OUTPUT_PORT_TYPE
-out_LEDS[2] <= outLED2.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[0] <= outMATRIZ0.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[1] <= outMATRIZ1.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[2] <= outMATRIZ2.DB_MAX_OUTPUT_PORT_TYPE
-out_7SEG <= out7SEG.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|TESTES|enc_FUN:enc_IE02
-A => outLED0.IN0
-A => outMATRIZ0.IN0
-A => out7SEG.IN0
-B => outLED1.IN0
-B => outMATRIZ1.IN0
-B => out7SEG.IN1
-C => outLED2.IN0
-C => outMATRIZ2.IN0
-C => out7SEG.IN2
-atv_PRIO => outLED0.IN1
-atv_PRIO => outLED1.IN1
-atv_PRIO => outLED2.IN1
-atv_PRIO => outMATRIZ0.IN1
-atv_PRIO => outMATRIZ1.IN1
-atv_PRIO => outMATRIZ2.IN1
-INTERF => outMATRIZ0.IN2
-INTERF => outMATRIZ1.IN2
-INTERF => outMATRIZ2.IN2
-INTERF => outLED0.IN2
-INTERF => outLED1.IN2
-INTERF => outLED2.IN2
-out_LEDS[0] <= outLED0.DB_MAX_OUTPUT_PORT_TYPE
-out_LEDS[1] <= outLED1.DB_MAX_OUTPUT_PORT_TYPE
-out_LEDS[2] <= outLED2.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[0] <= outMATRIZ0.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[1] <= outMATRIZ1.DB_MAX_OUTPUT_PORT_TYPE
-out_MATRIZ[2] <= outMATRIZ2.DB_MAX_OUTPUT_PORT_TYPE
-out_7SEG <= out7SEG.DB_MAX_OUTPUT_PORT_TYPE
+|decod_7seg
+a <= MOSTRAR_A.DB_MAX_OUTPUT_PORT_TYPE
+b <= MOSTRAR_B.DB_MAX_OUTPUT_PORT_TYPE
+c <= MOSTRAR_C.DB_MAX_OUTPUT_PORT_TYPE
+d <= MOSTRAR_D.DB_MAX_OUTPUT_PORT_TYPE
+e <= MOSTRAR_E.DB_MAX_OUTPUT_PORT_TYPE
+f <= MOSTRAR_F.DB_MAX_OUTPUT_PORT_TYPE
+g <= MOSTRAR_G.DB_MAX_OUTPUT_PORT_TYPE
+MSB => POSSIBIDADE_NUM_1.IN0
+MSB => POSSIBIDADE_NUM_4.IN0
+MSB => POSSIBIDADE_NUM_2.IN0
+MSB => POSSIBIDADE_NUM_3.IN0
+B => POSSIBIDADE_NUM_2.IN1
+B => POSSIBIDADE_NUM_4.IN1
+B => POSSIBIDADE_NUM_1.IN1
+B => POSSIBIDADE_NUM_3.IN1
+LSB => POSSIBIDADE_NUM_1.IN2
+LSB => POSSIBIDADE_NUM_2.IN2
+LSB => POSSIBIDADE_NUM_3.IN2
+LSB => POSSIBIDADE_NUM_4.IN2
+Func => MOSTRAR_A.IN1
+Func => MOSTRAR_B.DATAIN
+Func => MOSTRAR_C.IN1
+Func => MOSTRAR_D.IN1
+Func => MOSTRAR_E.IN3
+Func => MOSTRAR_F.IN3
+Func => MOSTRAR_G.IN1
 
 

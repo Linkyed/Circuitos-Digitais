@@ -1,0 +1,18 @@
+module decod_Matriz(MSB, B, LSB,MLed0,MLed2,MLed3,MLed4,MLed5,MLed6);
+	input MSB, B, LSB;
+	output MLed0,MLed2,MLed3,MLed4,MLed5,MLed6;
+	
+	wire not_MSB, not_B, not_LSB;
+	
+	not int_MSB(not_MSB, MSB);
+	not int_B(not_B, B);
+	not int_LSB(not_LSB, LSB);
+	
+	and func_1(MLed0, not_MSB, not_B, LSB);
+	and func_3(MLed2, not_MSB, B, LSB);
+	and func_4(MLed3, MSB, not_B, not_LSB);
+	and func_5(MLed4, MSB, not_B, LSB);
+	and func_6(MLed5, MSB, B, not_LSB);
+	and func_7(MLed6, MSB, B, LSB);
+	
+endmodule

@@ -39,10 +39,10 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY TESTES
+set_global_assignment -name TOP_LEVEL_ENTITY decod_7seg
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:08:44  AUGUST 18, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -68,7 +68,6 @@ set_location_assignment PIN_52 -to B0
 set_location_assignment PIN_86 -to LEDRGB_red
 set_location_assignment PIN_72 -to LEDRGB_green
 set_location_assignment PIN_74 -to LEDRGB_blue
-set_global_assignment -name VECTOR_WAVEFORM_FILE testarComparador.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE controladorPrioridade.sv
 set_location_assignment PIN_54 -to LED0
 set_location_assignment PIN_55 -to LED1
@@ -76,7 +75,6 @@ set_location_assignment PIN_57 -to LED2
 set_location_assignment PIN_61 -to LED3
 set_location_assignment PIN_67 -to LED4
 set_location_assignment PIN_69 -to LED5
-set_global_assignment -name VECTOR_WAVEFORM_FILE testarPrioridade.vwf
 set_global_assignment -name VERILOG_FILE comp_FUN.v
 set_global_assignment -name VERILOG_FILE selec_FUN2.v
 set_global_assignment -name VERILOG_FILE enc_FUN.v
@@ -86,13 +84,10 @@ set_global_assignment -name VERILOG_FILE fil_7SEG.v
 set_global_assignment -name VERILOG_FILE atv_PRIO.v
 set_global_assignment -name SYSTEMVERILOG_FILE FUN2_P_S.sv
 set_global_assignment -name VERILOG_FILE tristate_buffer.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE testeTribuffer.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE TesteEncaminhadores.vwf
-set_global_assignment -name VERILOG_FILE decodificador_Matriz_De_Led.v
-set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
-set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
-set_global_assignment -name VECTOR_WAVEFORM_FILE ../../../../Downloads/Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
+set_global_assignment -name VERILOG_FILE decod_Leds.v
+set_global_assignment -name VERILOG_FILE decod_Matriz.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name VERILOG_FILE decod_7seg.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf

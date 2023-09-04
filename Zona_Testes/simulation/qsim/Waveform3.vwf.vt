@@ -19,86 +19,66 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/03/2023 20:03:05"
+// Generated on "09/03/2023 16:52:29"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          decodificador_Matriz_De_Led
+// Verilog Test Bench (with test vectors) for design :                          controladorPrioridade
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module decodificador_Matriz_De_Led_vlg_vec_tst();
+module controladorPrioridade_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg A1;
-reg A2;
-reg A3;
-reg B1;
-reg B2;
-reg B3;
+reg [1:0] PERF_IE01;
+reg [1:0] PERF_IE02;
 // wires                                               
-wire S0;
-wire S1;
-wire S2;
-wire S3;
-wire S4;
-wire S5;
+wire LED_b;
+wire LED_g;
+wire LED_r;
+wire out;
 
 // assign statements (if any)                          
-decodificador_Matriz_De_Led i1 (
+controladorPrioridade i1 (
 // port map - connection between master ports and signals/registers   
-	.A1(A1),
-	.A2(A2),
-	.A3(A3),
-	.B1(B1),
-	.B2(B2),
-	.B3(B3),
-	.S0(S0),
-	.S1(S1),
-	.S2(S2),
-	.S3(S3),
-	.S4(S4),
-	.S5(S5)
+	.LED_b(LED_b),
+	.LED_g(LED_g),
+	.LED_r(LED_r),
+	.PERF_IE01(PERF_IE01),
+	.PERF_IE02(PERF_IE02),
+	.out(out)
 );
 initial 
 begin 
-#1000000 $finish;
+#160000 $finish;
 end 
-
-// A1
-initial
+// PERF_IE01[ 1 ]
+always
 begin
-	A1 = 1'b0;
+	PERF_IE01[1] = 1'b0;
+	PERF_IE01[1] = #10000 1'b1;
+	#10000;
 end 
-
-// A2
-initial
+// PERF_IE01[ 0 ]
+always
 begin
-	A2 = 1'b1;
+	PERF_IE01[0] = 1'b0;
+	PERF_IE01[0] = #20000 1'b1;
+	#20000;
 end 
-
-// A3
-initial
+// PERF_IE02[ 1 ]
+always
 begin
-	A3 = 1'b0;
+	PERF_IE02[1] = 1'b0;
+	PERF_IE02[1] = #40000 1'b1;
+	#40000;
 end 
-
-// B1
-initial
+// PERF_IE02[ 0 ]
+always
 begin
-	B1 = 1'b0;
-end 
-
-// B2
-initial
-begin
-	B2 = 1'b0;
-end 
-
-// B3
-initial
-begin
-	B3 = 1'b0;
+	PERF_IE02[0] = 1'b0;
+	PERF_IE02[0] = #80000 1'b1;
+	#80000;
 end 
 endmodule
 
