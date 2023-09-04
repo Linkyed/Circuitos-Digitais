@@ -1,0 +1,50 @@
+# Reading pref.tcl
+# do TESTES_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes {C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:22:26 on Sep 03,2023
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes" C:/Users/teus_/Desktop/CD/Circuitos-Digitais/Zona_Testes/decodificador_Matriz_De_Led.v 
+# -- Compiling module decodificador_Matriz_De_Led
+# 
+# Top level modules:
+# 	decodificador_Matriz_De_Led
+# End time: 19:22:26 on Sep 03,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.decodificador_Matriz_De_Led
+# vsim work.decodificador_Matriz_De_Led 
+# Start time: 19:22:33 on Sep 03,2023
+# Loading work.decodificador_Matriz_De_Led
+add wave -position end  sim:/decodificador_Matriz_De_Led/A1
+add wave -position end  sim:/decodificador_Matriz_De_Led/A2
+add wave -position end  sim:/decodificador_Matriz_De_Led/A3
+add wave -position end  sim:/decodificador_Matriz_De_Led/B1
+add wave -position end  sim:/decodificador_Matriz_De_Led/B2
+add wave -position end  sim:/decodificador_Matriz_De_Led/B3
+add wave -position end  sim:/decodificador_Matriz_De_Led/S0
+add wave -position end  sim:/decodificador_Matriz_De_Led/S1
+add wave -position end  sim:/decodificador_Matriz_De_Led/S2
+add wave -position end  sim:/decodificador_Matriz_De_Led/S3
+add wave -position end  sim:/decodificador_Matriz_De_Led/S4
+add wave -position end  sim:/decodificador_Matriz_De_Led/S5
+force -freeze sim:/decodificador_Matriz_De_Led/A1 1 0
+force -freeze sim:/decodificador_Matriz_De_Led/A2 0 0
+force -freeze sim:/decodificador_Matriz_De_Led/A3 0 0
+force -freeze sim:/decodificador_Matriz_De_Led/B1 0 0
+force -freeze sim:/decodificador_Matriz_De_Led/B2 0 0
+force -freeze sim:/decodificador_Matriz_De_Led/B3 0 0
+run
+# WARNING: No extended dataflow license exists
+# WARNING: No extended dataflow license exists
+# End time: 19:29:33 on Sep 03,2023, Elapsed time: 0:07:00
+# Errors: 0, Warnings: 0
