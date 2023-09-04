@@ -1,1 +1,1 @@
-Warning (10273): Verilog HDL warning at tristate_buffer.v(6): extended using "x" or "z" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/tristate_buffer.v Line: 6
+Info (10281): Verilog HDL Declaration information at decod_7seg.v(3): object "B" differs only in case from object "b" in the same scope File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/decod_7seg.v Line: 3

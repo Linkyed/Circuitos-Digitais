@@ -1,0 +1,16 @@
+module decod_Leds(MSB, B, LSB,Led1,Led3,Led4, Led6);
+	input MSB, B, LSB;
+	output Led1,Led3,Led4, Led6;
+	
+	wire not_MSB, not_B, not_LSB;
+	
+	not int_MSB(not_MSB, MSB);
+	not int_B(not_B, B);
+	not int_LSB(not_LSB, LSB);
+	
+	and func_1(Led1, not_MSB, not_B, LSB);
+	and func_3(Led1, not_MSB, not_B, LSB);
+	and func_4(Led1, MSB, not_B, not_LSB);
+	and func_6(Led1, MSB, B, not_LSB);
+	
+endmodule

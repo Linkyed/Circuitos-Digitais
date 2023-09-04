@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Aug 29 19:10:02 2023
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Fitter Status : Successful - Mon Sep 04 14:50:13 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TESTES
-Top-level Entity Name : TESTES
+Top-level Entity Name : decod_7seg
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 33 / 240 ( 14 % )
-Total pins : 29 / 80 ( 36 % )
+Total logic elements : 6 / 240 ( 3 % )
+Total pins : 11 / 80 ( 14 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
