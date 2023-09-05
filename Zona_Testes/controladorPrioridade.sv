@@ -1,6 +1,6 @@
-module controladorPrioridade(PERF_IE01, PERF_IE02, out, LED_r, LED_g, LED_b);
+module controladorPrioridade(PERF_IE01, PERF_IE02, out);
 	input [1:0] PERF_IE01, PERF_IE02;
-	output LED_r, LED_g, LED_b, out;
+	output out;
 	wire IE01_equal_IE02, IE01_less_IE02, IE01_greater_IE02, PERF_IE02_not0, PERF_IE02_not1,
 	SUP1, SUP2, SUP3, SUP4, SUP5;
 	

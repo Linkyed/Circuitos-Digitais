@@ -1,22 +1,27 @@
 module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
 					M_LED0, M_LED1, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
-					RGB_r, RGB_g, RGB_b, // LED RGB 
+					RGB_r, // LED RGB 
 					CH7, CH6, CH5, CH4, B3, B2, // IE01
-					CH3, CH2, CH1, CH0, B1, B0 ); // IE02
+					CH3, CH2, CH1, CH0, B1, B0, // IE02
+					SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g,
+				 l1, l2, l3, l4, l5, l6, m1, m2, m3, m4, m5, m6,  D7_0, D7_1, D7_2); 
 					
    input CH7, CH6, CH5, CH4, B3, B2, 
 			CH3, CH2, CH1, CH0, B1, B0;
 			
    output LED0, LED1, LED2, LED3, LED4, LED5, 
-			 RGB_r, RGB_g, RGB_b,
-			 M_LED0, M_LED1, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0;
+			 RGB_r, D7_0, D7_1, D7_2,
+			 M_LED0, M_LED1, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
+			 SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g,
+			
+			 l1, l2, l3, l4, l5, l6, m1, m2, m3, m4, m5, m6;
 			 
-	wire [1:0] BIN_IE01, BIN_IE02, S_FUN02;
+	wire [1:0] BIN_IE01, BIN_IE02, S_FUN02, SEG7_atv_per;
 	wire [2: 0] FUN_IE01, FUN_IE02, auxPERF0, auxPERF1, F_PER7SEG, LEDs_IE01, MATRIZ_IE01,
 	LEDs_IE02, MATRIZ_IE02, FUN2_P0, FUN2_P1, FUN2_P_VER;
 	wire [11:0] outPrioridade;
 	wire IE01_FUN2, IE02_FUN2, PRIO, PRIO_not, FUN_IGUAIS, atv_PRIO_IE01, atv_PRIO_IE02, SEG7_IE01, SEG7_IE02, atv_PRIO,
-	atv_PRIO_not;
+	atv_PRIO_not, P_SEG7_0, P_SEG7_1, P_SEG7_2, ver_PIE01, ver_PIE02;
 
 
 	conversor_perfil_binario CONV_IE01 (CH7, CH6, CH5, BIN_IE01);
@@ -27,7 +32,7 @@ module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
 	
 	comp_FUN comp_FUN (FUN_IE01[0], FUN_IE01[1], FUN_IE01[2], FUN_IE02[0], FUN_IE02[1], FUN_IE02[2], FUN_IGUAIS);
 	
-	controladorPrioridade CON_PRIO (BIN_IE01, BIN_IE02, PRIO, RGB_r, RGB_g, RGB_b); 
+	controladorPrioridade CON_PRIO (BIN_IE01, BIN_IE02, PRIO); 
 	
 	not inv_PRIO (PRIO_not, PRIO);
 	
@@ -39,20 +44,41 @@ module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
 	enc_FUN enc_IE01 (FUN_IE01[0], FUN_IE01[1], FUN_IE01[2], atv_PRIO_IE01, BIN_IE01[0], LEDs_IE01, MATRIZ_IE01, SEG7_IE01);
 	enc_FUN enc_IE02 (FUN_IE02[0], FUN_IE02[1], FUN_IE02[2], atv_PRIO_IE02, BIN_IE02[0], LEDs_IE02, MATRIZ_IE02, SEG7_IE02);
 	
-	wire LED0 = LEDs_IE01[0];
-	wire LED1 = LEDs_IE01[1];
-	wire LED2 = LEDs_IE01[2];
-	wire LED3 = LEDs_IE02[0];
-	wire LED4 = LEDs_IE02[1];
-	wire LED5 = LEDs_IE02[2];
+	decisor decisor (SEG7_IE01, SEG7_IE02, SEG7_atv_per);
+	
+	enc_perf enc_p_0 (CH7, CH3, SEG7_atv_per[0], SEG7_atv_per[1], P_SEG7_0);
+	enc_perf enc_p_1 (CH6, CH2, SEG7_atv_per[0], SEG7_atv_per[1], P_SEG7_1);
+	enc_perf enc_p_2 (CH5, CH1, SEG7_atv_per[0], SEG7_atv_per[1], P_SEG7_2);
+	
+	decod_Leds Ligar_Leds(LEDs_IE01[0], LEDs_IE01[1], LEDs_IE01[2],LEDs_IE02[0], LEDs_IE02[1], LEDs_IE02[2], LED0, LED2, LED3, LED5);
 	
 	wire MCOL_LED0 = 1;
-	not (M_LED0, MATRIZ_IE01[0]);
-	not (M_LED1, MATRIZ_IE01[1]);
-	not (M_LED2, MATRIZ_IE01[2]);
-	not (M_LED3, MATRIZ_IE02[0]);
-	not (M_LED4, MATRIZ_IE02[1]);
-	not (M_LED5, MATRIZ_IE02[2]);
+	decod_Matriz Ligar_MLeds(MATRIZ_IE01[0], MATRIZ_IE01[1], MATRIZ_IE01[2],MATRIZ_IE02[0], MATRIZ_IE02[1], MATRIZ_IE02[2], M_LED0, M_LED2, M_LED3, M_LED4 , M_LED5, M_LED6);
+	
+	decod_7seg Ligar_7seg (SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g, P_SEG7_0, P_SEG7_0, P_SEG7_2);
+	
+	verfi_perf verf_p_IE01 (CH7, CH6, CH5, ver_PIE01);
+	verfi_perf verf_p_IE02 (CH3, CH2, CH1, ver_PIE02);
+	
+	nor (RGB_r, ver_PIE01, ver_PIE02);
+	
+	wire l1 = LEDs_IE01[2];
+	wire l2 = LEDs_IE01[1];
+	wire l3 = LEDs_IE01[0];
+	wire l4 = LEDs_IE02[0];
+	wire l5 = LEDs_IE02[1];
+	wire l6 = LEDs_IE02[2];
+	
+	wire D7_0 = P_SEG7_0;
+	wire D7_1 = P_SEG7_1;
+	wire D7_2 = P_SEG7_2;
+	
+	not (m1, MATRIZ_IE01[0]);
+	not (m2, MATRIZ_IE01[1]);
+	not (m3, MATRIZ_IE01[2]);
+	not (m4, MATRIZ_IE02[0]);
+	not (m5, MATRIZ_IE02[1]);
+	not (m6, MATRIZ_IE02[2]);
 	//tristate_buffer t_buff (CH7, CH6, LED0); 
 	
 	//selec_FUN2 SEL_FUN2_IE01 (CH3, CH2, CH1, SEG7_IE01, atv_PRIO_IE01, FUN2_P0);

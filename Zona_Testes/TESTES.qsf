@@ -88,3 +88,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE FUN2_P_S.sv
 set_global_assignment -name VERILOG_FILE tristate_buffer.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE testeTribuffer.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE TesteEncaminhadores.vwf
+set_global_assignment -name VERILOG_FILE decisor.v
+set_global_assignment -name VERILOG_FILE enc_perf.v
+set_global_assignment -name VERILOG_FILE decod_7seg.v
+set_global_assignment -name VERILOG_FILE decod_Leds.v
+set_global_assignment -name VERILOG_FILE decod_Matriz.v
+set_global_assignment -name VERILOG_FILE verfi_perf.v

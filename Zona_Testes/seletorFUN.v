@@ -1,52 +1,35 @@
 module seletorFUN( out, A, B, C, D, E, F);
    input A, B, C, D, E, F;
    output [2:0] out;
-	wire A_not, B_not, C_not, ADM, USER, TESTER, GUEST, AUTO, IS01, IS02;
-	wire Fun1_Possivel, Fun2_Possivel, Fun3_Possivel, Fun4_Possivel, Fun5_Possivel, Fun6_Possivel, Fun7_Possivel,
-	FUN01, FUN02, FUN03, FUN04, FUN05, FUN06, FUN07, PerfilFUN01, PerfilFUN02, PerfilFUN03, PerfilFUN04,
-	PerfilFUN05, PerfilFUN06, PerfilFUN07, Possibilidade	; 
-	//[0, 0] BIT0 = displey (1 = IS01, 0 = IS02), BIT1 = possibilidade (1 = É possivel, 0 = Não é possivel
+	wire A_not, B_not, C_not, D_not, E_not, F_not;
+	wire SUP1, SUP2, SUP3, SUP4, SUP5, SUP6, SUP7, SUP8, SUP9, SUP10, SUP11, SUP12, SUP13, SUP14, SUP15;
+
 	not A_inv (A_not, A);
 	not B_inv (B_not, B);
 	not C_inv (C_not, C);
 	not D_inv (D_not, D);
 	not E_inv (E_not, E);
 	not F_inv (F_not, F);
-	
-	and AndADM (ADM, A, B_not, C); //ADMIN
-	and AndTESTER (TESTER, A_not, B, C); //TESTE
-	and AndUSER (USER, A_not, B_not, C); //USER
-	and AndGUEST (GUEST, A, B, C_not); //GUEST
-	and AndAUTO (AUTO, A_not, B_not, C_not); //PILOTO AUTOMATICO
-	
-	xor V_P_FUN1 (Fun1_Possivel, ADM, GUEST, USER, TESTER);
-	xor V_P_FUN2 (Fun2_Possivel, ADM, TESTER);
-	xor V_P_FUN3 (Fun3_Possivel, ADM, USER, TESTER);
-	xor V_P_FUN4 (Fun4_Possivel, ADM, USER, TESTER);
-	assign Fun5_Possivel =  ADM;
-	xor V_P_FUN6 (Fun6_Possivel, ADM, GUEST, USER, TESTER);
-	assign Fun7_Possivel =  ADM;
-	
-	
-	and Funcionlidade1 (FUN01, D_not, E_not, F);
-	and Funcionlidade2 (FUN02, D_not, E, F_not);
-	and Funcionlidade3 (FUN03, D_not, E, F);
-	and Funcionlidade4 (FUN04, D, E_not, F_not);
-	and Funcionlidade5 (FUN05, D, E_not, F);
-	and Funcionlidade6 (FUN06, D, E, F_not);
-	and Funcionlidade7 (FUN07, D, E, F);
-	
-	and SaidaFUN01 (PerfilFUN01, Fun1_Possivel, FUN01);
-	and SaidaFUN02 (PerfilFUN02, Fun2_Possivel, FUN02);
-	and SaidaFUN03 (PerfilFUN03, Fun3_Possivel, FUN03);
-	and SaidaFUN04 (PerfilFUN04, Fun4_Possivel, FUN04);
-	and SaidaFUN05 (PerfilFUN05, Fun5_Possivel, FUN05);
-	and SaidaFUN06 (PerfilFUN06, Fun6_Possivel, FUN06);
-	and SaidaFUN07 (PerfilFUN07, Fun7_Possivel, FUN07);
-	
-	xor PossbilidadeReal (Possibilidade, PerfilFUN01, PerfilFUN02, PerfilFUN03, PerfilFUN04, PerfilFUN05, PerfilFUN06, PerfilFUN07);
-	
-	and Saida0Funcionlidade (out[0], Possibilidade, D);
-	and Saida1Funcionlidade (out[1], Possibilidade, E);
-	and Saida2Funcionlidade (out[2], Possibilidade, F);
+
+	and And0 (SUP0, A, C, B_not);
+	and And1 (SUP1, C, A_not, F_not) ;
+	and And2 (SUP2, A, B, E, C_not, F_not);
+	or Or0 (SUP4, SUP0, SUP1, SUP2);
+	and And3 (out[0], D, SUP4);
+	//D⋅((A⋅C⋅B)+(C⋅~A⋅~G)+(A⋅B⋅E⋅~C⋅ G))
+	or Or1 (SUP5, A, C);
+	or Or2 (SUP6, B, C);
+	or Or3 (SUP7, C, D);
+	or Or4 (SUP8, C, F_not);
+	or Or5 (SUP9, A, B, D, F);
+	or Or6 (SUP10, A, D_not, F_not);
+	or Or7 (SUP11, A_not, B_not, C_not);
+	and And4 (out[1], E, SUP5, SUP6, SUP7, SUP8, SUP9, SUP10, SUP11);
+	//E⋅(A+C)⋅(B+C)⋅(C+D)⋅(C+~G)⋅(A+B+D+G)⋅(A+~D+~G)⋅(~A+~B+~C)
+	and And5 (SUP12, A, C, B_not);
+	and And6 (SUP13, C, A_not, D_not);
+	and And7 (SUP14, A, B, C_not, D_not, E_not);
+	or Or8 (SUP15, SUP12, SUP13, SUP14);
+	and And8 (out[2], F, SUP15);
+	// G⋅((A⋅C⋅~B)+(C⋅~A⋅~D)+(A⋅B⋅~C⋅~D⋅~E))
 endmodule

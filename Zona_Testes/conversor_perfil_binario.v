@@ -9,7 +9,7 @@ module conversor_perfil_binario(A, B, C, out);
 	
 	//REPRESENTAÇÃO EM NUMEROS NA BASE 2
 	and And3 (SUP1, A_not, B, C);
-	and And2 (SUP2, B_not, A, C); 
+	and And2 (SUP2, A, B_not, C); 
 	
 	//SAIDAS QUE REPRESENTARÃO O PERFIL EM BINARIO DE 2 DIGITOS SEGUINDO A ORDEM:
    //(ADM = 11, TESTER = 10, USER = 01, GUEST = 00)
