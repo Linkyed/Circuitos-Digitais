@@ -1,5 +1,5 @@
 Timing Analyzer report for TESTES
-Mon Sep 04 14:50:16 2023
+Mon Sep 04 19:19:30 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -145,10 +145,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 24    ; 24   ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 19    ; 19   ;
 ; Unconstrained Output Ports      ; 7     ; 7    ;
-; Unconstrained Output Port Paths ; 24    ; 24   ;
+; Unconstrained Output Port Paths ; 19    ; 19   ;
 +---------------------------------+-------+------+
 
 
@@ -158,7 +158,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; Func       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LSB        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MSB        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -185,7 +184,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
 ; B          ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; Func       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LSB        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; MSB        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
@@ -212,7 +210,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 04 14:50:15 2023
+    Info: Processing started: Mon Sep 04 19:19:29 2023
 Info: Command: quartus_sta TESTES -c TESTES
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -239,7 +237,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4673 megabytes
-    Info: Processing ended: Mon Sep 04 14:50:16 2023
+    Info: Processing ended: Mon Sep 04 19:19:30 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Sep 04 14:50:11 2023
+Analysis & Synthesis Status : Successful - Mon Sep 04 19:19:25 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : TESTES
 Top-level Entity Name : decod_7seg
 Family : MAX II
 Total logic elements : 6
-Total pins : 11
+Total pins : 10
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

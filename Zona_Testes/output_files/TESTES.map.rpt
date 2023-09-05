@@ -1,5 +1,5 @@
 Analysis & Synthesis report for TESTES
-Mon Sep 04 14:50:11 2023
+Mon Sep 04 19:19:25 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -42,13 +42,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Sep 04 14:50:11 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Sep 04 19:19:25 2023       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; TESTES                                      ;
 ; Top-level Entity Name       ; decod_7seg                                  ;
 ; Family                      ; MAX II                                      ;
 ; Total logic elements        ; 6                                           ;
-; Total pins                  ; 11                                          ;
+; Total pins                  ; 10                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -161,9 +161,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 5     ;
-;     -- 3 input functions                    ; 1     ;
-;     -- 2 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 5     ;
+;     -- 2 input functions                    ; 1     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
@@ -176,11 +176,11 @@ https://fpgasoftware.intel.com/eula.
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
 ; Total registers                             ; 0     ;
-; I/O pins                                    ; 11    ;
-; Maximum fan-out node                        ; Func  ;
-; Maximum fan-out                             ; 7     ;
-; Total fan-out                               ; 30    ;
-; Average fan-out                             ; 1.76  ;
+; I/O pins                                    ; 10    ;
+; Maximum fan-out node                        ; LSB   ;
+; Maximum fan-out                             ; 6     ;
+; Total fan-out                               ; 24    ;
+; Average fan-out                             ; 1.50  ;
 +---------------------------------------------+-------+
 
 
@@ -189,7 +189,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
-; |decod_7seg                ; 6 (6)       ; 0            ; 0          ; 11   ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decod_7seg         ; decod_7seg  ; work         ;
+; |decod_7seg                ; 6 (6)       ; 0            ; 0          ; 10   ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |decod_7seg         ; decod_7seg  ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -215,7 +215,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Sep 04 14:50:03 2023
+    Info: Processing started: Mon Sep 04 19:19:17 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TESTES -c TESTES
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -257,18 +257,18 @@ Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(12): created i
 Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(13): created implicit net for "E_not" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at seletorFUN.v(14): created implicit net for "F_not" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/seletorFUN.v Line: 14
 Info (12127): Elaborating entity "decod_7seg" for the top level hierarchy
-Info (13014): Ignored 2 buffer(s)
-    Info (13019): Ignored 2 SOFT buffer(s)
-Info (21057): Implemented 17 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 4 input pins
+Info (13014): Ignored 1 buffer(s)
+    Info (13019): Ignored 1 SOFT buffer(s)
+Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 6 logic cells
 Info (144001): Generated suppressed messages file C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/output_files/TESTES.map.smsg
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4699 megabytes
-    Info: Processing ended: Mon Sep 04 14:50:11 2023
+    Info: Processing ended: Mon Sep 04 19:19:25 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:17
+    Info: Total CPU time (on all processors): 00:00:19
 
 
 +------------------------------------------+

@@ -1,38 +1,34 @@
-module decod_7seg(a, b, c, d, e, f, g, MSB, B, LSB, Func);
+module decod_7seg(a, b, c, d, e, f, g, MSB, B, LSB);
 
-	input MSB, B, LSB, Func;
+	input MSB, B, LSB;
 	output a, b, c, d, e, f, g;
 	
 	wire notMSB, notB, notLSB;
-	wire aux_1, aux_2,aux_3,aux_4, aux_d1,mix_d, aux_a, LD, aux_d;
+	wire aux_1, aux_2,aux_3,aux_4, aux_a,aux_ligar;
 	
 	not INVERTER_MSB (notMSB, MSB);
 	not INVERTER_B (notB, B);
 	not INVERTER_LSB (notLSB, LSB);
 	
-	and POSSIBIDADE_NUM_1(aux_4, MSB, notB, LSB);
-	and POSSIBIDADE_NUM_2(aux_3, notMSB, B, LSB);
-	and POSSIBIDADE_NUM_3(aux_2, notMSB, notB, LSB);
-	and POSSIBIDADE_NUM_4(aux_1, MSB, B, notLSB);
-	
-	nand Ligar_DESLIGAR(LD, Func);
+	and POSSIBIDADE_NUM_4(aux_4, MSB, notB, LSB);
+	and POSSIBIDADE_NUM_3(aux_3, notMSB, B, LSB);
+	and POSSIBIDADE_NUM_2(aux_2, notMSB, notB, LSB);
+	and POSSIBIDADE_NUM_1(aux_1, MSB, B, notLSB);
+	nor LigarOuDesligar(aux_ligar, aux_1, aux_2, aux_3, aux_4);
 	
 	or POSSI_1_4(aux_a,aux_1, aux_4);
-	or MOSTRAR_A(a, aux_a, LD);
+	or MOSTRAR_A(a, aux_a, aux_ligar);
 	
-	and MOSTRAR_B(b, LD);
+	or MOSTRAR_B(b, aux_ligar);
 	
-	or MOSTRAR_C(c, aux_2, LD);
+	or MOSTRAR_C(c, aux_2, aux_ligar);
 	
-	or SEMPRE_1(aux_d1, MSB, notMSB);
-	nor MIX_2_E_3(mix_d, aux_2, aux_3);
-	and LIGAR_D(aux_d, SEMPRE_1, mix_d);
-	or MOSTRAR_D(d, aux_d, LD);
+	or MOSTRAR_D(d, aux_a, aux_ligar);
 	
-	or MOSTRAR_E(e, aux_1, aux_3, aux_4, LD);
+	or MOSTRAR_E(e, aux_1, aux_3, aux_4, aux_ligar);
 	
-	or MOSTRAR_F(f, aux_1, aux_2, aux_3, LD);
+	or MOSTRAR_F(f, aux_1, aux_2, aux_3, aux_ligar);
 	
-	or MOSTRAR_G(g, aux_1, LD);
+	or MOSTRAR_G(g, aux_1, aux_ligar);
 	
 endmodule 

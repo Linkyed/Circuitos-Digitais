@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work TESTES.vo
-vlog -work work Waveform12.vwf.vt
+vlog -work work Waveform13.vwf.vt
 vsim  -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.decod_7seg_vlg_vec_tst
 vcd file -direction TESTES.msim.vcd
 vcd add -internal decod_7seg_vlg_vec_tst/*
