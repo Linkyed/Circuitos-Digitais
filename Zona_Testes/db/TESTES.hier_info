@@ -1,19 +1,16 @@
 |TESTES
-LED0 <= decod_Leds:Ligar_Leds.port6
-LED1 <= <GND>
-LED2 <= decod_Leds:Ligar_Leds.port7
-LED3 <= decod_Leds:Ligar_Leds.port8
-LED4 <= <GND>
-LED5 <= decod_Leds:Ligar_Leds.port9
-M_LED0 <= decod_Matriz:Ligar_MLeds.port6
-M_LED1 <= <GND>
-M_LED2 <= decod_Matriz:Ligar_MLeds.port7
-M_LED3 <= decod_Matriz:Ligar_MLeds.port8
-M_LED4 <= decod_Matriz:Ligar_MLeds.port9
-M_LED5 <= decod_Matriz:Ligar_MLeds.port10
-M_LED6 <= decod_Matriz:Ligar_MLeds.port11
-MCOL_LED0 <= <VCC>
-RGB_r <= comb.DB_MAX_OUTPUT_PORT_TYPE
+LED0 << decod_Leds:Ligar_Leds.port6
+LED2 << decod_Leds:Ligar_Leds.port7
+LED3 << decod_Leds:Ligar_Leds.port8
+LED5 << decod_Leds:Ligar_Leds.port9
+M_LED0 << decod_Matriz:Ligar_MLeds.port6
+M_LED2 << decod_Matriz:Ligar_MLeds.port7
+M_LED3 << decod_Matriz:Ligar_MLeds.port8
+M_LED4 << decod_Matriz:Ligar_MLeds.port9
+M_LED5 << decod_Matriz:Ligar_MLeds.port10
+M_LED6 << decod_Matriz:Ligar_MLeds.port11
+MCOL_LED0 << <VCC>
+RGB_r << comb.DB_MAX_OUTPUT_PORT_TYPE
 CH7 => CH7.IN4
 CH6 => CH6.IN4
 CH5 => CH5.IN4
@@ -26,28 +23,13 @@ CH1 => CH1.IN4
 CH0 => CH0.IN1
 B1 => B1.IN1
 B0 => B0.IN1
-SEG7_a <= decod_7seg:Ligar_7seg.port0
-SEG7_b <= decod_7seg:Ligar_7seg.port1
-SEG7_c <= decod_7seg:Ligar_7seg.port2
-SEG7_d <= decod_7seg:Ligar_7seg.port3
-SEG7_e <= decod_7seg:Ligar_7seg.port4
-SEG7_f <= decod_7seg:Ligar_7seg.port5
-SEG7_g <= decod_7seg:Ligar_7seg.port6
-l1 <= LEDs_IE01[2].DB_MAX_OUTPUT_PORT_TYPE
-l2 <= LEDs_IE01[1].DB_MAX_OUTPUT_PORT_TYPE
-l3 <= LEDs_IE01[0].DB_MAX_OUTPUT_PORT_TYPE
-l4 <= LEDs_IE02[0].DB_MAX_OUTPUT_PORT_TYPE
-l5 <= LEDs_IE02[1].DB_MAX_OUTPUT_PORT_TYPE
-l6 <= LEDs_IE02[2].DB_MAX_OUTPUT_PORT_TYPE
-m1 <= MATRIZ_IE01[0].DB_MAX_OUTPUT_PORT_TYPE
-m2 <= MATRIZ_IE01[1].DB_MAX_OUTPUT_PORT_TYPE
-m3 <= MATRIZ_IE01[2].DB_MAX_OUTPUT_PORT_TYPE
-m4 <= MATRIZ_IE02[0].DB_MAX_OUTPUT_PORT_TYPE
-m5 <= MATRIZ_IE02[1].DB_MAX_OUTPUT_PORT_TYPE
-m6 <= MATRIZ_IE02[2].DB_MAX_OUTPUT_PORT_TYPE
-D7_0 <= P_SEG7_0.DB_MAX_OUTPUT_PORT_TYPE
-D7_1 <= enc_perf:enc_p_1.port4
-D7_2 <= P_SEG7_2.DB_MAX_OUTPUT_PORT_TYPE
+SEG7_a << decod_7seg:Ligar_7seg.port0
+SEG7_b << decod_7seg:Ligar_7seg.port1
+SEG7_c << decod_7seg:Ligar_7seg.port2
+SEG7_d << decod_7seg:Ligar_7seg.port3
+SEG7_e << decod_7seg:Ligar_7seg.port4
+SEG7_f << decod_7seg:Ligar_7seg.port5
+SEG7_g << decod_7seg:Ligar_7seg.port6
 
 
 |TESTES|conversor_perfil_binario:CONV_IE01

@@ -1,25 +1,21 @@
-module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
-					M_LED0, M_LED1, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
+module TESTES( LED0, LED2, LED3, LED5, // LEDs
+					M_LED0, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
 					RGB_r, // LED RGB 
 					CH7, CH6, CH5, CH4, B3, B2, // IE01
 					CH3, CH2, CH1, CH0, B1, B0, // IE02
-					SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g,
-				 l1, l2, l3, l4, l5, l6, m1, m2, m3, m4, m5, m6,  D7_0, D7_1, D7_2); 
+					SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g); 
 					
    input CH7, CH6, CH5, CH4, B3, B2, 
 			CH3, CH2, CH1, CH0, B1, B0;
 			
-   output LED0, LED1, LED2, LED3, LED4, LED5, 
-			 RGB_r, D7_0, D7_1, D7_2,
-			 M_LED0, M_LED1, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
-			 SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g,
-			
-			 l1, l2, l3, l4, l5, l6, m1, m2, m3, m4, m5, m6;
+   output LED0, LED2, LED3, LED5, 
+			 RGB_r,
+			 M_LED0, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
+			 SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g;
 			 
-	wire [1:0] BIN_IE01, BIN_IE02, S_FUN02, SEG7_atv_per;
-	wire [2: 0] FUN_IE01, FUN_IE02, auxPERF0, auxPERF1, F_PER7SEG, LEDs_IE01, MATRIZ_IE01,
-	LEDs_IE02, MATRIZ_IE02, FUN2_P0, FUN2_P1, FUN2_P_VER;
-	wire [11:0] outPrioridade;
+	wire [1:0] BIN_IE01, BIN_IE02, SEG7_atv_per;
+	wire [2: 0] FUN_IE01, FUN_IE02, LEDs_IE01, MATRIZ_IE01,
+	LEDs_IE02, MATRIZ_IE02;
 	wire IE01_FUN2, IE02_FUN2, PRIO, PRIO_not, FUN_IGUAIS, atv_PRIO_IE01, atv_PRIO_IE02, SEG7_IE01, SEG7_IE02, atv_PRIO,
 	atv_PRIO_not, P_SEG7_0, P_SEG7_1, P_SEG7_2, ver_PIE01, ver_PIE02;
 
@@ -61,24 +57,7 @@ module TESTES( LED0, LED1, LED2, LED3, LED4, LED5, // LEDs
 	verfi_perf verf_p_IE02 (CH3, CH2, CH1, ver_PIE02);
 	
 	nor (RGB_r, ver_PIE01, ver_PIE02);
-	
-	wire l1 = LEDs_IE01[2];
-	wire l2 = LEDs_IE01[1];
-	wire l3 = LEDs_IE01[0];
-	wire l4 = LEDs_IE02[0];
-	wire l5 = LEDs_IE02[1];
-	wire l6 = LEDs_IE02[2];
-	
-	wire D7_0 = P_SEG7_0;
-	wire D7_1 = P_SEG7_1;
-	wire D7_2 = P_SEG7_2;
-	
-	not (m1, MATRIZ_IE01[0]);
-	not (m2, MATRIZ_IE01[1]);
-	not (m3, MATRIZ_IE01[2]);
-	not (m4, MATRIZ_IE02[0]);
-	not (m5, MATRIZ_IE02[1]);
-	not (m6, MATRIZ_IE02[2]);
+
 	//tristate_buffer t_buff (CH7, CH6, LED0); 
 	
 	//selec_FUN2 SEL_FUN2_IE01 (CH3, CH2, CH1, SEG7_IE01, atv_PRIO_IE01, FUN2_P0);
