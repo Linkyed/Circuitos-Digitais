@@ -3,7 +3,7 @@ module TESTES( LED0, LED2, LED3, LED5, // LEDs
 					RGB_r, // LED RGB 
 					CH7, CH6, CH5, CH4, B3, B2, // IE01
 					CH3, CH2, CH1, CH0, B1, B0, // IE02
-					SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g); 
+					SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g, SEG_DP,DITOGO_1,DITIGO_2,DITIGO_3); 
 					
    input CH7, CH6, CH5, CH4, B3, B2, 
 			CH3, CH2, CH1, CH0, B1, B0;
@@ -11,7 +11,7 @@ module TESTES( LED0, LED2, LED3, LED5, // LEDs
    output LED0, LED2, LED3, LED5, 
 			 RGB_r,
 			 M_LED0, M_LED2, M_LED3, M_LED4, M_LED5, M_LED6, MCOL_LED0,
-			 SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g;
+			 SEG7_a, SEG7_b, SEG7_c, SEG7_d, SEG7_e, SEG7_f, SEG7_g,SEG_DP,DITOGO_1,DITIGO_2,DITIGO_3;
 			 
 	wire [1:0] BIN_IE01, BIN_IE02, SEG7_atv_per;
 	wire [2: 0] FUN_IE01, FUN_IE02, LEDs_IE01, MATRIZ_IE01,
@@ -57,6 +57,11 @@ module TESTES( LED0, LED2, LED3, LED5, // LEDs
 	verfi_perf verf_p_IE02 (CH3, CH2, CH1, ver_PIE02);
 	
 	nor (RGB_r, ver_PIE01, ver_PIE02);
+	
+	wire SEG_DP = 1;
+	wire DITOGO_1 = 1;
+	wire DITIGO_2 = 1;
+	wire DITIGO_3 = 1;
 
 	//tristate_buffer t_buff (CH7, CH6, LED0); 
 	

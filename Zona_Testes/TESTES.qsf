@@ -42,7 +42,7 @@ set_global_assignment -name DEVICE EPM240T100C5
 set_global_assignment -name TOP_LEVEL_ENTITY TESTES
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:08:44  AUGUST 18, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
@@ -104,3 +104,7 @@ set_location_assignment PIN_98 -to SEG7_d
 set_location_assignment PIN_100 -to SEG7_e
 set_location_assignment PIN_92 -to SEG7_f
 set_location_assignment PIN_39 -to SEG7_g
+set_location_assignment PIN_88 -to DITOGO_1
+set_location_assignment PIN_68 -to DITIGO_3
+set_location_assignment PIN_66 -to DITIGO_2
+set_location_assignment PIN_96 -to SEG_DP

@@ -1,6 +1,6 @@
 EDA Netlist Writer report for TESTES
-Mon Sep 04 17:04:06 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Tue Sep 05 13:03:24 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Sep 04 17:04:06 2023 ;
+; EDA Netlist Writer Status ; Successful - Tue Sep 05 13:03:24 2023 ;
 ; Revision Name             ; TESTES                                ;
 ; Top-level Entity Name     ; TESTES                                ;
 ; Family                    ; MAX II                                ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                          ;
-+-----------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                     ;
-+-----------------------------------------------------------------------------------------------------+
-; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim//TESTES.vo ;
-+-----------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                ;
++-------------------------------------------------------------------------------------------+
+; Generated Files                                                                           ;
++-------------------------------------------------------------------------------------------+
+; C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim//TESTES.vo ;
++-------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -80,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
     Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and any partner logic 
@@ -95,13 +95,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Sep 04 17:04:05 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim/ TESTES -c TESTES
+    Info: Processing started: Tue Sep 05 13:03:23 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim/ TESTES -c TESTES
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file TESTES.vo in folder "C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file TESTES.vo in folder "C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4620 megabytes
-    Info: Processing ended: Mon Sep 04 17:04:06 2023
+    Info: Peak virtual memory: 4619 megabytes
+    Info: Processing ended: Tue Sep 05 13:03:24 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

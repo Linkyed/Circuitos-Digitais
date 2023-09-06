@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "09/04/2023 17:04:04"
+// Generated on "09/05/2023 13:03:22"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          TESTES
 // 
@@ -43,25 +43,17 @@ reg CH5;
 reg CH6;
 reg CH7;
 // wires                                               
-wire D7_0;
-wire D7_1;
-wire D7_2;
 wire LED0;
-wire LED1;
 wire LED2;
 wire LED3;
-wire LED4;
 wire LED5;
 wire MCOL_LED0;
 wire M_LED0;
-wire M_LED1;
 wire M_LED2;
 wire M_LED3;
 wire M_LED4;
 wire M_LED5;
 wire M_LED6;
-wire RGB_b;
-wire RGB_g;
 wire RGB_r;
 wire SEG7_a;
 wire SEG7_b;
@@ -70,18 +62,6 @@ wire SEG7_d;
 wire SEG7_e;
 wire SEG7_f;
 wire SEG7_g;
-wire l1;
-wire l2;
-wire l3;
-wire l4;
-wire l5;
-wire l6;
-wire m1;
-wire m2;
-wire m3;
-wire m4;
-wire m5;
-wire m6;
 
 // assign statements (if any)                          
 TESTES i1 (
@@ -98,25 +78,17 @@ TESTES i1 (
 	.CH5(CH5),
 	.CH6(CH6),
 	.CH7(CH7),
-	.D7_0(D7_0),
-	.D7_1(D7_1),
-	.D7_2(D7_2),
 	.LED0(LED0),
-	.LED1(LED1),
 	.LED2(LED2),
 	.LED3(LED3),
-	.LED4(LED4),
 	.LED5(LED5),
 	.MCOL_LED0(MCOL_LED0),
 	.M_LED0(M_LED0),
-	.M_LED1(M_LED1),
 	.M_LED2(M_LED2),
 	.M_LED3(M_LED3),
 	.M_LED4(M_LED4),
 	.M_LED5(M_LED5),
 	.M_LED6(M_LED6),
-	.RGB_b(RGB_b),
-	.RGB_g(RGB_g),
 	.RGB_r(RGB_r),
 	.SEG7_a(SEG7_a),
 	.SEG7_b(SEG7_b),
@@ -124,53 +96,11 @@ TESTES i1 (
 	.SEG7_d(SEG7_d),
 	.SEG7_e(SEG7_e),
 	.SEG7_f(SEG7_f),
-	.SEG7_g(SEG7_g),
-	.l1(l1),
-	.l2(l2),
-	.l3(l3),
-	.l4(l4),
-	.l5(l5),
-	.l6(l6),
-	.m1(m1),
-	.m2(m2),
-	.m3(m3),
-	.m4(m4),
-	.m5(m5),
-	.m6(m6)
+	.SEG7_g(SEG7_g)
 );
 initial 
 begin 
 #160000 $finish;
-end 
-
-// CH3
-initial
-begin
-	CH3 = 1'b1;
-	CH3 = #20000 1'b0;
-	CH3 = #30000 1'b1;
-	CH3 = #50000 1'b0;
-end 
-
-// CH2
-initial
-begin
-	CH2 = 1'b1;
-	CH2 = #20000 1'b0;
-	CH2 = #20000 1'b1;
-	CH2 = #10000 1'b0;
-	CH2 = #50000 1'b1;
-	CH2 = #20000 1'b0;
-end 
-
-// CH1
-initial
-begin
-	CH1 = 1'b0;
-	CH1 = #20000 1'b1;
-	CH1 = #20000 1'b0;
-	CH1 = #10000 1'b1;
-	CH1 = #80000 1'b0;
 end 
 
 // CH0
@@ -204,36 +134,6 @@ begin
 	B0 = #30000 1'b0;
 	B0 = #10000 1'b1;
 	B0 = #10000 1'b0;
-end 
-
-// CH7
-initial
-begin
-	CH7 = 1'b1;
-	CH7 = #20000 1'b0;
-	CH7 = #50000 1'b1;
-	CH7 = #20000 1'b0;
-	CH7 = #10000 1'b1;
-	CH7 = #30000 1'b0;
-end 
-
-// CH6
-initial
-begin
-	CH6 = 1'b0;
-	CH6 = #20000 1'b1;
-	CH6 = #20000 1'b0;
-	CH6 = #20000 1'b1;
-	CH6 = #10000 1'b0;
-	CH6 = #20000 1'b1;
-	CH6 = #10000 1'b0;
-end 
-
-// CH5
-initial
-begin
-	CH5 = 1'b1;
-	CH5 = #130000 1'b0;
 end 
 
 // CH4

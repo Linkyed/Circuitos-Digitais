@@ -58,7 +58,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 CHIP  "TESTES"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -128,9 +128,9 @@ GND*                         : 62        :        :                   :         
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
-GND*                         : 66        :        :                   :         : 2         :                
+DITIGO_2                     : 66        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 67        :        :                   :         : 2         :                
-GND*                         : 68        :        :                   :         : 2         :                
+DITIGO_3                     : 68        : output : 3.3-V LVTTL       :         : 2         : Y              
 LED5                         : 69        : output : 3.3-V LVTTL       :         : 2         : Y              
 SEG7_b                       : 70        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 71        :        :                   :         : 2         :                
@@ -150,7 +150,7 @@ M_LED2                       : 84        : output : 3.3-V LVTTL       :         
 M_LED0                       : 85        : output : 3.3-V LVTTL       :         : 2         : Y              
 RGB_r                        : 86        : output : 3.3-V LVTTL       :         : 2         : Y              
 M_LED3                       : 87        : output : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 88        :        :                   :         : 2         :                
+DITOGO_1                     : 88        : output : 3.3-V LVTTL       :         : 2         : Y              
 M_LED6                       : 89        : output : 3.3-V LVTTL       :         : 2         : Y              
 SEG7_a                       : 90        : output : 3.3-V LVTTL       :         : 2         : Y              
 M_LED5                       : 91        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -158,7 +158,7 @@ SEG7_f                       : 92        : output : 3.3-V LVTTL       :         
 GNDIO                        : 93        : gnd    :                   :         :           :                
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
 GND*                         : 95        :        :                   :         : 2         :                
-GND*                         : 96        :        :                   :         : 2         :                
+SEG_DP                       : 96        : output : 3.3-V LVTTL       :         : 2         : Y              
 MCOL_LED0                    : 97        : output : 3.3-V LVTTL       :         : 2         : Y              
 SEG7_d                       : 98        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 99        :        :                   :         : 2         :                

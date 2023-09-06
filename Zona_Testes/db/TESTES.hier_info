@@ -30,6 +30,10 @@ SEG7_d << decod_7seg:Ligar_7seg.port3
 SEG7_e << decod_7seg:Ligar_7seg.port4
 SEG7_f << decod_7seg:Ligar_7seg.port5
 SEG7_g << decod_7seg:Ligar_7seg.port6
+SEG_DP << <VCC>
+DITOGO_1 << <VCC>
+DITIGO_2 << <VCC>
+DITIGO_3 << <VCC>
 
 
 |TESTES|conversor_perfil_binario:CONV_IE01

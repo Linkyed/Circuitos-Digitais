@@ -1,46 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TESTES -c TESTES --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/TesteEncaminhadores.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim/TesteEncaminhadores.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off TESTES -c TESTES --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/TesteEncaminhadores.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim/TesteEncaminhadores.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim/" TESTES -c TESTES</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim/" TESTES -c TESTES</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work TESTES.vo
-vlog -work work TesteEncaminhadores.vwf.vt
-vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TESTES_vlg_vec_tst
-vcd file -direction TESTES.msim.vcd
-vcd add -internal TESTES_vlg_vec_tst/*
-vcd add -internal TESTES_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work TESTES.vo
-vlog -work work TesteEncaminhadores.vwf.vt
-vsim -novopt -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TESTES_vlg_vec_tst
-vcd file -direction TESTES.msim.vcd
-vcd add -internal TESTES_vlg_vec_tst/*
-vcd add -internal TESTES_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -126,7 +83,7 @@ SIGNAL("CH0")
 	PARENT = "";
 }
 
-SIGNAL("PerfilA3")
+SIGNAL("CH1")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -136,7 +93,7 @@ SIGNAL("PerfilA3")
 	PARENT = "";
 }
 
-SIGNAL("PerfilA2")
+SIGNAL("CH2")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -146,7 +103,7 @@ SIGNAL("PerfilA2")
 	PARENT = "";
 }
 
-SIGNAL("PerfilA1")
+SIGNAL("CH3")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -166,7 +123,7 @@ SIGNAL("CH4")
 	PARENT = "";
 }
 
-SIGNAL("PerfilB3")
+SIGNAL("CH5")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -176,7 +133,7 @@ SIGNAL("PerfilB3")
 	PARENT = "";
 }
 
-SIGNAL("PerfilB2")
+SIGNAL("CH6")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -186,7 +143,7 @@ SIGNAL("PerfilB2")
 	PARENT = "";
 }
 
-SIGNAL("PerfilB1")
+SIGNAL("CH7")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
@@ -301,12 +258,16 @@ TRANSITION_LIST("B0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 90.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 90.0;
+		}
 	}
 }
 
@@ -315,11 +276,15 @@ TRANSITION_LIST("B1")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 60.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 60.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
@@ -328,16 +293,20 @@ TRANSITION_LIST("B2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 40.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 40.0;
+		}
 	}
 }
 
@@ -346,17 +315,21 @@ TRANSITION_LIST("B3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
@@ -365,52 +338,68 @@ TRANSITION_LIST("CH0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 70.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 70.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilA3")
+TRANSITION_LIST("CH1")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 80.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 80.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilA2")
+TRANSITION_LIST("CH2")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 40.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 40.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilA1")
+TRANSITION_LIST("CH3")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 50.0;
-		LEVEL 0 FOR 60.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 50.0;
+			LEVEL 0 FOR 60.0;
+		}
 	}
 }
 
@@ -419,54 +408,70 @@ TRANSITION_LIST("CH4")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilB3")
+TRANSITION_LIST("CH5")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 130.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 130.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilB2")
+TRANSITION_LIST("CH6")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 20.0;
-		LEVEL 1 FOR 10.0;
-		LEVEL 0 FOR 60.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 60.0;
+		}
 	}
 }
 
-TRANSITION_LIST("PerfilB1")
+TRANSITION_LIST("CH7")
 {
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 50.0;
-		LEVEL 1 FOR 20.0;
-		LEVEL 0 FOR 10.0;
-		LEVEL 1 FOR 30.0;
-		LEVEL 0 FOR 30.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 30.0;
+		}
 	}
 }
 
@@ -475,7 +480,11 @@ TRANSITION_LIST("LED0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+		}
 	}
 }
 
@@ -484,7 +493,13 @@ TRANSITION_LIST("LED2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 30.0;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 110.0;
+		}
 	}
 }
 
@@ -493,7 +508,11 @@ TRANSITION_LIST("LED3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 160.0;
+		}
 	}
 }
 
@@ -502,7 +521,13 @@ TRANSITION_LIST("LED5")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 140.0;
+		}
 	}
 }
 
@@ -511,7 +536,16 @@ TRANSITION_LIST("M_LED0")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 60.0;
+		}
 	}
 }
 
@@ -520,7 +554,15 @@ TRANSITION_LIST("M_LED2")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 90.0;
+		}
 	}
 }
 
@@ -529,7 +571,15 @@ TRANSITION_LIST("M_LED3")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 100.0;
+		}
 	}
 }
 
@@ -538,7 +588,11 @@ TRANSITION_LIST("M_LED4")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 160.0;
+		}
 	}
 }
 
@@ -547,7 +601,15 @@ TRANSITION_LIST("M_LED5")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 70.0;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 30.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 30.0;
+		}
 	}
 }
 
@@ -556,13 +618,19 @@ TRANSITION_LIST("M_LED6")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 160.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 110.0;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 40.0;
+		}
 	}
 }
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilA1";
+	CHANNEL = "CH3";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 0;
@@ -571,7 +639,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilA2";
+	CHANNEL = "CH2";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -580,7 +648,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilA3";
+	CHANNEL = "CH1";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -616,7 +684,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilB1";
+	CHANNEL = "CH7";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 6;
@@ -625,7 +693,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilB2";
+	CHANNEL = "CH6";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 7;
@@ -634,7 +702,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "PerfilB3";
+	CHANNEL = "CH5";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 8;

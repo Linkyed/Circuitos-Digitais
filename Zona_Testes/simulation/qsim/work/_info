@@ -8,52 +8,52 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
+dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
 vTESTES
-Z1 !s110 1693857847
+Z0 !s110 1693929806
 !i10b 1
-!s100 8QE8U>6WL4?>_B2<;ADVX2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-I3d>om[VRNzCicGh5LeDaN0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1693857846
+!s100 ^7]61KT6][g97eOcc`@NC0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=4i02M:ge?NeDIUiO5zX]3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim
+w1693929804
 8TESTES.vo
 FTESTES.vo
-!i122 154
-L0 32 3057
+!i122 160
+L0 32 2743
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1693857847.000000
+!s108 1693929805.000000
 !s107 TESTES.vo|
 !s90 -work|work|TESTES.vo|
 !i113 1
-Z6 o-work work
-Z7 tCvgOpt 0
+Z5 o-work work
+Z6 tCvgOpt 0
 n@t@e@s@t@e@s
 vTESTES_vlg_vec_tst
-R1
-!i10b 1
-!s100 DD1[niQE^d[N3WXdlbW>>2
-R2
-IGXH<9;jAEWUh4T:LZ@WlA2
-R3
 R0
-w1693857845
+!i10b 1
+!s100 mnSVZh4fLznKCj2oF:?_S0
+R1
+IOBTmD4Ba27UfbL;NEzGXN3
+R2
+R3
+w1693929802
 8TesteEncaminhadores.vwf.vt
 FTesteEncaminhadores.vwf.vt
-!i122 155
-L0 30 254
+!i122 161
+L0 30 154
 R4
 r1
 !s85 0
 31
-R5
+!s108 1693929806.000000
 !s107 TesteEncaminhadores.vwf.vt|
 !s90 -work|work|TesteEncaminhadores.vwf.vt|
 !i113 1
+R5
 R6
-R7
 n@t@e@s@t@e@s_vlg_vec_tst
