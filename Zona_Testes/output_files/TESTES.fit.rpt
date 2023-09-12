@@ -1,6 +1,6 @@
 Fitter report for TESTES
-Wed Sep 06 13:12:15 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Sep 12 01:33:34 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -53,15 +53,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Sep 06 13:12:15 2023       ;
-; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Fitter Status         ; Successful - Tue Sep 12 01:33:34 2023       ;
+; Quartus Prime Version ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name         ; TESTES                                      ;
 ; Top-level Entity Name ; TESTES                                      ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 63 / 240 ( 26 % )                           ;
-; Total pins            ; 35 / 80 ( 44 % )                            ;
+; Total logic elements  ; 67 / 240 ( 28 % )                           ;
+; Total pins            ; 36 / 80 ( 45 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -121,8 +121,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -135,7 +135,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/output_files/TESTES.pin.
+The pin-out file can be found in C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/output_files/TESTES.pin.
 
 
 +------------------------------------------------------------------+
@@ -143,20 +143,20 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 +---------------------------------------------+--------------------+
 ; Resource                                    ; Usage              ;
 +---------------------------------------------+--------------------+
-; Total logic elements                        ; 63 / 240 ( 26 % )  ;
-;     -- Combinational with no register       ; 63                 ;
+; Total logic elements                        ; 67 / 240 ( 28 % )  ;
+;     -- Combinational with no register       ; 67                 ;
 ;     -- Register only                        ; 0                  ;
 ;     -- Combinational with a register        ; 0                  ;
 ;                                             ;                    ;
 ; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 44                 ;
-;     -- 3 input functions                    ; 11                 ;
-;     -- 2 input functions                    ; 8                  ;
+;     -- 4 input functions                    ; 45                 ;
+;     -- 3 input functions                    ; 16                 ;
+;     -- 2 input functions                    ; 6                  ;
 ;     -- 1 input functions                    ; 0                  ;
 ;     -- 0 input functions                    ; 0                  ;
 ;                                             ;                    ;
 ; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 63                 ;
+;     -- normal mode                          ; 67                 ;
 ;     -- arithmetic mode                      ; 0                  ;
 ;     -- qfbk mode                            ; 0                  ;
 ;     -- register cascade mode                ; 0                  ;
@@ -167,7 +167,7 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; Total LABs                                  ; 7 / 24 ( 29 % )    ;
 ; Logic elements in carry chains              ; 0                  ;
 ; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 35 / 80 ( 44 % )   ;
+; I/O pins                                    ; 36 / 80 ( 45 % )   ;
 ;     -- Clock pins                           ; 0 / 4 ( 0 % )      ;
 ;                                             ;                    ;
 ; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
@@ -178,12 +178,12 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; Global signals                              ; 0                  ;
 ;     -- Global clocks                        ; 0 / 4 ( 0 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 7.7% / 6.0% / 9.5% ;
-; Peak interconnect usage (total/H/V)         ; 7.7% / 6.0% / 9.5% ;
+; Average interconnect usage (total/H/V)      ; 8.1% / 6.9% / 9.3% ;
+; Peak interconnect usage (total/H/V)         ; 8.1% / 6.9% / 9.3% ;
 ; Maximum fan-out                             ; 11                 ;
 ; Highest non-global fan-out                  ; 11                 ;
-; Total fan-out                               ; 242                ;
-; Average fan-out                             ; 2.47               ;
+; Total fan-out                               ; 258                ;
+; Average fan-out                             ; 2.50               ;
 +---------------------------------------------+--------------------+
 
 
@@ -198,11 +198,11 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; B3   ; 44    ; 1        ; 6            ; 0            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH0  ; 42    ; 1        ; 5            ; 0            ; 0           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH1  ; 40    ; 1        ; 5            ; 0            ; 2           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; CH2  ; 38    ; 1        ; 4            ; 0            ; 0           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; CH2  ; 38    ; 1        ; 4            ; 0            ; 0           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH3  ; 36    ; 1        ; 4            ; 0            ; 2           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH4  ; 34    ; 1        ; 3            ; 0            ; 1           ; 4                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH5  ; 30    ; 1        ; 3            ; 0            ; 3           ; 10                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
-; CH6  ; 33    ; 1        ; 3            ; 0            ; 2           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
+; CH6  ; 33    ; 1        ; 3            ; 0            ; 2           ; 9                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 ; CH7  ; 35    ; 1        ; 3            ; 0            ; 0           ; 8                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; User                 ; no             ;
 +------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
@@ -221,6 +221,7 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; LED5      ; 69    ; 2        ; 8            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; MCOL_LED0 ; 97    ; 2        ; 3            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; M_LED0    ; 85    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; M_LED1    ; 83    ; 2        ; 6            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; M_LED2    ; 84    ; 2        ; 6            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; M_LED3    ; 87    ; 2        ; 5            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; M_LED4    ; 81    ; 2        ; 6            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
@@ -244,7 +245,7 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 13 / 38 ( 34 % ) ; 3.3V          ; --           ;
-; 2        ; 22 / 42 ( 52 % ) ; 3.3V          ; --           ;
+; 2        ; 23 / 42 ( 55 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -335,7 +336,7 @@ The pin-out file can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digit
 ; 80       ;            ; 2        ; VCCIO2         ; power  ;              ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 81       ; 65         ; 2        ; M_LED4         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 82       ; 66         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
-; 83       ; 67         ; 2        ; GND*           ;        ;              ;           ; Column I/O ;                 ; no       ; Off          ;
+; 83       ; 67         ; 2        ; M_LED1         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 84       ; 68         ; 2        ; M_LED2         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 85       ; 69         ; 2        ; M_LED0         ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 86       ; 70         ; 2        ; RGB_r          ; output ; 3.3-V LVTTL  ;           ; Column I/O ; Y               ; no       ; Off          ;
@@ -373,26 +374,28 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                               ;
-+-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
-; Compilation Hierarchy Node              ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                        ; Entity Name              ; Library Name ;
-+-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
-; |TESTES                                 ; 63 (2)      ; 0            ; 0          ; 35   ; 0            ; 63 (2)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES                                    ; TESTES                   ; work         ;
-;    |atv_PRIO:atv_PRIO0|                 ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|atv_PRIO:atv_PRIO0                 ; atv_PRIO                 ; work         ;
-;    |atv_PRIO:atv_PRIO1|                 ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|atv_PRIO:atv_PRIO1                 ; atv_PRIO                 ; work         ;
-;    |controladorPrioridade:CON_PRIO|     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|controladorPrioridade:CON_PRIO     ; controladorPrioridade    ; work         ;
-;    |conversor_perfil_binario:CONV_IE01| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|conversor_perfil_binario:CONV_IE01 ; conversor_perfil_binario ; work         ;
-;    |conversor_perfil_binario:CONV_IE02| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|conversor_perfil_binario:CONV_IE02 ; conversor_perfil_binario ; work         ;
-;    |decod_7seg:Ligar_7seg|              ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_7seg:Ligar_7seg              ; decod_7seg               ; work         ;
-;    |decod_Leds:Ligar_Leds|              ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_Leds:Ligar_Leds              ; decod_Leds               ; work         ;
-;    |decod_Matriz:Ligar_MLeds|           ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_Matriz:Ligar_MLeds           ; decod_Matriz             ; work         ;
-;    |enc_FUN:enc_IE01|                   ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE01                   ; enc_FUN                  ; work         ;
-;    |enc_FUN:enc_IE02|                   ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE02                   ; enc_FUN                  ; work         ;
-;    |enc_perf:enc_p_2|                   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_perf:enc_p_2                   ; enc_perf                 ; work         ;
-;    |seletorFUN:seletorIE01|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE01             ; seletorFUN               ; work         ;
-;    |seletorFUN:seletorIE02|             ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|seletorFUN:seletorIE02             ; seletorFUN               ; work         ;
-+-----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+--------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                               ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+--------------+--------------+
+; Compilation Hierarchy Node    ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name              ; Entity Name  ; Library Name ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+--------------+--------------+
+; |TESTES                       ; 67 (2)      ; 0            ; 0          ; 36   ; 0            ; 67 (2)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES                          ; TESTES       ; work         ;
+;    |atv_PRIO:atv_PRIO0|       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|atv_PRIO:atv_PRIO0       ; atv_PRIO     ; work         ;
+;    |atv_PRIO:atv_PRIO1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|atv_PRIO:atv_PRIO1       ; atv_PRIO     ; work         ;
+;    |comp_prio:comp_prio|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|comp_prio:comp_prio      ; comp_prio    ; work         ;
+;    |conv_per_bin:conv_IE01|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|conv_per_bin:conv_IE01   ; conv_per_bin ; work         ;
+;    |conv_per_bin:conv_IE02|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|conv_per_bin:conv_IE02   ; conv_per_bin ; work         ;
+;    |decod_7seg:Ligar_7seg|    ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_7seg:Ligar_7seg    ; decod_7seg   ; work         ;
+;    |decod_Leds:Ligar_Leds|    ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_Leds:Ligar_Leds    ; decod_Leds   ; work         ;
+;    |decod_Matriz:Ligar_MLeds| ; 12 (12)     ; 0            ; 0          ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|decod_Matriz:Ligar_MLeds ; decod_Matriz ; work         ;
+;    |enc_FUN:enc_IE01|         ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE01         ; enc_FUN      ; work         ;
+;    |enc_FUN:enc_IE02|         ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_FUN:enc_IE02         ; enc_FUN      ; work         ;
+;    |enc_perf:enc_p_0|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_perf:enc_p_0         ; enc_perf     ; work         ;
+;    |enc_perf:enc_p_1|         ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_perf:enc_p_1         ; enc_perf     ; work         ;
+;    |enc_perf:enc_p_2|         ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|enc_perf:enc_p_2         ; enc_perf     ; work         ;
+;    |ver_fun:ver_funIE01|      ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|ver_fun:ver_funIE01      ; ver_fun      ; work         ;
+;    |ver_fun:ver_funIE02|      ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |TESTES|ver_fun:ver_funIE02      ; ver_fun      ; work         ;
++-------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -406,6 +409,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; LED3      ; Output   ; --            ;
 ; LED5      ; Output   ; --            ;
 ; M_LED0    ; Output   ; --            ;
+; M_LED1    ; Output   ; --            ;
 ; M_LED2    ; Output   ; --            ;
 ; M_LED3    ; Output   ; --            ;
 ; M_LED4    ; Output   ; --            ;
@@ -439,35 +443,35 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------+----------+---------------+
 
 
-+------------------------------------------+
-; Routing Usage Summary                    ;
-+-----------------------+------------------+
-; Routing Resource Type ; Usage            ;
-+-----------------------+------------------+
-; C4s                   ; 55 / 784 ( 7 % ) ;
-; Direct links          ; 0 / 888 ( 0 % )  ;
-; Global clocks         ; 0 / 4 ( 0 % )    ;
-; LAB clocks            ; 0 / 32 ( 0 % )   ;
-; LUT chains            ; 3 / 216 ( 1 % )  ;
-; Local interconnects   ; 72 / 888 ( 8 % ) ;
-; R4s                   ; 32 / 704 ( 5 % ) ;
-+-----------------------+------------------+
++-------------------------------------------+
+; Routing Usage Summary                     ;
++-----------------------+-------------------+
+; Routing Resource Type ; Usage             ;
++-----------------------+-------------------+
+; C4s                   ; 54 / 784 ( 7 % )  ;
+; Direct links          ; 2 / 888 ( < 1 % ) ;
+; Global clocks         ; 0 / 4 ( 0 % )     ;
+; LAB clocks            ; 0 / 32 ( 0 % )    ;
+; LUT chains            ; 2 / 216 ( < 1 % ) ;
+; Local interconnects   ; 75 / 888 ( 8 % )  ;
+; R4s                   ; 37 / 704 ( 5 % )  ;
++-----------------------+-------------------+
 
 
 +--------------------------------------------------------------------------+
 ; LAB Logic Elements                                                       ;
 +--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 9.00) ; Number of LABs  (Total = 7) ;
+; Number of Logic Elements  (Average = 9.57) ; Number of LABs  (Total = 7) ;
 +--------------------------------------------+-----------------------------+
 ; 1                                          ; 0                           ;
 ; 2                                          ; 0                           ;
 ; 3                                          ; 0                           ;
 ; 4                                          ; 0                           ;
-; 5                                          ; 1                           ;
+; 5                                          ; 0                           ;
 ; 6                                          ; 0                           ;
 ; 7                                          ; 0                           ;
 ; 8                                          ; 0                           ;
-; 9                                          ; 2                           ;
+; 9                                          ; 3                           ;
 ; 10                                         ; 4                           ;
 +--------------------------------------------+-----------------------------+
 
@@ -475,44 +479,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                       ;
 +---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 9.00) ; Number of LABs  (Total = 7) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 2                           ;
-; 10                                          ; 4                           ;
-+---------------------------------------------+-----------------------------+
-
-
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 5.00) ; Number of LABs  (Total = 7) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 0                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 3                           ;
-; 5                                               ; 1                           ;
-; 6                                               ; 1                           ;
-; 7                                               ; 0                           ;
-; 8                                               ; 0                           ;
-; 9                                               ; 1                           ;
-+-------------------------------------------------+-----------------------------+
-
-
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 7.43) ; Number of LABs  (Total = 7) ;
+; Number of Signals Sourced  (Average = 9.57) ; Number of LABs  (Total = 7) ;
 +---------------------------------------------+-----------------------------+
 ; 0                                           ; 0                           ;
 ; 1                                           ; 0                           ;
@@ -520,12 +487,49 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3                                           ; 0                           ;
 ; 4                                           ; 0                           ;
 ; 5                                           ; 0                           ;
-; 6                                           ; 2                           ;
-; 7                                           ; 3                           ;
-; 8                                           ; 1                           ;
+; 6                                           ; 0                           ;
+; 7                                           ; 0                           ;
+; 8                                           ; 0                           ;
+; 9                                           ; 3                           ;
+; 10                                          ; 4                           ;
++---------------------------------------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                       ;
++-------------------------------------------------+-----------------------------+
+; Number of Signals Sourced Out  (Average = 5.43) ; Number of LABs  (Total = 7) ;
++-------------------------------------------------+-----------------------------+
+; 0                                               ; 0                           ;
+; 1                                               ; 0                           ;
+; 2                                               ; 0                           ;
+; 3                                               ; 0                           ;
+; 4                                               ; 3                           ;
+; 5                                               ; 1                           ;
+; 6                                               ; 1                           ;
+; 7                                               ; 1                           ;
+; 8                                               ; 1                           ;
++-------------------------------------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                       ;
++---------------------------------------------+-----------------------------+
+; Number of Distinct Inputs  (Average = 7.57) ; Number of LABs  (Total = 7) ;
++---------------------------------------------+-----------------------------+
+; 0                                           ; 0                           ;
+; 1                                           ; 0                           ;
+; 2                                           ; 0                           ;
+; 3                                           ; 0                           ;
+; 4                                           ; 0                           ;
+; 5                                           ; 1                           ;
+; 6                                           ; 1                           ;
+; 7                                           ; 2                           ;
+; 8                                           ; 2                           ;
 ; 9                                           ; 0                           ;
 ; 10                                          ; 0                           ;
-; 11                                          ; 1                           ;
+; 11                                          ; 0                           ;
+; 12                                          ; 1                           ;
 +---------------------------------------------+-----------------------------+
 
 
@@ -547,7 +551,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (119006): Selected device EPM240T100C5 for design "TESTES"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -587,13 +591,13 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.03 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/output_files/TESTES.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/output_files/TESTES.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 5891 megabytes
-    Info: Processing ended: Wed Sep 06 13:12:15 2023
+    Info: Peak virtual memory: 5328 megabytes
+    Info: Processing ended: Tue Sep 12 01:33:34 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
@@ -601,6 +605,6 @@ Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/output_files/TESTES.fit.smsg.
+The suppressed messages can be found in C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/output_files/TESTES.fit.smsg.
 
 

@@ -4,6 +4,7 @@ LED2 << decod_Leds:Ligar_Leds.port7
 LED3 << decod_Leds:Ligar_Leds.port8
 LED5 << decod_Leds:Ligar_Leds.port9
 M_LED0 << decod_Matriz:Ligar_MLeds.port6
+M_LED1 << <VCC>
 M_LED2 << decod_Matriz:Ligar_MLeds.port7
 M_LED3 << decod_Matriz:Ligar_MLeds.port8
 M_LED4 << decod_Matriz:Ligar_MLeds.port9
@@ -36,7 +37,7 @@ DITIGO_2 << <VCC>
 DITIGO_3 << <VCC>
 
 
-|TESTES|conversor_perfil_binario:CONV_IE01
+|TESTES|conv_per_bin:conv_IE01
 A => And2.IN0
 A => And3.IN0
 B => And3.IN1
@@ -49,7 +50,7 @@ out[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TESTES|conversor_perfil_binario:CONV_IE02
+|TESTES|conv_per_bin:conv_IE02
 A => And2.IN0
 A => And3.IN0
 B => And3.IN1
@@ -62,7 +63,7 @@ out[0] <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= And0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TESTES|seletorFUN:seletorIE01
+|TESTES|ver_fun:ver_funIE01
 out[0] <= And3.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= And4.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= And8.DB_MAX_OUTPUT_PORT_TYPE
@@ -111,7 +112,7 @@ F => Or4.IN1
 F => Or6.IN2
 
 
-|TESTES|seletorFUN:seletorIE02
+|TESTES|ver_fun:ver_funIE02
 out[0] <= And3.DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= And4.DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= And8.DB_MAX_OUTPUT_PORT_TYPE
@@ -170,7 +171,7 @@ F => Or2.IN1
 out <= is_IGUAL.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TESTES|controladorPrioridade:CON_PRIO
+|TESTES|comp_prio:comp_prio
 PERF_IE01[0] => And0.IN0
 PERF_IE01[0] => And1.IN0
 PERF_IE01[0] => And2.IN0
@@ -407,29 +408,35 @@ LSB => POSSIBIDADE_NUM_2.IN2
 LSB => POSSIBIDADE_NUM_1.IN2
 
 
-|TESTES|verfi_perf:verf_p_IE01
+|TESTES|ver_perf:verf_p_IE01
 A => And0.IN0
+A => And3.IN0
 A => And1.IN0
 A => And2.IN0
 B => And1.IN1
+B => And3.IN1
 B => And0.IN1
 B => And2.IN1
 C => And0.IN2
 C => And1.IN2
 C => And2.IN2
+C => And3.IN2
 out <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|TESTES|verfi_perf:verf_p_IE02
+|TESTES|ver_perf:verf_p_IE02
 A => And0.IN0
+A => And3.IN0
 A => And1.IN0
 A => And2.IN0
 B => And1.IN1
+B => And3.IN1
 B => And0.IN1
 B => And2.IN1
 C => And0.IN2
 C => And1.IN2
 C => And2.IN2
+C => And3.IN2
 out <= Or0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -12,7 +12,7 @@ module verfi_perf(A, B, C, out);
 	and And2 (SUP3, A_not, B_not, C);
 	and And3 (SUP4, A, B, C_not);
 	
-	or Or0 (out, SUP1, SUP2, SUP3, SUP3);
+	or Or0 (out, SUP1, SUP2, SUP3, SUP4);
 	
 
 endmodule

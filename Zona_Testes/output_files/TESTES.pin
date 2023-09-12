@@ -58,7 +58,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 CHIP  "TESTES"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -145,7 +145,7 @@ GNDIO                        : 79        : gnd    :                   :         
 VCCIO2                       : 80        : power  :                   : 3.3V    : 2         :                
 M_LED4                       : 81        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 82        :        :                   :         : 2         :                
-GND*                         : 83        :        :                   :         : 2         :                
+M_LED1                       : 83        : output : 3.3-V LVTTL       :         : 2         : Y              
 M_LED2                       : 84        : output : 3.3-V LVTTL       :         : 2         : Y              
 M_LED0                       : 85        : output : 3.3-V LVTTL       :         : 2         : Y              
 RGB_r                        : 86        : output : 3.3-V LVTTL       :         : 2         : Y              
