@@ -1,0 +1,717 @@
+$comment
+	File created using the following command:
+		vcd file TESTES.msim.vcd -direction
+$end
+$date
+	Tue Sep 05 13:03:27 2023
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module TESTES_vlg_vec_tst $end
+$var reg 1 ! B0 $end
+$var reg 1 " B1 $end
+$var reg 1 # B2 $end
+$var reg 1 $ B3 $end
+$var reg 1 % CH0 $end
+$var reg 1 & CH1 $end
+$var reg 1 ' CH2 $end
+$var reg 1 ( CH3 $end
+$var reg 1 ) CH4 $end
+$var reg 1 * CH5 $end
+$var reg 1 + CH6 $end
+$var reg 1 , CH7 $end
+$var wire 1 - LED0 $end
+$var wire 1 . LED2 $end
+$var wire 1 / LED3 $end
+$var wire 1 0 LED5 $end
+$var wire 1 1 MCOL_LED0 $end
+$var wire 1 2 M_LED0 $end
+$var wire 1 3 M_LED2 $end
+$var wire 1 4 M_LED3 $end
+$var wire 1 5 M_LED4 $end
+$var wire 1 6 M_LED5 $end
+$var wire 1 7 M_LED6 $end
+$var wire 1 8 RGB_r $end
+$var wire 1 9 SEG7_a $end
+$var wire 1 : SEG7_b $end
+$var wire 1 ; SEG7_c $end
+$var wire 1 < SEG7_d $end
+$var wire 1 = SEG7_e $end
+$var wire 1 > SEG7_f $end
+$var wire 1 ? SEG7_g $end
+
+$scope module i1 $end
+$var wire 1 @ gnd $end
+$var wire 1 A vcc $end
+$var wire 1 B unknown $end
+$var tri1 1 C devclrn $end
+$var tri1 1 D devpor $end
+$var tri1 1 E devoe $end
+$var wire 1 F CH7~combout $end
+$var wire 1 G CH5~combout $end
+$var wire 1 H CH6~combout $end
+$var wire 1 I CONV_IE01|Or0~0_combout $end
+$var wire 1 J CH2~combout $end
+$var wire 1 K CH1~combout $end
+$var wire 1 L CON_PRIO|Or0~0_combout $end
+$var wire 1 M CH4~combout $end
+$var wire 1 N B2~combout $end
+$var wire 1 O seletorIE01|And4~1_combout $end
+$var wire 1 P seletorIE01|And3~0_combout $end
+$var wire 1 Q seletorIE01|And4~0_combout $end
+$var wire 1 R B3~combout $end
+$var wire 1 S seletorIE01|And4~2_combout $end
+$var wire 1 T CH3~combout $end
+$var wire 1 U CH0~combout $end
+$var wire 1 V B0~combout $end
+$var wire 1 W seletorIE02|And3~0_combout $end
+$var wire 1 X seletorIE02|And4~0_combout $end
+$var wire 1 Y B1~combout $end
+$var wire 1 Z seletorIE02|And4~1_combout $end
+$var wire 1 [ seletorIE02|And4~2_combout $end
+$var wire 1 \ seletorIE01|And3~1_combout $end
+$var wire 1 ] seletorIE01|And3~2_combout $end
+$var wire 1 ^ seletorIE01|And3~3_combout $end
+$var wire 1 _ seletorIE02|And8~0_combout $end
+$var wire 1 ` seletorIE02|And8~1_combout $end
+$var wire 1 a seletorIE02|And3~1_combout $end
+$var wire 1 b seletorIE02|And3~2_combout $end
+$var wire 1 c seletorIE02|And3~3_combout $end
+$var wire 1 d seletorIE01|And8~0_combout $end
+$var wire 1 e seletorIE01|And8~1_combout $end
+$var wire 1 f atv_PRIO0|Out~0_combout $end
+$var wire 1 g atv_PRIO0|Out~1_combout $end
+$var wire 1 h CONV_IE02|Or0~0_combout $end
+$var wire 1 i enc_IE01|outLED0~0_combout $end
+$var wire 1 j enc_IE01|outLED0~combout $end
+$var wire 1 k atv_PRIO1|Out~combout $end
+$var wire 1 l enc_IE02|outLED0~combout $end
+$var wire 1 m enc_IE02|out7SEG~2_combout $end
+$var wire 1 n enc_IE02|outLED1~0_combout $end
+$var wire 1 o enc_IE02|outLED2~combout $end
+$var wire 1 p Ligar_Leds|func2_1~combout $end
+$var wire 1 q enc_IE01|outLED2~combout $end
+$var wire 1 r enc_IE01|outLED1~0_combout $end
+$var wire 1 s Ligar_Leds|Ligarfunc1~combout $end
+$var wire 1 t Ligar_Leds|Ligarfunc3~combout $end
+$var wire 1 u Ligar_Leds|func2_4~combout $end
+$var wire 1 v Ligar_Leds|Ligarfunc4~combout $end
+$var wire 1 w Ligar_Leds|Ligarfunc6~combout $end
+$var wire 1 x enc_IE01|outMATRIZ0~0_combout $end
+$var wire 1 y Ligar_MLeds|func1_1~0_combout $end
+$var wire 1 z enc_IE02|outMATRIZ1~0_combout $end
+$var wire 1 { Ligar_MLeds|func2_1~0_combout $end
+$var wire 1 | enc_IE01|outMATRIZ1~0_combout $end
+$var wire 1 } Ligar_MLeds|comb~0_combout $end
+$var wire 1 ~ Ligar_MLeds|comb~1_combout $end
+$var wire 1 !! Ligar_MLeds|func1_1~1_combout $end
+$var wire 1 "! Ligar_MLeds|func2_1~1_combout $end
+$var wire 1 #! Ligar_MLeds|comb~2_combout $end
+$var wire 1 $! Ligar_MLeds|func2_1~2_combout $end
+$var wire 1 %! Ligar_MLeds|func1_1~2_combout $end
+$var wire 1 &! Ligar_MLeds|comb~3_combout $end
+$var wire 1 '! Ligar_MLeds|comb~4_combout $end
+$var wire 1 (! Ligar_MLeds|comb~5_combout $end
+$var wire 1 )! comb~0_combout $end
+$var wire 1 *! comb~1_combout $end
+$var wire 1 +! enc_IE02|out7SEG~combout $end
+$var wire 1 ,! atv_PRIO0|Out~combout $end
+$var wire 1 -! enc_IE01|out7SEG~combout $end
+$var wire 1 .! enc_p_2|And0~0_combout $end
+$var wire 1 /! Ligar_7seg|MOSTRAR_C~0_combout $end
+$var wire 1 0! Ligar_7seg|MOSTRAR_A~0_combout $end
+$var wire 1 1! Ligar_7seg|LigarOuDesligar~0_combout $end
+$var wire 1 2! Ligar_7seg|MOSTRAR_C~1_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+1#
+0$
+0%
+x&
+x'
+x(
+0)
+x*
+x+
+x,
+x-
+0.
+0/
+00
+11
+x2
+13
+14
+15
+16
+17
+x8
+19
+1:
+1;
+1<
+1=
+1>
+1?
+0@
+1A
+xB
+1C
+1D
+1E
+xF
+xG
+xH
+xI
+xJ
+xK
+xL
+0M
+1N
+xO
+0P
+xQ
+0R
+0S
+xT
+0U
+1V
+0W
+xX
+0Y
+xZ
+0[
+0\
+x]
+0^
+x_
+x`
+0a
+xb
+0c
+xd
+xe
+xf
+xg
+xh
+xi
+0j
+xk
+0l
+xm
+0n
+xo
+xp
+xq
+0r
+xs
+0t
+0u
+0v
+0w
+xx
+xy
+0z
+x{
+0|
+x}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+0&!
+0'!
+0(!
+x)!
+x*!
+0+!
+x,!
+0-!
+0.!
+0/!
+10!
+01!
+12!
+$end
+#10000
+1%
+1"
+0!
+1U
+1Y
+0V
+xc
+xW
+xa
+0`
+x[
+x+!
+x"!
+0{
+xl
+0o
+xz
+xn
+x/!
+x.!
+x'!
+x#!
+xu
+xt
+0p
+xw
+x2!
+x1!
+x0!
+xv
+x.
+x0
+x4
+x6
+x;
+x?
+x=
+x<
+x9
+x/
+x:
+#20000
+1$
+0%
+1!
+1R
+0U
+1V
+x\
+xS
+0W
+x`
+x-!
+x|
+xr
+0c
+x$!
+x{
+xo
+x(!
+x&!
+x~
+0$!
+0"!
+0l
+xp
+0(!
+0&!
+0'!
+0#!
+0u
+x3
+x5
+x7
+0v
+14
+16
+15
+17
+0/
+#30000
+1)
+0#
+0$
+1M
+0N
+0R
+x^
+xP
+0e
+0\
+0S
+0-!
+x!!
+0|
+0y
+0r
+xj
+0q
+x#!
+xv
+x/
+x4
+#40000
+0"
+0)
+1#
+1$
+0Y
+0M
+1N
+1R
+0a
+0[
+0^
+0P
+xe
+x\
+xS
+0+!
+0z
+0n
+x-!
+0!!
+x|
+xy
+xr
+0j
+xq
+0#!
+0v
+0/
+14
+#50000
+1%
+0!
+1)
+0#
+0$
+1U
+0V
+1M
+0N
+0R
+xc
+xW
+0`
+x^
+xP
+0e
+0\
+0S
+x"!
+0{
+xl
+0o
+0-!
+x!!
+0|
+0y
+0r
+xj
+0q
+x#!
+0~
+0}
+xu
+0t
+0p
+0w
+0/!
+0.!
+xv
+0s
+12!
+01!
+10!
+0.
+00
+x/
+12
+13
+x4
+0-
+1;
+1?
+1=
+1<
+19
+1:
+#60000
+0%
+1!
+0)
+1#
+1$
+0U
+1V
+0M
+1N
+1R
+0c
+0W
+x`
+0^
+0P
+xe
+x\
+xS
+0"!
+x{
+0l
+xo
+x-!
+0!!
+x|
+xy
+xr
+0j
+xq
+0#!
+x~
+x}
+0u
+xt
+xp
+xw
+x/!
+x.!
+xs
+0v
+x2!
+x1!
+x0!
+x.
+x0
+x-
+x2
+x3
+14
+0/
+x;
+x?
+x=
+x<
+x9
+x:
+#70000
+1"
+1%
+0!
+0$
+1Y
+1U
+0V
+0R
+xa
+0`
+x[
+xc
+xW
+0\
+0S
+x+!
+x"!
+0{
+0o
+xz
+xn
+xl
+0-!
+0|
+0r
+x'!
+x#!
+0~
+xu
+0p
+xv
+13
+x4
+x6
+x/
+#80000
+1)
+0#
+1$
+1M
+0N
+1R
+x^
+xP
+0e
+x\
+xS
+x-!
+x!!
+x|
+0y
+xr
+xj
+0q
+0}
+0s
+0-
+12
+#90000
+0%
+0)
+1#
+0$
+0U
+0M
+1N
+0R
+0W
+0P
+xe
+0\
+0S
+0c
+0^
+0-!
+x%!
+0|
+xy
+0r
+xq
+0"!
+1m
+0l
+0%!
+0!!
+0j
+x&!
+x}
+xs
+0'!
+0#!
+0z
+0n
+0u
+0&!
+x-
+x2
+x5
+0w
+0t
+0v
+15
+14
+16
+00
+0.
+0/
+#100000
+0#
+1$
+0N
+1R
+0e
+x\
+xS
+x-!
+0y
+0q
+1f
+0}
+0s
+0-
+12
+#110000
+1)
+1#
+1M
+1N
+x^
+0O
+xe
+x%!
+x!!
+x|
+xy
+xr
+xj
+xf
+xq
+x(!
+x&!
+x'!
+x#!
+x~
+x}
+xw
+xv
+xt
+xs
+x0
+x/
+x.
+x-
+x2
+x3
+x4
+x6
+x5
+x7
+#120000
+0#
+0N
+0e
+xP
+xO
+0%!
+0y
+0q
+0(!
+0&!
+0~
+0}
+0s
+0-
+12
+13
+15
+17
+#130000
+0"
+0$
+0)
+0Y
+0R
+0M
+0a
+0[
+0\
+0S
+0P
+0+!
+0^
+0-!
+0|
+0r
+0/!
+0.!
+0!!
+0j
+1f
+0'!
+0w
+0t
+12!
+01!
+10!
+0#!
+0v
+1g
+00
+0.
+16
+1;
+1?
+1=
+1<
+19
+0/
+14
+1:
+#160000

@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at atv_PRIO.v(3): object "out" differs only in case from object "Out" in the same scope File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/atv_PRIO.v Line: 3
+Info (10281): Verilog HDL Declaration information at decod_7seg.v(3): object "B" differs only in case from object "b" in the same scope File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/decod_7seg.v Line: 3

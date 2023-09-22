@@ -1,0 +1,14 @@
+module enc_perf (A, B, C, D, out);
+
+   input   A, B, C, D;
+   output  out;
+	wire A_not, SUP1, SUP2, SUP3;
+ 
+	not D_inv (D_not, D);
+	
+   or Or0 (SUP1, A, B);
+	or	Or1 (SUP2, A, D_not);
+	or	Or2 (SUP3, B, D_not);
+	and And0 (out, A, SUP1, SUP2, SUP3);
+
+endmodule

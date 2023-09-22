@@ -1,0 +1,14 @@
+module decisor (A, B, C, out);
+
+   input   A, B, C;
+   output  out;
+	wire A_not, SUP1, SUP2;
+ 
+	not A_inv (A_not, A);
+	
+   and And0 (SUP1, A_not, B);
+	and And1 (SUP2, A, c);
+	 
+	or Or0 (out, SUP1, SUP2);
+
+endmodule

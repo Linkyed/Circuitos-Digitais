@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/Zona_Testes/simulation/qsim
+vTESTES
+Z0 !s110 1693929806
+!i10b 1
+!s100 ^7]61KT6][g97eOcc`@NC0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=4i02M:ge?NeDIUiO5zX]3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/Zona_Testes/simulation/qsim
+w1693929804
+8TESTES.vo
+FTESTES.vo
+!i122 160
+L0 32 2743
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1693929805.000000
+!s107 TESTES.vo|
+!s90 -work|work|TESTES.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@t@e@s@t@e@s
+vTESTES_vlg_vec_tst
+R0
+!i10b 1
+!s100 mnSVZh4fLznKCj2oF:?_S0
+R1
+IOBTmD4Ba27UfbL;NEzGXN3
+R2
+R3
+w1693929802
+8TesteEncaminhadores.vwf.vt
+FTesteEncaminhadores.vwf.vt
+!i122 161
+L0 30 154
+R4
+r1
+!s85 0
+31
+!s108 1693929806.000000
+!s107 TesteEncaminhadores.vwf.vt|
+!s90 -work|work|TesteEncaminhadores.vwf.vt|
+!i113 1
+R5
+R6
+n@t@e@s@t@e@s_vlg_vec_tst
