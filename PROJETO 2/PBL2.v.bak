@@ -1,0 +1,9 @@
+module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
+				SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G, SEG7_H)
+		input CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0;
+		output SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G, SEG7_H;
+		
+		
+	
+
+endmodule
