@@ -1,13 +1,27 @@
-|Contador
+|divided_frequecy
 clk => clk.IN1
-rstn => rstn.IN4
+rstn => rstn.IN18
 out[0] <= out[0].DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= out[1].DB_MAX_OUTPUT_PORT_TYPE
 out[2] <= out[2].DB_MAX_OUTPUT_PORT_TYPE
 out[3] <= out[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out[7].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out[8].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out[9].DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out[10].DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out[11].DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out[12].DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out[13].DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out[14].DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out[15].DB_MAX_OUTPUT_PORT_TYPE
+out[16] <= out[16].DB_MAX_OUTPUT_PORT_TYPE
+out[17] <= out[17].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Contador|flip_flop_d:dff0
+|divided_frequecy|flip_flop_d:dff0
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
 rstn => q~reg0.ACLR
@@ -15,7 +29,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Contador|flip_flop_d:dff1
+|divided_frequecy|flip_flop_d:dff1
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
 rstn => q~reg0.ACLR
@@ -23,7 +37,7 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Contador|flip_flop_d:dff2
+|divided_frequecy|flip_flop_d:dff2
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
 rstn => q~reg0.ACLR
@@ -31,7 +45,119 @@ q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Contador|flip_flop_d:dff3
+|divided_frequecy|flip_flop_d:dff3
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff4
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff5
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff6
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff7
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff8
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff9
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff10
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff11
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff12
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff13
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff14
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff15
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff16
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+rstn => q~reg0.ACLR
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qn <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divided_frequecy|flip_flop_d:dff17
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
 rstn => q~reg0.ACLR
