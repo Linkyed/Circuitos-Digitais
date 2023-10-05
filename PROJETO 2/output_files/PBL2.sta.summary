@@ -2,4 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Setup 'flip_flop_d:dff2|q'
+Slack : -1.193
+TNS   : -1.193
+
+Type  : Setup 'flip_flop_d:dff0|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff1|q'
+Slack : 0.825
+TNS   : 0.000
+
+Type  : Setup 'clk'
+Slack : 1.671
+TNS   : 0.000
+
+Type  : Hold 'clk'
+Slack : -1.725
+TNS   : -1.725
+
+Type  : Hold 'flip_flop_d:dff1|q'
+Slack : -0.879
+TNS   : -0.879
+
+Type  : Hold 'flip_flop_d:dff0|q'
+Slack : -0.520
+TNS   : -0.520
+
+Type  : Hold 'flip_flop_d:dff2|q'
+Slack : 1.639
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff0|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff1|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff2|q'
+Slack : 0.234
+TNS   : 0.000
+
 ------------------------------------------------------------

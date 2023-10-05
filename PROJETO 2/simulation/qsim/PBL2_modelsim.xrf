@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v
+source_file = 1, C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/flip_flop_d.v
+source_file = 1, C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Contador.v
+source_file = 1, C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform.vwf
+source_file = 1, C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/db/PBL2.cbx.xml
+design_name = Contador
+instance = comp, \clk~I , clk, Contador, 1
+instance = comp, \rstn~I , rstn, Contador, 1
+instance = comp, \dff0|q , dff0|q, Contador, 1
+instance = comp, \dff1|q , dff1|q, Contador, 1
+instance = comp, \dff2|q , dff2|q, Contador, 1
+instance = comp, \dff3|q , dff3|q, Contador, 1
+instance = comp, \out[0]~I , out[0], Contador, 1
+instance = comp, \out[1]~I , out[1], Contador, 1
+instance = comp, \out[2]~I , out[2], Contador, 1
+instance = comp, \out[3]~I , out[3], Contador, 1

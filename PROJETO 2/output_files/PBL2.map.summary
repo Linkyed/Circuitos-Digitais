@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue Sep 26 23:47:26 2023
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Wed Oct 04 21:22:22 2023
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PBL2
-Top-level Entity Name : PBL2
+Top-level Entity Name : Contador
 Family : MAX II
-Total logic elements : 1
-Total pins : 16
+Total logic elements : 4
+Total pins : 6
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

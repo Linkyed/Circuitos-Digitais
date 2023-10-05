@@ -1,6 +1,6 @@
 Timing Analyzer report for PBL2
-Tue Sep 26 23:47:44 2023
-Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Wed Oct 04 21:22:27 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -16,15 +16,25 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Clock Transfers
- 12. Report TCCS
- 13. Report RSKM
- 14. Unconstrained Paths Summary
- 15. Unconstrained Input Ports
- 16. Unconstrained Output Ports
- 17. Unconstrained Input Ports
- 18. Unconstrained Output Ports
- 19. Timing Analyzer Messages
+ 11. Setup: 'flip_flop_d:dff2|q'
+ 12. Setup: 'flip_flop_d:dff0|q'
+ 13. Setup: 'flip_flop_d:dff1|q'
+ 14. Setup: 'clk'
+ 15. Hold: 'clk'
+ 16. Hold: 'flip_flop_d:dff1|q'
+ 17. Hold: 'flip_flop_d:dff0|q'
+ 18. Hold: 'flip_flop_d:dff2|q'
+ 19. Setup Transfers
+ 20. Hold Transfers
+ 21. Report TCCS
+ 22. Report RSKM
+ 23. Unconstrained Paths Summary
+ 24. Clock Status Summary
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Unconstrained Input Ports
+ 28. Unconstrained Output Ports
+ 29. Timing Analyzer Messages
 
 
 
@@ -51,7 +61,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Timing Analyzer Summary                                                     ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; PBL2                                                ;
 ; Device Family         ; MAX II                                              ;
@@ -67,8 +77,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -78,28 +88,50 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                 ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; Clock Name         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
+; clk                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                ;
+; flip_flop_d:dff0|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { flip_flop_d:dff0|q } ;
+; flip_flop_d:dff1|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { flip_flop_d:dff1|q } ;
+; flip_flop_d:dff2|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { flip_flop_d:dff2|q } ;
++--------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------+
 
 
-----------------
-; Fmax Summary ;
-----------------
-No paths to report.
++---------------------------------------------------------+
+; Fmax Summary                                            ;
++-----------+-----------------+--------------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name         ; Note ;
++-----------+-----------------+--------------------+------+
+; 456.0 MHz ; 456.0 MHz       ; flip_flop_d:dff2|q ;      ;
++-----------+-----------------+--------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
------------------
-; Setup Summary ;
------------------
-No paths to report.
++---------------------------------------------+
+; Setup Summary                               ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; flip_flop_d:dff2|q ; -1.193 ; -1.193        ;
+; flip_flop_d:dff0|q ; 0.466  ; 0.000         ;
+; flip_flop_d:dff1|q ; 0.825  ; 0.000         ;
+; clk                ; 1.671  ; 0.000         ;
++--------------------+--------+---------------+
 
 
-----------------
-; Hold Summary ;
-----------------
-No paths to report.
++---------------------------------------------+
+; Hold Summary                                ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -1.725 ; -1.725        ;
+; flip_flop_d:dff1|q ; -0.879 ; -0.879        ;
+; flip_flop_d:dff0|q ; -0.520 ; -0.520        ;
+; flip_flop_d:dff2|q ; 1.639  ; 0.000         ;
++--------------------+--------+---------------+
 
 
 --------------------
@@ -114,16 +146,120 @@ No paths to report.
 No paths to report.
 
 
--------------------------------
-; Minimum Pulse Width Summary ;
--------------------------------
-No paths to report.
++---------------------------------------------+
+; Minimum Pulse Width Summary                 ;
++--------------------+--------+---------------+
+; Clock              ; Slack  ; End Point TNS ;
++--------------------+--------+---------------+
+; clk                ; -2.289 ; -2.289        ;
+; flip_flop_d:dff0|q ; 0.234  ; 0.000         ;
+; flip_flop_d:dff1|q ; 0.234  ; 0.000         ;
+; flip_flop_d:dff2|q ; 0.234  ; 0.000         ;
++--------------------+--------+---------------+
 
 
--------------------
-; Clock Transfers ;
--------------------
-Nothing to report.
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'flip_flop_d:dff2|q'                                                                                                         ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -1.193 ; flip_flop_d:dff3|q ; flip_flop_d:dff3|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; 1.000        ; 0.000      ; 1.860      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'flip_flop_d:dff0|q'                                                                                                        ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.466 ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'flip_flop_d:dff1|q'                                                                                                        ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 0.825 ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; 0.500        ; 2.160      ; 1.878      ;
+; 1.325 ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; 1.000        ; 2.160      ; 1.878      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                ;
++-------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+; 1.671 ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; clk         ; 0.500        ; 3.266      ; 2.138      ;
+; 2.171 ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; clk         ; 1.000        ; 3.266      ; 2.138      ;
++-------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                  ;
++--------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+; -1.725 ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; clk         ; 0.000        ; 3.266      ; 2.138      ;
+; -1.225 ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; clk         ; -0.500       ; 3.266      ; 2.138      ;
++--------+--------------------+--------------------+--------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'flip_flop_d:dff1|q'                                                                                                          ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.879 ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; 0.000        ; 2.160      ; 1.878      ;
+; -0.379 ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; -0.500       ; 2.160      ; 1.878      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'flip_flop_d:dff0|q'                                                                                                          ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack  ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; -0.520 ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'flip_flop_d:dff2|q'                                                                                                         ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; Slack ; From Node          ; To Node            ; Launch Clock       ; Latch Clock        ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+; 1.639 ; flip_flop_d:dff3|q ; flip_flop_d:dff3|q ; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; 0.000        ; 0.000      ; 1.860      ;
++-------+--------------------+--------------------+--------------------+--------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------+
+; Setup Transfers                                                                     ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; flip_flop_d:dff0|q ; clk                ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; 1        ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------+
+; Hold Transfers                                                                      ;
++--------------------+--------------------+----------+----------+----------+----------+
+; From Clock         ; To Clock           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------+--------------------+----------+----------+----------+----------+
+; flip_flop_d:dff0|q ; clk                ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff1|q ; flip_flop_d:dff0|q ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff2|q ; flip_flop_d:dff1|q ; 1        ; 1        ; 0        ; 0        ;
+; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; 1        ; 0        ; 0        ; 0        ;
++--------------------+--------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
 ---------------
@@ -145,20 +281,31 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 4     ; 4    ;
-; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Ports      ; 4     ; 4    ;
 ; Unconstrained Output Port Paths ; 4     ; 4    ;
 +---------------------------------+-------+------+
 
 
++--------------------------------------------------------------+
+; Clock Status Summary                                         ;
++--------------------+--------------------+------+-------------+
+; Target             ; Clock              ; Type ; Status      ;
++--------------------+--------------------+------+-------------+
+; clk                ; clk                ; Base ; Constrained ;
+; flip_flop_d:dff0|q ; flip_flop_d:dff0|q ; Base ; Constrained ;
+; flip_flop_d:dff1|q ; flip_flop_d:dff1|q ; Base ; Constrained ;
+; flip_flop_d:dff2|q ; flip_flop_d:dff2|q ; Base ; Constrained ;
++--------------------+--------------------+------+-------------+
+
+
 +---------------------------------------------------------------------------------------------------+
 ; Unconstrained Input Ports                                                                         ;
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; CH0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; CH1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rstn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -167,8 +314,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; SEG7_A      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SEG7_F      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -177,8 +326,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +------------+--------------------------------------------------------------------------------------+
 ; Input Port ; Comment                                                                              ;
 +------------+--------------------------------------------------------------------------------------+
-; CH0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; CH1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; rstn       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +------------+--------------------------------------------------------------------------------------+
 
 
@@ -187,8 +335,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; SEG7_A      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; SEG7_F      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[0]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[1]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[2]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; out[3]      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -197,35 +347,55 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 26 23:47:43 2023
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Oct 04 21:22:26 2023
 Info: Command: quartus_sta PBL2 -c PBL2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'PBL2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name flip_flop_d:dff0|q flip_flop_d:dff0|q
+    Info (332105): create_clock -period 1.000 -name flip_flop_d:dff1|q flip_flop_d:dff1|q
+    Info (332105): create_clock -period 1.000 -name flip_flop_d:dff2|q flip_flop_d:dff2|q
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
-Info (332140): No fmax paths to report
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332140): No Setup paths to report
-Info (332140): No Hold paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.193
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.193              -1.193 flip_flop_d:dff2|q 
+    Info (332119):     0.466               0.000 flip_flop_d:dff0|q 
+    Info (332119):     0.825               0.000 flip_flop_d:dff1|q 
+    Info (332119):     1.671               0.000 clk 
+Info (332146): Worst-case hold slack is -1.725
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.725              -1.725 clk 
+    Info (332119):    -0.879              -0.879 flip_flop_d:dff1|q 
+    Info (332119):    -0.520              -0.520 flip_flop_d:dff0|q 
+    Info (332119):     1.639               0.000 flip_flop_d:dff2|q 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 clk 
+    Info (332119):     0.234               0.000 flip_flop_d:dff0|q 
+    Info (332119):     0.234               0.000 flip_flop_d:dff1|q 
+    Info (332119):     0.234               0.000 flip_flop_d:dff2|q 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4676 megabytes
-    Info: Processing ended: Tue Sep 26 23:47:44 2023
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Wed Oct 04 21:22:27 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
