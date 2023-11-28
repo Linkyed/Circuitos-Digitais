@@ -2,36 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Setup 'flip_flop_d:dff16|q'
+Slack : -1.194
+TNS   : -1.194
+
 Type  : Setup 'flip_flop_d:dff2|q'
-Slack : -1.193
-TNS   : -1.193
+Slack : 0.457
+TNS   : 0.000
 
 Type  : Setup 'flip_flop_d:dff0|q'
 Slack : 0.466
 TNS   : 0.000
 
+Type  : Setup 'flip_flop_d:dff4|q'
+Slack : 0.466
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff12|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff14|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff6|q'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff8|q'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff10|q'
+Slack : 0.469
+TNS   : 0.000
+
 Type  : Setup 'flip_flop_d:dff1|q'
-Slack : 0.825
+Slack : 0.817
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff13|q'
+Slack : 0.835
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff15|q'
+Slack : 0.835
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff11|q'
+Slack : 0.836
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff7|q'
+Slack : 0.839
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff5|q'
+Slack : 0.851
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff3|q'
+Slack : 1.304
+TNS   : 0.000
+
+Type  : Setup 'flip_flop_d:dff9|q'
+Slack : 1.329
 TNS   : 0.000
 
 Type  : Setup 'clk'
-Slack : 1.671
+Slack : 1.672
 TNS   : 0.000
 
 Type  : Hold 'clk'
-Slack : -1.725
-TNS   : -1.725
+Slack : -1.726
+TNS   : -1.726
+
+Type  : Hold 'flip_flop_d:dff9|q'
+Slack : -1.383
+TNS   : -1.383
+
+Type  : Hold 'flip_flop_d:dff3|q'
+Slack : -1.358
+TNS   : -1.358
+
+Type  : Hold 'flip_flop_d:dff5|q'
+Slack : -0.905
+TNS   : -0.905
+
+Type  : Hold 'flip_flop_d:dff7|q'
+Slack : -0.893
+TNS   : -0.893
+
+Type  : Hold 'flip_flop_d:dff11|q'
+Slack : -0.890
+TNS   : -0.890
+
+Type  : Hold 'flip_flop_d:dff13|q'
+Slack : -0.889
+TNS   : -0.889
+
+Type  : Hold 'flip_flop_d:dff15|q'
+Slack : -0.889
+TNS   : -0.889
 
 Type  : Hold 'flip_flop_d:dff1|q'
-Slack : -0.879
-TNS   : -0.879
+Slack : -0.871
+TNS   : -0.871
+
+Type  : Hold 'flip_flop_d:dff10|q'
+Slack : -0.523
+TNS   : -0.523
+
+Type  : Hold 'flip_flop_d:dff8|q'
+Slack : -0.522
+TNS   : -0.522
+
+Type  : Hold 'flip_flop_d:dff12|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'flip_flop_d:dff14|q'
+Slack : -0.521
+TNS   : -0.521
+
+Type  : Hold 'flip_flop_d:dff6|q'
+Slack : -0.521
+TNS   : -0.521
 
 Type  : Hold 'flip_flop_d:dff0|q'
 Slack : -0.520
 TNS   : -0.520
 
+Type  : Hold 'flip_flop_d:dff4|q'
+Slack : -0.520
+TNS   : -0.520
+
 Type  : Hold 'flip_flop_d:dff2|q'
-Slack : 1.639
+Slack : -0.511
+TNS   : -0.511
+
+Type  : Hold 'flip_flop_d:dff16|q'
+Slack : 1.640
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'
@@ -42,11 +154,67 @@ Type  : Minimum Pulse Width 'flip_flop_d:dff0|q'
 Slack : 0.234
 TNS   : 0.000
 
+Type  : Minimum Pulse Width 'flip_flop_d:dff10|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff11|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff12|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff13|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff14|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff15|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff16|q'
+Slack : 0.234
+TNS   : 0.000
+
 Type  : Minimum Pulse Width 'flip_flop_d:dff1|q'
 Slack : 0.234
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'flip_flop_d:dff2|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff3|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff4|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff5|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff6|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff7|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff8|q'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'flip_flop_d:dff9|q'
 Slack : 0.234
 TNS   : 0.000
 

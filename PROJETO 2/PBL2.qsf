@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY Contador
+set_global_assignment -name TOP_LEVEL_ENTITY divided_frequecy
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:08:42  SEPTEMBER 26, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -52,3 +52,8 @@ set_global_assignment -name VERILOG_FILE PBL2.v
 set_global_assignment -name VERILOG_FILE flip_flop_d.v
 set_global_assignment -name VERILOG_FILE Contador.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VERILOG_FILE divided_frequecy.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
+set_global_assignment -name VERILOG_FILE matriz_led.v
+set_global_assignment -name VERILOG_FILE matriz_led_coluna.v
