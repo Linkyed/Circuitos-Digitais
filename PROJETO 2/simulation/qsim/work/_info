@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim
+vPBL2
+Z1 !s110 1701137417
+!i10b 1
+!s100 ]z?lJ<[o`Bk1IT`B;6TYF1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IVhcVhjXa6D;;9J`B=Z[0L3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701137416
+8PBL2.vo
+FPBL2.vo
+!i122 56
+L0 32 1401
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1701137417.000000
+!s107 PBL2.vo|
+!s90 -work|work|PBL2.vo|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@p@b@l2
+vPBL2_vlg_vec_tst
+R1
+!i10b 1
+!s100 HCI?7H44Z@=NjLn6l3Tjf0
+R2
+IUKDm4nbNLNzRbUl<f;GXL0
+R3
+R0
+w1701137415
+8simulador_matriz.vwf.vt
+Fsimulador_matriz.vwf.vt
+!i122 57
+L0 30 110
+R4
+r1
+!s85 0
+31
+R5
+!s107 simulador_matriz.vwf.vt|
+!s90 -work|work|simulador_matriz.vwf.vt|
+!i113 1
+R6
+R7
+n@p@b@l2_vlg_vec_tst

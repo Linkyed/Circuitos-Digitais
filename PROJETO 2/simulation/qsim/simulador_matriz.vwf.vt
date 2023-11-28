@@ -1,0 +1,140 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "11/27/2023 23:10:14"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          PBL2
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module PBL2_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg CH0;
+reg CH1;
+reg CH2;
+reg CH3;
+reg CH4;
+reg CH5;
+reg CH6;
+reg CH7;
+reg clk;
+// wires                                               
+wire LED0;
+wire LED1;
+wire LED2;
+wire LED3;
+wire LED4;
+wire LED5;
+wire LED6;
+wire LED7;
+wire LED8;
+wire LED9;
+wire MATRIZ_C0;
+wire MATRIZ_C1;
+wire MATRIZ_C2;
+wire MATRIZ_C3;
+wire MATRIZ_C4;
+wire MATRIZ_L0;
+wire MATRIZ_L1;
+wire MATRIZ_L2;
+wire MATRIZ_L3;
+wire MATRIZ_L4;
+wire MATRIZ_L5;
+wire MATRIZ_L6;
+wire SEG7_A;
+wire SEG7_B;
+wire SEG7_C;
+wire SEG7_D;
+wire SEG7_E;
+wire SEG7_F;
+wire SEG7_G;
+wire teste0;
+wire teste1;
+wire teste2;
+
+// assign statements (if any)                          
+PBL2 i1 (
+// port map - connection between master ports and signals/registers   
+	.CH0(CH0),
+	.CH1(CH1),
+	.CH2(CH2),
+	.CH3(CH3),
+	.CH4(CH4),
+	.CH5(CH5),
+	.CH6(CH6),
+	.CH7(CH7),
+	.LED0(LED0),
+	.LED1(LED1),
+	.LED2(LED2),
+	.LED3(LED3),
+	.LED4(LED4),
+	.LED5(LED5),
+	.LED6(LED6),
+	.LED7(LED7),
+	.LED8(LED8),
+	.LED9(LED9),
+	.MATRIZ_C0(MATRIZ_C0),
+	.MATRIZ_C1(MATRIZ_C1),
+	.MATRIZ_C2(MATRIZ_C2),
+	.MATRIZ_C3(MATRIZ_C3),
+	.MATRIZ_C4(MATRIZ_C4),
+	.MATRIZ_L0(MATRIZ_L0),
+	.MATRIZ_L1(MATRIZ_L1),
+	.MATRIZ_L2(MATRIZ_L2),
+	.MATRIZ_L3(MATRIZ_L3),
+	.MATRIZ_L4(MATRIZ_L4),
+	.MATRIZ_L5(MATRIZ_L5),
+	.MATRIZ_L6(MATRIZ_L6),
+	.SEG7_A(SEG7_A),
+	.SEG7_B(SEG7_B),
+	.SEG7_C(SEG7_C),
+	.SEG7_D(SEG7_D),
+	.SEG7_E(SEG7_E),
+	.SEG7_F(SEG7_F),
+	.SEG7_G(SEG7_G),
+	.clk(clk),
+	.teste0(teste0),
+	.teste1(teste1),
+	.teste2(teste2)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+
+// CH0
+initial
+begin
+	CH0 = 1'b1;
+end 
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #20 1'b1;
+	#20;
+end 
+endmodule
+
