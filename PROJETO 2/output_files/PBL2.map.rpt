@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PBL2
-Wed Oct 04 21:22:22 2023
+Wed Oct 04 23:09:36 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,7 +14,7 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "flip_flop_d:dff3"
+  9. Port Connectivity Checks: "flip_flop_d:dff17"
  10. Analysis & Synthesis Messages
 
 
@@ -42,13 +42,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Oct 04 21:22:22 2023       ;
+; Analysis & Synthesis Status ; Successful - Wed Oct 04 23:09:36 2023       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; PBL2                                        ;
-; Top-level Entity Name       ; Contador                                    ;
+; Top-level Entity Name       ; divided_frequecy                            ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 4                                           ;
-; Total pins                  ; 6                                           ;
+; Total logic elements        ; 18                                          ;
+; Total pins                  ; 20                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; Contador           ; PBL2               ;
+; Top-level entity name                                            ; divided_frequecy   ; PBL2               ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -141,14 +141,14 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
-; flip_flop_d.v                    ; yes             ; User Verilog HDL File  ; C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/flip_flop_d.v ;         ;
-; Contador.v                       ; yes             ; User Verilog HDL File  ; C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Contador.v    ;         ;
-+----------------------------------+-----------------+------------------------+----------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                    ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
+; flip_flop_d.v                    ; yes             ; User Verilog HDL File  ; C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/flip_flop_d.v      ;         ;
+; divided_frequecy.v               ; yes             ; User Verilog HDL File  ; C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/divided_frequecy.v ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -156,46 +156,60 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 4     ;
+; Total logic elements                        ; 18    ;
 ;     -- Combinational with no register       ; 0     ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 4     ;
+;     -- Combinational with a register        ; 18    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
 ;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 4     ;
+;     -- 1 input functions                    ; 18    ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 4     ;
+;     -- normal mode                          ; 18    ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 4     ;
+;     -- asynchronous clear/load mode         ; 18    ;
 ;                                             ;       ;
-; Total registers                             ; 4     ;
-; I/O pins                                    ; 6     ;
+; Total registers                             ; 18    ;
+; I/O pins                                    ; 20    ;
 ; Maximum fan-out node                        ; rstn  ;
-; Maximum fan-out                             ; 4     ;
-; Total fan-out                               ; 16    ;
-; Average fan-out                             ; 1.60  ;
+; Maximum fan-out                             ; 18    ;
+; Total fan-out                               ; 72    ;
+; Average fan-out                             ; 1.89  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name        ; Entity Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+-------------+--------------+
-; |Contador                  ; 4 (0)       ; 4            ; 0          ; 6    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |Contador                  ; Contador    ; work         ;
-;    |flip_flop_d:dff0|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Contador|flip_flop_d:dff0 ; flip_flop_d ; work         ;
-;    |flip_flop_d:dff1|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Contador|flip_flop_d:dff1 ; flip_flop_d ; work         ;
-;    |flip_flop_d:dff2|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Contador|flip_flop_d:dff2 ; flip_flop_d ; work         ;
-;    |flip_flop_d:dff3|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |Contador|flip_flop_d:dff3 ; flip_flop_d ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                     ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                 ; Entity Name      ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+------------------+--------------+
+; |divided_frequecy          ; 18 (0)      ; 18           ; 0          ; 20   ; 0            ; 0 (0)        ; 0 (0)             ; 18 (0)           ; 0 (0)           ; 0 (0)      ; |divided_frequecy                   ; divided_frequecy ; work         ;
+;    |flip_flop_d:dff0|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff0  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff10|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff10 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff11|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff11 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff12|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff12 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff13|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff13 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff14|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff14 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff15|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff15 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff16|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff16 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff17|     ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff17 ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff1|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff1  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff2|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff2  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff3|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff3  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff4|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff4  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff5|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff5  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff6|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff6  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff7|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff7  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff8|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff8  ; flip_flop_d      ; work         ;
+;    |flip_flop_d:dff9|      ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |divided_frequecy|flip_flop_d:dff9  ; flip_flop_d      ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -204,10 +218,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 18    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -215,7 +229,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flip_flop_d:dff3"                                                                   ;
+; Port Connectivity Checks: "flip_flop_d:dff17"                                                                  ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -229,7 +243,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 04 21:22:14 2023
+    Info: Processing started: Wed Oct 04 23:09:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -239,6 +253,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file flip_fl
     Info (12023): Found entity 1: flip_flop_d File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/flip_flop_d.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file contador.v
     Info (12023): Found entity 1: Contador File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Contador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file divided_frequecy.v
+    Info (12023): Found entity 1: divided_frequecy File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/divided_frequecy.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(11): created implicit net for "SUP1" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 11
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(11): created implicit net for "CH1_NOT" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 11
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(11): created implicit net for "CH0_NOT" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 11
@@ -246,16 +262,16 @@ Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(12): created implici
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(13): created implicit net for "SUP3" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(17): created implicit net for "SUP4" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
 Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(20): created implicit net for "SUP5" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 20
-Info (12127): Elaborating entity "Contador" for the top level hierarchy
-Info (12128): Elaborating entity "flip_flop_d" for hierarchy "flip_flop_d:dff0" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Contador.v Line: 13
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+Info (12127): Elaborating entity "divided_frequecy" for the top level hierarchy
+Info (12128): Elaborating entity "flip_flop_d" for hierarchy "flip_flop_d:dff0" File: C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/divided_frequecy.v Line: 13
+Info (21057): Implemented 38 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 4 logic cells
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 18 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 4700 megabytes
-    Info: Processing ended: Wed Oct 04 21:22:22 2023
+    Info: Peak virtual memory: 4699 megabytes
+    Info: Processing ended: Wed Oct 04 23:09:36 2023
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 

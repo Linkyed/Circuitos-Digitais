@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Oct 04 21:22:24 2023
+Fitter Status : Successful - Wed Oct 04 23:09:38 2023
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : PBL2
-Top-level Entity Name : Contador
+Top-level Entity Name : divided_frequecy
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 4 / 240 ( 2 % )
-Total pins : 6 / 80 ( 8 % )
+Total logic elements : 18 / 240 ( 8 % )
+Total pins : 20 / 80 ( 25 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

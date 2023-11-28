@@ -1,0 +1,11 @@
+module matriz_led(l0, l1, l2, l3, l4, l5, l6, A, B, C, D, E, ch6, ch7, codigoMap,codigoAtk, clk);
+	
+	input l0, l1, l2, l3, l4, l5, l6;
+	input A, B, C, D, E;
+	input clk;
+	
+	output l0, l1, l2, l3, l4, l5, l6;
+	output A, B, C, D, E; 
+	
+endmodule	
+	

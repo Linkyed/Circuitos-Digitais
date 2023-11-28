@@ -1,5 +1,5 @@
 Flow report for PBL2
-Wed Oct 04 21:24:29 2023
+Wed Oct 04 23:19:52 2023
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Oct 04 21:24:29 2023       ;
+; Flow Status           ; Successful - Wed Oct 04 23:19:52 2023       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; PBL2                                        ;
-; Top-level Entity Name ; Contador                                    ;
+; Top-level Entity Name ; divided_frequecy                            ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 4 / 240 ( 2 % )                             ;
-; Total pins            ; 6 / 80 ( 8 % )                              ;
+; Total logic elements  ; 18 / 240 ( 8 % )                            ;
+; Total pins            ; 20 / 80 ( 25 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/04/2023 21:22:14 ;
+; Start date & time ; 10/04/2023 23:09:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; PBL2                ;
 +-------------------+---------------------+
@@ -71,12 +71,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+--------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                          ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 42874947737317.169646533403244 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 42874947737317.169647176815408 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --            ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --            ; --          ; --         ;
 ; PROJECT_OUTPUT_DIRECTORY              ; output_files                   ; --            ; --          ; --         ;
-; TOP_LEVEL_ENTITY                      ; Contador                       ; PBL2          ; --          ; --         ;
+; TOP_LEVEL_ENTITY                      ; divided_frequecy               ; PBL2          ; --          ; --         ;
 +---------------------------------------+--------------------------------+---------------+-------------+------------+
 
 
@@ -85,17 +85,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4700 MB             ; 00:00:19                           ;
-; Fitter               ; 00:00:01     ; 1.0                     ; 5879 MB             ; 00:00:01                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4657 MB             ; 00:00:00                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4675 MB             ; 00:00:01                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4699 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:01     ; 1.1                     ; 5887 MB             ; 00:00:02                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 4657 MB             ; 00:00:00                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4705 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:00                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4608 MB             ; 00:00:00                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4608 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:00                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
-; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4608 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,6 +118,10 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-LLH6HE7  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -124,11 +132,15 @@ quartus_map --read_settings_files=on --write_settings_files=off PBL2 -c PBL2
 quartus_fit --read_settings_files=off --write_settings_files=off PBL2 -c PBL2
 quartus_asm --read_settings_files=off --write_settings_files=off PBL2 -c PBL2
 quartus_sta PBL2 -c PBL2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
 
 
