@@ -1,0 +1,159 @@
+module mux8_1(A0, A1, A2, A3, A4, A5, A6, A7, SEL, out);
+	input [12:0]A0, A1, A2, A3, A4, A5, A6, A7;
+	output[12:0] out;
+	
+	wire SEL0_not, SEL1_not, SEL2_not, SUP1, SUP2;
+	
+	not (SEL0_not, SEL[0]);
+	not (SEL1_not, SEL[1]);
+	not (SEL2_not, SEL[2]);
+	
+	
+	// SAIDA S0 DO MUX
+	and And0 (T0, SEL0_not, SEL1_not, SEL2_not, A0[0])
+	and And1 (T1, SEL0_not, SEL1_not, SEL[2], A1[0])
+	and And2 (T2, SEL0_not, SEL[1], SEL2_not, A2[0])
+	and And3 (T3, SEL0_not, SEL[1], SEL[2], A3[0])
+	and And4 (T4, SEL[0], SEL1_not, SEL2_not, A4[0])
+	and And5 (T5, SEL[0], SEL1_not, SEL[2], A5[0])
+	and And6 (T6, SEL[0], SEL[1], SEL2_not, A6[0])
+	and And7 (T7, SEL[0], SEL[1], SEL[2], A7[0])
+	
+	// SAIDA S1 DO MUX
+	and And0 (T8, SEL0_not, SEL1_not, SEL2_not, A0[1])
+	and And1 (T9, SEL0_not, SEL1_not, SEL[2], A1[1])
+	and And2 (T10, SEL0_not, SEL[1], SEL2_not, A2[1])
+	and And3 (T11, SEL0_not, SEL[1], SEL[2], A3[1])
+	and And4 (T12, SEL[0], SEL1_not, SEL2_not, A4[1])
+	and And5 (T13, SEL[0], SEL1_not, SEL[2], A5[1])
+	and And6 (T14, SEL[0], SEL[1], SEL2_not, A6[1])
+	and And7 (T15, SEL[0], SEL[1], SEL[2], A7[1])
+	
+	// SAIDA S2 DO MUX
+	and And0 (T16, SEL0_not, SEL1_not, SEL2_not, A0[2])
+	and And1 (T17, SEL0_not, SEL1_not, SEL[2], A1[2])
+	and And2 (T18, SEL0_not, SEL[1], SEL2_not, A2[2])
+	and And3 (T19, SEL0_not, SEL[1], SEL[2], A3[2])
+	and And4 (T20, SEL[0], SEL1_not, SEL2_not, A4[2])
+	and And5 (T21, SEL[0], SEL1_not, SEL[2], A5[2])
+	and And6 (T22, SEL[0], SEL[1], SEL2_not, A6[2])
+	and And7 (T23, SEL[0], SEL[1], SEL[2], A7[2])
+	
+	// SAIDA S3 DO MUX
+	and And0 (T24, SEL0_not, SEL1_not, SEL2_not, A0[3])
+	and And1 (T25, SEL0_not, SEL1_not, SEL[2], A1[3])
+	and And2 (T26, SEL0_not, SEL[1], SEL2_not, A2[3])
+	and And3 (T27, SEL0_not, SEL[1], SEL[2], A3[3])
+	and And4 (T28, SEL[0], SEL1_not, SEL2_not, A4[3])
+	and And5 (T29, SEL[0], SEL1_not, SEL[2], A5[3])
+	and And6 (T30, SEL[0], SEL[1], SEL2_not, A6[3])
+	and And7 (T31, SEL[0], SEL[1], SEL[2], A7[3])
+	
+	// SAIDA S4 DO MUX
+	and And0 (T32, SEL0_not, SEL1_not, SEL2_not, A0[4])
+	and And1 (T33, SEL0_not, SEL1_not, SEL[2], A1[4])
+	and And2 (T34, SEL0_not, SEL[1], SEL2_not, A2[4])
+	and And3 (T35, SEL0_not, SEL[1], SEL[2], A3[4])
+	and And4 (T36, SEL[0], SEL1_not, SEL2_not, A4[4])
+	and And5 (T37, SEL[0], SEL1_not, SEL[2], A5[4])
+	and And6 (T38, SEL[0], SEL[1], SEL2_not, A6[4])
+	and And7 (T39, SEL[0], SEL[1], SEL[2], A7[4])
+	
+	// SAIDA S5 DO MUX
+	and And0 (T40, SEL0_not, SEL1_not, SEL2_not, A0[5])
+	and And1 (T41, SEL0_not, SEL1_not, SEL[2], A1[5])
+	and And2 (T42, SEL0_not, SEL[1], SEL2_not, A2[5])
+	and And3 (T43, SEL0_not, SEL[1], SEL[2], A3[5])
+	and And4 (T44, SEL[0], SEL1_not, SEL2_not, A4[5])
+	and And5 (T45, SEL[0], SEL1_not, SEL[2], A5[5])
+	and And6 (T46, SEL[0], SEL[1], SEL2_not, A6[5])
+	and And7 (T47, SEL[0], SEL[1], SEL[2], A7[5])
+
+	// SAIDA S6 DO MUX
+	and And0 (T48, SEL0_not, SEL1_not, SEL2_not, A0[6])
+	and And1 (T49, SEL0_not, SEL1_not, SEL[2], A1[6])
+	and And2 (T50, SEL0_not, SEL[1], SEL2_not, A2[6])
+	and And3 (T51, SEL0_not, SEL[1], SEL[2], A3[6])
+	and And4 (T52, SEL[0], SEL1_not, SEL2_not, A4[6])
+	and And5 (T53, SEL[0], SEL1_not, SEL[2], A5[6])
+	and And6 (T54, SEL[0], SEL[1], SEL2_not, A6[6])
+	and And7 (T55, SEL[0], SEL[1], SEL[2], A7[6])
+
+	// SAIDA S7 DO MUX
+	and And0 (T56, SEL0_not, SEL1_not, SEL2_not, A0[7])
+	and And1 (T57, SEL0_not, SEL1_not, SEL[2], A1[7])
+	and And2 (T58, SEL0_not, SEL[1], SEL2_not, A2[7])
+	and And3 (T59, SEL0_not, SEL[1], SEL[2], A3[7])
+	and And4 (T60, SEL[0], SEL1_not, SEL2_not, A4[7])
+	and And5 (T61, SEL[0], SEL1_not, SEL[2], A5[7])
+	and And6 (T62, SEL[0], SEL[1], SEL2_not, A6[7])
+	and And7 (T63, SEL[0], SEL[1], SEL[2], A7[7])
+
+	// SAIDA S8 DO MUX
+	and And0 (T64, SEL0_not, SEL1_not, SEL2_not, A0[8])
+	and And1 (T65, SEL0_not, SEL1_not, SEL[2], A1[8])
+	and And2 (T66, SEL0_not, SEL[1], SEL2_not, A2[8])
+	and And3 (T67, SEL0_not, SEL[1], SEL[2], A3[8])
+	and And4 (T68, SEL[0], SEL1_not, SEL2_not, A4[8])
+	and And5 (T69, SEL[0], SEL1_not, SEL[2], A5[8])
+	and And6 (T70, SEL[0], SEL[1], SEL2_not, A6[8])
+	and And7 (T71, SEL[0], SEL[1], SEL[2], A7[8])
+
+	// SAIDA S9 DO MUX
+	and And0 (T72, SEL0_not, SEL1_not, SEL2_not, A0[9])
+	and And1 (T73, SEL0_not, SEL1_not, SEL[2], A1[9])
+	and And2 (T74, SEL0_not, SEL[1], SEL2_not, A2[9])
+	and And3 (T75, SEL0_not, SEL[1], SEL[2], A3[9])
+	and And4 (T76, SEL[0], SEL1_not, SEL2_not, A4[9])
+	and And5 (T77, SEL[0], SEL1_not, SEL[2], A5[9])
+	and And6 (T78, SEL[0], SEL[1], SEL2_not, A6[9])
+	and And7 (T79, SEL[0], SEL[1], SEL[2], A7[9])
+
+	// SAIDA S10 DO MUX
+	and And0 (T80, SEL0_not, SEL1_not, SEL2_not, A0[10])
+	and And1 (T81, SEL0_not, SEL1_not, SEL[2], A1[10])
+	and And2 (T82, SEL0_not, SEL[1], SEL2_not, A2[10])
+	and And3 (T83, SEL0_not, SEL[1], SEL[2], A3[10])
+	and And4 (T84, SEL[0], SEL1_not, SEL2_not, A4[10])
+	and And5 (T85, SEL[0], SEL1_not, SEL[2], A5[10])
+	and And6 (T86, SEL[0], SEL[1], SEL2_not, A6[10])
+	and And7 (T87, SEL[0], SEL[1], SEL[2], A7[10])
+
+	// SAIDA S11 DO MUX
+	and And0 (T88, SEL0_not, SEL1_not, SEL2_not, A0[11])
+	and And1 (T89, SEL0_not, SEL1_not, SEL[2], A1[11])
+	and And2 (T90, SEL0_not, SEL[1], SEL2_not, A2[11])
+	and And3 (T91, SEL0_not, SEL[1], SEL[2], A3[11])
+	and And4 (T92, SEL[0], SEL1_not, SEL2_not, A4[11])
+	and And5 (T93, SEL[0], SEL1_not, SEL[2], A5[11])
+	and And6 (T94, SEL[0], SEL[1], SEL2_not, A6[11])
+	and And7 (T95, SEL[0], SEL[1], SEL[2], A7[11])
+
+	// SAIDA S12 DO MUX 
+	and And0 (T96, SEL0_not, SEL1_not, SEL2_not, A0[12])
+	and And1 (T97, SEL0_not, SEL1_not, SEL[2], A1[12])
+	and And2 (T98, SEL0_not, SEL[1], SEL2_not, A2[12])
+	and And3 (T99, SEL0_not, SEL[1], SEL[2], A3[12])
+	and And4 (T100, SEL[0], SEL1_not, SEL2_not, A4[12])
+	and And5 (T101, SEL[0], SEL1_not, SEL[2], A5[12])
+	and And6 (T102, SEL[0], SEL[1], SEL2_not, A6[12])
+	and And7 (T103, SEL[0], SEL[1], SEL[2], A7[12])
+
+
+	or out0 (out[0], T0, T1, T2, T3, T4, T5, T6, T7);
+	or out1 (out[1], T8, T9, T10, T11, T12, T13, T14, T15);
+	or out2 (out[2], T16, T17, T18, T19, T20, T21, T22, T23);
+	or out3 (out[3], T24, T25, T26, T27, T28, T29, T30, T31);
+	or out4 (out[4], T32, T33, T34, T35, T36, T37, T38, T39);
+	or out5 (out[5], T40, T41, T42, T43, T44, T45, T46, T47);
+	or out6 (out[6], T48, T49, T50, T51, T52, T53, T54, T55);
+	or out7 (out[7], T56, T57, T58, T59, T60, T61, T62, T63);
+	or out8 (out[8], T64, T65, T66, T67, T68, T69, T70, T71);
+	or out9 (out[9], T72, T73, T74, T75, T76, T77, T78, T79);
+	or out10 (out[10], T80, T81, T82, T83, T84, T85, T86, T87);
+	or out11 (out[11], T88, T89, T90, T91, T92, T93, T94, T95);
+	or out12 (out[12], T96, T97, T98, T99, T100, T101, T102, T103);
+
+	
+
+endmodule 

@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Oct 04 23:09:38 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Mon Nov 27 23:10:01 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : PBL2
-Top-level Entity Name : divided_frequecy
+Top-level Entity Name : PBL2
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 18 / 240 ( 8 % )
-Total pins : 20 / 80 ( 25 % )
+Total logic elements : 24 / 240 ( 10 % )
+Total pins : 41 / 80 ( 51 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
