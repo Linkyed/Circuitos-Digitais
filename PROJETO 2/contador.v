@@ -2,7 +2,6 @@ module contador(clk, rstn, out0, out1, out2);
 	input clk, rstn; 
 	output out0, out1, out2;
 	
-
 	d_ff d0 ( .d(~SUP1),
 		.rstn(rstn),
 		.clk(clk),
@@ -30,7 +29,4 @@ module contador(clk, rstn, out0, out1, out2);
 	not (out1, SUP2);
 	not (out2, SUP3);
 
-
-	
-
-endmodule 
+endmodule
