@@ -2,219 +2,135 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'flip_flop_d:dff16|q'
-Slack : -1.194
-TNS   : -1.194
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d9|q'
+Slack : -1.684
+TNS   : -4.675
 
-Type  : Setup 'flip_flop_d:dff2|q'
-Slack : 0.457
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff0|q'
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d0|q'
 Slack : 0.466
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff4|q'
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d6|q'
 Slack : 0.466
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff12|q'
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d2|q'
 Slack : 0.467
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff14|q'
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d4|q'
 Slack : 0.467
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff6|q'
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d8|q'
 Slack : 0.467
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff8|q'
-Slack : 0.468
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d3|q'
+Slack : 0.808
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff10|q'
-Slack : 0.469
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d1|q'
+Slack : 0.833
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff1|q'
-Slack : 0.817
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d7|q'
+Slack : 0.852
 TNS   : 0.000
 
-Type  : Setup 'flip_flop_d:dff13|q'
-Slack : 0.835
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff15|q'
-Slack : 0.835
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff11|q'
-Slack : 0.836
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff7|q'
-Slack : 0.839
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff5|q'
-Slack : 0.851
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff3|q'
-Slack : 1.304
-TNS   : 0.000
-
-Type  : Setup 'flip_flop_d:dff9|q'
-Slack : 1.329
+Type  : Setup 'divisor_clk:divisor_clk|d_ff:d5|q'
+Slack : 1.195
 TNS   : 0.000
 
 Type  : Setup 'clk'
-Slack : 1.672
+Slack : 2.938
 TNS   : 0.000
 
 Type  : Hold 'clk'
-Slack : -1.726
-TNS   : -1.726
+Slack : -2.992
+TNS   : -2.992
 
-Type  : Hold 'flip_flop_d:dff9|q'
-Slack : -1.383
-TNS   : -1.383
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d5|q'
+Slack : -1.249
+TNS   : -1.249
 
-Type  : Hold 'flip_flop_d:dff3|q'
-Slack : -1.358
-TNS   : -1.358
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d7|q'
+Slack : -0.906
+TNS   : -0.906
 
-Type  : Hold 'flip_flop_d:dff5|q'
-Slack : -0.905
-TNS   : -0.905
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d1|q'
+Slack : -0.887
+TNS   : -0.887
 
-Type  : Hold 'flip_flop_d:dff7|q'
-Slack : -0.893
-TNS   : -0.893
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d3|q'
+Slack : -0.862
+TNS   : -0.862
 
-Type  : Hold 'flip_flop_d:dff11|q'
-Slack : -0.890
-TNS   : -0.890
-
-Type  : Hold 'flip_flop_d:dff13|q'
-Slack : -0.889
-TNS   : -0.889
-
-Type  : Hold 'flip_flop_d:dff15|q'
-Slack : -0.889
-TNS   : -0.889
-
-Type  : Hold 'flip_flop_d:dff1|q'
-Slack : -0.871
-TNS   : -0.871
-
-Type  : Hold 'flip_flop_d:dff10|q'
-Slack : -0.523
-TNS   : -0.523
-
-Type  : Hold 'flip_flop_d:dff8|q'
-Slack : -0.522
-TNS   : -0.522
-
-Type  : Hold 'flip_flop_d:dff12|q'
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d2|q'
 Slack : -0.521
 TNS   : -0.521
 
-Type  : Hold 'flip_flop_d:dff14|q'
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d4|q'
 Slack : -0.521
 TNS   : -0.521
 
-Type  : Hold 'flip_flop_d:dff6|q'
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d8|q'
 Slack : -0.521
 TNS   : -0.521
 
-Type  : Hold 'flip_flop_d:dff0|q'
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d0|q'
 Slack : -0.520
 TNS   : -0.520
 
-Type  : Hold 'flip_flop_d:dff4|q'
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d6|q'
 Slack : -0.520
 TNS   : -0.520
 
-Type  : Hold 'flip_flop_d:dff2|q'
-Slack : -0.511
-TNS   : -0.511
-
-Type  : Hold 'flip_flop_d:dff16|q'
-Slack : 1.640
+Type  : Hold 'divisor_clk:divisor_clk|d_ff:d9|q'
+Slack : 1.639
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'clk'
 Slack : -2.289
 TNS   : -2.289
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff0|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d0|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff10|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d1|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff11|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d2|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff12|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d3|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff13|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d4|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff14|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d5|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff15|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d6|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff16|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d7|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff1|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d8|q'
 Slack : 0.234
 TNS   : 0.000
 
-Type  : Minimum Pulse Width 'flip_flop_d:dff2|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff3|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff4|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff5|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff6|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff7|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff8|q'
-Slack : 0.234
-TNS   : 0.000
-
-Type  : Minimum Pulse Width 'flip_flop_d:dff9|q'
+Type  : Minimum Pulse Width 'divisor_clk:divisor_clk|d_ff:d9|q'
 Slack : 0.234
 TNS   : 0.000
 

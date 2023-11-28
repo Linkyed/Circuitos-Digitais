@@ -1,17 +1,17 @@
 Determining the location of the ModelSim executable...
 
-Using: C:\intelFPGA_lite\20.1\modelsim_ase\win32aloem
+Using: D:\Quartus\modelsim_ase\win32aloem
 
 To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
 Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_matriz.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
     Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and any partner logic 
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 04 23:19:51 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf" --testbench_file="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/Waveform3.vwf.vt"
+    Info: Processing started: Mon Nov 27 23:10:14 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_matriz.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -36,11 +36,11 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
     Info: Copyright (C) 2020  Intel Corporation. All rights reserved.
     Info: Your use of Intel Corporation's design tools, logic functions 
     Info: and other software and tools, and any partner logic 
@@ -55,81 +55,83 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Wed Oct 04 23:19:52 2023
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
+    Info: Processing started: Mon Nov 27 23:10:15 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file PBL2.vo in folder "C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file PBL2.vo in folder "C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4616 megabytes
-    Info: Processing ended: Wed Oct 04 23:19:52 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 4621 megabytes
+    Info: Processing ended: Mon Nov 27 23:10:16 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2.do generated.
+C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2.do generated.
 
 Completed successfully. 
 
 **** Running the ModelSim simulation ****
 
-C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vsim -c -do PBL2.do
+D:/Quartus/modelsim_ase/win32aloem/vsim -c -do PBL2.do
 
 Reading pref.tcl
+
 
 # 2020.1
 
 # do PBL2.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:19:53 on Oct 04,2023
+# Start time: 23:10:17 on Nov 27,2023
 # vlog -work work PBL2.vo 
-# -- Compiling module divided_frequecy
+
+# -- Compiling module PBL2
 # 
 # Top level modules:
-# 	divided_frequecy
-# End time: 23:19:53 on Oct 04,2023, Elapsed time: 0:00:00
+# 	PBL2
+# End time: 23:10:17 on Nov 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:19:54 on Oct 04,2023
-# vlog -work work Waveform3.vwf.vt 
-# -- Compiling module divided_frequecy_vlg_vec_tst
+# Start time: 23:10:17 on Nov 27,2023
+# vlog -work work simulador_matriz.vwf.vt 
+# -- Compiling module PBL2_vlg_vec_tst
 # 
 # Top level modules:
-# 	divided_frequecy_vlg_vec_tst
-# End time: 23:19:54 on Oct 04,2023, Elapsed time: 0:00:00
+# 	PBL2_vlg_vec_tst
+# End time: 23:10:17 on Nov 27,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.divided_frequecy_vlg_vec_tst 
-# Start time: 23:19:54 on Oct 04,2023
-# Loading work.divided_frequecy_vlg_vec_tst
-# Loading work.divided_frequecy
+# vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.PBL2_vlg_vec_tst 
+# Start time: 23:10:17 on Nov 27,2023
+# Loading work.PBL2_vlg_vec_tst
+# Loading work.PBL2
 # Loading maxii_ver.maxii_io
 # Loading maxii_ver.maxii_lcell
 # Loading maxii_ver.maxii_asynch_lcell
 # Loading maxii_ver.maxii_lcell_register
 # after#25
-# ** Note: $finish    : Waveform3.vwf.vt(47)
-#    Time: 1 us  Iteration: 0  Instance: /divided_frequecy_vlg_vec_tst
-# End time: 23:19:54 on Oct 04,2023, Elapsed time: 0:00:00
+
+# ** Note: $finish    : simulador_matriz.vwf.vt(123)
+#    Time: 1 us  Iteration: 0  Instance: /PBL2_vlg_vec_tst
+# End time: 23:10:18 on Nov 27,2023, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/Waveform3.vwf...
+Reading C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf...
 
-Reading C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2.msim.vcd...
+Reading C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/nalbe/OneDrive/Desktop/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2_20231004231954.sim.vwf
+Writing the resulting VWF to C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2_20231127231018.sim.vwf
 
 Finished VCD to VWF conversion.
 

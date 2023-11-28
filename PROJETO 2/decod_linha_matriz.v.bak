@@ -1,0 +1,14 @@
+module decod_linha_matriz(A, out);
+	input [4:0] A;
+	output [5: 0]out;
+
+	
+	or Or0(out[0], A[0], A[1], A[2], A[3]);
+	
+	wire out[1] = A[0];
+	wire out[2] = A[1];
+	wire out[3] = A[2];
+	wire out[4] = A[3];
+	
+
+endmodule 
