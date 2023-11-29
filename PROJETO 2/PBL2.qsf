@@ -86,3 +86,7 @@ set_global_assignment -name VERILOG_FILE mux8_1.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulador_matriz.vwf
 set_global_assignment -name VERILOG_FILE divisor_clk.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulador_contador.vwf
+set_global_assignment -name TEXT_FILE "testar divisor.txt"
+set_global_assignment -name TEXT_FILE "testar mapa na martriz.txt"
+set_global_assignment -name VERILOG_FILE verf_ataque.v
+set_global_assignment -name TEXT_FILE "testar verificador de ataque.txt"

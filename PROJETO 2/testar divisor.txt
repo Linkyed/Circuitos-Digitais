@@ -1,0 +1,38 @@
+module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
+				B0, B1, B2, B3,
+				clk,
+				LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9,
+				SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
+				MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
+				MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4,
+				teste0, teste1, teste2);
+		input CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0, B0, B1, B2, B3,
+				clk;
+		output SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
+				 LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9,
+				 MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
+				 MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4;
+		wire [4:0] linha0, linha1, linha2, linha3, linha4, linha5, linha6;
+		wire [5:0] out_decod_linha0, out_decod_linha1, out_decod_linha2, out_decod_linha3, out_decod_linha4, out_decod_linha5, out_decod_linha6;
+		wire [4:0] mux_matrix0, mux_matrix1, mux_matrix2, mux_matrix3, mux_matrix4, mux_matrix5, mux_matrix6, mux_matrix7, out_matriz; 
+		wire div_CLK, cont_0, cont_1, cont_2, cont_0_not, cont_1_not, cont_2_not;
+		
+		divisor_clk divisor_clk(clk, CH0, LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, div_CLK);
+		
+		//Ultimo led da sequencia com a frequencia de 381,4697265625HZ
+		wire LED9 = div_CLK;
+		
+		//Contador sincrono de 3 bits para ser mostrador na linha 0 da matriz
+		contador contador(div_CLK, CH0, MATRIZ_C0, MATRIZ_C1, MATRIZ_C2);
+		
+		wire MATRIZ_L0 = 0;
+		wire MATRIZ_L1 = 1;
+		wire MATRIZ_L2 = 1;
+		wire MATRIZ_L3 = 1;
+		wire MATRIZ_L4 = 1;
+		wire MATRIZ_L5 = 1;
+		wire MATRIZ_L6 = 1;
+
+		
+		
+endmodule

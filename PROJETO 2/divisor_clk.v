@@ -32,49 +32,94 @@ module divisor_clk(clk, rstn, out0, out1, out2, out3, out4, out5, out6, out7, ou
 		.q(SUP5)
 	);
 	
-	d_ff d5 ( .d(~SUP6), //SAIDA 781,25HZ
+	d_ff d5 ( .d(~SUP6), //SAIDA 781,25KHZ
 		.rstn(rstn),
 		.clk(SUP5),
 		.q(SUP6)
 	);
 	
-	d_ff d6 ( .d(~SUP7), //SAIDA 390,625HZ
+	d_ff d6 ( .d(~SUP7), //SAIDA 390,625KHZ
 		.rstn(rstn),
 		.clk(SUP6),
 		.q(SUP7)
 	);
 	
-	d_ff d7 ( .d(~SUP8), //SAIDA 195,3125HZ
+	d_ff d7 ( .d(~SUP8), //SAIDA 195,3125KHZ
 		.rstn(rstn),
 		.clk(SUP7),
 		.q(SUP8)
 	);
 	
-	d_ff d8 ( .d(~SUP9), //SAIDA 195,3125HZ
+	d_ff d8 ( .d(~SUP9), //SAIDA 195,3125KHZ
 		.rstn(rstn),
 		.clk(SUP8),
 		.q(SUP9)
 	);
 	
-	d_ff d9 ( .d(~SUP10), //SAIDA 97,65625HZ
+	d_ff d9 ( .d(~SUP10), //SAIDA 97,65625KHZ
 		.rstn(rstn),
 		.clk(SUP9),
 		.q(SUP10)
 	);
 	
+	d_ff d10 ( .d(~SUP11), //SAIDA 48,828125KHZ
+		.rstn(rstn),
+		.clk(SUP10),
+		.q(SUP11)
+	);
 	
+	d_ff d11 ( .d(~SUP12), //SAIDA 24,4140625KHZ
+		.rstn(rstn),
+		.clk(SUP11),
+		.q(SUP12)
+	);
 	
+	d_ff d12 ( .d(~SUP13), //SAIDA 12,20703125KHZ
+		.rstn(rstn),
+		.clk(SUP12),
+		.q(SUP13)
+	);
 	
-	assign out0 = SUP1;
-	assign out1 = SUP2;
-	assign out2 = SUP3;
-	assign out3 = SUP4;
-	assign out4 = SUP5;
-	assign out5 = SUP6;
-	assign out6 = SUP7;
-	assign out7 = SUP8;
-	assign out8 = SUP9;
-	assign out9 = SUP10;
+	d_ff d13 ( .d(~SUP14), //SAIDA 6,103515625KHZ
+		.rstn(rstn),
+		.clk(SUP13),
+		.q(SUP14)
+	);
+	
+	d_ff d14 ( .d(~SUP15), //SAIDA 3,0517578125KHZ
+		.rstn(rstn),
+		.clk(SUP14),
+		.q(SUP15)
+	);
+	
+	d_ff d15 ( .d(~SUP16), //SAIDA 1,52587890625KHZ
+		.rstn(rstn),
+		.clk(SUP15),
+		.q(SUP16)
+	);
+	
+	d_ff d16 ( .d(~SUP17), //SAIDA 762,939453125HZ
+		.rstn(rstn),
+		.clk(SUP16),
+		.q(SUP17)
+	);
+	
+	d_ff d17 ( .d(~SUP18), //SAIDA 381,4697265625HZ
+		.rstn(rstn),
+		.clk(SUP17),
+		.q(SUP18)
+	);
+	
+	assign out0 = SUP9;
+	assign out1 = SUP10;
+	assign out2 = SUP11;
+	assign out3 = SUP12;
+	assign out4 = SUP13;
+	assign out5 = SUP14;
+	assign out6 = SUP15;
+	assign out7 = SUP16;
+	assign out8 = SUP17;
+	assign out9 = SUP18;
 	
 
 endmodule 
