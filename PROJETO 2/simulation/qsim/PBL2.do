@@ -1,7 +1,7 @@
 onerror {exit -code 1}
 vlib work
 vlog -work work PBL2.vo
-vlog -work work simulador_matriz.vwf.vt
+vlog -work work simulador_contador.vwf.vt
 vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.PBL2_vlg_vec_tst
 vcd file -direction PBL2.msim.vcd
 vcd add -internal PBL2_vlg_vec_tst/*
@@ -15,5 +15,10 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
+
+
+
+
 
 

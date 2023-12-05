@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_matriz.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_contador.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_contador.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,8 +26,8 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 27 23:10:14 2023
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_matriz.vwf.vt"
+    Info: Processing started: Mon Dec 04 19:34:49 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off PBL2 -c PBL2 --vector_source="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_contador.vwf" --testbench_file="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/simulador_contador.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
@@ -55,13 +55,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Mon Nov 27 23:10:15 2023
+    Info: Processing started: Mon Dec 04 19:34:50 2023
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/" PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file PBL2.vo in folder "C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4621 megabytes
-    Info: Processing ended: Mon Nov 27 23:10:16 2023
+    Info: Peak virtual memory: 4616 megabytes
+    Info: Processing ended: Mon Dec 04 19:34:51 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -79,35 +79,36 @@ D:/Quartus/modelsim_ase/win32aloem/vsim -c -do PBL2.do
 
 Reading pref.tcl
 
-
 # 2020.1
+
 
 # do PBL2.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:10:17 on Nov 27,2023
-# vlog -work work PBL2.vo 
 
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 19:34:53 on Dec 04,2023
+# vlog -work work PBL2.vo 
 # -- Compiling module PBL2
+
 # 
 # Top level modules:
 # 	PBL2
-# End time: 23:10:17 on Nov 27,2023, Elapsed time: 0:00:00
+# End time: 19:34:53 on Dec 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:10:17 on Nov 27,2023
-# vlog -work work simulador_matriz.vwf.vt 
+# Start time: 19:34:53 on Dec 04,2023
+# vlog -work work simulador_contador.vwf.vt 
+
 # -- Compiling module PBL2_vlg_vec_tst
 # 
 # Top level modules:
 # 	PBL2_vlg_vec_tst
-# End time: 23:10:17 on Nov 27,2023, Elapsed time: 0:00:00
+# End time: 19:34:53 on Dec 04,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L maxii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.PBL2_vlg_vec_tst 
-# Start time: 23:10:17 on Nov 27,2023
+# Start time: 19:34:53 on Dec 04,2023
 # Loading work.PBL2_vlg_vec_tst
 # Loading work.PBL2
 # Loading maxii_ver.maxii_io
@@ -116,22 +117,25 @@ Reading pref.tcl
 # Loading maxii_ver.maxii_lcell_register
 # after#25
 
-# ** Note: $finish    : simulador_matriz.vwf.vt(123)
+# Simulation time: 253922 ps
+
+# ** Note: $finish    : simulador_contador.vwf.vt(131)
 #    Time: 1 us  Iteration: 0  Instance: /PBL2_vlg_vec_tst
-# End time: 23:10:18 on Nov 27,2023, Elapsed time: 0:00:01
+
+# End time: 19:34:57 on Dec 04,2023, Elapsed time: 0:00:04
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_matriz.vwf...
+Reading C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulador_contador.vwf...
 
 Reading C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2_20231127231018.sim.vwf
+Writing the resulting VWF to C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim/PBL2_20231204193457.sim.vwf
 
 Finished VCD to VWF conversion.
 

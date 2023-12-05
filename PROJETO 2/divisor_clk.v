@@ -1,6 +1,6 @@
-module divisor_clk(clk, rstn, out0, out1, out2, out3, out4, out5, out6, out7, out8, out9);
+module divisor_clk(clk, rstn, out);
 	input clk, rstn; 
-	output out0, out1, out2, out3, out4, out5, out6, out7, out8, out9;
+	output out;
 	
 	wire SUP1, SUP1_not, SUP2, SUP2_not, SUP3, SUP3_not;
 
@@ -92,34 +92,7 @@ module divisor_clk(clk, rstn, out0, out1, out2, out3, out4, out5, out6, out7, ou
 		.q(SUP15)
 	);
 	
-	d_ff d15 ( .d(~SUP16), //SAIDA 1,52587890625KHZ
-		.rstn(rstn),
-		.clk(SUP15),
-		.q(SUP16)
-	);
-	
-	d_ff d16 ( .d(~SUP17), //SAIDA 762,939453125HZ
-		.rstn(rstn),
-		.clk(SUP16),
-		.q(SUP17)
-	);
-	
-	d_ff d17 ( .d(~SUP18), //SAIDA 381,4697265625HZ
-		.rstn(rstn),
-		.clk(SUP17),
-		.q(SUP18)
-	);
-	
-	assign out0 = SUP9;
-	assign out1 = SUP10;
-	assign out2 = SUP11;
-	assign out3 = SUP12;
-	assign out4 = SUP13;
-	assign out5 = SUP14;
-	assign out6 = SUP15;
-	assign out7 = SUP16;
-	assign out8 = SUP17;
-	assign out9 = SUP18;
-	
+	assign out = SUP10;
+
 
 endmodule 

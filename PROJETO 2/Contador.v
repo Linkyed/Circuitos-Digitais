@@ -1,32 +1,34 @@
-module Contador ( input clk,  
-                input rstn,  
-                output [3:0] out);  
-					 
-   wire  q0,q1,q2,q3;  
- 
- 
- 
-   flip_flop_d  dff0 ( .d (out[0]),  
-                .clk (clk),  
-                .rstn (rstn),  
-                .q (q0),  
-                .qn (out[0]));  
-  
-   flip_flop_d  dff1 ( .d (out[1]),  
-                .clk (q0),  
-                .rstn (rstn),  
-                .q (q1),  
-                .qn (out[1]));  
-   flip_flop_d  dff2 ( .d (out[2]),  
-                .clk (q1),  
-                .rstn (rstn),  
-                .q (q2),  
-                .qn (out[2]));  
-   flip_flop_d  dff3 ( .d (out[3]),  
-                .clk (q2),  
-                .rstn (rstn),  
-                .q (q3),  
-                .qn (out[3])); 
-					 
- 
-endmodule 
+//module contador_sin_3bit(clk, rstn, out0, out1, out2);
+//	input clk, rstn; 
+//	output out0, out1, out2;
+//	
+//	wire T0, T1, T2;
+//	
+//	d_ff d0 ( .d(~T0),
+//		.rstn(rstn),
+//		.clk(clk),
+//		.q(T0)
+//	);
+//	
+//	xnor xnor0 (SUP4, T0, T1);
+//	
+//	d_ff d1 ( .d(SUP4), 
+//		.rstn(rstn),
+//		.clk(clk),
+//		.q(T1)
+//	);
+//	
+//	or or0(SUP5, T1, T0);
+//	xnor xnor1(SUP6, SUP5, T2);
+//	
+//	d_ff d2 ( .d(SUP6), 
+//		.rstn(rstn),
+//		.clk(clk),
+//		.q(T2)
+//	);
+//	
+//	not (out0, T0);
+//	not (out1, T1);
+//	not (out2, T2);
+//
+//endmodule

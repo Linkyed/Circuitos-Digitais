@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PBL2
-Mon Nov 27 23:09:58 2023
+Mon Dec 04 21:20:22 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,7 +14,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "mux8_1:mux8_1"
+  9. Port Connectivity Checks: "mux4_1:mux_7segmentos"
  10. Analysis & Synthesis Messages
 
 
@@ -42,13 +42,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Nov 27 23:09:58 2023       ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 04 21:20:22 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; PBL2                                        ;
 ; Top-level Entity Name       ; PBL2                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 24                                          ;
-; Total pins                  ; 41                                          ;
+; Total logic elements        ; 28                                          ;
+; Total pins                  ; 45                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -141,76 +141,78 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                       ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
-; PBL2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v        ;         ;
-; d_ff.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/d_ff.v        ;         ;
-; contador.v                       ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v    ;         ;
-; mux8_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v      ;         ;
-; divisor_clk.v                    ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
+; PBL2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v               ;         ;
+; d_ff.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/d_ff.v               ;         ;
+; divisor_clk.v                    ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v        ;         ;
+; decod_modo_de_jogo.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v ;         ;
+; decod_linha_numero.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v ;         ;
+; decod_coluna_letra.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v ;         ;
+; contador_sin_2bit.v              ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_2bit.v  ;         ;
+; mux4_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v             ;         ;
++----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                               ;
-+---------------------------------------------+-----------------------------+
-; Resource                                    ; Usage                       ;
-+---------------------------------------------+-----------------------------+
-; Total logic elements                        ; 24                          ;
-;     -- Combinational with no register       ; 11                          ;
-;     -- Register only                        ; 0                           ;
-;     -- Combinational with a register        ; 13                          ;
-;                                             ;                             ;
-; Logic element usage by number of LUT inputs ;                             ;
-;     -- 4 input functions                    ; 0                           ;
-;     -- 3 input functions                    ; 11                          ;
-;     -- 2 input functions                    ; 2                           ;
-;     -- 1 input functions                    ; 11                          ;
-;     -- 0 input functions                    ; 0                           ;
-;                                             ;                             ;
-; Logic elements by mode                      ;                             ;
-;     -- normal mode                          ; 24                          ;
-;     -- arithmetic mode                      ; 0                           ;
-;     -- qfbk mode                            ; 0                           ;
-;     -- register cascade mode                ; 0                           ;
-;     -- synchronous clear/load mode          ; 0                           ;
-;     -- asynchronous clear/load mode         ; 13                          ;
-;                                             ;                             ;
-; Total registers                             ; 13                          ;
-; I/O pins                                    ; 41                          ;
-; Maximum fan-out node                        ; contador:contador|d_ff:d0|q ;
-; Maximum fan-out                             ; 14                          ;
-; Total fan-out                               ; 95                          ;
-; Average fan-out                             ; 1.46                        ;
-+---------------------------------------------+-----------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                        ;
++---------------------------------------------+--------------------------------------+
+; Resource                                    ; Usage                                ;
++---------------------------------------------+--------------------------------------+
+; Total logic elements                        ; 28                                   ;
+;     -- Combinational with no register       ; 16                                   ;
+;     -- Register only                        ; 0                                    ;
+;     -- Combinational with a register        ; 12                                   ;
+;                                             ;                                      ;
+; Logic element usage by number of LUT inputs ;                                      ;
+;     -- 4 input functions                    ; 11                                   ;
+;     -- 3 input functions                    ; 3                                    ;
+;     -- 2 input functions                    ; 3                                    ;
+;     -- 1 input functions                    ; 11                                   ;
+;     -- 0 input functions                    ; 0                                    ;
+;                                             ;                                      ;
+; Logic elements by mode                      ;                                      ;
+;     -- normal mode                          ; 28                                   ;
+;     -- arithmetic mode                      ; 0                                    ;
+;     -- qfbk mode                            ; 0                                    ;
+;     -- register cascade mode                ; 0                                    ;
+;     -- synchronous clear/load mode          ; 0                                    ;
+;     -- asynchronous clear/load mode         ; 12                                   ;
+;                                             ;                                      ;
+; Total registers                             ; 12                                   ;
+; I/O pins                                    ; 45                                   ;
+; Maximum fan-out node                        ; contador_sin_2bit:contador|d_ff:d0|q ;
+; Maximum fan-out                             ; 12                                   ;
+; Total fan-out                               ; 101                                  ;
+; Average fan-out                             ; 1.38                                 ;
++---------------------------------------------+--------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node   ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                   ; Entity Name ; Library Name ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
-; |PBL2                        ; 24 (7)      ; 13           ; 0          ; 41   ; 0            ; 11 (7)       ; 0 (0)             ; 13 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2                                 ; PBL2        ; work         ;
-;    |contador:contador|       ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador:contador               ; contador    ; work         ;
-;       |d_ff:d0|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador:contador|d_ff:d0       ; d_ff        ; work         ;
-;       |d_ff:d1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador:contador|d_ff:d1       ; d_ff        ; work         ;
-;       |d_ff:d2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador:contador|d_ff:d2       ; d_ff        ; work         ;
-;    |divisor_clk:divisor_clk| ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk         ; divisor_clk ; work         ;
-;       |d_ff:d0|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d0 ; d_ff        ; work         ;
-;       |d_ff:d1|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d1 ; d_ff        ; work         ;
-;       |d_ff:d2|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d2 ; d_ff        ; work         ;
-;       |d_ff:d3|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d3 ; d_ff        ; work         ;
-;       |d_ff:d4|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d4 ; d_ff        ; work         ;
-;       |d_ff:d5|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d5 ; d_ff        ; work         ;
-;       |d_ff:d6|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d6 ; d_ff        ; work         ;
-;       |d_ff:d7|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d7 ; d_ff        ; work         ;
-;       |d_ff:d8|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d8 ; d_ff        ; work         ;
-;       |d_ff:d9|              ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d9 ; d_ff        ; work         ;
-;    |mux8_1:mux8_1|           ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|mux8_1:mux8_1                   ; mux8_1      ; work         ;
-+------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
+; |PBL2                           ; 28 (0)      ; 12           ; 0          ; 45   ; 0            ; 16 (0)       ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2                                    ; PBL2              ; work         ;
+;    |contador_sin_2bit:contador| ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador         ; contador_sin_2bit ; work         ;
+;       |d_ff:d0|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador|d_ff:d0 ; d_ff              ; work         ;
+;       |d_ff:d1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador|d_ff:d1 ; d_ff              ; work         ;
+;    |divisor_clk:divisor_clk|    ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk            ; divisor_clk       ; work         ;
+;       |d_ff:d0|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d0    ; d_ff              ; work         ;
+;       |d_ff:d1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d1    ; d_ff              ; work         ;
+;       |d_ff:d2|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d2    ; d_ff              ; work         ;
+;       |d_ff:d3|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d3    ; d_ff              ; work         ;
+;       |d_ff:d4|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d4    ; d_ff              ; work         ;
+;       |d_ff:d5|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d5    ; d_ff              ; work         ;
+;       |d_ff:d6|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d6    ; d_ff              ; work         ;
+;       |d_ff:d7|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d7    ; d_ff              ; work         ;
+;       |d_ff:d8|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d8    ; d_ff              ; work         ;
+;       |d_ff:d9|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d9    ; d_ff              ; work         ;
+;    |mux4_1:mux_7segmentos|      ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|mux4_1:mux_7segmentos              ; mux4_1            ; work         ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,40 +221,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 13    ;
+; Total registers                              ; 12    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 13    ;
+; Number of registers using Asynchronous Clear ; 12    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "mux8_1:mux8_1"  ;
-+----------+-------+----------+--------------+
-; Port     ; Type  ; Severity ; Details      ;
-+----------+-------+----------+--------------+
-; A0[4..3] ; Input ; Info     ; Stuck at VCC ;
-; A0[2..0] ; Input ; Info     ; Stuck at GND ;
-; A1[1..0] ; Input ; Info     ; Stuck at VCC ;
-; A1[4..2] ; Input ; Info     ; Stuck at GND ;
-; A2[4..2] ; Input ; Info     ; Stuck at GND ;
-; A2[1]    ; Input ; Info     ; Stuck at VCC ;
-; A2[0]    ; Input ; Info     ; Stuck at GND ;
-; A3[4..3] ; Input ; Info     ; Stuck at GND ;
-; A3[1..0] ; Input ; Info     ; Stuck at GND ;
-; A3[2]    ; Input ; Info     ; Stuck at VCC ;
-; A4[3..2] ; Input ; Info     ; Stuck at VCC ;
-; A4[4]    ; Input ; Info     ; Stuck at GND ;
-; A4[1]    ; Input ; Info     ; Stuck at GND ;
-; A4[0]    ; Input ; Info     ; Stuck at VCC ;
-; A5[4..3] ; Input ; Info     ; Stuck at GND ;
-; A5[2]    ; Input ; Info     ; Stuck at VCC ;
-; A5[1]    ; Input ; Info     ; Stuck at GND ;
-; A5[0]    ; Input ; Info     ; Stuck at VCC ;
-+----------+-------+----------+--------------+
++---------------------------------------------------+
+; Port Connectivity Checks: "mux4_1:mux_7segmentos" ;
++---------+-------+----------+----------------------+
+; Port    ; Type  ; Severity ; Details              ;
++---------+-------+----------+----------------------+
+; B[5..0] ; Input ; Info     ; Stuck at VCC         ;
+; B[6]    ; Input ; Info     ; Stuck at GND         ;
++---------+-------+----------+----------------------+
 
 
 +-------------------------------+
@@ -261,32 +247,40 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Nov 27 23:09:47 2023
+    Info: Processing started: Mon Dec 04 21:20:10 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file pbl2.v
     Info (12023): Found entity 1: PBL2 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file jk_ff.v
 Info (12021): Found 0 design units, including 0 entities, in source file decod_7seg.v
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.v
     Info (12023): Found entity 1: d_ff File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/d_ff.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.v
     Info (12023): Found entity 1: mux2_1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux2_1.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file contador.v
-    Info (12023): Found entity 1: contador File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file contador.v
 Info (12021): Found 1 design units, including 1 entities, in source file decod_linha_matriz.v
     Info (12023): Found entity 1: decod_linha_matriz File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_matriz.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.v
     Info (12023): Found entity 1: mux8_1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file divisor_clk.v
     Info (12023): Found entity 1: divisor_clk File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(6): created implicit net for "SUP1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 6
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(12): created implicit net for "SUP4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(12): created implicit net for "SUP2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(20): created implicit net for "SUP5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(21): created implicit net for "SUP6" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at contador.v(21): created implicit net for "SUP3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file verf_ataque.v
+    Info (12023): Found entity 1: verf_ataque File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decod_modo_de_jogo.v
+    Info (12023): Found entity 1: decod_modo_de_jogo File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decod_linha_numero.v
+    Info (12023): Found entity 1: decod_linha_numero File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decod_coluna_letra.v
+    Info (12023): Found entity 1: decod_coluna_letra File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador_sin_3bit.v
+    Info (12023): Found entity 1: contador_sin_3bit File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_3bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador_sin_2bit.v
+    Info (12023): Found entity 1: contador_sin_2bit File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_2bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.v
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(24): created implicit net for "cont_2bit1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(24): created implicit net for "cont_2bit0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(13): created implicit net for "T56" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(14): created implicit net for "T57" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 14
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(15): created implicit net for "T58" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 15
@@ -334,85 +328,151 @@ Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(41): created 
 Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(47): created implicit net for "SUP8" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 47
 Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(53): created implicit net for "SUP9" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 53
 Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(59): created implicit net for "SUP10" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 59
+Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(65): created implicit net for "SUP11" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 65
+Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(71): created implicit net for "SUP12" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 71
+Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(77): created implicit net for "SUP13" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 77
+Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(83): created implicit net for "SUP14" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 83
+Warning (10236): Verilog HDL Implicit Net warning at divisor_clk.v(89): created implicit net for "SUP15" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 89
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(7): created implicit net for "T0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(8): created implicit net for "T1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(9): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(10): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(11): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(13): created implicit net for "T5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(14): created implicit net for "T6" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(15): created implicit net for "T7" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(16): created implicit net for "T8" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at verf_ataque.v(17): created implicit net for "T9" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at decod_modo_de_jogo.v(11): created implicit net for "T0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at decod_modo_de_jogo.v(12): created implicit net for "T1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at decod_modo_de_jogo.v(13): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at decod_modo_de_jogo.v(23): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at decod_modo_de_jogo.v(24): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(9): created implicit net for "c_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(12): created implicit net for "T0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(13): created implicit net for "T1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(23): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(27): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(31): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at decod_linha_numero.v(32): created implicit net for "T5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(9): created implicit net for "c_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(15): created implicit net for "T0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(16): created implicit net for "T1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(17): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(21): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at decod_coluna_letra.v(22): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at contador_sin_3bit.v(13): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_3bit.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at contador_sin_3bit.v(21): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_3bit.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at contador_sin_3bit.v(22): created implicit net for "T5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_3bit.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at contador_sin_2bit.v(13): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_2bit.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(12): created implicit net for "T0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(13): created implicit net for "T1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(14): created implicit net for "T2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(15): created implicit net for "T3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(18): created implicit net for "T4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(19): created implicit net for "T5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(20): created implicit net for "T6" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(21): created implicit net for "T7" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(24): created implicit net for "T8" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(25): created implicit net for "T9" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 25
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(26): created implicit net for "T10" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(27): created implicit net for "T11" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(30): created implicit net for "T12" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(31): created implicit net for "T13" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 31
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(32): created implicit net for "T14" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 32
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(33): created implicit net for "T15" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(36): created implicit net for "T16" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(37): created implicit net for "T17" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 37
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(38): created implicit net for "T18" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(39): created implicit net for "T19" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(42): created implicit net for "T20" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(43): created implicit net for "T21" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(44): created implicit net for "T22" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(45): created implicit net for "T23" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 45
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(48): created implicit net for "T24" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(49): created implicit net for "T25" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(50): created implicit net for "T26" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(51): created implicit net for "T27" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 51
 Info (12127): Elaborating entity "PBL2" for the top level hierarchy
-Warning (10739): Verilog HDL warning at PBL2.v(28): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 28
-Warning (10739): Verilog HDL warning at PBL2.v(29): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 29
-Warning (10739): Verilog HDL warning at PBL2.v(30): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 30
-Warning (10739): Verilog HDL warning at PBL2.v(31): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 31
 Warning (10739): Verilog HDL warning at PBL2.v(32): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 32
+Warning (10739): Verilog HDL warning at PBL2.v(33): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 33
 Warning (10739): Verilog HDL warning at PBL2.v(34): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 34
 Warning (10739): Verilog HDL warning at PBL2.v(35): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 35
 Warning (10739): Verilog HDL warning at PBL2.v(36): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 36
 Warning (10739): Verilog HDL warning at PBL2.v(37): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 37
 Warning (10739): Verilog HDL warning at PBL2.v(38): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 38
-Warning (10739): Verilog HDL warning at PBL2.v(40): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 40
-Warning (10739): Verilog HDL warning at PBL2.v(41): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 41
-Warning (10739): Verilog HDL warning at PBL2.v(42): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 42
-Warning (10739): Verilog HDL warning at PBL2.v(43): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 43
-Warning (10739): Verilog HDL warning at PBL2.v(44): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 44
-Warning (10739): Verilog HDL warning at PBL2.v(46): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 46
-Warning (10739): Verilog HDL warning at PBL2.v(47): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 47
-Warning (10739): Verilog HDL warning at PBL2.v(48): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 48
-Warning (10739): Verilog HDL warning at PBL2.v(49): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 49
-Warning (10739): Verilog HDL warning at PBL2.v(50): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 50
-Warning (10739): Verilog HDL warning at PBL2.v(52): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 52
-Warning (10739): Verilog HDL warning at PBL2.v(53): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 53
-Warning (10739): Verilog HDL warning at PBL2.v(54): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 54
-Warning (10739): Verilog HDL warning at PBL2.v(55): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 55
-Warning (10739): Verilog HDL warning at PBL2.v(56): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 56
-Warning (10739): Verilog HDL warning at PBL2.v(58): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 58
-Warning (10739): Verilog HDL warning at PBL2.v(59): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 59
-Warning (10739): Verilog HDL warning at PBL2.v(60): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 60
-Warning (10739): Verilog HDL warning at PBL2.v(61): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 61
-Warning (10739): Verilog HDL warning at PBL2.v(62): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 62
-Warning (10739): Verilog HDL warning at PBL2.v(64): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 64
-Warning (10739): Verilog HDL warning at PBL2.v(65): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 65
-Warning (10739): Verilog HDL warning at PBL2.v(66): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 66
-Warning (10739): Verilog HDL warning at PBL2.v(67): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 67
-Warning (10739): Verilog HDL warning at PBL2.v(68): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 68
-Warning (10034): Output port "LED9" at PBL2.v(11) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 11
-Warning (10034): Output port "SEG7_A" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_B" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_C" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_D" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_E" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_F" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "SEG7_G" at PBL2.v(10) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-Warning (10034): Output port "teste0" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "teste1" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "teste2" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Info (12128): Elaborating entity "divisor_clk" for hierarchy "divisor_clk:divisor_clk" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 20
+Warning (10034): Output port "LED0" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED1" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED2" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED3" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED4" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED5" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED6" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED7" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED8" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "LED9" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+Warning (10034): Output port "MATRIZ_L0" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L1" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L2" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L3" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L4" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L5" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_L6" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+Warning (10034): Output port "MATRIZ_C0" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "MATRIZ_C1" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "MATRIZ_C2" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "MATRIZ_C3" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "MATRIZ_C4" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "teste0" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+Warning (10034): Output port "teste1" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+Warning (10034): Output port "teste2" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+Info (12128): Elaborating entity "divisor_clk" for hierarchy "divisor_clk:divisor_clk" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 22
 Info (12128): Elaborating entity "d_ff" for hierarchy "divisor_clk:divisor_clk|d_ff:d0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 11
-Info (12128): Elaborating entity "contador" for hierarchy "contador:contador" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 22
-Info (12128): Elaborating entity "mux8_1" for hierarchy "mux8_1:mux8_1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 168
+Info (12128): Elaborating entity "contador_sin_2bit" for hierarchy "contador_sin_2bit:contador" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
+Info (12128): Elaborating entity "decod_modo_de_jogo" for hierarchy "decod_modo_de_jogo:d_modo_jogo" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 26
+Info (12128): Elaborating entity "decod_linha_numero" for hierarchy "decod_linha_numero:d_linha_numero" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 28
+Warning (10030): Net "C_not" at decod_linha_numero.v(5) has no driver or initial value, using a default initial value '0' File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 5
+Info (12128): Elaborating entity "decod_coluna_letra" for hierarchy "decod_coluna_letra:d_coluna_letra" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 30
+Warning (10030): Net "C_not" at decod_coluna_letra.v(5) has no driver or initial value, using a default initial value '0' File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 5
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux4_1:mux_7segmentos" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 40
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED9" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 11
-    Warning (13410): Pin "SEG7_A" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_B" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_C" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_D" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_E" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_F" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "SEG7_G" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
-    Warning (13410): Pin "teste0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "teste1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "teste2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (21074): Design contains 7 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CH7" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH6" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH5" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH4" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-    Warning (15610): No output dependent on input pin "CH1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 8
-Info (21057): Implemented 65 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
+    Warning (13410): Pin "LED0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED5" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED7" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED8" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "LED9" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
+    Warning (13410): Pin "MATRIZ_L0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L5" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_L6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
+    Warning (13410): Pin "MATRIZ_C0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "MATRIZ_C1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "MATRIZ_C2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "MATRIZ_C3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "MATRIZ_C4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "teste0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+    Warning (13410): Pin "teste1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+    Warning (13410): Pin "teste2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "B1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
+    Warning (15610): No output dependent on input pin "B2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
+    Warning (15610): No output dependent on input pin "B3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
+Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
     Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 24 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 120 warnings
+    Info (21061): Implemented 28 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 179 warnings
     Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Mon Nov 27 23:09:58 2023
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:26
+    Info: Processing ended: Mon Dec 04 21:20:22 2023
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:29
 
 

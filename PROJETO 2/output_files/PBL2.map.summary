@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Mon Nov 27 23:09:58 2023
+Analysis & Synthesis Status : Successful - Mon Dec 04 21:20:22 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : PBL2
 Top-level Entity Name : PBL2
 Family : MAX II
-Total logic elements : 24
-Total pins : 41
+Total logic elements : 28
+Total pins : 45
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
