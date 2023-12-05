@@ -63,14 +63,14 @@ CHIP  "PBL2"  ASSIGNED TO AN: EPM240T100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-teste2                       : 1         : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 1         :        :                   :         : 2         :                
 GND*                         : 2         :        :                   :         : 1         :                
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
 GND*                         : 5         :        :                   :         : 1         :                
-GND*                         : 6         :        :                   :         : 1         :                
+teste2                       : 6         : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 7         :        :                   :         : 1         :                
-GND*                         : 8         :        :                   :         : 1         :                
+SEG7_Dig2                    : 8         : output : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
@@ -81,8 +81,8 @@ GND*                         : 15        :        :                   :         
 GND*                         : 16        :        :                   :         : 1         :                
 GND*                         : 17        :        :                   :         : 1         :                
 GND*                         : 18        :        :                   :         : 1         :                
-GND*                         : 19        :        :                   :         : 1         :                
-teste0                       : 20        : output : 3.3-V LVTTL       :         : 1         : N              
+teste0                       : 19        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 20        :        :                   :         : 1         :                
 GND*                         : 21        :        :                   :         : 1         :                
 TMS                          : 22        : input  :                   :         : 1         :                
 TDI                          : 23        : input  :                   :         : 1         :                
@@ -126,15 +126,15 @@ GNDIO                        : 60        : gnd    :                   :         
 LED3                         : 61        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 62        :        :                   :         : 2         :                
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
-teste1                       : 64        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                
-GND*                         : 66        :        :                   :         : 2         :                
+SEG7_Dig0                    : 66        : output : 3.3-V LVTTL       :         : 2         : N              
 LED4                         : 67        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 68        :        :                   :         : 2         :                
 LED5                         : 69        : output : 3.3-V LVTTL       :         : 2         : Y              
 SEG7_B                       : 70        : output : 3.3-V LVTTL       :         : 2         : Y              
 LED6                         : 71        : output : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 72        :        :                   :         : 2         :                
+teste1                       : 72        : output : 3.3-V LVTTL       :         : 2         : N              
 LED7                         : 73        : output : 3.3-V LVTTL       :         : 2         : Y              
 GND*                         : 74        :        :                   :         : 2         :                
 LED8                         : 75        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -148,9 +148,9 @@ MATRIZ_C3                    : 82        : output : 3.3-V LVTTL       :         
 MATRIZ_L1                    : 83        : output : 3.3-V LVTTL       :         : 2         : Y              
 MATRIZ_L2                    : 84        : output : 3.3-V LVTTL       :         : 2         : Y              
 MATRIZ_L0                    : 85        : output : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 86        :        :                   :         : 2         :                
+SEG7_Dig1                    : 86        : output : 3.3-V LVTTL       :         : 2         : N              
 MATRIZ_L3                    : 87        : output : 3.3-V LVTTL       :         : 2         : Y              
-GND*                         : 88        :        :                   :         : 2         :                
+SEG7_Dig3                    : 88        : output : 3.3-V LVTTL       :         : 2         : N              
 MATRIZ_L6                    : 89        : output : 3.3-V LVTTL       :         : 2         : Y              
 SEG7_A                       : 90        : output : 3.3-V LVTTL       :         : 2         : Y              
 MATRIZ_L5                    : 91        : output : 3.3-V LVTTL       :         : 2         : Y              

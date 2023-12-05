@@ -5,9 +5,9 @@ CH5 => CH5.IN1
 CH4 => CH4.IN1
 CH3 => CH3.IN1
 CH2 => CH2.IN1
-CH1 => CH1.IN1
-CH0 => CH0.IN1
-B0 => B0.IN2
+CH1 => CH1.IN2
+CH0 => CH0.IN2
+B0 => B0_not.IN6
 B1 => ~NO_FANOUT~
 B2 => ~NO_FANOUT~
 B3 => ~NO_FANOUT~
@@ -29,18 +29,22 @@ SEG7_D <= mux4_1:mux_7segmentos.port9
 SEG7_E <= mux4_1:mux_7segmentos.port10
 SEG7_F <= mux4_1:mux_7segmentos.port11
 SEG7_G <= mux4_1:mux_7segmentos.port12
-MATRIZ_L0 <= <GND>
-MATRIZ_L1 <= <GND>
-MATRIZ_L2 <= <GND>
-MATRIZ_L3 <= <GND>
-MATRIZ_L4 <= <GND>
-MATRIZ_L5 <= <GND>
-MATRIZ_L6 <= <GND>
-MATRIZ_C0 <= <GND>
-MATRIZ_C1 <= <GND>
-MATRIZ_C2 <= <GND>
-MATRIZ_C3 <= <GND>
-MATRIZ_C4 <= <GND>
+MATRIZ_L0 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L1 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L2 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L3 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L4 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L5 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_L6 <= decod_3_pra_8:decod_linhas_matriz.port3
+MATRIZ_C0 <= mux8_1:mux8_1.port11
+MATRIZ_C1 <= mux8_1:mux8_1.port11
+MATRIZ_C2 <= mux8_1:mux8_1.port11
+MATRIZ_C3 <= mux8_1:mux8_1.port11
+MATRIZ_C4 <= mux8_1:mux8_1.port11
+SEG7_Dig0 <= decod_2_pra_4:decod_digitos_7seg.port2
+SEG7_Dig1 <= decod_2_pra_4:decod_digitos_7seg.port2
+SEG7_Dig2 <= decod_2_pra_4:decod_digitos_7seg.port2
+SEG7_Dig3 <= decod_2_pra_4:decod_digitos_7seg.port2
 teste0 <= <GND>
 teste1 <= <GND>
 teste2 <= <GND>
@@ -157,25 +161,69 @@ clk => q~reg0.CLK
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PBL2|contador_sin_2bit:contador
+|PBL2|contador_sin_3bit:contador_3bit
+clk => clk.IN3
+rstn => rstn.IN3
+out0 <= d_ff:d0.q
+out1 <= d_ff:d1.q
+out2 <= d_ff:d2.q
+
+
+|PBL2|contador_sin_3bit:contador_3bit|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|contador_sin_3bit:contador_3bit|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|contador_sin_3bit:contador_3bit|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|contador_sin_2bit:contador_2bit
 clk => clk.IN2
 rstn => rstn.IN2
 out0 <= d_ff:d0.q
 out1 <= d_ff:d1.q
 
 
-|PBL2|contador_sin_2bit:contador|d_ff:d0
+|PBL2|contador_sin_2bit:contador_2bit|d_ff:d0
 d => q~reg0.DATAIN
 rstn => q~reg0.ACLR
 clk => q~reg0.CLK
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|PBL2|contador_sin_2bit:contador|d_ff:d1
+|PBL2|contador_sin_2bit:contador_2bit|d_ff:d1
 d => q~reg0.DATAIN
 rstn => q~reg0.ACLR
 clk => q~reg0.CLK
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|decod_2_pra_4:verf_modo_jogo
+A => And2.IN0
+A => And3.IN0
+A => And0.IN0
+A => And1.IN0
+B => And1.IN1
+B => And3.IN1
+B => And0.IN1
+B => And2.IN1
+out[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |PBL2|decod_modo_de_jogo:d_modo_jogo
@@ -322,5 +370,904 @@ out3 <= Or3.DB_MAX_OUTPUT_PORT_TYPE
 out4 <= Or4.DB_MAX_OUTPUT_PORT_TYPE
 out5 <= Or5.DB_MAX_OUTPUT_PORT_TYPE
 out6 <= Or6.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|decod_2_pra_4:decod_digitos_7seg
+A => And2.IN0
+A => And3.IN0
+A => And0.IN0
+A => And1.IN0
+B => And1.IN1
+B => And3.IN1
+B => And0.IN1
+B => And2.IN1
+out[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch7
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch6
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch5
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch4
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch3
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|conf_chave:ch2
+A => And0.IN0
+B => And0.IN1
+C => And1.IN1
+out0 <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out1 <= And1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|decod_cordenadas:decod_cordenadas
+A => And20.IN0
+A => And21.IN0
+A => And22.IN0
+A => And23.IN0
+A => And24.IN0
+A => And25.IN0
+A => And26.IN0
+A => And27.IN0
+A => And28.IN0
+A => And29.IN0
+A => And30.IN0
+A => And31.IN0
+A => And32.IN0
+A => And33.IN0
+A => And34.IN0
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+A => And8.IN0
+A => And9.IN0
+A => And10.IN0
+A => And11.IN0
+A => And12.IN0
+A => And13.IN0
+A => And14.IN0
+A => And15.IN0
+A => And16.IN0
+A => And17.IN0
+A => And18.IN0
+A => And19.IN0
+B => And10.IN1
+B => And11.IN1
+B => And12.IN1
+B => And13.IN1
+B => And14.IN1
+B => And15.IN1
+B => And16.IN1
+B => And17.IN1
+B => And18.IN1
+B => And19.IN1
+B => And30.IN1
+B => And31.IN1
+B => And32.IN1
+B => And33.IN1
+B => And34.IN1
+B => And0.IN1
+B => And1.IN1
+B => And2.IN1
+B => And3.IN1
+B => And4.IN1
+B => And5.IN1
+B => And6.IN1
+B => And7.IN1
+B => And8.IN1
+B => And9.IN1
+B => And20.IN1
+B => And21.IN1
+B => And22.IN1
+B => And23.IN1
+B => And24.IN1
+B => And25.IN1
+B => And26.IN1
+B => And27.IN1
+B => And28.IN1
+B => And29.IN1
+C => And5.IN2
+C => And6.IN2
+C => And7.IN2
+C => And8.IN2
+C => And9.IN2
+C => And15.IN2
+C => And16.IN2
+C => And17.IN2
+C => And18.IN2
+C => And19.IN2
+C => And25.IN2
+C => And26.IN2
+C => And27.IN2
+C => And28.IN2
+C => And29.IN2
+C => And0.IN2
+C => And1.IN2
+C => And2.IN2
+C => And3.IN2
+C => And4.IN2
+C => And10.IN2
+C => And11.IN2
+C => And12.IN2
+C => And13.IN2
+C => And14.IN2
+C => And20.IN2
+C => And21.IN2
+C => And22.IN2
+C => And23.IN2
+C => And24.IN2
+C => And30.IN2
+C => And31.IN2
+C => And32.IN2
+C => And33.IN2
+C => And34.IN2
+D => And4.IN3
+D => And9.IN3
+D => And14.IN3
+D => And19.IN3
+D => And24.IN3
+D => And29.IN3
+D => And34.IN3
+D => And0.IN3
+D => And1.IN3
+D => And2.IN3
+D => And3.IN3
+D => And5.IN3
+D => And6.IN3
+D => And7.IN3
+D => And8.IN3
+D => And10.IN3
+D => And11.IN3
+D => And12.IN3
+D => And13.IN3
+D => And15.IN3
+D => And16.IN3
+D => And17.IN3
+D => And18.IN3
+D => And20.IN3
+D => And21.IN3
+D => And22.IN3
+D => And23.IN3
+D => And25.IN3
+D => And26.IN3
+D => And27.IN3
+D => And28.IN3
+D => And30.IN3
+D => And31.IN3
+D => And32.IN3
+D => And33.IN3
+E => And2.IN4
+E => And3.IN4
+E => And7.IN4
+E => And8.IN4
+E => And12.IN4
+E => And13.IN4
+E => And17.IN4
+E => And18.IN4
+E => And22.IN4
+E => And23.IN4
+E => And27.IN4
+E => And28.IN4
+E => And32.IN4
+E => And33.IN4
+E => And0.IN4
+E => And1.IN4
+E => And4.IN4
+E => And5.IN4
+E => And6.IN4
+E => And9.IN4
+E => And10.IN4
+E => And11.IN4
+E => And14.IN4
+E => And15.IN4
+E => And16.IN4
+E => And19.IN4
+E => And20.IN4
+E => And21.IN4
+E => And24.IN4
+E => And25.IN4
+E => And26.IN4
+E => And29.IN4
+E => And30.IN4
+E => And31.IN4
+E => And34.IN4
+F => And1.IN5
+F => And3.IN5
+F => And6.IN5
+F => And8.IN5
+F => And11.IN5
+F => And13.IN5
+F => And16.IN5
+F => And18.IN5
+F => And21.IN5
+F => And23.IN5
+F => And26.IN5
+F => And28.IN5
+F => And31.IN5
+F => And33.IN5
+F => And0.IN5
+F => And2.IN5
+F => And4.IN5
+F => And5.IN5
+F => And7.IN5
+F => And9.IN5
+F => And10.IN5
+F => And12.IN5
+F => And14.IN5
+F => And15.IN5
+F => And17.IN5
+F => And19.IN5
+F => And20.IN5
+F => And22.IN5
+F => And24.IN5
+F => And25.IN5
+F => And27.IN5
+F => And29.IN5
+F => And30.IN5
+F => And32.IN5
+F => And34.IN5
+out0[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out0[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+out0[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+out0[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+out0[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+out1[0] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+out1[1] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+out1[2] <= And7.DB_MAX_OUTPUT_PORT_TYPE
+out1[3] <= And8.DB_MAX_OUTPUT_PORT_TYPE
+out1[4] <= And9.DB_MAX_OUTPUT_PORT_TYPE
+out2[0] <= And10.DB_MAX_OUTPUT_PORT_TYPE
+out2[1] <= And11.DB_MAX_OUTPUT_PORT_TYPE
+out2[2] <= And12.DB_MAX_OUTPUT_PORT_TYPE
+out2[3] <= And13.DB_MAX_OUTPUT_PORT_TYPE
+out2[4] <= And14.DB_MAX_OUTPUT_PORT_TYPE
+out3[0] <= And15.DB_MAX_OUTPUT_PORT_TYPE
+out3[1] <= And16.DB_MAX_OUTPUT_PORT_TYPE
+out3[2] <= And17.DB_MAX_OUTPUT_PORT_TYPE
+out3[3] <= And18.DB_MAX_OUTPUT_PORT_TYPE
+out3[4] <= And19.DB_MAX_OUTPUT_PORT_TYPE
+out4[0] <= And20.DB_MAX_OUTPUT_PORT_TYPE
+out4[1] <= And21.DB_MAX_OUTPUT_PORT_TYPE
+out4[2] <= And22.DB_MAX_OUTPUT_PORT_TYPE
+out4[3] <= And23.DB_MAX_OUTPUT_PORT_TYPE
+out4[4] <= And24.DB_MAX_OUTPUT_PORT_TYPE
+out5[0] <= And25.DB_MAX_OUTPUT_PORT_TYPE
+out5[1] <= And26.DB_MAX_OUTPUT_PORT_TYPE
+out5[2] <= And27.DB_MAX_OUTPUT_PORT_TYPE
+out5[3] <= And28.DB_MAX_OUTPUT_PORT_TYPE
+out5[4] <= And29.DB_MAX_OUTPUT_PORT_TYPE
+out6[0] <= And30.DB_MAX_OUTPUT_PORT_TYPE
+out6[1] <= And31.DB_MAX_OUTPUT_PORT_TYPE
+out6[2] <= And32.DB_MAX_OUTPUT_PORT_TYPE
+out6[3] <= And33.DB_MAX_OUTPUT_PORT_TYPE
+out6[4] <= And34.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha1
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha1|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha1|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha1|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha1|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha1|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha2
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha2|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha2|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha2|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha2|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha2|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha3
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha3|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha3|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha3|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha3|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha3|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha4
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha4|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha4|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha4|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha4|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha4|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha5
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha5|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha5|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha5|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha5|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha5|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha6
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha6|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha6|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha6|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha6|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha6|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha7
+map_input[0] => And0.IN0
+map_input[1] => And1.IN0
+map_input[2] => And2.IN0
+map_input[3] => And3.IN0
+map_input[4] => And4.IN0
+player_input[0] => And0.IN1
+player_input[1] => And1.IN1
+player_input[2] => And2.IN1
+player_input[3] => And3.IN1
+player_input[4] => And4.IN1
+rstn => rstn.IN5
+clk => clk.IN5
+out[0] <= d_ff:d0.q
+out[1] <= d_ff:d1.q
+out[2] <= d_ff:d2.q
+out[3] <= d_ff:d3.q
+out[4] <= d_ff:d4.q
+
+
+|PBL2|verf_ataque:verf_linha7|d_ff:d0
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha7|d_ff:d1
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha7|d_ff:d2
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha7|d_ff:d3
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|verf_ataque:verf_linha7|d_ff:d4
+d => q~reg0.DATAIN
+rstn => q~reg0.ACLR
+clk => q~reg0.CLK
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|mux8_1:mux8_1
+A0[0] => And56.IN0
+A0[1] => And64.IN0
+A0[2] => And72.IN0
+A0[3] => And80.IN0
+A0[4] => And88.IN0
+A1[0] => And57.IN0
+A1[1] => And65.IN0
+A1[2] => And73.IN0
+A1[3] => And81.IN0
+A1[4] => And89.IN0
+A2[0] => And58.IN0
+A2[1] => And66.IN0
+A2[2] => And74.IN0
+A2[3] => And82.IN0
+A2[4] => And90.IN0
+A3[0] => And59.IN0
+A3[1] => And67.IN0
+A3[2] => And75.IN0
+A3[3] => And83.IN0
+A3[4] => And91.IN0
+A4[0] => And60.IN0
+A4[1] => And68.IN0
+A4[2] => And76.IN0
+A4[3] => And84.IN0
+A4[4] => And92.IN0
+A5[0] => And61.IN0
+A5[1] => And69.IN0
+A5[2] => And77.IN0
+A5[3] => And85.IN0
+A5[4] => And93.IN0
+A6[0] => And62.IN0
+A6[1] => And70.IN0
+A6[2] => And78.IN0
+A6[3] => And86.IN0
+A6[4] => And94.IN0
+A7[0] => And63.IN0
+A7[1] => And71.IN0
+A7[2] => And79.IN0
+A7[3] => And87.IN0
+A7[4] => And95.IN0
+SEL0 => And60.IN1
+SEL0 => And61.IN1
+SEL0 => And62.IN1
+SEL0 => And63.IN1
+SEL0 => And68.IN1
+SEL0 => And69.IN1
+SEL0 => And70.IN1
+SEL0 => And71.IN1
+SEL0 => And76.IN1
+SEL0 => And77.IN1
+SEL0 => And78.IN1
+SEL0 => And79.IN1
+SEL0 => And84.IN1
+SEL0 => And85.IN1
+SEL0 => And86.IN1
+SEL0 => And87.IN1
+SEL0 => And92.IN1
+SEL0 => And93.IN1
+SEL0 => And94.IN1
+SEL0 => And95.IN1
+SEL0 => And56.IN1
+SEL0 => And57.IN1
+SEL0 => And58.IN1
+SEL0 => And59.IN1
+SEL0 => And64.IN1
+SEL0 => And65.IN1
+SEL0 => And66.IN1
+SEL0 => And67.IN1
+SEL0 => And72.IN1
+SEL0 => And73.IN1
+SEL0 => And74.IN1
+SEL0 => And75.IN1
+SEL0 => And80.IN1
+SEL0 => And81.IN1
+SEL0 => And82.IN1
+SEL0 => And83.IN1
+SEL0 => And88.IN1
+SEL0 => And89.IN1
+SEL0 => And90.IN1
+SEL0 => And91.IN1
+SEL1 => And58.IN2
+SEL1 => And59.IN2
+SEL1 => And62.IN2
+SEL1 => And63.IN2
+SEL1 => And66.IN2
+SEL1 => And67.IN2
+SEL1 => And70.IN2
+SEL1 => And71.IN2
+SEL1 => And74.IN2
+SEL1 => And75.IN2
+SEL1 => And78.IN2
+SEL1 => And79.IN2
+SEL1 => And82.IN2
+SEL1 => And83.IN2
+SEL1 => And86.IN2
+SEL1 => And87.IN2
+SEL1 => And90.IN2
+SEL1 => And91.IN2
+SEL1 => And94.IN2
+SEL1 => And95.IN2
+SEL1 => And56.IN2
+SEL1 => And57.IN2
+SEL1 => And60.IN2
+SEL1 => And61.IN2
+SEL1 => And64.IN2
+SEL1 => And65.IN2
+SEL1 => And68.IN2
+SEL1 => And69.IN2
+SEL1 => And72.IN2
+SEL1 => And73.IN2
+SEL1 => And76.IN2
+SEL1 => And77.IN2
+SEL1 => And80.IN2
+SEL1 => And81.IN2
+SEL1 => And84.IN2
+SEL1 => And85.IN2
+SEL1 => And88.IN2
+SEL1 => And89.IN2
+SEL1 => And92.IN2
+SEL1 => And93.IN2
+SEL2 => And57.IN3
+SEL2 => And59.IN3
+SEL2 => And61.IN3
+SEL2 => And63.IN3
+SEL2 => And65.IN3
+SEL2 => And67.IN3
+SEL2 => And69.IN3
+SEL2 => And71.IN3
+SEL2 => And73.IN3
+SEL2 => And75.IN3
+SEL2 => And77.IN3
+SEL2 => And79.IN3
+SEL2 => And81.IN3
+SEL2 => And83.IN3
+SEL2 => And85.IN3
+SEL2 => And87.IN3
+SEL2 => And89.IN3
+SEL2 => And91.IN3
+SEL2 => And93.IN3
+SEL2 => And95.IN3
+SEL2 => And56.IN3
+SEL2 => And58.IN3
+SEL2 => And60.IN3
+SEL2 => And62.IN3
+SEL2 => And64.IN3
+SEL2 => And66.IN3
+SEL2 => And68.IN3
+SEL2 => And70.IN3
+SEL2 => And72.IN3
+SEL2 => And74.IN3
+SEL2 => And76.IN3
+SEL2 => And78.IN3
+SEL2 => And80.IN3
+SEL2 => And82.IN3
+SEL2 => And84.IN3
+SEL2 => And86.IN3
+SEL2 => And88.IN3
+SEL2 => And90.IN3
+SEL2 => And92.IN3
+SEL2 => And94.IN3
+out[0] <= out7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out8.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out9.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out10.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out11.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|PBL2|decod_3_pra_8:decod_linhas_matriz
+A => And4.IN0
+A => And5.IN0
+A => And6.IN0
+A => And7.IN0
+A => And0.IN0
+A => And1.IN0
+A => And2.IN0
+A => And3.IN0
+B => And2.IN1
+B => And3.IN1
+B => And6.IN1
+B => And7.IN1
+B => And0.IN1
+B => And1.IN1
+B => And4.IN1
+B => And5.IN1
+C => And1.IN2
+C => And3.IN2
+C => And5.IN2
+C => And7.IN2
+C => And0.IN2
+C => And2.IN2
+C => And4.IN2
+C => And6.IN2
+out[0] <= And0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= And1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= And2.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= And3.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= And4.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= And5.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= And6.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= And7.DB_MAX_OUTPUT_PORT_TYPE
 
 

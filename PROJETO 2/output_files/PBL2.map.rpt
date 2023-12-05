@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PBL2
-Mon Dec 04 21:20:22 2023
+Tue Dec 05 18:46:09 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -13,9 +13,23 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "mux4_1:mux_7segmentos"
- 10. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "decod_3_pra_8:decod_linhas_matriz"
+ 11. Port Connectivity Checks: "verf_ataque:verf_linha7"
+ 12. Port Connectivity Checks: "verf_ataque:verf_linha6"
+ 13. Port Connectivity Checks: "verf_ataque:verf_linha5"
+ 14. Port Connectivity Checks: "verf_ataque:verf_linha4"
+ 15. Port Connectivity Checks: "verf_ataque:verf_linha3"
+ 16. Port Connectivity Checks: "verf_ataque:verf_linha2"
+ 17. Port Connectivity Checks: "verf_ataque:verf_linha1"
+ 18. Port Connectivity Checks: "mux4_1:mux_7segmentos"
+ 19. Port Connectivity Checks: "decod_2_pra_4:verf_modo_jogo"
+ 20. Port Connectivity Checks: "contador_sin_2bit:contador_2bit"
+ 21. Port Connectivity Checks: "contador_sin_3bit:contador_3bit"
+ 22. Port Connectivity Checks: "divisor_clk:divisor_clk"
+ 23. Analysis & Synthesis Messages
+ 24. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,13 +56,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 04 21:20:22 2023       ;
+; Analysis & Synthesis Status ; Successful - Tue Dec 05 18:46:09 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; PBL2                                        ;
 ; Top-level Entity Name       ; PBL2                                        ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 28                                          ;
-; Total pins                  ; 45                                          ;
+; Total logic elements        ; 84                                          ;
+; Total pins                  ; 49                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -148,72 +162,144 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
 ; PBL2.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v               ;         ;
 ; d_ff.v                           ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/d_ff.v               ;         ;
+; mux8_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v             ;         ;
 ; divisor_clk.v                    ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v        ;         ;
+; verf_ataque.v                    ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/verf_ataque.v        ;         ;
 ; decod_modo_de_jogo.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_modo_de_jogo.v ;         ;
 ; decod_linha_numero.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v ;         ;
 ; decod_coluna_letra.v             ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v ;         ;
+; contador_sin_3bit.v              ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_3bit.v  ;         ;
 ; contador_sin_2bit.v              ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_2bit.v  ;         ;
 ; mux4_1.v                         ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v             ;         ;
+; decod_cordenadas.v               ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_cordenadas.v   ;         ;
+; decod_2_pra_4.v                  ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_2_pra_4.v      ;         ;
+; decod_3_pra_8.v                  ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_3_pra_8.v      ;         ;
+; conf_chave.v                     ; yes             ; User Verilog HDL File  ; C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/conf_chave.v         ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                        ;
-+---------------------------------------------+--------------------------------------+
-; Resource                                    ; Usage                                ;
-+---------------------------------------------+--------------------------------------+
-; Total logic elements                        ; 28                                   ;
-;     -- Combinational with no register       ; 16                                   ;
-;     -- Register only                        ; 0                                    ;
-;     -- Combinational with a register        ; 12                                   ;
-;                                             ;                                      ;
-; Logic element usage by number of LUT inputs ;                                      ;
-;     -- 4 input functions                    ; 11                                   ;
-;     -- 3 input functions                    ; 3                                    ;
-;     -- 2 input functions                    ; 3                                    ;
-;     -- 1 input functions                    ; 11                                   ;
-;     -- 0 input functions                    ; 0                                    ;
-;                                             ;                                      ;
-; Logic elements by mode                      ;                                      ;
-;     -- normal mode                          ; 28                                   ;
-;     -- arithmetic mode                      ; 0                                    ;
-;     -- qfbk mode                            ; 0                                    ;
-;     -- register cascade mode                ; 0                                    ;
-;     -- synchronous clear/load mode          ; 0                                    ;
-;     -- asynchronous clear/load mode         ; 12                                   ;
-;                                             ;                                      ;
-; Total registers                             ; 12                                   ;
-; I/O pins                                    ; 45                                   ;
-; Maximum fan-out node                        ; contador_sin_2bit:contador|d_ff:d0|q ;
-; Maximum fan-out                             ; 12                                   ;
-; Total fan-out                               ; 101                                  ;
-; Average fan-out                             ; 1.38                                 ;
-+---------------------------------------------+--------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++---------------------------------------------+-------------------------------------------+
+; Resource                                    ; Usage                                     ;
++---------------------------------------------+-------------------------------------------+
+; Total logic elements                        ; 84                                        ;
+;     -- Combinational with no register       ; 59                                        ;
+;     -- Register only                        ; 0                                         ;
+;     -- Combinational with a register        ; 25                                        ;
+;                                             ;                                           ;
+; Logic element usage by number of LUT inputs ;                                           ;
+;     -- 4 input functions                    ; 53                                        ;
+;     -- 3 input functions                    ; 10                                        ;
+;     -- 2 input functions                    ; 10                                        ;
+;     -- 1 input functions                    ; 11                                        ;
+;     -- 0 input functions                    ; 0                                         ;
+;                                             ;                                           ;
+; Logic elements by mode                      ;                                           ;
+;     -- normal mode                          ; 84                                        ;
+;     -- arithmetic mode                      ; 0                                         ;
+;     -- qfbk mode                            ; 0                                         ;
+;     -- register cascade mode                ; 0                                         ;
+;     -- synchronous clear/load mode          ; 0                                         ;
+;     -- asynchronous clear/load mode         ; 12                                        ;
+;                                             ;                                           ;
+; Total registers                             ; 25                                        ;
+; I/O pins                                    ; 49                                        ;
+; Maximum fan-out node                        ; contador_sin_2bit:contador_2bit|d_ff:d0|q ;
+; Maximum fan-out                             ; 27                                        ;
+; Total fan-out                               ; 333                                       ;
+; Average fan-out                             ; 2.50                                      ;
++---------------------------------------------+-------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                      ; Entity Name       ; Library Name ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
-; |PBL2                           ; 28 (0)      ; 12           ; 0          ; 45   ; 0            ; 16 (0)       ; 0 (0)             ; 12 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2                                    ; PBL2              ; work         ;
-;    |contador_sin_2bit:contador| ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador         ; contador_sin_2bit ; work         ;
-;       |d_ff:d0|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador|d_ff:d0 ; d_ff              ; work         ;
-;       |d_ff:d1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador|d_ff:d1 ; d_ff              ; work         ;
-;    |divisor_clk:divisor_clk|    ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk            ; divisor_clk       ; work         ;
-;       |d_ff:d0|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d0    ; d_ff              ; work         ;
-;       |d_ff:d1|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d1    ; d_ff              ; work         ;
-;       |d_ff:d2|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d2    ; d_ff              ; work         ;
-;       |d_ff:d3|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d3    ; d_ff              ; work         ;
-;       |d_ff:d4|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d4    ; d_ff              ; work         ;
-;       |d_ff:d5|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d5    ; d_ff              ; work         ;
-;       |d_ff:d6|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d6    ; d_ff              ; work         ;
-;       |d_ff:d7|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d7    ; d_ff              ; work         ;
-;       |d_ff:d8|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d8    ; d_ff              ; work         ;
-;       |d_ff:d9|                 ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d9    ; d_ff              ; work         ;
-;    |mux4_1:mux_7segmentos|      ; 16 (16)     ; 0            ; 0          ; 0    ; 0            ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|mux4_1:mux_7segmentos              ; mux4_1            ; work         ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+-------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                            ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node             ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                           ; Entity Name       ; Library Name ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+-------------------+--------------+
+; |PBL2                                  ; 84 (0)      ; 25           ; 0          ; 49   ; 0            ; 59 (0)       ; 0 (0)             ; 25 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2                                         ; PBL2              ; work         ;
+;    |conf_chave:ch2|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch2                          ; conf_chave        ; work         ;
+;    |conf_chave:ch3|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch3                          ; conf_chave        ; work         ;
+;    |conf_chave:ch4|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch4                          ; conf_chave        ; work         ;
+;    |conf_chave:ch5|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch5                          ; conf_chave        ; work         ;
+;    |conf_chave:ch6|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch6                          ; conf_chave        ; work         ;
+;    |conf_chave:ch7|                    ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|conf_chave:ch7                          ; conf_chave        ; work         ;
+;    |contador_sin_2bit:contador_2bit|   ; 2 (0)       ; 2            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador_2bit         ; contador_sin_2bit ; work         ;
+;       |d_ff:d0|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador_2bit|d_ff:d0 ; d_ff              ; work         ;
+;       |d_ff:d1|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_2bit:contador_2bit|d_ff:d1 ; d_ff              ; work         ;
+;    |contador_sin_3bit:contador_3bit|   ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_3bit:contador_3bit         ; contador_sin_3bit ; work         ;
+;       |d_ff:d2|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|contador_sin_3bit:contador_3bit|d_ff:d2 ; d_ff              ; work         ;
+;    |decod_2_pra_4:decod_digitos_7seg|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|decod_2_pra_4:decod_digitos_7seg        ; decod_2_pra_4     ; work         ;
+;    |decod_3_pra_8:decod_linhas_matriz| ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|decod_3_pra_8:decod_linhas_matriz       ; decod_3_pra_8     ; work         ;
+;    |decod_cordenadas:decod_cordenadas| ; 5 (5)       ; 0            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|decod_cordenadas:decod_cordenadas       ; decod_cordenadas  ; work         ;
+;    |divisor_clk:divisor_clk|           ; 10 (0)      ; 10           ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 10 (0)           ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk                 ; divisor_clk       ; work         ;
+;       |d_ff:d0|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d0         ; d_ff              ; work         ;
+;       |d_ff:d1|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d1         ; d_ff              ; work         ;
+;       |d_ff:d2|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d2         ; d_ff              ; work         ;
+;       |d_ff:d3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d3         ; d_ff              ; work         ;
+;       |d_ff:d4|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d4         ; d_ff              ; work         ;
+;       |d_ff:d5|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d5         ; d_ff              ; work         ;
+;       |d_ff:d6|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d6         ; d_ff              ; work         ;
+;       |d_ff:d7|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d7         ; d_ff              ; work         ;
+;       |d_ff:d8|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d8         ; d_ff              ; work         ;
+;       |d_ff:d9|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|divisor_clk:divisor_clk|d_ff:d9         ; d_ff              ; work         ;
+;    |mux4_1:mux_7segmentos|             ; 19 (19)     ; 0            ; 0          ; 0    ; 0            ; 19 (19)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|mux4_1:mux_7segmentos                   ; mux4_1            ; work         ;
+;    |mux8_1:mux8_1|                     ; 10 (10)     ; 0            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|mux8_1:mux8_1                           ; mux8_1            ; work         ;
+;    |verf_ataque:verf_linha1|           ; 4 (0)       ; 2            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha1                 ; verf_ataque       ; work         ;
+;       |d_ff:d3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha1|d_ff:d3         ; d_ff              ; work         ;
+;       |d_ff:d4|                        ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha1|d_ff:d4         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha2|           ; 4 (0)       ; 2            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha2                 ; verf_ataque       ; work         ;
+;       |d_ff:d0|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha2|d_ff:d0         ; d_ff              ; work         ;
+;       |d_ff:d1|                        ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha2|d_ff:d1         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha3|           ; 3 (0)       ; 1            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha3                 ; verf_ataque       ; work         ;
+;       |d_ff:d1|                        ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha3|d_ff:d1         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha4|           ; 3 (0)       ; 1            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha4                 ; verf_ataque       ; work         ;
+;       |d_ff:d2|                        ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha4|d_ff:d2         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha5|           ; 3 (0)       ; 3            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 3 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha5                 ; verf_ataque       ; work         ;
+;       |d_ff:d0|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha5|d_ff:d0         ; d_ff              ; work         ;
+;       |d_ff:d2|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha5|d_ff:d2         ; d_ff              ; work         ;
+;       |d_ff:d3|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha5|d_ff:d3         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha6|           ; 4 (0)       ; 2            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 2 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha6                 ; verf_ataque       ; work         ;
+;       |d_ff:d0|                        ; 3 (3)       ; 1            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha6|d_ff:d0         ; d_ff              ; work         ;
+;       |d_ff:d2|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha6|d_ff:d2         ; d_ff              ; work         ;
+;    |verf_ataque:verf_linha7|           ; 1 (0)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha7                 ; verf_ataque       ; work         ;
+;       |d_ff:d2|                        ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |PBL2|verf_ataque:verf_linha7|d_ff:d2         ; d_ff              ; work         ;
++----------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++-------------------------------------------+-------------------------------------------------------+
+; Register name                             ; Reason for Removal                                    ;
++-------------------------------------------+-------------------------------------------------------+
+; verf_ataque:verf_linha2|d_ff:d3|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha1|d_ff:d0|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha4|d_ff:d3|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha3|d_ff:d0|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha4|d_ff:d0|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha5|d_ff:d1|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha1|d_ff:d2|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha6|d_ff:d4|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha6|d_ff:d3|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha3|d_ff:d2|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha3|d_ff:d4|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha5|d_ff:d4|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha2|d_ff:d4|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha7|d_ff:d0|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha2|d_ff:d2|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha4|d_ff:d4|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha1|d_ff:d1|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha7|d_ff:d3|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha4|d_ff:d1|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha6|d_ff:d1|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha7|d_ff:d1|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; verf_ataque:verf_linha3|d_ff:d3|q         ; Merged with verf_ataque:verf_linha7|d_ff:d4|q         ;
+; contador_sin_3bit:contador_3bit|d_ff:d0|q ; Merged with contador_sin_2bit:contador_2bit|d_ff:d0|q ;
+; contador_sin_3bit:contador_3bit|d_ff:d1|q ; Merged with contador_sin_2bit:contador_2bit|d_ff:d1|q ;
+; verf_ataque:verf_linha7|d_ff:d4|q         ; Stuck at GND due to stuck port data_in                ;
+; Total Number of Removed Registers = 25    ;                                                       ;
++-------------------------------------------+-------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -221,7 +307,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 12    ;
+; Total registers                              ; 25    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 12    ;
@@ -229,6 +315,92 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decod_3_pra_8:decod_linhas_matriz"                                                    ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; out[7] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha7" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[4..3] ; Input ; Info     ; Stuck at GND   ;
+; map_input[1..0] ; Input ; Info     ; Stuck at GND   ;
+; map_input[2]    ; Input ; Info     ; Stuck at VCC   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha6" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[4..3] ; Input ; Info     ; Stuck at GND   ;
+; map_input[2]    ; Input ; Info     ; Stuck at VCC   ;
+; map_input[1]    ; Input ; Info     ; Stuck at GND   ;
+; map_input[0]    ; Input ; Info     ; Stuck at VCC   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha5" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[3..2] ; Input ; Info     ; Stuck at VCC   ;
+; map_input[4]    ; Input ; Info     ; Stuck at GND   ;
+; map_input[1]    ; Input ; Info     ; Stuck at GND   ;
+; map_input[0]    ; Input ; Info     ; Stuck at VCC   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha4" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[4..3] ; Input ; Info     ; Stuck at GND   ;
+; map_input[1..0] ; Input ; Info     ; Stuck at GND   ;
+; map_input[2]    ; Input ; Info     ; Stuck at VCC   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha3" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[4..2] ; Input ; Info     ; Stuck at GND   ;
+; map_input[1]    ; Input ; Info     ; Stuck at VCC   ;
+; map_input[0]    ; Input ; Info     ; Stuck at GND   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha2" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[1..0] ; Input ; Info     ; Stuck at VCC   ;
+; map_input[4..2] ; Input ; Info     ; Stuck at GND   ;
++-----------------+-------+----------+----------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "verf_ataque:verf_linha1" ;
++-----------------+-------+----------+----------------+
+; Port            ; Type  ; Severity ; Details        ;
++-----------------+-------+----------+----------------+
+; map_input[4..3] ; Input ; Info     ; Stuck at VCC   ;
+; map_input[2..0] ; Input ; Info     ; Stuck at GND   ;
++-----------------+-------+----------+----------------+
 
 
 +---------------------------------------------------+
@@ -241,13 +413,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------+-------+----------+----------------------+
 
 
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "decod_2_pra_4:verf_modo_jogo"                                                            ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; out[3..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; out[0]    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador_sin_2bit:contador_2bit"                                                                                                                                                      ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador_sin_3bit:contador_3bit"                                                                                                                                                      ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisor_clk:divisor_clk"                                                                                                                                                              ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                                                            ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rstn     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; rstn[-1] ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++----------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Dec 04 21:20:10 2023
+    Info: Processing started: Tue Dec 05 18:45:57 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -279,8 +491,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file contado
     Info (12023): Found entity 1: contador_sin_2bit File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/contador_sin_2bit.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.v
     Info (12023): Found entity 1: mux4_1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(24): created implicit net for "cont_2bit1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at PBL2.v(24): created implicit net for "cont_2bit0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file decod_cordenadas.v
+    Info (12023): Found entity 1: decod_cordenadas File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_cordenadas.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decod_2_pra_4.v
+    Info (12023): Found entity 1: decod_2_pra_4 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_2_pra_4.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decod_3_pra_8.v
+    Info (12023): Found entity 1: decod_3_pra_8 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_3_pra_8.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file conf_chave.v
+    Info (12023): Found entity 1: conf_chave File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/conf_chave.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(13): created implicit net for "T56" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(14): created implicit net for "T57" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 14
 Warning (10236): Verilog HDL Implicit Net warning at mux8_1.v(15): created implicit net for "T58" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux8_1.v Line: 15
@@ -393,86 +611,113 @@ Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(48): created impli
 Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(49): created implicit net for "T25" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 49
 Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(50): created implicit net for "T26" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 50
 Warning (10236): Verilog HDL Implicit Net warning at mux4_1.v(51): created implicit net for "T27" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/mux4_1.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at decod_3_pra_8.v(9): created implicit net for "C_not" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_3_pra_8.v Line: 9
 Info (12127): Elaborating entity "PBL2" for the top level hierarchy
-Warning (10739): Verilog HDL warning at PBL2.v(32): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 32
-Warning (10739): Verilog HDL warning at PBL2.v(33): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 33
-Warning (10739): Verilog HDL warning at PBL2.v(34): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 34
-Warning (10739): Verilog HDL warning at PBL2.v(35): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 35
-Warning (10739): Verilog HDL warning at PBL2.v(36): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 36
-Warning (10739): Verilog HDL warning at PBL2.v(37): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 37
-Warning (10739): Verilog HDL warning at PBL2.v(38): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 38
-Warning (10034): Output port "LED0" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED1" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED2" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED3" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED4" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED5" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED6" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED7" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED8" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "LED9" at PBL2.v(12) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-Warning (10034): Output port "MATRIZ_L0" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L1" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L2" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L3" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L4" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L5" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_L6" at PBL2.v(13) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-Warning (10034): Output port "MATRIZ_C0" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "MATRIZ_C1" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "MATRIZ_C2" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "MATRIZ_C3" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "MATRIZ_C4" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-Warning (10034): Output port "teste0" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
-Warning (10034): Output port "teste1" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
-Warning (10034): Output port "teste2" at PBL2.v(15) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
-Info (12128): Elaborating entity "divisor_clk" for hierarchy "divisor_clk:divisor_clk" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 22
+Warning (10739): Verilog HDL warning at PBL2.v(44): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 44
+Warning (10739): Verilog HDL warning at PBL2.v(45): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 45
+Warning (10739): Verilog HDL warning at PBL2.v(46): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 46
+Warning (10739): Verilog HDL warning at PBL2.v(47): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 47
+Warning (10739): Verilog HDL warning at PBL2.v(48): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 48
+Warning (10739): Verilog HDL warning at PBL2.v(49): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 49
+Warning (10739): Verilog HDL warning at PBL2.v(50): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 50
+Warning (10739): Verilog HDL warning at PBL2.v(73): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 73
+Warning (10739): Verilog HDL warning at PBL2.v(74): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 74
+Warning (10739): Verilog HDL warning at PBL2.v(75): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 75
+Warning (10739): Verilog HDL warning at PBL2.v(76): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 76
+Warning (10739): Verilog HDL warning at PBL2.v(77): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 77
+Warning (10739): Verilog HDL warning at PBL2.v(79): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 79
+Warning (10739): Verilog HDL warning at PBL2.v(80): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 80
+Warning (10739): Verilog HDL warning at PBL2.v(81): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 81
+Warning (10739): Verilog HDL warning at PBL2.v(82): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 82
+Warning (10739): Verilog HDL warning at PBL2.v(83): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 83
+Warning (10739): Verilog HDL warning at PBL2.v(85): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 85
+Warning (10739): Verilog HDL warning at PBL2.v(86): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 86
+Warning (10739): Verilog HDL warning at PBL2.v(87): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 87
+Warning (10739): Verilog HDL warning at PBL2.v(88): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 88
+Warning (10739): Verilog HDL warning at PBL2.v(89): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 89
+Warning (10739): Verilog HDL warning at PBL2.v(91): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 91
+Warning (10739): Verilog HDL warning at PBL2.v(92): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 92
+Warning (10739): Verilog HDL warning at PBL2.v(93): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 93
+Warning (10739): Verilog HDL warning at PBL2.v(94): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 94
+Warning (10739): Verilog HDL warning at PBL2.v(95): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 95
+Warning (10739): Verilog HDL warning at PBL2.v(97): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 97
+Warning (10739): Verilog HDL warning at PBL2.v(98): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 98
+Warning (10739): Verilog HDL warning at PBL2.v(99): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 99
+Warning (10739): Verilog HDL warning at PBL2.v(100): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 100
+Warning (10739): Verilog HDL warning at PBL2.v(101): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 101
+Warning (10739): Verilog HDL warning at PBL2.v(103): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 103
+Warning (10739): Verilog HDL warning at PBL2.v(104): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 104
+Warning (10739): Verilog HDL warning at PBL2.v(105): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 105
+Warning (10739): Verilog HDL warning at PBL2.v(106): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 106
+Warning (10739): Verilog HDL warning at PBL2.v(107): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 107
+Warning (10739): Verilog HDL warning at PBL2.v(109): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 109
+Warning (10739): Verilog HDL warning at PBL2.v(110): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 110
+Warning (10739): Verilog HDL warning at PBL2.v(111): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 111
+Warning (10739): Verilog HDL warning at PBL2.v(112): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 112
+Warning (10739): Verilog HDL warning at PBL2.v(113): actual bit length 32 differs from formal bit length 1 File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 113
+Warning (10034): Output port "LED0" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED1" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED2" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED3" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED4" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED5" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED6" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED7" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED8" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "LED9" at PBL2.v(14) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+Warning (10034): Output port "teste0" at PBL2.v(17) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
+Warning (10034): Output port "teste1" at PBL2.v(17) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
+Warning (10034): Output port "teste2" at PBL2.v(17) has no driver File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
+Info (12128): Elaborating entity "divisor_clk" for hierarchy "divisor_clk:divisor_clk" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 31
 Info (12128): Elaborating entity "d_ff" for hierarchy "divisor_clk:divisor_clk|d_ff:d0" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/divisor_clk.v Line: 11
-Info (12128): Elaborating entity "contador_sin_2bit" for hierarchy "contador_sin_2bit:contador" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 24
-Info (12128): Elaborating entity "decod_modo_de_jogo" for hierarchy "decod_modo_de_jogo:d_modo_jogo" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 26
-Info (12128): Elaborating entity "decod_linha_numero" for hierarchy "decod_linha_numero:d_linha_numero" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 28
+Info (12128): Elaborating entity "contador_sin_3bit" for hierarchy "contador_sin_3bit:contador_3bit" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 33
+Info (12128): Elaborating entity "contador_sin_2bit" for hierarchy "contador_sin_2bit:contador_2bit" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 34
+Info (12128): Elaborating entity "decod_2_pra_4" for hierarchy "decod_2_pra_4:verf_modo_jogo" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 36
+Info (12128): Elaborating entity "decod_modo_de_jogo" for hierarchy "decod_modo_de_jogo:d_modo_jogo" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 38
+Info (12128): Elaborating entity "decod_linha_numero" for hierarchy "decod_linha_numero:d_linha_numero" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 40
 Warning (10030): Net "C_not" at decod_linha_numero.v(5) has no driver or initial value, using a default initial value '0' File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_linha_numero.v Line: 5
-Info (12128): Elaborating entity "decod_coluna_letra" for hierarchy "decod_coluna_letra:d_coluna_letra" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 30
+Info (12128): Elaborating entity "decod_coluna_letra" for hierarchy "decod_coluna_letra:d_coluna_letra" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 42
 Warning (10030): Net "C_not" at decod_coluna_letra.v(5) has no driver or initial value, using a default initial value '0' File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/decod_coluna_letra.v Line: 5
-Info (12128): Elaborating entity "mux4_1" for hierarchy "mux4_1:mux_7segmentos" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 40
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux4_1:mux_7segmentos" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 52
+Info (12128): Elaborating entity "conf_chave" for hierarchy "conf_chave:ch7" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 64
+Info (12128): Elaborating entity "decod_cordenadas" for hierarchy "decod_cordenadas:decod_cordenadas" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 71
+Info (12128): Elaborating entity "verf_ataque" for hierarchy "verf_ataque:verf_linha1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 115
+Info (12128): Elaborating entity "mux8_1" for hierarchy "mux8_1:mux8_1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 123
+Info (12128): Elaborating entity "decod_3_pra_8" for hierarchy "decod_3_pra_8:decod_linhas_matriz" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 124
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LED0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED5" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED7" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED8" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "LED9" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 12
-    Warning (13410): Pin "MATRIZ_L0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L5" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_L6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 13
-    Warning (13410): Pin "MATRIZ_C0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "MATRIZ_C1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "MATRIZ_C2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "MATRIZ_C3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "MATRIZ_C4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
-    Warning (13410): Pin "teste0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
-    Warning (13410): Pin "teste1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
-    Warning (13410): Pin "teste2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 15
+    Warning (13410): Pin "LED0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED3" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED4" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED5" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED6" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED7" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED8" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "LED9" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 14
+    Warning (13410): Pin "teste0" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
+    Warning (13410): Pin "teste1" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
+    Warning (13410): Pin "teste2" is stuck at GND File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 17
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "B1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
-    Warning (15610): No output dependent on input pin "B2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
-    Warning (15610): No output dependent on input pin "B3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 9
-Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "B1" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
+    Warning (15610): No output dependent on input pin "B2" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
+    Warning (15610): No output dependent on input pin "B3" File: C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/PBL2.v Line: 10
+Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 28 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 179 warnings
-    Info: Peak virtual memory: 4701 megabytes
-    Info: Processing ended: Mon Dec 04 21:20:22 2023
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 84 logic cells
+Info (144001): Generated suppressed messages file C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/output_files/PBL2.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 190 warnings
+    Info: Peak virtual memory: 4702 megabytes
+    Info: Processing ended: Tue Dec 05 18:46:09 2023
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/output_files/PBL2.map.smsg.
 
 

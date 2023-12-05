@@ -5,10 +5,12 @@ module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
 				SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
 				MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
 				MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4,
+				SEG7_Dig0, SEG7_Dig1, SEG7_Dig2, SEG7_Dig3,
 				teste0, teste1, teste2);
 		input CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0, B0, B1, B2, B3,
 				clk;
 		output SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
+				SEG7_Dig0, SEG7_Dig1, SEG7_Dig2, SEG7_Dig3, 
 				 LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9,
 				 MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
 				 MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4,
@@ -18,6 +20,7 @@ module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
 		wire [5:0] out_decod_linha0, out_decod_linha1, out_decod_linha2, out_decod_linha3, out_decod_linha4, out_decod_linha5, out_decod_linha6;
 		wire [4:0] mux_matrix0, mux_matrix1, mux_matrix2, mux_matrix3, mux_matrix4, mux_matrix5, mux_matrix6, mux_matrix7, out_matriz; 
 		wire [6:0] modo_jogo_7seg, linha_numero, coluna_letra, split;
+		wire [3:0] digitos_7seg;
 		wire div_CLK, cont_0, cont_1, cont_2, cont_0_not, cont_1_not, cont_2_not;
 		divisor_clk divisor_clk (clk, B0, div_CLK);
 		
@@ -39,4 +42,11 @@ module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
 		
 		mux4_1 mux_7segmentos (modo_jogo_7seg, split, linha_numero, coluna_letra, cont_2bit0, cont_2bit1, SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G);
 		
-endmodul
+		decod_2_pra_4 decod_digitos_7seg (cont_2bit0, cont_2bit1, digitos_7seg);
+		
+		wire SEG7_Dig0 = digitos_7seg[0];
+		wire SEG7_Dig1 = digitos_7seg[1];
+		wire SEG7_Dig2 = digitos_7seg[2];
+		wire SEG7_Dig3 = digitos_7seg[3];
+		
+endmodule

@@ -112,3 +112,9 @@ set_global_assignment -name VERILOG_FILE contador_sin_3bit.v
 set_global_assignment -name VERILOG_FILE contador_sin_2bit.v
 set_global_assignment -name VERILOG_FILE mux4_1.v
 set_global_assignment -name TEXT_FILE "testar decodificadores 7seg.txt"
+set_global_assignment -name VERILOG_FILE decod_cordenadas.v
+set_global_assignment -name VERILOG_FILE decod_2_pra_4.v
+set_global_assignment -name VERILOG_FILE decod_3_pra_8.v
+set_global_assignment -name TEXT_FILE "testar decodificadores matriz.txt"
+set_global_assignment -name VERILOG_FILE conf_chave.v
+set_global_assignment -name TEXT_FILE "testar matriz e decodificador juntos.txt"
