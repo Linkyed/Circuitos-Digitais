@@ -1,0 +1,12 @@
+module conf_chave(A, B, C, out0, out1);
+	input A, B, C, D;
+	output out0, out1;
+	
+	wire T0;
+
+	and And0 (T0, A, B);
+	wire out0 = T0;
+	and And1 (out1, T0, C);
+	
+
+endmodule 

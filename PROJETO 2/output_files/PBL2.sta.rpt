@@ -1,6 +1,6 @@
 Timing Analyzer report for PBL2
-Wed Nov 29 00:57:11 2023
-Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Tue Dec 05 18:46:16 2023
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -16,51 +16,39 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   8. Recovery Summary
   9. Removal Summary
  10. Minimum Pulse Width Summary
- 11. Setup: 'Contador_2bits:cont_2|flip_flop_d:dff0|q'
- 12. Setup: 'divided_frequecy:did_f|flip_flop_d:dff0|q'
- 13. Setup: 'divided_frequecy:did_f|flip_flop_d:dff8|q'
- 14. Setup: 'divided_frequecy:did_f|flip_flop_d:dff10|q'
- 15. Setup: 'divided_frequecy:did_f|flip_flop_d:dff12|q'
- 16. Setup: 'divided_frequecy:did_f|flip_flop_d:dff15|q'
- 17. Setup: 'divided_frequecy:did_f|flip_flop_d:dff2|q'
- 18. Setup: 'divided_frequecy:did_f|flip_flop_d:dff4|q'
- 19. Setup: 'divided_frequecy:did_f|flip_flop_d:dff6|q'
- 20. Setup: 'divided_frequecy:did_f|flip_flop_d:dff5|q'
- 21. Setup: 'divided_frequecy:did_f|flip_flop_d:dff3|q'
- 22. Setup: 'divided_frequecy:did_f|flip_flop_d:dff14|q'
- 23. Setup: 'divided_frequecy:did_f|flip_flop_d:dff11|q'
- 24. Setup: 'divided_frequecy:did_f|flip_flop_d:dff9|q'
- 25. Setup: 'divided_frequecy:did_f|flip_flop_d:dff1|q'
- 26. Setup: 'divided_frequecy:did_f|flip_flop_d:dff7|q'
- 27. Setup: 'divided_frequecy:did_f|flip_flop_d:dff13|q'
- 28. Setup: 'clk'
- 29. Hold: 'clk'
- 30. Hold: 'divided_frequecy:did_f|flip_flop_d:dff13|q'
- 31. Hold: 'divided_frequecy:did_f|flip_flop_d:dff7|q'
- 32. Hold: 'divided_frequecy:did_f|flip_flop_d:dff1|q'
- 33. Hold: 'divided_frequecy:did_f|flip_flop_d:dff9|q'
- 34. Hold: 'divided_frequecy:did_f|flip_flop_d:dff11|q'
- 35. Hold: 'divided_frequecy:did_f|flip_flop_d:dff14|q'
- 36. Hold: 'divided_frequecy:did_f|flip_flop_d:dff3|q'
- 37. Hold: 'divided_frequecy:did_f|flip_flop_d:dff5|q'
- 38. Hold: 'divided_frequecy:did_f|flip_flop_d:dff10|q'
- 39. Hold: 'divided_frequecy:did_f|flip_flop_d:dff12|q'
- 40. Hold: 'divided_frequecy:did_f|flip_flop_d:dff15|q'
- 41. Hold: 'divided_frequecy:did_f|flip_flop_d:dff2|q'
- 42. Hold: 'divided_frequecy:did_f|flip_flop_d:dff4|q'
- 43. Hold: 'divided_frequecy:did_f|flip_flop_d:dff6|q'
- 44. Hold: 'divided_frequecy:did_f|flip_flop_d:dff0|q'
- 45. Hold: 'divided_frequecy:did_f|flip_flop_d:dff8|q'
- 46. Hold: 'Contador_2bits:cont_2|flip_flop_d:dff0|q'
- 47. Setup Transfers
- 48. Hold Transfers
- 49. Report TCCS
- 50. Report RSKM
- 51. Unconstrained Paths Summary
- 52. Clock Status Summary
- 53. Unconstrained Output Ports
- 54. Unconstrained Output Ports
- 55. Timing Analyzer Messages
+ 11. Setup: 'divisor_clk:divisor_clk|d_ff:d9|q'
+ 12. Setup: 'divisor_clk:divisor_clk|d_ff:d0|q'
+ 13. Setup: 'divisor_clk:divisor_clk|d_ff:d6|q'
+ 14. Setup: 'divisor_clk:divisor_clk|d_ff:d2|q'
+ 15. Setup: 'divisor_clk:divisor_clk|d_ff:d4|q'
+ 16. Setup: 'divisor_clk:divisor_clk|d_ff:d8|q'
+ 17. Setup: 'divisor_clk:divisor_clk|d_ff:d3|q'
+ 18. Setup: 'divisor_clk:divisor_clk|d_ff:d7|q'
+ 19. Setup: 'divisor_clk:divisor_clk|d_ff:d1|q'
+ 20. Setup: 'divisor_clk:divisor_clk|d_ff:d5|q'
+ 21. Setup: 'clk'
+ 22. Hold: 'clk'
+ 23. Hold: 'divisor_clk:divisor_clk|d_ff:d5|q'
+ 24. Hold: 'divisor_clk:divisor_clk|d_ff:d1|q'
+ 25. Hold: 'divisor_clk:divisor_clk|d_ff:d7|q'
+ 26. Hold: 'divisor_clk:divisor_clk|d_ff:d3|q'
+ 27. Hold: 'divisor_clk:divisor_clk|d_ff:d2|q'
+ 28. Hold: 'divisor_clk:divisor_clk|d_ff:d4|q'
+ 29. Hold: 'divisor_clk:divisor_clk|d_ff:d8|q'
+ 30. Hold: 'divisor_clk:divisor_clk|d_ff:d0|q'
+ 31. Hold: 'divisor_clk:divisor_clk|d_ff:d6|q'
+ 32. Hold: 'divisor_clk:divisor_clk|d_ff:d9|q'
+ 33. Setup Transfers
+ 34. Hold Transfers
+ 35. Report TCCS
+ 36. Report RSKM
+ 37. Unconstrained Paths Summary
+ 38. Clock Status Summary
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Unconstrained Input Ports
+ 42. Unconstrained Output Ports
+ 43. Timing Analyzer Messages
 
 
 
@@ -87,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------+
 ; Timing Analyzer Summary                                                     ;
 +-----------------------+-----------------------------------------------------+
-; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Timing Analyzer       ; Legacy Timing Analyzer                              ;
 ; Revision Name         ; PBL2                                                ;
 ; Device Family         ; MAX II                                              ;
@@ -103,105 +91,83 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.0%      ;
-;     Processors 3-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                 ;
-+--------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------+
-; Clock Name                                 ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                        ;
-+--------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------+
-; clk                                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Contador_2bits:cont_2|flip_flop_d:dff0|q }   ;
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff0|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff1|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff2|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff3|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff4|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff5|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff6|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff7|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff8|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff9|q }  ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff10|q } ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff11|q } ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff12|q } ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff13|q } ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff14|q } ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divided_frequecy:did_f|flip_flop_d:dff15|q } ;
-+--------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; Clock Name                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; clk                               ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                               ;
+; divisor_clk:divisor_clk|d_ff:d0|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d0|q } ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d1|q } ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d2|q } ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d3|q } ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d4|q } ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d5|q } ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d6|q } ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d7|q } ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d8|q } ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divisor_clk:divisor_clk|d_ff:d9|q } ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
 
 
-+--------------------------------------------------------------------------------+
-; Fmax Summary                                                                   ;
-+------------+-----------------+------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                               ; Note ;
-+------------+-----------------+------------------------------------------+------+
-; 455.79 MHz ; 455.79 MHz      ; Contador_2bits:cont_2|flip_flop_d:dff0|q ;      ;
-+------------+-----------------+------------------------------------------+------+
++-------------------------------------------------------------------------+
+; Fmax Summary                                                            ;
++------------+-----------------+-----------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                        ; Note ;
++------------+-----------------+-----------------------------------+------+
+; 369.41 MHz ; 369.41 MHz      ; divisor_clk:divisor_clk|d_ff:d9|q ;      ;
++------------+-----------------+-----------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+---------------------------------------------------------------------+
-; Setup Summary                                                       ;
-+--------------------------------------------+--------+---------------+
-; Clock                                      ; Slack  ; End Point TNS ;
-+--------------------------------------------+--------+---------------+
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; -1.194 ; -1.194        ;
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; 0.466  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; 0.466  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; 0.467  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; 0.807  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; 0.808  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; 0.809  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; 0.819  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; 0.825  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; 0.833  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; 1.178  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; 1.480  ; 0.000         ;
-; clk                                        ; 1.647  ; 0.000         ;
-+--------------------------------------------+--------+---------------+
++------------------------------------------------------------+
+; Setup Summary                                              ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; divisor_clk:divisor_clk|d_ff:d9|q ; -1.707 ; -19.209       ;
+; divisor_clk:divisor_clk|d_ff:d0|q ; 0.466  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; 0.466  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; 0.467  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; 0.467  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; 0.467  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; 0.808  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; 0.825  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; 0.853  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; 1.237  ; 0.000         ;
+; clk                               ; 2.869  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
-+---------------------------------------------------------------------+
-; Hold Summary                                                        ;
-+--------------------------------------------+--------+---------------+
-; Clock                                      ; Slack  ; End Point TNS ;
-+--------------------------------------------+--------+---------------+
-; clk                                        ; -1.701 ; -1.701        ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; -1.534 ; -1.534        ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; -1.232 ; -1.232        ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; -0.887 ; -0.887        ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; -0.879 ; -0.879        ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; -0.873 ; -0.873        ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; -0.863 ; -0.863        ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; -0.862 ; -0.862        ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; -0.861 ; -0.861        ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; -0.521 ; -0.521        ;
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; -0.520 ; -0.520        ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; -0.520 ; -0.520        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; 1.640  ; 0.000         ;
-+--------------------------------------------+--------+---------------+
++------------------------------------------------------------+
+; Hold Summary                                               ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk                               ; -2.923 ; -2.923        ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; -1.291 ; -1.291        ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; -0.907 ; -0.907        ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; -0.879 ; -0.879        ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; -0.862 ; -0.862        ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; -0.521 ; -0.521        ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; -0.521 ; -0.521        ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; -0.521 ; -0.521        ;
+; divisor_clk:divisor_clk|d_ff:d0|q ; -0.520 ; -0.520        ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; -0.520 ; -0.520        ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; 1.639  ; 0.000         ;
++-----------------------------------+--------+---------------+
 
 
 --------------------
@@ -216,441 +182,314 @@ No paths to report.
 No paths to report.
 
 
-+---------------------------------------------------------------------+
-; Minimum Pulse Width Summary                                         ;
-+--------------------------------------------+--------+---------------+
-; Clock                                      ; Slack  ; End Point TNS ;
-+--------------------------------------------+--------+---------------+
-; clk                                        ; -2.289 ; -2.289        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; 0.234  ; 0.000         ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; 0.234  ; 0.000         ;
-+--------------------------------------------+--------+---------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'Contador_2bits:cont_2|flip_flop_d:dff0|q'                                                                                                                                                                           ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                ; To Node                                  ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-; -1.194 ; Contador_2bits:cont_2|flip_flop_d:dff1|q ; Contador_2bits:cont_2|flip_flop_d:dff1|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; 1.000        ; 0.000      ; 1.861      ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff0|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.466 ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; 0.500        ; 1.784      ; 1.861      ;
-; 0.966 ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; 1.000        ; 1.784      ; 1.861      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff8|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.466 ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; 0.500        ; 1.784      ; 1.861      ;
-; 0.966 ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; 1.000        ; 1.784      ; 1.861      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff10|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 0.467 ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; 0.500        ; 1.785      ; 1.861      ;
-; 0.967 ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; 1.000        ; 1.785      ; 1.861      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff12|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 0.467 ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; 0.500        ; 1.785      ; 1.861      ;
-; 0.967 ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; 1.000        ; 1.785      ; 1.861      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff15|q'                                                                                                                                                                          ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                ; To Node                                  ; Launch Clock                             ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 0.467 ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0.500        ; 1.785      ; 1.861      ;
-; 0.967 ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; 1.000        ; 1.785      ; 1.861      ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff2|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.467 ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; 0.500        ; 1.784      ; 1.860      ;
-; 0.967 ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; 1.000        ; 1.784      ; 1.860      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff4|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.467 ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; 0.500        ; 1.784      ; 1.860      ;
-; 0.967 ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; 1.000        ; 1.784      ; 1.860      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff6|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.467 ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; 0.500        ; 1.784      ; 1.860      ;
-; 0.967 ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; 1.000        ; 1.784      ; 1.860      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff5|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.807 ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; 0.500        ; 2.143      ; 1.879      ;
-; 1.307 ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; 1.000        ; 2.143      ; 1.879      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff3|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.808 ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; 0.500        ; 2.144      ; 1.879      ;
-; 1.308 ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; 1.000        ; 2.144      ; 1.879      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff14|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 0.809 ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; 0.500        ; 2.144      ; 1.878      ;
-; 1.309 ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; 1.000        ; 2.144      ; 1.878      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff11|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 0.819 ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; 0.500        ; 2.154      ; 1.878      ;
-; 1.319 ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; 1.000        ; 2.154      ; 1.878      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff9|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.825 ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; 0.500        ; 2.160      ; 1.878      ;
-; 1.325 ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; 1.000        ; 2.160      ; 1.878      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff1|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 0.833 ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; 0.500        ; 2.169      ; 1.879      ;
-; 1.333 ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; 1.000        ; 2.169      ; 1.879      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff7|q'                                                                                                                                                                             ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; 1.178 ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; 0.500        ; 2.773      ; 2.138      ;
-; 1.678 ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; 1.000        ; 2.773      ; 2.138      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'divided_frequecy:did_f|flip_flop_d:dff13|q'                                                                                                                                                                                ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; 1.480 ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; 0.500        ; 2.798      ; 1.861      ;
-; 1.980 ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; 1.000        ; 2.798      ; 1.861      ;
-+-------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Setup: 'clk'                                                                                                                                                                                     ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-; 1.647 ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; clk         ; 0.500        ; 3.242      ; 2.138      ;
-; 2.147 ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; clk         ; 1.000        ; 3.242      ; 2.138      ;
-+-------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'clk'                                                                                                                                                                                       ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-; -1.701 ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; clk         ; 0.000        ; 3.242      ; 2.138      ;
-; -1.201 ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; clk         ; -0.500       ; 3.242      ; 2.138      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff13|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -1.534 ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; 0.000        ; 2.798      ; 1.861      ;
-; -1.034 ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; -0.500       ; 2.798      ; 1.861      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff7|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -1.232 ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; 0.000        ; 2.773      ; 2.138      ;
-; -0.732 ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; -0.500       ; 2.773      ; 2.138      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff1|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.887 ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; 0.000        ; 2.169      ; 1.879      ;
-; -0.387 ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; -0.500       ; 2.169      ; 1.879      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff9|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.879 ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; 0.000        ; 2.160      ; 1.878      ;
-; -0.379 ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; -0.500       ; 2.160      ; 1.878      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff11|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -0.873 ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; 0.000        ; 2.154      ; 1.878      ;
-; -0.373 ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; -0.500       ; 2.154      ; 1.878      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff14|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -0.863 ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; 0.000        ; 2.144      ; 1.878      ;
-; -0.363 ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; -0.500       ; 2.144      ; 1.878      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff3|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.862 ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; 0.000        ; 2.144      ; 1.879      ;
-; -0.362 ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; -0.500       ; 2.144      ; 1.879      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff5|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.861 ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; 0.000        ; 2.143      ; 1.879      ;
-; -0.361 ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; -0.500       ; 2.143      ; 1.879      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff10|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -0.521 ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; 0.000        ; 1.785      ; 1.861      ;
-; -0.021 ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; -0.500       ; 1.785      ; 1.861      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff12|q'                                                                                                                                                                                  ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                  ; To Node                                    ; Launch Clock                               ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -0.521 ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; 0.000        ; 1.785      ; 1.861      ;
-; -0.021 ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; -0.500       ; 1.785      ; 1.861      ;
-+--------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff15|q'                                                                                                                                                                            ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                ; To Node                                  ; Launch Clock                             ; Latch Clock                                ; Relationship ; Clock Skew ; Data Delay ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-; -0.521 ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0.000        ; 1.785      ; 1.861      ;
-; -0.021 ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; -0.500       ; 1.785      ; 1.861      ;
-+--------+------------------------------------------+------------------------------------------+------------------------------------------+--------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff2|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.521 ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; 0.000        ; 1.784      ; 1.860      ;
-; -0.021 ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff3|q ; divided_frequecy:did_f|flip_flop_d:dff2|q ; -0.500       ; 1.784      ; 1.860      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff4|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.521 ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; 0.000        ; 1.784      ; 1.860      ;
-; -0.021 ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff5|q ; divided_frequecy:did_f|flip_flop_d:dff4|q ; -0.500       ; 1.784      ; 1.860      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff6|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.521 ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; 0.000        ; 1.784      ; 1.860      ;
-; -0.021 ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff7|q ; divided_frequecy:did_f|flip_flop_d:dff6|q ; -0.500       ; 1.784      ; 1.860      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff0|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.520 ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; 0.000        ; 1.784      ; 1.861      ;
-; -0.020 ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff1|q ; divided_frequecy:did_f|flip_flop_d:dff0|q ; -0.500       ; 1.784      ; 1.861      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'divided_frequecy:did_f|flip_flop_d:dff8|q'                                                                                                                                                                               ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                              ; Latch Clock                               ; Relationship ; Clock Skew ; Data Delay ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-; -0.520 ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; 0.000        ; 1.784      ; 1.861      ;
-; -0.020 ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff9|q ; divided_frequecy:did_f|flip_flop_d:dff8|q ; -0.500       ; 1.784      ; 1.861      ;
-+--------+-------------------------------------------+-------------------------------------------+-------------------------------------------+-------------------------------------------+--------------+------------+------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Hold: 'Contador_2bits:cont_2|flip_flop_d:dff0|q'                                                                                                                                                                           ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-; Slack ; From Node                                ; To Node                                  ; Launch Clock                             ; Latch Clock                              ; Relationship ; Clock Skew ; Data Delay ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-; 1.640 ; Contador_2bits:cont_2|flip_flop_d:dff1|q ; Contador_2bits:cont_2|flip_flop_d:dff1|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; Contador_2bits:cont_2|flip_flop_d:dff0|q ; 0.000        ; 0.000      ; 1.861      ;
-+-------+------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+--------------+------------+------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                     ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; clk                                        ; 1        ; 1        ; 0        ; 0        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; 1        ; 0        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; divided_frequecy:did_f|flip_flop_d:dff0|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; divided_frequecy:did_f|flip_flop_d:dff1|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; divided_frequecy:did_f|flip_flop_d:dff2|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; divided_frequecy:did_f|flip_flop_d:dff3|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; divided_frequecy:did_f|flip_flop_d:dff4|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; divided_frequecy:did_f|flip_flop_d:dff5|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; divided_frequecy:did_f|flip_flop_d:dff6|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; divided_frequecy:did_f|flip_flop_d:dff7|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; divided_frequecy:did_f|flip_flop_d:dff8|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; 1        ; 1        ; 0        ; 0        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0        ; 0        ; 1        ; 1        ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
++------------------------------------------------------------+
+; Minimum Pulse Width Summary                                ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; clk                               ; -2.289 ; -2.289        ;
+; divisor_clk:divisor_clk|d_ff:d0|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; 0.234  ; 0.000         ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; 0.234  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d9|q'                                                                                                                                                                      ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -1.707 ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 2.374      ;
+; -1.501 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 2.168      ;
+; -1.494 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 2.161      ;
+; -1.491 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 2.158      ;
+; -1.238 ; verf_ataque:verf_linha1|d_ff:d4|q         ; verf_ataque:verf_linha1|d_ff:d4|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.905      ;
+; -1.238 ; verf_ataque:verf_linha3|d_ff:d1|q         ; verf_ataque:verf_linha3|d_ff:d1|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.905      ;
+; -1.228 ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.895      ;
+; -1.222 ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.889      ;
+; -1.221 ; verf_ataque:verf_linha7|d_ff:d2|q         ; verf_ataque:verf_linha7|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.888      ;
+; -1.214 ; verf_ataque:verf_linha1|d_ff:d3|q         ; verf_ataque:verf_linha1|d_ff:d3|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.881      ;
+; -1.204 ; verf_ataque:verf_linha4|d_ff:d2|q         ; verf_ataque:verf_linha4|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.871      ;
+; -1.204 ; verf_ataque:verf_linha2|d_ff:d1|q         ; verf_ataque:verf_linha2|d_ff:d1|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.871      ;
+; -1.203 ; verf_ataque:verf_linha6|d_ff:d2|q         ; verf_ataque:verf_linha6|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.870      ;
+; -1.203 ; verf_ataque:verf_linha5|d_ff:d2|q         ; verf_ataque:verf_linha5|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.870      ;
+; -1.203 ; verf_ataque:verf_linha5|d_ff:d0|q         ; verf_ataque:verf_linha5|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.870      ;
+; -1.203 ; verf_ataque:verf_linha2|d_ff:d0|q         ; verf_ataque:verf_linha2|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.870      ;
+; -1.193 ; verf_ataque:verf_linha5|d_ff:d3|q         ; verf_ataque:verf_linha5|d_ff:d3|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.860      ;
+; -1.193 ; verf_ataque:verf_linha6|d_ff:d0|q         ; verf_ataque:verf_linha6|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 1.000        ; 0.000      ; 1.860      ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d0|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.466 ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d6|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.466 ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; 0.500        ; 1.784      ; 1.861      ;
+; 0.966 ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; 1.000        ; 1.784      ; 1.861      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d2|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.467 ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; 1.000        ; 1.784      ; 1.860      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d4|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.467 ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; 0.500        ; 1.784      ; 1.860      ;
+; 0.967 ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; 1.000        ; 1.784      ; 1.860      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d8|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.467 ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; 0.500        ; 1.785      ; 1.861      ;
+; 0.967 ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; 1.000        ; 1.785      ; 1.861      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d3|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.808 ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; 0.500        ; 2.144      ; 1.879      ;
+; 1.308 ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; 1.000        ; 2.144      ; 1.879      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d7|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.825 ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; 0.500        ; 2.160      ; 1.878      ;
+; 1.325 ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; 1.000        ; 2.160      ; 1.878      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d1|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.853 ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; 0.500        ; 2.189      ; 1.879      ;
+; 1.353 ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; 1.000        ; 2.189      ; 1.879      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divisor_clk:divisor_clk|d_ff:d5|q'                                                                                                                                                     ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 1.237 ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; 0.500        ; 2.832      ; 2.138      ;
+; 1.737 ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; 1.000        ; 2.832      ; 2.138      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'clk'                                                                                                                                                             ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+; 2.869 ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; clk         ; 0.500        ; 4.464      ; 2.138      ;
+; 3.369 ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; clk         ; 1.000        ; 4.464      ; 2.138      ;
++-------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'clk'                                                                                                                                                               ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+; -2.923 ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; clk         ; 0.000        ; 4.464      ; 2.138      ;
+; -2.423 ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; clk         ; -0.500       ; 4.464      ; 2.138      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d5|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -1.291 ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; 0.000        ; 2.832      ; 2.138      ;
+; -0.791 ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; -0.500       ; 2.832      ; 2.138      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d1|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.907 ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; 0.000        ; 2.189      ; 1.879      ;
+; -0.407 ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; -0.500       ; 2.189      ; 1.879      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d7|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.879 ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; 0.000        ; 2.160      ; 1.878      ;
+; -0.379 ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; -0.500       ; 2.160      ; 1.878      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d3|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.862 ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; 0.000        ; 2.144      ; 1.879      ;
+; -0.362 ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; -0.500       ; 2.144      ; 1.879      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d2|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.521 ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; -0.500       ; 1.784      ; 1.860      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d4|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.521 ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; 0.000        ; 1.784      ; 1.860      ;
+; -0.021 ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; -0.500       ; 1.784      ; 1.860      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d8|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.521 ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; 0.000        ; 1.785      ; 1.861      ;
+; -0.021 ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; -0.500       ; 1.785      ; 1.861      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d0|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.520 ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d6|q'                                                                                                                                                       ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                         ; To Node                           ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.520 ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; 0.000        ; 1.784      ; 1.861      ;
+; -0.020 ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; -0.500       ; 1.784      ; 1.861      ;
++--------+-----------------------------------+-----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divisor_clk:divisor_clk|d_ff:d9|q'                                                                                                                                                                      ;
++-------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                                 ; To Node                                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 1.639 ; verf_ataque:verf_linha5|d_ff:d3|q         ; verf_ataque:verf_linha5|d_ff:d3|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.860      ;
+; 1.639 ; verf_ataque:verf_linha6|d_ff:d0|q         ; verf_ataque:verf_linha6|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.860      ;
+; 1.649 ; verf_ataque:verf_linha6|d_ff:d2|q         ; verf_ataque:verf_linha6|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.870      ;
+; 1.649 ; verf_ataque:verf_linha5|d_ff:d2|q         ; verf_ataque:verf_linha5|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.870      ;
+; 1.649 ; verf_ataque:verf_linha5|d_ff:d0|q         ; verf_ataque:verf_linha5|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.870      ;
+; 1.649 ; verf_ataque:verf_linha2|d_ff:d0|q         ; verf_ataque:verf_linha2|d_ff:d0|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.870      ;
+; 1.650 ; verf_ataque:verf_linha4|d_ff:d2|q         ; verf_ataque:verf_linha4|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.871      ;
+; 1.650 ; verf_ataque:verf_linha2|d_ff:d1|q         ; verf_ataque:verf_linha2|d_ff:d1|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.871      ;
+; 1.660 ; verf_ataque:verf_linha1|d_ff:d3|q         ; verf_ataque:verf_linha1|d_ff:d3|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.881      ;
+; 1.667 ; verf_ataque:verf_linha7|d_ff:d2|q         ; verf_ataque:verf_linha7|d_ff:d2|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.888      ;
+; 1.668 ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.889      ;
+; 1.674 ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.895      ;
+; 1.684 ; verf_ataque:verf_linha1|d_ff:d4|q         ; verf_ataque:verf_linha1|d_ff:d4|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.905      ;
+; 1.684 ; verf_ataque:verf_linha3|d_ff:d1|q         ; verf_ataque:verf_linha3|d_ff:d1|q         ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 1.905      ;
+; 1.937 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 2.158      ;
+; 1.940 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 2.161      ;
+; 1.947 ; contador_sin_2bit:contador_2bit|d_ff:d0|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 2.168      ;
+; 2.153 ; contador_sin_2bit:contador_2bit|d_ff:d1|q ; contador_sin_3bit:contador_3bit|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 0.000        ; 0.000      ; 2.374      ;
++-------+-------------------------------------------+-------------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; divisor_clk:divisor_clk|d_ff:d0|q ; clk                               ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 18       ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                      ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; clk                                        ; 1        ; 1        ; 0        ; 0        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; 1        ; 0        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; divided_frequecy:did_f|flip_flop_d:dff0|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; divided_frequecy:did_f|flip_flop_d:dff1|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; divided_frequecy:did_f|flip_flop_d:dff2|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; divided_frequecy:did_f|flip_flop_d:dff3|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; divided_frequecy:did_f|flip_flop_d:dff4|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; divided_frequecy:did_f|flip_flop_d:dff5|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; divided_frequecy:did_f|flip_flop_d:dff6|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; divided_frequecy:did_f|flip_flop_d:dff7|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; divided_frequecy:did_f|flip_flop_d:dff8|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff9|q  ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; 1        ; 1        ; 0        ; 0        ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; 1        ; 1        ; 0        ; 0        ;
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; divided_frequecy:did_f|flip_flop_d:dff15|q ; 0        ; 0        ; 1        ; 1        ;
-+--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; divisor_clk:divisor_clk|d_ff:d0|q ; clk                               ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d0|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d1|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d2|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d3|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d4|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d5|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d6|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d7|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d8|q ; 1        ; 1        ; 0        ; 0        ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; 18       ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -673,37 +512,47 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 11    ; 11   ;
-; Unconstrained Output Port Paths ; 19    ; 19   ;
+; Unconstrained Input Ports       ; 9     ; 9    ;
+; Unconstrained Input Port Paths  ; 144   ; 144  ;
+; Unconstrained Output Ports      ; 23    ; 23   ;
+; Unconstrained Output Port Paths ; 106   ; 106  ;
 +---------------------------------+-------+------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                         ;
-+--------------------------------------------+--------------------------------------------+------+-------------+
-; Target                                     ; Clock                                      ; Type ; Status      ;
-+--------------------------------------------+--------------------------------------------+------+-------------+
-; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; Contador_2bits:cont_2|flip_flop_d:dff0|q   ; Base ; Constrained ;
-; clk                                        ; clk                                        ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff0|q  ; divided_frequecy:did_f|flip_flop_d:dff0|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff1|q  ; divided_frequecy:did_f|flip_flop_d:dff1|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff2|q  ; divided_frequecy:did_f|flip_flop_d:dff2|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff3|q  ; divided_frequecy:did_f|flip_flop_d:dff3|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff4|q  ; divided_frequecy:did_f|flip_flop_d:dff4|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff5|q  ; divided_frequecy:did_f|flip_flop_d:dff5|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff6|q  ; divided_frequecy:did_f|flip_flop_d:dff6|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff7|q  ; divided_frequecy:did_f|flip_flop_d:dff7|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff8|q  ; divided_frequecy:did_f|flip_flop_d:dff8|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff9|q  ; divided_frequecy:did_f|flip_flop_d:dff9|q  ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff10|q ; divided_frequecy:did_f|flip_flop_d:dff10|q ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff11|q ; divided_frequecy:did_f|flip_flop_d:dff11|q ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff12|q ; divided_frequecy:did_f|flip_flop_d:dff12|q ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff13|q ; divided_frequecy:did_f|flip_flop_d:dff13|q ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff14|q ; divided_frequecy:did_f|flip_flop_d:dff14|q ; Base ; Constrained ;
-; divided_frequecy:did_f|flip_flop_d:dff15|q ; divided_frequecy:did_f|flip_flop_d:dff15|q ; Base ; Constrained ;
-+--------------------------------------------+--------------------------------------------+------+-------------+
++--------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                       ;
++-----------------------------------+-----------------------------------+------+-------------+
+; Target                            ; Clock                             ; Type ; Status      ;
++-----------------------------------+-----------------------------------+------+-------------+
+; clk                               ; clk                               ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d0|q ; divisor_clk:divisor_clk|d_ff:d0|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d1|q ; divisor_clk:divisor_clk|d_ff:d1|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d2|q ; divisor_clk:divisor_clk|d_ff:d2|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d3|q ; divisor_clk:divisor_clk|d_ff:d3|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d4|q ; divisor_clk:divisor_clk|d_ff:d4|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d5|q ; divisor_clk:divisor_clk|d_ff:d5|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d6|q ; divisor_clk:divisor_clk|d_ff:d6|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d7|q ; divisor_clk:divisor_clk|d_ff:d7|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d8|q ; divisor_clk:divisor_clk|d_ff:d8|q ; Base ; Constrained ;
+; divisor_clk:divisor_clk|d_ff:d9|q ; divisor_clk:divisor_clk|d_ff:d9|q ; Base ; Constrained ;
++-----------------------------------+-----------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; B0         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH2        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH3        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH4        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH5        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH6        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH7        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -711,18 +560,47 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; D1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D2          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D3          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D4          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; a           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; d           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; e           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; f           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; g           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L5   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L6   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_A      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_B      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_C      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_D      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_E      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_F      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_G      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; B0         ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH0        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH1        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH2        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH3        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH4        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH5        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH6        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; CH7        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------------------------------------------+
@@ -730,17 +608,29 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
-; D1          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D2          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D3          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; D4          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; a           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; b           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; c           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; d           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; e           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; f           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
-; g           ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_C4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L4   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L5   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; MATRIZ_L6   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_A      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_B      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_C      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_D      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig0   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig1   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig2   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_Dig3   ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_E      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_F      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SEG7_G      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +-------------+---------------------------------------------------------------------------------------+
 
 
@@ -749,12 +639,12 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 29 00:57:10 2023
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Dec 05 18:46:15 2023
 Info: Command: quartus_sta PBL2 -c PBL2
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
@@ -762,98 +652,70 @@ Info (334004): Delay annotation completed successfully
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'PBL2.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff15|q divided_frequecy:did_f|flip_flop_d:dff15|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff14|q divided_frequecy:did_f|flip_flop_d:dff14|q
-    Info (332105): create_clock -period 1.000 -name Contador_2bits:cont_2|flip_flop_d:dff0|q Contador_2bits:cont_2|flip_flop_d:dff0|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff13|q divided_frequecy:did_f|flip_flop_d:dff13|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff12|q divided_frequecy:did_f|flip_flop_d:dff12|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff11|q divided_frequecy:did_f|flip_flop_d:dff11|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff10|q divided_frequecy:did_f|flip_flop_d:dff10|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff9|q divided_frequecy:did_f|flip_flop_d:dff9|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff8|q divided_frequecy:did_f|flip_flop_d:dff8|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff7|q divided_frequecy:did_f|flip_flop_d:dff7|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff6|q divided_frequecy:did_f|flip_flop_d:dff6|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff5|q divided_frequecy:did_f|flip_flop_d:dff5|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff4|q divided_frequecy:did_f|flip_flop_d:dff4|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff3|q divided_frequecy:did_f|flip_flop_d:dff3|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff2|q divided_frequecy:did_f|flip_flop_d:dff2|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff1|q divided_frequecy:did_f|flip_flop_d:dff1|q
-    Info (332105): create_clock -period 1.000 -name divided_frequecy:did_f|flip_flop_d:dff0|q divided_frequecy:did_f|flip_flop_d:dff0|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d9|q divisor_clk:divisor_clk|d_ff:d9|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d8|q divisor_clk:divisor_clk|d_ff:d8|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d7|q divisor_clk:divisor_clk|d_ff:d7|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d6|q divisor_clk:divisor_clk|d_ff:d6|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d5|q divisor_clk:divisor_clk|d_ff:d5|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d4|q divisor_clk:divisor_clk|d_ff:d4|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d3|q divisor_clk:divisor_clk|d_ff:d3|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d2|q divisor_clk:divisor_clk|d_ff:d2|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d1|q divisor_clk:divisor_clk|d_ff:d1|q
+    Info (332105): create_clock -period 1.000 -name divisor_clk:divisor_clk|d_ff:d0|q divisor_clk:divisor_clk|d_ff:d0|q
     Info (332105): create_clock -period 1.000 -name clk clk
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.194
+Info (332146): Worst-case setup slack is -1.707
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.194              -1.194 Contador_2bits:cont_2|flip_flop_d:dff0|q 
-    Info (332119):     0.466               0.000 divided_frequecy:did_f|flip_flop_d:dff0|q 
-    Info (332119):     0.466               0.000 divided_frequecy:did_f|flip_flop_d:dff8|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff10|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff12|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff15|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff2|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff4|q 
-    Info (332119):     0.467               0.000 divided_frequecy:did_f|flip_flop_d:dff6|q 
-    Info (332119):     0.807               0.000 divided_frequecy:did_f|flip_flop_d:dff5|q 
-    Info (332119):     0.808               0.000 divided_frequecy:did_f|flip_flop_d:dff3|q 
-    Info (332119):     0.809               0.000 divided_frequecy:did_f|flip_flop_d:dff14|q 
-    Info (332119):     0.819               0.000 divided_frequecy:did_f|flip_flop_d:dff11|q 
-    Info (332119):     0.825               0.000 divided_frequecy:did_f|flip_flop_d:dff9|q 
-    Info (332119):     0.833               0.000 divided_frequecy:did_f|flip_flop_d:dff1|q 
-    Info (332119):     1.178               0.000 divided_frequecy:did_f|flip_flop_d:dff7|q 
-    Info (332119):     1.480               0.000 divided_frequecy:did_f|flip_flop_d:dff13|q 
-    Info (332119):     1.647               0.000 clk 
-Info (332146): Worst-case hold slack is -1.701
+    Info (332119):    -1.707             -19.209 divisor_clk:divisor_clk|d_ff:d9|q 
+    Info (332119):     0.466               0.000 divisor_clk:divisor_clk|d_ff:d0|q 
+    Info (332119):     0.466               0.000 divisor_clk:divisor_clk|d_ff:d6|q 
+    Info (332119):     0.467               0.000 divisor_clk:divisor_clk|d_ff:d2|q 
+    Info (332119):     0.467               0.000 divisor_clk:divisor_clk|d_ff:d4|q 
+    Info (332119):     0.467               0.000 divisor_clk:divisor_clk|d_ff:d8|q 
+    Info (332119):     0.808               0.000 divisor_clk:divisor_clk|d_ff:d3|q 
+    Info (332119):     0.825               0.000 divisor_clk:divisor_clk|d_ff:d7|q 
+    Info (332119):     0.853               0.000 divisor_clk:divisor_clk|d_ff:d1|q 
+    Info (332119):     1.237               0.000 divisor_clk:divisor_clk|d_ff:d5|q 
+    Info (332119):     2.869               0.000 clk 
+Info (332146): Worst-case hold slack is -2.923
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.701              -1.701 clk 
-    Info (332119):    -1.534              -1.534 divided_frequecy:did_f|flip_flop_d:dff13|q 
-    Info (332119):    -1.232              -1.232 divided_frequecy:did_f|flip_flop_d:dff7|q 
-    Info (332119):    -0.887              -0.887 divided_frequecy:did_f|flip_flop_d:dff1|q 
-    Info (332119):    -0.879              -0.879 divided_frequecy:did_f|flip_flop_d:dff9|q 
-    Info (332119):    -0.873              -0.873 divided_frequecy:did_f|flip_flop_d:dff11|q 
-    Info (332119):    -0.863              -0.863 divided_frequecy:did_f|flip_flop_d:dff14|q 
-    Info (332119):    -0.862              -0.862 divided_frequecy:did_f|flip_flop_d:dff3|q 
-    Info (332119):    -0.861              -0.861 divided_frequecy:did_f|flip_flop_d:dff5|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff10|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff12|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff15|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff2|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff4|q 
-    Info (332119):    -0.521              -0.521 divided_frequecy:did_f|flip_flop_d:dff6|q 
-    Info (332119):    -0.520              -0.520 divided_frequecy:did_f|flip_flop_d:dff0|q 
-    Info (332119):    -0.520              -0.520 divided_frequecy:did_f|flip_flop_d:dff8|q 
-    Info (332119):     1.640               0.000 Contador_2bits:cont_2|flip_flop_d:dff0|q 
+    Info (332119):    -2.923              -2.923 clk 
+    Info (332119):    -1.291              -1.291 divisor_clk:divisor_clk|d_ff:d5|q 
+    Info (332119):    -0.907              -0.907 divisor_clk:divisor_clk|d_ff:d1|q 
+    Info (332119):    -0.879              -0.879 divisor_clk:divisor_clk|d_ff:d7|q 
+    Info (332119):    -0.862              -0.862 divisor_clk:divisor_clk|d_ff:d3|q 
+    Info (332119):    -0.521              -0.521 divisor_clk:divisor_clk|d_ff:d2|q 
+    Info (332119):    -0.521              -0.521 divisor_clk:divisor_clk|d_ff:d4|q 
+    Info (332119):    -0.521              -0.521 divisor_clk:divisor_clk|d_ff:d8|q 
+    Info (332119):    -0.520              -0.520 divisor_clk:divisor_clk|d_ff:d0|q 
+    Info (332119):    -0.520              -0.520 divisor_clk:divisor_clk|d_ff:d6|q 
+    Info (332119):     1.639               0.000 divisor_clk:divisor_clk|d_ff:d9|q 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):    -2.289              -2.289 clk 
-    Info (332119):     0.234               0.000 Contador_2bits:cont_2|flip_flop_d:dff0|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff0|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff10|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff11|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff12|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff13|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff14|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff15|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff1|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff2|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff3|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff4|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff5|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff6|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff7|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff8|q 
-    Info (332119):     0.234               0.000 divided_frequecy:did_f|flip_flop_d:dff9|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d0|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d1|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d2|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d3|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d4|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d5|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d6|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d7|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d8|q 
+    Info (332119):     0.234               0.000 divisor_clk:divisor_clk|d_ff:d9|q 
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4705 megabytes
-    Info: Processing ended: Wed Nov 29 00:57:11 2023
+    Info: Peak virtual memory: 4677 megabytes
+    Info: Processing ended: Tue Dec 05 18:46:16 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

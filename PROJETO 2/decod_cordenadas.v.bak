@@ -1,0 +1,64 @@
+module decod_cordenadas(A, B, C, D, E, F, out);
+	input A, B, C, D, E, F;
+	output [34:0] out;
+	
+	wire A_not, B_not, C_not, D_not, E_not, F_not;
+	
+	not (A_not, A);
+	not (B_not, B);
+	not (C_not, C);
+	not (D_not, D);
+	not (E_not, E);
+	not (F_not, F);
+	
+	//LINHA 1 DA MATRIZ
+	and And0 (out[0], A_not, B_not, C_not, D_not, E_not, F_not);
+	and And1 (out[1], A_not, B_not, C_not, D_not, E_not, F);
+	and And2 (out[2], A_not, B_not, C_not, D_not, E, F_not);
+	and And3 (out[3], A_not, B_not, C_not, D_not, E, F);
+	and And4 (out[4], A_not, B_not, C_not, D, E_not, F_not);
+	
+	//LINHA 2 DA MATRIZ
+	and And5 (out[5], A_not, B_not, C, D_not, E_not, F_not);
+	and And6 (out[6], A_not, B_not, C, D_not, E_not, F);
+	and And7 (out[7], A_not, B_not, C, D_not, E, F_not);
+	and And8 (out[8], A_not, B_not, C, D_not, E, F);
+	and And9 (out[9], A_not, B_not, C, D, E_not, F_not);
+	
+	//LINHA 3 DA MATRIZ
+	and And10 (out[10], A_not, B, C_not, D_not, E_not, F_not);
+	and And11 (out[11], A_not, B, C_not, D_not, E_not, F);
+	and And12 (out[12], A_not, B, C_not, D_not, E, F_not);
+	and And13 (out[13], A_not, B, C_not, D_not, E, F);
+	and And14 (out[14], A_not, B, C_not, D, E_not, F_not);
+	
+	//LINHA 4 DA MATRIZ
+	and And15 (out[15], A_not, B, C, D_not, E_not, F_not);
+	and And16 (out[16], A_not, B, C, D_not, E_not, F);
+	and And17 (out[17], A_not, B, C, D_not, E, F_not);
+	and And18 (out[18], A_not, B, C, D_not, E, F);
+	and And19 (out[19], A_not, B, C, D, E_not, F_not);
+	
+	//LINHA 5 DA MATRIZ
+	and And20 (out[20], A, B_not, C_not, D_not, E_not, F_not);
+	and And21 (out[21], A, B_not, C_not, D_not, E_not, F);
+	and And22 (out[22], A, B_not, C_not, D_not, E, F_not);
+	and And23 (out[23], A, B_not, C_not, D_not, E, F);
+	and And24 (out[24], A, B_not, C_not, D, E_not, F_not);
+	
+	//LINHA 6 DA MATRIZ
+	and And25 (out[25], A, B_not, C, D_not, E_not, F_not);
+	and And26 (out[26], A, B_not, C, D_not, E_not, F);
+	and And27 (out[27], A, B_not, C, D_not, E, F_not);
+	and And28 (out[28], A, B_not, C, D_not, E, F);
+	and And29 (out[29], A, B_not, C, D, E_not, F_not);
+	
+	//LINHA 7 DA MATRIZ
+	and And30 (out[30], A, B, C_not, D_not, E_not, F_not);
+	and And31 (out[31], A, B, C_not, D_not, E_not, F);
+	and And32 (out[32], A, B, C_not, D_not, E, F_not);
+	and And33 (out[33], A, B, C_not, D_not, E, F);
+	and And34 (out[34], A, B, C_not, D, E_not, F_not);
+	
+
+endmodule 
