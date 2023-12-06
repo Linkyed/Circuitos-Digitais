@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/27/2023 23:08:05"
+// Generated on "12/04/2023 19:34:50"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          PBL2
 // 
@@ -30,6 +30,10 @@
 module PBL2_vlg_vec_tst();
 // constants                                           
 // general purpose registers
+reg B0;
+reg B1;
+reg B2;
+reg B3;
 reg CH0;
 reg CH1;
 reg CH2;
@@ -76,6 +80,10 @@ wire teste2;
 // assign statements (if any)                          
 PBL2 i1 (
 // port map - connection between master ports and signals/registers   
+	.B0(B0),
+	.B1(B1),
+	.B2(B2),
+	.B3(B3),
 	.CH0(CH0),
 	.CH1(CH1),
 	.CH2(CH2),
@@ -123,18 +131,18 @@ begin
 #1000000 $finish;
 end 
 
-// CH0
+// B0
 initial
 begin
-	CH0 = 1'b1;
+	B0 = 1'b1;
 end 
 
 // clk
 always
 begin
 	clk = 1'b0;
-	clk = #20 1'b1;
-	#20;
+	clk = #2 1'b1;
+	#2;
 end 
 endmodule
 

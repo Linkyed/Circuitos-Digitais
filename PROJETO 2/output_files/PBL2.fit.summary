@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Nov 29 00:57:07 2023
-Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Fitter Status : Successful - Tue Dec 05 18:46:12 2023
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : PBL2
-Top-level Entity Name : mux_display
+Top-level Entity Name : PBL2
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 24 / 240 ( 10 % )
-Total pins : 13 / 80 ( 16 % )
+Total logic elements : 84 / 240 ( 35 % )
+Total pins : 49 / 80 ( 61 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

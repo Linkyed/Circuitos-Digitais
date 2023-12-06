@@ -39,17 +39,16 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY mux_display
+set_global_assignment -name TOP_LEVEL_ENTITY PBL2
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:08:42  SEPTEMBER 26, 2023"
-set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_global_assignment -name VERILOG_FILE PBL2.v
-set_global_assignment -name VERILOG_FILE jk_ff.v
 set_global_assignment -name VERILOG_FILE decod_7seg.v
 set_global_assignment -name VERILOG_FILE d_ff.v
 set_global_assignment -name VERILOG_FILE mux2_1.v
@@ -86,10 +85,36 @@ set_global_assignment -name VERILOG_FILE mux8_1.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulador_matriz.vwf
 set_global_assignment -name VERILOG_FILE divisor_clk.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulador_contador.vwf
-set_global_assignment -name VERILOG_FILE Contador_2bits.v
-set_global_assignment -name VERILOG_FILE flip_flop_d.v
-set_global_assignment -name VERILOG_FILE divided_frequecy.v
-set_global_assignment -name VERILOG_FILE Demux1_4_7seg.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
-set_global_assignment -name VERILOG_FILE mux_display.v
-set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_global_assignment -name TEXT_FILE "testar divisor.txt"
+set_global_assignment -name TEXT_FILE "testar mapa na martriz.txt"
+set_global_assignment -name VERILOG_FILE verf_ataque.v
+set_global_assignment -name TEXT_FILE "testar verificador de ataque.txt"
+set_location_assignment PIN_52 -to B0
+set_location_assignment PIN_50 -to B1
+set_location_assignment PIN_48 -to B2
+set_location_assignment PIN_44 -to B3
+set_location_assignment PIN_97 -to MATRIZ_C0
+set_location_assignment PIN_99 -to MATRIZ_C1
+set_location_assignment PIN_95 -to MATRIZ_C2
+set_location_assignment PIN_82 -to MATRIZ_C3
+set_location_assignment PIN_78 -to MATRIZ_C4
+set_location_assignment PIN_85 -to MATRIZ_L0
+set_location_assignment PIN_83 -to MATRIZ_L1
+set_location_assignment PIN_84 -to MATRIZ_L2
+set_location_assignment PIN_87 -to MATRIZ_L3
+set_location_assignment PIN_81 -to MATRIZ_L4
+set_location_assignment PIN_91 -to MATRIZ_L5
+set_location_assignment PIN_89 -to MATRIZ_L6
+set_global_assignment -name VERILOG_FILE decod_modo_de_jogo.v
+set_global_assignment -name VERILOG_FILE decod_linha_numero.v
+set_global_assignment -name VERILOG_FILE decod_coluna_letra.v
+set_global_assignment -name VERILOG_FILE contador_sin_3bit.v
+set_global_assignment -name VERILOG_FILE contador_sin_2bit.v
+set_global_assignment -name VERILOG_FILE mux4_1.v
+set_global_assignment -name TEXT_FILE "testar decodificadores 7seg.txt"
+set_global_assignment -name VERILOG_FILE decod_cordenadas.v
+set_global_assignment -name VERILOG_FILE decod_2_pra_4.v
+set_global_assignment -name VERILOG_FILE decod_3_pra_8.v
+set_global_assignment -name TEXT_FILE "testar decodificadores matriz.txt"
+set_global_assignment -name VERILOG_FILE conf_chave.v
+set_global_assignment -name TEXT_FILE "testar matriz e decodificador juntos.txt"
