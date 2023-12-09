@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX II"
 set_global_assignment -name DEVICE EPM240T100C5
-set_global_assignment -name TOP_LEVEL_ENTITY PBL2
+set_global_assignment -name TOP_LEVEL_ENTITY decod_mapa
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:08:42  SEPTEMBER 26, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
@@ -118,3 +118,6 @@ set_global_assignment -name VERILOG_FILE decod_3_pra_8.v
 set_global_assignment -name TEXT_FILE "testar decodificadores matriz.txt"
 set_global_assignment -name VERILOG_FILE conf_chave.v
 set_global_assignment -name TEXT_FILE "testar matriz e decodificador juntos.txt"
+set_global_assignment -name VERILOG_FILE decod_mapa.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE "teste decod_mapa.vwf"
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf

@@ -1,0 +1,24 @@
+module(A,B,C,out);
+input A,B,C;
+output output [34:0] out;
+
+	not (A_not, A);
+	not (B_not, B);
+	not (C_not, C);
+	
+	wire term1, term2, term3;
+
+  // ~B1 ~B2 B3
+  and gate1 (term1,A_not,B_not,B3);
+
+  // B2 ~B3
+  and gate2 (term2,B2,C_not);
+
+  // B1 ~B3
+  and gate3 (term3,B1,C_not);
+
+  // ~B1 ~B2 B3 + B2 ~B3 + B1 ~B3
+  or final_or (out[0],term1,term2,term3)
+  );
+
+endmodule

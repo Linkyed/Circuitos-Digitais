@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue Dec 05 18:46:09 2023
+Analysis & Synthesis Status : Successful - Sat Dec 09 12:28:40 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : PBL2
-Top-level Entity Name : PBL2
+Top-level Entity Name : decod_mapa
 Family : MAX II
-Total logic elements : 84
-Total pins : 49
+Total logic elements : 31
+Total pins : 38
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
