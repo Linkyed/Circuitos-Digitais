@@ -1,127 +1,149 @@
 module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
-				B0, B1, B2, B3,
+				B0, B1,
 				clk,
-				LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9,
 				SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
 				MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
 				MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4,
 				SEG7_Dig0, SEG7_Dig1, SEG7_Dig2, SEG7_Dig3,
-				teste0, teste1, teste2);
-		input CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0, B0, B1, B2, B3,
+				LED_R, LED_G);
+				
+		input CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0, B0, B1,
 				clk;
 		output SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G,
 				SEG7_Dig0, SEG7_Dig1, SEG7_Dig2, SEG7_Dig3, 
-				 LED0, LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9,
 				 MATRIZ_L0, MATRIZ_L1, MATRIZ_L2, MATRIZ_L3, MATRIZ_L4, MATRIZ_L5, MATRIZ_L6, 
 				 MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4,
-				 teste0, teste1, teste2;
-		//assign T0, T1, T2, T3, T4, T5, T6, T7, T8, T9 ,T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27, T28, T29, T30, T31, T32, T33, T34;
-		wire [4:0] linha0, linha1, linha2, linha3, linha4, linha5, linha6, linha7, p_linha1, p_linha2, p_linha3, p_linha4, p_linha5, p_linha6, p_linha7, 
-		out_linha1, out_linha2, out_linha3, out_linha4, out_linha5, out_linha6, out_linha7;
-		wire [5:0] out_decod_linha0, out_decod_linha1, out_decod_linha2, out_decod_linha3, out_decod_linha4, out_decod_linha5, out_decod_linha6;
-		wire [4:0] out_matriz; 
-		wire [6:0] modo_jogo_7seg, linha_numero, coluna_letra, split;
-		wire [7:0] ligar_linhas_matriz;
+				 LED_R, LED_G;
+				 
+		wire [4:0] p_linha1, p_linha2, p_linha3, p_linha4, p_linha5, p_linha6, p_linha7;
+		wire [6:0] modo_jogo_7seg, linha_numero, coluna_letra, mapa_numero, ligar_linhas_matriz;
 		wire [3:0] digitos_7seg, modos_jogo;
-		wire div_CLK, cont_0, cont_1, cont_2, cont_0_not, cont_1_not, cont_2_not, cont_2bit1, cont_2bit0, cont_3bit2, cont_3bit1, cont_3bit0, B0_not, Atk_not,
-		cod0_linha, cod1_linha, cod2_linha, cod0_coluna, cod1_coluna, cod2_coluna,
+		wire [34:0] mapa;
+		
+		wire div_CLK, 
+		cont_2bit1, cont_2bit0, 
+		cont_3bit2, cont_3bit1, cont_3bit0, 
+		cont_mapa_bit2, cont_mapa_bit1, cont_mapa_bit0,
+		B0_not,
 		ch7_mod_jogo, ch6_mod_jogo, ch5_mod_jogo, ch4_mod_jogo, ch3_mod_jogo, ch2_mod_jogo,
-		ch7_atk, ch6_atk, ch5_atk, ch4_atk, ch3_atk, ch2_atk;
+		digito_7seg0, digito_7seg1, digito_7seg2, digito_7seg3, digito0_aux, digito1_aux, digito2_aux, digito3_aux,
+		ch7_atk, ch6_atk, ch5_atk, ch4_atk, ch3_atk, ch2_atk,
+		modo_desligado0, modo_desligado1, modo_ataque, modo_posicionamento, modo_p_inv, modo_a_inv, modo_d0_inv, modo_d1_inv,
+		alterar_mapa,
+		atualizar_led, acerto_erro, ligar_led_rgb, ligar_led_inv,
+		out_unidade0, out_unidade1, out_unidade2, out_unidade3, out_unidade4, out_unidade5, out_unidade6, out_unidade7, out_unidade8, out_unidade9, out_unidade10,
+		out_unidade11, out_unidade12, out_unidade13, out_unidade14, out_unidade15, out_unidade16, out_unidade17, out_unidade18, out_unidade19, out_unidade20, out_unidade21,
+		out_unidade22, out_unidade23, out_unidade24, out_unidade25, out_unidade26, out_unidade27, out_unidade28, out_unidade29, out_unidade30, out_unidade31, out_unidade32,
+		out_unidade33, out_unidade34,
+		verf_acerto_erro0, verf_acerto_erro1, verf_acerto_erro2, verf_acerto_erro3, verf_acerto_erro4, verf_acerto_erro5, verf_acerto_erro6, verf_acerto_erro7, verf_acerto_erro8, verf_acerto_erro9, verf_acerto_erro10,
+		verf_acerto_erro11, verf_acerto_erro12, verf_acerto_erro13, verf_acerto_erro14, verf_acerto_erro15, verf_acerto_erro16, verf_acerto_erro17, verf_acerto_erro18, verf_acerto_erro19, verf_acerto_erro20, verf_acerto_erro21,
+		verf_acerto_erro22, verf_acerto_erro23, verf_acerto_erro24, verf_acerto_erro25, verf_acerto_erro26, verf_acerto_erro27, verf_acerto_erro28, verf_acerto_erro29, verf_acerto_erro30, verf_acerto_erro31, verf_acerto_erro32,
+		verf_acerto_erro33, verf_acerto_erro34;
 		
 		divisor_clk divisor_clk (clk, 1, div_CLK);
 		
 		contador_sin_3bit contador_3bit (div_CLK, 1, cont_3bit2, cont_3bit1, cont_3bit0);
 		contador_sin_2bit contador_2bit (div_CLK, 1, cont_2bit1, cont_2bit0);
 		
-		decod_2_pra_4 verf_modo_jogo (CH1, CH0, modos_jogo);
+		decod_2_pra_4 verf_modo_jogo (CH1, CH0, modo_desligado0, modo_ataque, modo_posicionamento, modo_desligado1);
+		
+		and And00 (alterar_mapa, modo_posicionamento, B1);
+		
+		contador_sin_3bit contador_3bit_mapa (alterar_mapa, 1, cont_mapa_bit2, cont_mapa_bit1, cont_mapa_bit0);
+		
+		decod_mapa decod_mapas (cont_mapa_bit2, cont_mapa_bit1, cont_mapa_bit0, mapa);
 		
 		decod_modo_de_jogo d_modo_jogo (CH1, CH0, modo_jogo_7seg[0], modo_jogo_7seg[2], modo_jogo_7seg[3], modo_jogo_7seg[5]);
+		decod_num_7seg d_linha_numero (CH7, CH6, CH5, linha_numero[0], linha_numero[1], linha_numero[2], linha_numero[3], linha_numero[4], linha_numero[5], linha_numero[6]);
+		decod_num_7seg d_mapa_numero (cont_mapa_bit2, cont_mapa_bit1, cont_mapa_bit0, mapa_numero[0], mapa_numero[1], mapa_numero[2], mapa_numero[3], mapa_numero[4], mapa_numero[5], mapa_numero[6]);
+		decod_coluna_letra d_coluna_letra (CH4, CH3, CH2, coluna_letra[0], coluna_letra[1], coluna_letra[2], coluna_letra[3], coluna_letra[5], coluna_letra[6]);
 		
-		decod_linha_numero d_linha_numero (ch7_mod_jogo, ch6_mod_jogo, ch5_mod_jogo, linha_numero[0], linha_numero[1], linha_numero[2], linha_numero[3], linha_numero[4], linha_numero[5], linha_numero[6]);
-
-		decod_coluna_letra d_coluna_letra (ch4_mod_jogo, ch3_mod_jogo, ch2_mod_jogo, coluna_letra[0], coluna_letra[1], coluna_letra[2], coluna_letra[3], coluna_letra[6]);
+		mux4_1 mux_7segmentos (modo_jogo_7seg, mapa_numero, linha_numero, coluna_letra, cont_2bit0, cont_2bit1, SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G);
 		
-		not (split[0], 0);
-		not (split[1], 0);
-		not (split[2], 0);
-		not (split[3], 0);
-		not (split[4], 0);
-		not (split[5], 0);
-		not (split[6], 1);
+		decod_2_pra_4 decod_digitos_7seg (cont_2bit0, cont_2bit1, digito0_aux, digito1_aux, digito2_aux, digito3_aux);
 		
-		mux4_1 mux_7segmentos (modo_jogo_7seg, split, linha_numero, coluna_letra, cont_2bit0, cont_2bit1, SEG7_A, SEG7_B, SEG7_C, SEG7_D, SEG7_E, SEG7_F, SEG7_G);
+		not (digito_7seg0, digito0_aux);
+		not (digito_7seg1, digito1_aux);
+		not (digito_7seg2, digito2_aux);
+		not (digito_7seg3, digito3_aux);
 		
-		decod_2_pra_4 decod_digitos_7seg (cont_2bit0, cont_2bit1, digitos_7seg);
+		not (modo_p_inv, modo_posicionamento);
+		not (modo_a_inv, modo_ataque);
 		
-		wire SEG7_Dig0 = digitos_7seg[0];
-		wire SEG7_Dig1 = digitos_7seg[1];
-		wire SEG7_Dig2 = digitos_7seg[2];
-		wire SEG7_Dig3 = digitos_7seg[3];
+		wire SEG7_Dig0 = digito_7seg0;
+		or Or1 (SEG7_Dig1, digito_7seg1, modo_p_inv);
+		or Or2 (SEG7_Dig2, digito_7seg2, modo_a_inv);
+		or Or3 (SEG7_Dig3, digito_7seg3, modo_a_inv);
 		
 		not (B0_not, B0);
 		
-		
-		conf_chave ch7 (CH7, modos_jogo[1], B0_not, ch7_mod_jogo, ch7_atk);
-		conf_chave ch6 (CH6, modos_jogo[1], B0_not, ch6_mod_jogo, ch6_atk);
-		conf_chave ch5 (CH5, modos_jogo[1], B0_not, ch5_mod_jogo, ch5_atk);
-		conf_chave ch4 (CH4, modos_jogo[1], B0_not, ch4_mod_jogo, ch4_atk);
-		conf_chave ch3 (CH3, modos_jogo[1], B0_not, ch3_mod_jogo, ch3_atk);
-		conf_chave ch2 (CH2, modos_jogo[1], B0_not, ch2_mod_jogo, ch2_atk);
+		conf_chave ch7 (CH7, modo_ataque, B0_not, ch7_mod_jogo, ch7_atk);
+		conf_chave ch6 (CH6, modo_ataque, B0_not, ch6_mod_jogo, ch6_atk);
+		conf_chave ch5 (CH5, modo_ataque, B0_not, ch5_mod_jogo, ch5_atk);
+		conf_chave ch4 (CH4, modo_ataque, B0_not, ch4_mod_jogo, ch4_atk);
+		conf_chave ch3 (CH3, modo_ataque, B0_not, ch3_mod_jogo, ch3_atk);
+		conf_chave ch2 (CH2, modo_ataque, B0_not, ch2_mod_jogo, ch2_atk);
 		
 		decod_cordenadas decod_cordenadas(ch7_atk, ch6_atk, ch5_atk, ch4_atk, ch3_atk, ch2_atk, p_linha1, p_linha2, p_linha3, p_linha4, p_linha5, p_linha6, p_linha7);
+
+		//VERIFICAR ACERTO DO ATAQUE
+		verf_acerto_ataque verf_unidade0 (mapa[0], p_linha1[0], modo_ataque, div_CLK, out_unidade0, verf_acerto_erro0);
+		verf_acerto_ataque verf_unidade1 (mapa[1], p_linha1[1], modo_ataque, div_CLK, out_unidade1, verf_acerto_erro1);
+		verf_acerto_ataque verf_unidade2 (mapa[2], p_linha1[2], modo_ataque, div_CLK, out_unidade2, verf_acerto_erro2);
+		verf_acerto_ataque verf_unidade3 (mapa[3], p_linha1[3], modo_ataque, div_CLK, out_unidade3, verf_acerto_erro3);
+		verf_acerto_ataque verf_unidade4 (mapa[4], p_linha1[4], modo_ataque, div_CLK, out_unidade4, verf_acerto_erro4);
 		
-		and and0(linha1[0], 1, 0);
-		and and1(linha1[1], 1, 0);
-		and and2(linha1[2], 1, 0);
-		and and3(linha1[3], 1, 1);
-		and and4(linha1[4], 1, 1);
+		verf_acerto_ataque verf_unidade5 (mapa[5], p_linha2[0], modo_ataque, div_CLK, out_unidade5, verf_acerto_erro5);
+		verf_acerto_ataque verf_unidade6 (mapa[6], p_linha2[1], modo_ataque, div_CLK, out_unidade6, verf_acerto_erro6);
+		verf_acerto_ataque verf_unidade7 (mapa[7], p_linha2[2], modo_ataque, div_CLK, out_unidade7, verf_acerto_erro7);
+		verf_acerto_ataque verf_unidade8 (mapa[8], p_linha2[3], modo_ataque, div_CLK, out_unidade8, verf_acerto_erro8);
+		verf_acerto_ataque verf_unidade9 (mapa[9], p_linha2[4], modo_ataque, div_CLK, out_unidade9, verf_acerto_erro9);
+
+		verf_acerto_ataque verf_unidade10 (mapa[10], p_linha3[0], modo_ataque, div_CLK, out_unidade10, verf_acerto_erro10);
+		verf_acerto_ataque verf_unidade11 (mapa[11], p_linha3[1], modo_ataque, div_CLK, out_unidade11, verf_acerto_erro11);
+		verf_acerto_ataque verf_unidade12 (mapa[12], p_linha3[2], modo_ataque, div_CLK, out_unidade12, verf_acerto_erro12);
+		verf_acerto_ataque verf_unidade13 (mapa[13], p_linha3[3], modo_ataque, div_CLK, out_unidade13, verf_acerto_erro13);
+		verf_acerto_ataque verf_unidade14 (mapa[14], p_linha3[4], modo_ataque, div_CLK, out_unidade14, verf_acerto_erro14);
+
+		verf_acerto_ataque verf_unidade15 (mapa[15], p_linha4[0], modo_ataque, div_CLK, out_unidade15, verf_acerto_erro15);
+		verf_acerto_ataque verf_unidade16 (mapa[16], p_linha4[1], modo_ataque, div_CLK, out_unidade16, verf_acerto_erro16);
+		verf_acerto_ataque verf_unidade17 (mapa[17], p_linha4[2], modo_ataque, div_CLK, out_unidade17, verf_acerto_erro17);
+		verf_acerto_ataque verf_unidade18 (mapa[18], p_linha4[3], modo_ataque, div_CLK, out_unidade18, verf_acerto_erro18);
+		verf_acerto_ataque verf_unidade19 (mapa[19], p_linha4[4], modo_ataque, div_CLK, out_unidade19, verf_acerto_erro19);
+
+
+		verf_acerto_ataque verf_unidade20 (mapa[20], p_linha5[0], modo_ataque, div_CLK, out_unidade20, verf_acerto_erro20);
+		verf_acerto_ataque verf_unidade21 (mapa[21], p_linha5[1], modo_ataque, div_CLK, out_unidade21, verf_acerto_erro21);
+		verf_acerto_ataque verf_unidade22 (mapa[22], p_linha5[2], modo_ataque, div_CLK, out_unidade22, verf_acerto_erro22);
+		verf_acerto_ataque verf_unidade23 (mapa[23], p_linha5[3], modo_ataque, div_CLK, out_unidade23, verf_acerto_erro23);
+		verf_acerto_ataque verf_unidade24 (mapa[24], p_linha5[4], modo_ataque, div_CLK, out_unidade24, verf_acerto_erro24);
+
+		verf_acerto_ataque verf_unidade25 (mapa[25], p_linha6[0], modo_ataque, div_CLK, out_unidade25, verf_acerto_erro25);
+		verf_acerto_ataque verf_unidade26 (mapa[26], p_linha6[1], modo_ataque, div_CLK, out_unidade26, verf_acerto_erro26);
+		verf_acerto_ataque verf_unidade27 (mapa[27], p_linha6[2], modo_ataque, div_CLK, out_unidade27, verf_acerto_erro27);
+		verf_acerto_ataque verf_unidade28 (mapa[28], p_linha6[3], modo_ataque, div_CLK, out_unidade28, verf_acerto_erro28);
+		verf_acerto_ataque verf_unidade29 (mapa[29], p_linha6[4], modo_ataque, div_CLK, out_unidade29, verf_acerto_erro29);
+
+		verf_acerto_ataque verf_unidade30 (mapa[30], p_linha7[0], modo_ataque, div_CLK, out_unidade30, verf_acerto_erro30);
+		verf_acerto_ataque verf_unidade31 (mapa[31], p_linha7[1], modo_ataque, div_CLK, out_unidade31, verf_acerto_erro31);
+		verf_acerto_ataque verf_unidade32 (mapa[32], p_linha7[2], modo_ataque, div_CLK, out_unidade32, verf_acerto_erro32);
+		verf_acerto_ataque verf_unidade33 (mapa[33], p_linha7[3], modo_ataque, div_CLK, out_unidade33, verf_acerto_erro33);
+		verf_acerto_ataque verf_unidade34 (mapa[34], p_linha7[4], modo_ataque, div_CLK, out_unidade34, verf_acerto_erro34);
 		
-		and and5(linha2[0], 1, 1);
-		and and6(linha2[1], 1, 1);
-		and and7(linha2[2], 1, 0);
-		and and8(linha2[3], 1, 0);
-		and and9(linha2[4], 1, 0);
 		
-		and and10(linha3[0], 1, 0);
-		and and11(linha3[1], 1, 1);
-		and and12(linha3[2], 1, 0);
-		and and13(linha3[3], 1, 0);
-		and and14(linha3[4], 1, 0);
-	
-		and and15(linha4[0], 1, 0);
-		and and16(linha4[1], 1, 0);
-		and and17(linha4[2], 1, 1);
-		and and18(linha4[3], 1, 0);
-		and and19(linha4[4], 1, 0);
+		mux8_1 mux8_1(out_unidade0, out_unidade1, out_unidade2, out_unidade3, out_unidade4, 
+		out_unidade5, out_unidade6, out_unidade7, out_unidade8, out_unidade9, 
+		out_unidade10, out_unidade11, out_unidade12, out_unidade13, out_unidade14, 
+		out_unidade15, out_unidade16, out_unidade17, out_unidade18, out_unidade19, 
+		out_unidade20, out_unidade21, out_unidade22, out_unidade23, out_unidade24, 
+		out_unidade25, out_unidade26, out_unidade27, out_unidade28, out_unidade29, 
+		out_unidade30, out_unidade31, out_unidade32, out_unidade33, out_unidade34, 
+		out_unidade30, out_unidade31, out_unidade32, out_unidade33, out_unidade34, 
+		cont_3bit0, cont_3bit1, cont_3bit2, 
+		MATRIZ_C0, MATRIZ_C1, MATRIZ_C2, MATRIZ_C3, MATRIZ_C4);
 		
-		and and20(linha5[0], 1, 1);
-		and and21(linha5[1], 1, 0);
-		and and22(linha5[2], 1, 1);
-		and and23(linha5[3], 1, 1);
-		and and24(linha5[4], 1, 0);
-		
-		and and25(linha6[0], 1, 1);
-		and and26(linha6[1], 1, 0);
-		and and27(linha6[2], 1, 1);
-		and and28(linha6[3], 1, 0);
-		and and29(linha6[4], 1, 0);
-		
-		and and30(linha7[0], 1, 0);
-		and and31(linha7[1], 1, 0);
-		and and32(linha7[2], 1, 1);
-		and and33(linha7[3], 1, 0);
-		and and34(linha7[4], 1, 0);
-		
-		verf_ataque verf_linha1 (linha1, p_linha1, modos_jogo[1], div_CLK, out_linha1);
-		verf_ataque verf_linha2 (linha2, p_linha2, modos_jogo[1], div_CLK, out_linha2);
-		verf_ataque verf_linha3 (linha3, p_linha3, modos_jogo[1], div_CLK, out_linha3);
-		verf_ataque verf_linha4 (linha4, p_linha4, modos_jogo[1], div_CLK, out_linha4);
-		verf_ataque verf_linha5 (linha5, p_linha5, modos_jogo[1], div_CLK, out_linha5);
-		verf_ataque verf_linha6 (linha6, p_linha6, modos_jogo[1], div_CLK, out_linha6);
-		verf_ataque verf_linha7 (linha7, p_linha7, modos_jogo[1], div_CLK, out_linha7);
-		
-		mux8_1 mux8_1(out_linha1, out_linha2, out_linha3, out_linha4, out_linha5, out_linha6, out_linha7, out_linha7, cont_3bit0, cont_3bit1, cont_3bit2, out_matriz);
 		decod_3_pra_8 decod_linhas_matriz (cont_3bit0, cont_3bit1, cont_3bit2, ligar_linhas_matriz);
+		
 		not (MATRIZ_L0, ligar_linhas_matriz[0]);
 		not (MATRIZ_L1, ligar_linhas_matriz[1]);
 		not (MATRIZ_L2, ligar_linhas_matriz[2]);
@@ -129,15 +151,31 @@ module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
 		not (MATRIZ_L4, ligar_linhas_matriz[4]);
 		not (MATRIZ_L5, ligar_linhas_matriz[5]);
 		not (MATRIZ_L6, ligar_linhas_matriz[6]);
+		
+		not (modo_d0_inv, modo_desligado1);
+		not (modo_d1_inv, modo_desligado0);
+		
+		and And35 (atualizar_led, B0, modo_d0_inv, modo_p_inv, modo_d1_inv);
 
+		or Or0 (acerto_erro, verf_acerto_erro0, verf_acerto_erro1, verf_acerto_erro2, verf_acerto_erro3, verf_acerto_erro4,
+								verf_acerto_erro5, verf_acerto_erro6, verf_acerto_erro7, verf_acerto_erro8, verf_acerto_erro9,
+								verf_acerto_erro10, verf_acerto_erro11, verf_acerto_erro12, verf_acerto_erro13, verf_acerto_erro14,
+								verf_acerto_erro15, verf_acerto_erro16, verf_acerto_erro17, verf_acerto_erro18, verf_acerto_erro19,
+								verf_acerto_erro20, verf_acerto_erro21, verf_acerto_erro22, verf_acerto_erro23, verf_acerto_erro24,
+								verf_acerto_erro25, verf_acerto_erro26, verf_acerto_erro27, verf_acerto_erro28, verf_acerto_erro29,
+								verf_acerto_erro30, verf_acerto_erro31, verf_acerto_erro32, verf_acerto_erro33, verf_acerto_erro34);
+
+		d_ff d0 ( .d(acerto_erro),
+			.rstn(1),
+			.clk(atualizar_led),
+			.q(ligar_led_rgb)
+		);
 		
-		assign MATRIZ_C0 = out_matriz[0];
-		assign MATRIZ_C1 = out_matriz[1];
-		assign MATRIZ_C2 = out_matriz[2];
-		assign MATRIZ_C3 = out_matriz[3];
-		assign MATRIZ_C4 = out_matriz[4];
+		not (ligar_led_inv, ligar_led_rgb);
 		
 		
+		and And36 (LED_G, ligar_led_rgb, modo_ataque);
+		and And37(LED_R, ligar_led_inv, modo_ataque);
 		
 		
 endmodule

@@ -1,8 +1,10 @@
+
 module decod_modo_de_jogo(A, B, seg_a, seg_c, seg_d, seg_f);
 	input A, B;
 	output seg_a, seg_c, seg_d, seg_f;
 	
-	wire A_not, B_not;
+	wire A_not, B_not,
+	T0, T1, T2, T3, T4;
 	
 	not (A_not, A);
 	not (B_not, B);
@@ -22,7 +24,7 @@ module decod_modo_de_jogo(A, B, seg_a, seg_c, seg_d, seg_f);
 	// saida s2 do decodificador
 	and And3(T3, A_not, B);
 	and And4(T4, A, B_not);
-	or Or1 (seg_d, T2, T3);
+	or Or1 (seg_d, T3, T4);
 	
 
 

@@ -118,3 +118,14 @@ set_global_assignment -name VERILOG_FILE decod_3_pra_8.v
 set_global_assignment -name TEXT_FILE "testar decodificadores matriz.txt"
 set_global_assignment -name VERILOG_FILE conf_chave.v
 set_global_assignment -name TEXT_FILE "testar matriz e decodificador juntos.txt"
+set_location_assignment PIN_88 -to SEG7_Dig0
+set_location_assignment PIN_66 -to SEG7_Dig1
+set_location_assignment PIN_68 -to SEG7_Dig2
+set_location_assignment PIN_37 -to SEG7_Dig3
+set_global_assignment -name VERILOG_FILE decod_2_pra_4_not_invert.v
+set_global_assignment -name VERILOG_FILE acender_led.v
+set_location_assignment PIN_72 -to LED_G
+set_location_assignment PIN_86 -to LED_R
+set_global_assignment -name VERILOG_FILE verf_acerto_ataque.v
+set_global_assignment -name VERILOG_FILE decod_mapa.v
+set_global_assignment -name VERILOG_FILE decod_num_7seg.v

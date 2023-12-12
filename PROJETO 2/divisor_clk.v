@@ -2,97 +2,138 @@ module divisor_clk(clk, rstn, out);
 	input clk, rstn; 
 	output out;
 	
-	wire SUP1, SUP1_not, SUP2, SUP2_not, SUP3, SUP3_not;
+	wire 	T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15,
+		T0_not, T1_not, T2_not, T3_not, T4_not, T5_not, T6_not, T7_not, T8_not, T9_not, T10_not, T11_not, T12_not, T13_not, T14_not, T15_not;
 
-	d_ff d0 ( .d(~SUP1), // SAIDA 25MHZ
+	d_ff d0 ( .d(T0_not), // SAIDA 25MHZ
 		.rstn(rstn),
 		.clk(clk),
-		.q(SUP1)
-	);
-	d_ff d1 ( .d(~SUP2), //SAIDA 12,5MHZ
-		.rstn(rstn),
-		.clk(SUP1),
-		.q(SUP2)
-	);
-	d_ff d2 ( .d(~SUP3), //SAIDA 6,25MHZ
-		.rstn(rstn),
-		.clk(SUP2),
-		.q(SUP3)
+		.q(T0)
 	);
 	
-	d_ff d3 ( .d(~SUP4), //SAIDA 3,125MHZ
+	not (T0_not, T0);
+	
+	d_ff d1 ( .d(T1_not), //SAIDA 12,5MHZ
 		.rstn(rstn),
-		.clk(SUP3),
-		.q(SUP4)
+		.clk(T0),
+		.q(T1)
 	);
 	
-	d_ff d4 ( .d(~SUP5), //SAIDA 1,5625MHZ
+	not (T1_not, T1);
+	
+	d_ff d2 ( .d(T2_not), //SAIDA 6,25MHZ
 		.rstn(rstn),
-		.clk(SUP4),
-		.q(SUP5)
+		.clk(T1),
+		.q(T2)
 	);
 	
-	d_ff d5 ( .d(~SUP6), //SAIDA 781,25KHZ
+	not (T2_not, T2);
+	
+	d_ff d3 ( .d(T3_not), //SAIDA 3,125MHZ
 		.rstn(rstn),
-		.clk(SUP5),
-		.q(SUP6)
+		.clk(T2),
+		.q(T3)
 	);
 	
-	d_ff d6 ( .d(~SUP7), //SAIDA 390,625KHZ
+	not (T3_not, T3);
+	
+	d_ff d4 ( .d(T4_not), //SAIDA 1,5625MHZ
 		.rstn(rstn),
-		.clk(SUP6),
-		.q(SUP7)
+		.clk(T3),
+		.q(T4)
 	);
 	
-	d_ff d7 ( .d(~SUP8), //SAIDA 195,3125KHZ
+	not (T4_not, T4);
+	
+	d_ff d5 ( .d(T5_not), //SAIDA 781,25KHZ
 		.rstn(rstn),
-		.clk(SUP7),
-		.q(SUP8)
+		.clk(T4),
+		.q(T5)
 	);
 	
-	d_ff d8 ( .d(~SUP9), //SAIDA 195,3125KHZ
+	not (T5_not, T5);
+	
+	d_ff d6 ( .d(T6_not), //SAIDA 390,625KHZ
 		.rstn(rstn),
-		.clk(SUP8),
-		.q(SUP9)
+		.clk(T5),
+		.q(T6)
 	);
 	
-	d_ff d9 ( .d(~SUP10), //SAIDA 97,65625KHZ
+	not (T6_not, T6);
+	
+	d_ff d7 ( .d(T7_not), //SAIDA 195,3125KHZ
 		.rstn(rstn),
-		.clk(SUP9),
-		.q(SUP10)
+		.clk(T6),
+		.q(T7)
 	);
 	
-	d_ff d10 ( .d(~SUP11), //SAIDA 48,828125KHZ
+	not (T7_not, T7);
+	
+	d_ff d8 ( .d(T8_not), //SAIDA 195,3125KHZ
 		.rstn(rstn),
-		.clk(SUP10),
-		.q(SUP11)
+		.clk(T7),
+		.q(T8)
 	);
 	
-	d_ff d11 ( .d(~SUP12), //SAIDA 24,4140625KHZ
+	not (T8_not, T8);
+	
+	d_ff d9 ( .d(T9_not), //SAIDA 97,65625KHZ
 		.rstn(rstn),
-		.clk(SUP11),
-		.q(SUP12)
+		.clk(T8),
+		.q(T9)
 	);
 	
-	d_ff d12 ( .d(~SUP13), //SAIDA 12,20703125KHZ
+	not (T9_not, T9);
+	
+	d_ff d10 ( .d(T10_not), //SAIDA 48,828125KHZ
 		.rstn(rstn),
-		.clk(SUP12),
-		.q(SUP13)
+		.clk(T9),
+		.q(T10)
 	);
 	
-	d_ff d13 ( .d(~SUP14), //SAIDA 6,103515625KHZ
+	not (T10_not, T10);
+	
+	d_ff d11 ( .d(T11_not), //SAIDA 24,4140625KHZ
 		.rstn(rstn),
-		.clk(SUP13),
-		.q(SUP14)
+		.clk(T10),
+		.q(T11)
 	);
 	
-	d_ff d14 ( .d(~SUP15), //SAIDA 3,0517578125KHZ
+	not (T11_not, T11);
+	
+	d_ff d12 ( .d(T12_not), //SAIDA 12,20703125KHZ
 		.rstn(rstn),
-		.clk(SUP14),
-		.q(SUP15)
+		.clk(T11),
+		.q(T12)
 	);
 	
-	assign out = SUP10;
+	not (T12_not, T12);
+	
+	d_ff d13 ( .d(T13_not), //SAIDA 6,103515625KHZ
+		.rstn(rstn),
+		.clk(T12),
+		.q(T13)
+	);
+	
+	not (T13_not, T13);
+	
+	d_ff d14 ( .d(T14_not), //SAIDA 3,0517578125KHZ
+		.rstn(rstn),
+		.clk(T13),
+		.q(T14)
+	);
+	
+	not (T14_not, T14);
+	
+	d_ff d15 ( .d(T15_not), //SAIDA 1,52587890625KHZ
+		.rstn(rstn),
+		.clk(T14),
+		.q(T15)
+	);
+	
+	not (T15_not, T15);
+	
+	assign out = T15;
 
 
 endmodule 

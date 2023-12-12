@@ -2,7 +2,7 @@ module contador_sin_2bit(clk, rstn, out0, out1);
 	input clk, rstn; 
 	output out0, out1;
 	
-	wire T0, T1;
+	wire T0, T1, T2;
 	
 	d_ff d0 ( .d(~T0),
 		.rstn(rstn),

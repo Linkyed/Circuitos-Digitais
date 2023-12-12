@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Dec 05 18:46:12 2023
+Fitter Status : Successful - Sun Dec 10 22:03:37 2023
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : PBL2
 Top-level Entity Name : PBL2
 Family : MAX II
 Device : EPM240T100C5
 Timing Models : Final
-Total logic elements : 84 / 240 ( 35 % )
-Total pins : 49 / 80 ( 61 % )
+Total logic elements : 227 / 240 ( 95 % )
+Total pins : 36 / 80 ( 45 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

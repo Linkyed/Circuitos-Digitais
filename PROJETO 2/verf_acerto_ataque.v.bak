@@ -1,0 +1,21 @@
+module verf_acerto_ataque (map_input, player_input, rstn, clk, out);
+	input map_input, player_input;
+	input rstn, clk;
+	output out;
+	
+	wire T0, T1
+
+	
+	and And0 (T0, map_input, player_input[);
+
+	or Or0 (T1, T0, out);
+
+	
+	d_ff d0 ( .d(T1), 
+		.rstn(rstn),
+		.clk(clk),
+		.q(out)
+	);
+	
+
+endmodule 

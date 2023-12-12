@@ -24,13 +24,14 @@ module PBL2(CH7, CH6, CH5, CH4, CH3, CH2, CH1, CH0,
 		wire [7:0] ligar_linhas_matriz;
 		wire [3:0] digitos_7seg, modos_jogo;
 		wire div_CLK, cont_0, cont_1, cont_2, cont_0_not, cont_1_not, cont_2_not, cont_2bit1, cont_2bit0, cont_3bit2, cont_3bit1, cont_3bit0, B0_not, Atk_not,
+		
 		cod0_linha, cod1_linha, cod2_linha, cod0_coluna, cod1_coluna, cod2_coluna;
 		
 		divisor_clk divisor_clk (clk, 1, div_CLK);
 		
 		contador_sin_3bit contador (div_CLK, 1, cont_3bit2, cont_3bit1, cont_3bit0);
 		
-		decod_2_pra_4 verf_modo_jogo (CH1, CH0, modos_jogo);
+		decod_2_pra_4_not_invert verf_modo_jogo (CH1, CH0, modos_jogo);
 		
 		not (B0_not, B0);
 		

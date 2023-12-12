@@ -3,7 +3,8 @@ module mux4_1(A, B, C, D, SEL0, SEL1, out0, out1, out2, out3, out4, out5, out6);
 	input SEL0, SEL1;
 	output out0, out1, out2, out3, out4, out5, out6;
 	
-	wire SEL0_not, SEL1_not;
+	wire SEL0_not, SEL1_not,
+	T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19, T20, T21, T22, T23, T24, T25, T26, T27;
 	
 	not (SEL0_not, SEL0);
 	not (SEL1_not, SEL1);

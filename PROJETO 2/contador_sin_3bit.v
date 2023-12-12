@@ -2,7 +2,7 @@ module contador_sin_3bit(clk, rstn, out0, out1, out2);
 	input clk, rstn; 
 	output out0, out1, out2;
 	
-	wire T0, T1, T2;
+	wire T0, T1, T2, T3, T4, T5;
 	
 	d_ff d0 ( .d(~T0),
 		.rstn(rstn),

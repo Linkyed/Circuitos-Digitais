@@ -2,7 +2,7 @@ module decod_3_pra_8(A, B, C, out);
 	input A, B, C;
 	output [7:0] out;
 	
-	wire A_not, B_not;
+	wire A_not, B_not, C_not;
 	
 	not (A_not, A);
 	not (B_not, B);

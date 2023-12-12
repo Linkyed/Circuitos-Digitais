@@ -1,0 +1,25 @@
+module contador(on, clk, rstn, LED);
+	input on, clk, rstn; 
+	output LED;
+	
+	wire SUP1, SUP2, SUP3;
+	
+	d_ff d0 ( d.(SUP1),
+		rstn.(rstn)
+		clk.(clk),
+		q.(SUP1)
+	)
+	d_ff d1 ( d.(SUP2),
+		rstn.(rstn)
+		clk.(SUP1),
+		q.(SUP2)
+	)
+	d_ff d2 ( d.(SUP3),
+		rstn.(rstn)
+		clk.(SUP2),
+		q.(LED)
+	)
+	
+	
+
+endmodule 

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EPM240T100) Path("/home/aluno/Downloads/Circuitos-Digitais-p2/PROJETO 2/output_files/") File("PBL2.pof") MfrSpec(OpMask(1) SEC_Device(EPM240T100) Child_OpMask(2 1 1));
+		Device PartName(EPM240T100) Path("/home/aluno/Downloads/Circuitos-Digitais-4b761dc94afd84fafdacdea697e5b6f25c95cf8b/PROJETO 2/output_files/") File("PBL2.pof") MfrSpec(OpMask(1) SEC_Device(EPM240T100) Child_OpMask(2 1 1));
 
 ChainEnd;
 

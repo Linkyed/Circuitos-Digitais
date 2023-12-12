@@ -1,15 +1,18 @@
-module decod_coluna_letra(A, B, C, seg_a, seg_b, seg_c, seg_d, seg_g);
+module decod_coluna_letra(A, B, C, seg_a, seg_b, seg_c, seg_d,seg_f, seg_g);
 	input A, B, C;
-	output seg_a, seg_b, seg_c, seg_d, seg_g;
+	output seg_a, seg_b, seg_c, seg_d, seg_f,seg_g;
 	
-	wire A_not, B_not, C_not;
+	wire A_not, B_not, C_not,
+	T0, T1, T2, T3, T4;
 	
 	not (A_not, A);
 	not (B_not, B);
-	not (c_not, C);
+	not (C_not, C);
+	
+	
 	
 	//saida S0 do decodificador
-	or And0 (seg_a, A_not, C);
+	and And0 (seg_a, A_not, C);
 	
 	//saida S1 do decodificador
 	and And1 (T0, A_not, B_not, C);
@@ -25,9 +28,10 @@ module decod_coluna_letra(A, B, C, seg_a, seg_b, seg_c, seg_d, seg_g);
 	//saida S3 do decodificador
 	and And5 (seg_d, A_not, B_not, C_not);
 
+	and And329084 (seg_f, A_not, B, C);
 	
 	//saida S4 do decodificador
-	or Or4 (seg_g, A_not, B);
+	and And87346 (seg_g, A_not, B, C_not);
 	
 	
 
