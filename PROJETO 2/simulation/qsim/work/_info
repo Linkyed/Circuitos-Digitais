@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 dC:/Users/peedr/OneDrive/Documentos/GitHub/Circuitos-Digitais/PROJETO 2/simulation/qsim
 vdecod_mapa
-Z1 !s110 1702136960
+Z1 !s110 1702467753
 !i10b 1
-!s100 hR29`ROcI]5G5<O17gndW3
+!s100 A:CcUacn4GDN;l1U2E]5:0
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IzHj=@ame4bclH]jeCERO]2
+IcF6_WCUQH7;6m`i6:SEhN2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 dC:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/simulation/qsim
-w1702136959
+w1702467751
 Z5 8PBL2.vo
 Z6 FPBL2.vo
-!i122 81
+!i122 132
 L0 32 1557
 Z7 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z8 !s108 1702136960.000000
+Z8 !s108 1702467753.000000
 Z9 !s107 PBL2.vo|
 Z10 !s90 -work|work|PBL2.vo|
 !i113 1
@@ -35,23 +35,23 @@ Z12 tCvgOpt 0
 vdecod_mapa_vlg_vec_tst
 R1
 !i10b 1
-!s100 fb0HFY9<5z=YK1`0<d0n[2
+!s100 X0I]Zkl0A8=>Rgaz1U?9z1
 R2
-IH`^5mQ[D<1WL6VC`d:l7C0
+I_8WRJgWX5PSJ1`Ke@]bS<1
 R3
 R4
-w1702136958
-8Waveform9.vwf.vt
-FWaveform9.vwf.vt
-!i122 82
+w1702467750
+8Waveform17.vwf.vt
+FWaveform17.vwf.vt
+!i122 133
 L0 30 40
 R7
 r1
 !s85 0
 31
 R8
-!s107 Waveform9.vwf.vt|
-!s90 -work|work|Waveform9.vwf.vt|
+!s107 Waveform17.vwf.vt|
+!s90 -work|work|Waveform17.vwf.vt|
 !i113 1
 R11
 R12

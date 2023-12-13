@@ -1,5 +1,5 @@
 Analysis & Synthesis report for PBL2
-Sat Dec 09 12:28:40 2023
+Wed Dec 13 08:17:17 2023
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Dec 09 12:28:40 2023       ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 13 08:17:17 2023       ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; PBL2                                        ;
 ; Top-level Entity Name       ; decod_mapa                                  ;
@@ -162,8 +162,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 26    ;
-;     -- 2 input functions                    ; 5     ;
+;     -- 3 input functions                    ; 27    ;
+;     -- 2 input functions                    ; 4     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
@@ -178,9 +178,9 @@ https://fpgasoftware.intel.com/eula.
 ; Total registers                             ; 0     ;
 ; I/O pins                                    ; 38    ;
 ; Maximum fan-out node                        ; B     ;
-; Maximum fan-out                             ; 30    ;
-; Total fan-out                               ; 123   ;
-; Average fan-out                             ; 1.78  ;
+; Maximum fan-out                             ; 31    ;
+; Total fan-out                               ; 124   ;
+; Average fan-out                             ; 1.80  ;
 +---------------------------------------------+-------+
 
 
@@ -215,7 +215,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Dec 09 12:28:32 2023
+    Info: Processing started: Wed Dec 13 08:17:06 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off PBL2 -c PBL2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -374,20 +374,18 @@ Warning (10236): Verilog HDL Implicit Net warning at decod_3_pra_8.v(9): created
 Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(5): created implicit net for "A_not" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 5
 Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(6): created implicit net for "B_not" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 6
 Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(7): created implicit net for "C_not" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 7
-Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(172): created implicit net for "b" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 172
-Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(214): created implicit net for "F56" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 214
+Warning (10236): Verilog HDL Implicit Net warning at decod_mapa.v(215): created implicit net for "F56" File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 215
 Info (12127): Elaborating entity "decod_mapa" for the top level hierarchy
-Warning (10030): Net "b" at decod_mapa.v(172) has no driver or initial value, using a default initial value '0' File: C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/decod_mapa.v Line: 172
 Info (21057): Implemented 69 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 35 output pins
     Info (21061): Implemented 31 logic cells
 Info (144001): Generated suppressed messages file C:/Users/teus_/Documents/CD/Circuitos-Digitais/PROJETO 2/output_files/PBL2.map.smsg
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 120 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 118 warnings
     Info: Peak virtual memory: 4703 megabytes
-    Info: Processing ended: Sat Dec 09 12:28:40 2023
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:11
+    Info: Processing ended: Wed Dec 13 08:17:17 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

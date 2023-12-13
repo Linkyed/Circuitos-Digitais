@@ -38,7 +38,7 @@ output [34:0] out;
 
 	//C~B~A
 	//L1-5
-	and And6 (out[4], C, A_not, A_not);
+	and And6 (out[4], C, A_not, B_not);
 
 	//LINHA 2
 	//L2-1
@@ -73,7 +73,7 @@ output [34:0] out;
 	//LINHA 3
 	//L3-1
 	//~A + ~C + B
-	or Or9 (out[10],A_not, B_not, C_not);
+	or Or9 (out[10],A_not, B, C_not);
 	
 	//L3-2
 	//~A~B + ~AC + AB
@@ -169,7 +169,7 @@ output [34:0] out;
 	//~A~B + ~BC + AB
 	and And41(F41, A_not, B_not);
 	and And42(F42, B_not, C);
-	and And43(F43, A, b);
+	and And43(F43, A, B);
 	or Or25 (out[27], F41, F42, F43);
 	
 	//L6-4
@@ -208,11 +208,14 @@ output [34:0] out;
 	or Or30(out[33], C_not, F53);
 	
 	//L7-5
+
 	//~AB + BC + A~B~C
 	and And54(F54, A_not, B);
 	and And55(F55, B, C);
 	and And56(F56, A, B_not, C_not);
-	or Or31(out[34], F54,F54, F56);
+	or Or31(out[34], F54,F55, F56);
+	
+	
 	
 	
 	

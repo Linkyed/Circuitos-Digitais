@@ -121,3 +121,11 @@ set_global_assignment -name TEXT_FILE "testar matriz e decodificador juntos.txt"
 set_global_assignment -name VERILOG_FILE decod_mapa.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE "teste decod_mapa.vwf"
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform9.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform10.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform11.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform12.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform13.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform14.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform15.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform16.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform17.vwf
